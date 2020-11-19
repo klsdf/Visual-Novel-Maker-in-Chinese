@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Conditional Choices</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "3.2.3.0_2";
+</script>
+ <meta name="topic-breadcrumbs" content="Beginner's Guide > Customizing your Game > Non-Linear Stories" />
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+ <p class="Topic_Heading">Conditional Choices</p>
+</div>
+<p>&#160;</p>
+<p><span class="Topic_Start">I</span>n this tutorial, we'll teach you how to make dynamic choices. This means that certain choices won't appear until you trigger a flag. Since this is an advanced concept, we do not recommend trying this tutorial until you understand how Variables, Switches, Labels and Conditions work.</p>
+<p>&#160;</p>
+<p>Here's the situation, the character is trapped in a room and has to investigate objects. In this case just the bed, door and windows. The only thing is, we want the Windows to appear after we check the door. So here's how the process will work:</p>
+<p><img src="2017-01-31_1-09-07.jpg" alt="" style=" border:none; width:100%; max-width:686px;" border="0" /></p>
+<p>&#160;</p>
+<p>Based on this flowchart, here's how the event would get laid out:</p>
+<p><img src="2017-01-31_8-32-56.jpg" alt="" style=" border:none; width:100%; max-width:916px;" border="0" /></p>
+<p>&#160;</p>
+<p>So here's a quick breakdown:</p>
+<ul style="list-style: disc;">
+<li>In order to make choices appear based on certain actions, we have to put the choices and prompts under <a href="Basic.htm#Condition">Conditions</a>!</li>
+<li>On the Add Choice: Window it says it will show itself to the player if the Local Switch #1 is Equal to ON.</li>
+<li>Since in the flow chart we see that the window option is unlocked when you check the door, we added another condition there that checks if the switch is OFF. After that, it will give you a prompt and turn on a switch. Should the player check the door again, it will not return this prompt making it a one-time thing only.</li>
+</ul>
+<p>&#160;</p>
+<p>It's surprisingly simple isn't it? Have fun making cool Branching Visual Novels!</p>
+</body>
+</html>

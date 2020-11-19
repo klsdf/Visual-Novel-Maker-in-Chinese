@@ -1,0 +1,221 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Animation Basics</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<link rel="stylesheet" href="highlight/styles/default.css" type="text/css" />
+<script src="highlight/highlight.pack.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+//<![CDATA[
+hljs.initHighlightingOnLoad();
+//]]>
+</script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "4.1.0_5";
+</script>
+ <meta name="topic-breadcrumbs" content="Scripter's Guide > Basic Engine" />
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<p class="Topic_Heading">Animations</p>
+<p>&#160;</p>
+<p><span class="Topic_Start">V</span>isual Novel Maker's Engine already provides a lot of components to do smooth animations easily. However, in this chapter we will make some very simple animations from scratch to learn some basics first without using VN Maker's animation system.</p>
+<p>&#160;</p>
+<p>You can use that knowledge to understand how animations work under the hood or maybe to even build your own animation system, but we recommend to use VN Maker's default animation system especially for beginners.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">How animation works</p>
+<p>&#160;</p>
+<p>Your game is running in a so called game loop which means that a certain part of your game logic is executed and repeated over and over again. In regular cases, 60 times per second. That loop does not end until the user quits the game. In VN Maker, the loop pauses if the game window loses focus.</p>
+<p>&#160;</p>
+<p>To keep things as easy as possible, you can imagine the updateContent method of your test bed scene as the your entry-point into the game loop.</p>
+<pre>
+<code class="coffee">###*
+* Update the scene's content.
+###         
+updateContent: -&gt;
+    # Your entry point into the game loop.</code>
+</pre>
+<p>In our last examples, we left updateContent empty because there was nothing we need to do there. But this method is called 60 times per second in regular cases. We can use that to animate a graphic object by changing it's position each time the method it called. So let's change the method a bit and add some movement and rotation to our sprite:</p>
+<pre>
+<code class="coffee">
+###*
+* Update the scene's content.
+###         
+updateContent: -&gt;
+    # Add 1 to the sprite's rotation angle to rotate with 60 degrees per second.
+    @sprite.angle += 1
+    # Add 1 to the sprite's x-coordinate to move it to the right with 60 pixels per second.
+    @sprite.x += 1</code>
+</pre>
+<p>If we execute this example we can see how our sprite slowly moves and rotates non-stop to the right until it completely left the screen. That's because we never put an end to our animation, it is executed as long as the game runs.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Control your animation</p>
+<p>&#160;</p>
+<p>To get more control over our animation from the above example, we will setup a timer and once our timer reaches 0 we will stop with the animation.</p>
+<pre>
+<code class="coffee">
+###*
+* Prepares all data for the scene and loads the necessary graphic and audio resources.
+### 
+prepareData: -&gt;
+    # Load the background image "Bench_Morning".
+    @bitmap = ResourceManager.getBitmap("Graphics/Backgrounds/Bench_Morning")
+    # Set an animation timer to 300 frames which are 5 seconds. 
+    @animationTimer = 300
+###*
+* Update the scene's content.
+###         
+updateContent: -&gt;
+    # As long as the timer has not reached 0 we will animate the sprite.
+    if @animationTimer &gt; 0
+        # Add 1 to the sprite's rotation angle to rotate with 60 degrees per second.
+        @sprite.angle += 1
+        # Add 1 to the sprite's x-coordinate to move it to the right with 60 pixels per second.
+        @sprite.x += 1
+        # Reduce the timer by 1.
+        @animationTimer -= 1</code>
+</pre>
+<p>In prepareData we set up a timer variable and set it to 300. Means after 300 game loop runs, also called "frames", we will stop the animation. Since we have 60 frames per second, our animation will run for 5 seconds. In updateContent, we are checking the timer and only if the timer has not reached 0 we will continue with the animation and reduce the timer by 1.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Make your animation smoother</p>
+<p>&#160;</p>
+<p>Our current animation stops immediately after 5 seconds but sometimes it is more nice to add a smooth fade-out / easing which means that instead of immediately stopping the animation after 5 seconds, the animation becomes slower and slower until it stops.</p>
+<pre>
+<code class="coffee">
+updateContent: -&gt;
+    # As long as the timer has not reached 0 we will animate the sprite.
+    if @animationTimer &gt; 0
+        # Add 5 to the sprite's rotation angle at the beginning but then reduce
+        # the increment more and more depending on how much time has elapsed so that
+        # the rotation becomes slower and slower until it stops.
+        @sprite.angle += 5 * (@animationTimer / 300)
+        # Reduce the timer by 1.
+        @animationTimer -= 1</code>
+</pre>
+<p>With this example, we can see how the rotation is very fast in the beginning but then slowly loses more and more speed until it stops. This is also called linear easing, which is very simple. There are a lot of other easing equations which you can find under <a href="Easing_Effects.htm">Easing Effects</a> topic.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Spritesheet Animation</p>
+<p>&#160;</p>
+<p>In game development, a spritesheet is a single image file containing multiple smaller images. The following example shows a spritesheet of a 2D Character</p>
+<p>&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: bold;"><img src="4FramesNaia-Helpfile.png" alt="" style=" border:none; width:100%; max-width:327px;" border="0" /></p>
+<p>&#160;</p>
+<p>The above spritesheet contains all directions the character can look at and also all images for a move-animation. A single image in a spritesheet is also called "frame" if it comes to animation.</p>
+<p>&#160;</p>
+<p>To make a spritesheet based animation, we only display one single frame of the spritesheet at a time. And after a certain time passed, we display the next frame of the spritesheet. If we do that with the right timing, it looks like a smooth animation. In our example, it makes the character walking.</p>
+<p>&#160;</p>
+<p><img src="$Naia.gif" alt="" style=" border:none; width:100%; max-width:32px;" border="0" /></p>
+<p>&#160;</p>
+<p>Maybe you remember the srcRect property we set in <a href="Display_a_Picture.htm">Display a Picture</a> example. We set it to the full size of the image, but for a spritesheet animation we can use that property to only display a single frame since srcRect allows us to only display a certain portion of the image on screen.</p>
+<p>&#160;</p>
+<p><img src="4FramesNaia-Helpfile_Select.png" alt="" style=" border:none; width:100%; max-width:327px;" border="0" /></p>
+<p>&#160;</p>
+<p>The yellow area is the srcRect of the sprite so only that portion of the image will be displayed on screen and if we move that area fast enough we get an animation.</p>
+<p>&#160;</p>
+<p>Let's take a look at the following example, we use this spritesheet:</p>
+<p>&#160;</p>
+<p><img src="4FramesNaia.png" alt="" style=" border:none; width:100%; max-width:128px;" border="0" /></p>
+<p>&#160;</p>
+<p>with the following code:</p>
+<pre>
+<code class="coffee">
+###*
+* Prepares all visual game object for the scene.
+###  
+prepareVisual: -&gt;
+    # Create a new sprite
+    @sprite = new gs.Sprite(Graphics.viewport)
+    # Assign the spritesheet bitmap to the sprite
+    @sprite.bitmap = @bitmap
+    # Set the portion of the spritesheet which should be visible on screen.
+    @sprite.srcRect = new gs.Rect(32, 0, 32, 48)
+    # Center the sprite on screen
+    @sprite.x = (Graphics.width - @sprite.srcRect.width) / 2
+    # Center the sprite on screen
+    @sprite.y = (Graphics.height - @sprite.srcRect.height) / 2
+    # We are done with preparing our visual objects. So we can start
+    # the screen transition to fade in our new created objects smoothly.
+    @transition()
+    
+###*
+* Prepares all data for the scene and loads the necessary graphic and audio resources.
+### 
+prepareData: -&gt;
+    # Load the spritesheet bitmap
+    @bitmap = ResourceManager.getBitmap("Graphics/Pictures/Naia")</code>
+</pre>
+<p>To make that example work, you have to import the above spritesheet in Graphics/Pictures folder of your project and call it "Naia". If we test that example, we can see the character on the center of the screen. That is because we set the srcRect to a 32x48 pixel portion of the spritesheet. A single frame on the spritesheet is 32x48 pixel.</p>
+<p>&#160;</p>
+<p>Let's make it animated next by changing updateContent:</p>
+<pre>
+<code class="coffee">
+###*
+* Update the scene's content.
+###         
+updateContent: -&gt;
+    # We only want to change to the next frame on each 8th frame of the game-loop which
+    # is 1/4 second. 
+    if Graphics.frameCount % 15 == 0
+        # We move our srcRect 32 pixels to the right to display the next frame of the
+        # spritesheet. We use a modulo-operation with 128 to loop the animation.
+        @sprite.srcRect.x = (@sprite.srcRect.x + 32) % 128</code>
+</pre>
+<p>If we run our game now, we will see the character walking on screen. Well she is not actually moving, but we can see her walking-animation. Let's take a closer look to the code above to see how that is done.</p>
+<p>&#160;</p>
+<p>First we do a modulo-operation on the current Graphics.frameCount which is just a counter increased by 1 on each game-loop frame/run. So it stores the number of frames passed since game start. With modulo 15, the result will be 0 each 15 frames. So only after 15 frames we execute our animation-code below the if-condition.</p>
+<p>&#160;</p>
+<p>What we do there is that we move the src-rect by 32 pixels. As mentioned before, a single frame on the spritesheet is 32x48 pixel. So if we move the src-rect by 32 pixel on x-axis, we display the next frame of the spritesheet. You can imagine the src-rect like a yellow-cursor hovering over the spritesheet-bitmap with a position and a size and only the area of that cursor is displayed on screen.</p>
+<p>&#160;</p>
+<p>However, if we move that src-rect cursor to much tothe &#160;right, we will run out of the spritesheet. To avoid that, we add a module 128 operation. The width of our spritesheet is 128 pixels. A single frame is 32 pixels. So if the x-coordinate of our src-rect cursor reaches 128, the modulo operation result will be 0. So our srcRect cursor is moved back to 0 and so, the animation runs endless.</p>
+<p>&#160;</p>
+<p>While that all sounds a bit complicated at first, just try to modify the example above to get a better feeling for it. Try to remove the modulo operation to see what happens then, change the % 15 to let's say % 60 to see how the animation becomes slower. If you experiment a bit you will get a much better feeling.</p>
+<p>&#160;</p>
+<p>As mentioned in the beginning of that chapter, that all is already implemented in <a href="Animations_Animator.htm">Visual Novel Maker's Animation System</a> which you can just use as we will learn in another chapter.</p>
+</body>
+</html>

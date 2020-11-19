@@ -1,0 +1,306 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Example: Custom Title-Screen</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "5.3.1.0_1";
+</script>
+ <meta name="topic-breadcrumbs" content="Script and Plugin Reference > In-Game UI Documentation > Getting Started" />
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+ <p class="Topic_Heading">Example: Custom Title-Screen</p>
+</div>
+<p><br />
+<span class="Topic_Start">I</span>n this example we will make our own title-screen using Visual Novel Maker’s In-Game UI-System!</p>
+<p>&#160;</p>
+<p>First we need to open Script Editor and open the folder"Layouts " and then select the script called"Layout_Title " which contains the layout definition for the title-screen.</p>
+<p>Next, lets delete the already existing content to make the script completely empty. Then we will add the following JSON:</p>
+<p>&#160;</p>
+<p><span class="Code">ui.UIManager.layouts.titleLayout = {</span></p>
+<p><span class="Code">&#160;&#160;"type": "ui.FreeLayout",</span></p>
+<p><span class="Code">&#160;&#160;"frame": [0, 0, Graphics.width, Graphics.height],</span></p>
+<p><span class="Code">&#160;&#160;"items": []</span></p>
+<p><span class="Code">}</span></p>
+<p>&#160;</p>
+<p>If we test-play our game now we will see that our title-screen is just a black screen. That is because we didn’t add any content yet, we only added an empty layout. Lets go through this step by step.</p>
+<p>&#160;</p>
+<p>The first line is always like:</p>
+<p>&#160;</p>
+<p><span class="Code">ui.UIManager.layouts.&lt;unique_layout_name&gt; = {</span></p>
+<p>&#160;</p>
+<p>It is not necessary for you to completely understand this line, the only important thing you have to know is that you have to select a unique name for the layout. The name shouldn’t contain any space or special characters. The name is needed to connect your layout with other layouts or to show your layout using the Scene Command"Switch To Layout ".</p>
+<p>&#160;</p>
+<p>Before we can add any controls we always have to define at least one layout first, the main-layout. In our example it is a Free-Layout which allows us to freely position our controls at exact positions. Our layout has three properties:</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">type</p>
+</li>
+</ul>
+<p>Defines the type of the layout. In our case it is "ui.FreeLayout". There also other types of layouts available like "ui.GridLayout" or "ui.StackLayout".</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">frame</p>
+</li>
+</ul>
+<p>Defines the position and size of our layout in pixels. The first two numbers define the position, which is 0,0, the top-left corner of the screen in our case. The next two numbers are the size of the layouts. We are using two special number constants here called "Graphics.width" and "Graphics.height" referring to the current screen size. So our layout takes up the whole screen. We will see below that it is also possible to use percentage values instead of pixel coordinates.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">controls</p>
+</li>
+</ul>
+<p>That property contains the UI controls to display. Since we added no controls yet we get a black screen. Lets change that in our next step!</p>
+<p>&#160;</p>
+<p><span class="Code">ui.UIManager.layouts.titleLayout = {</span></p>
+<p><span class="Code">&#160;&#160;"type": "ui.FreeLayout",</span></p>
+<p><span class="Code">&#160;&#160;"frame": [0, 0, Graphics.width, Graphics.height],</span></p>
+<p><span class="Code">&#160;&#160;"controls": [</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"type": "ui.Image",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"image": "bg-generic",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"frame": [0, 0, "100%", "100%"]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;}</span></p>
+<p><span class="Code">&#160;&#160;]</span></p>
+<p><span class="Code">}</span></p>
+<p>&#160;</p>
+<p>If we test-play our game now we will see the default background image "bg-generic" taking up the whole screen.</p>
+<p>&#160;</p>
+<p>Lets see next how this works:</p>
+<p>&#160;</p>
+<p>We added an item of type "ui.Image" which is, like the name says, just an image. Lets go through the properties:</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">type</p>
+</li>
+</ul>
+<p>The type of the control. In our case its "ui.Image" to just display an image. But there are lots of other control types available and you can even define your own control-templates but we will see that in another example.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">image</p>
+</li>
+</ul>
+<p>The name of the image resource we want to display. The resource must be in Graphics/Pictures folder by default.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">frame</p>
+</li>
+</ul>
+<p>The position and size of the image. We put our image at the top-left corner of the screen and for the size we set "100%", "100%" which</p>
+<p>scales the image to 100% of the layout-size. In our example, it is equivalent to Graphics.width, Graphics.height. You can play around with it and try out other percentages to see how it looks then. You can even do calculations and mix pixel-values with percentage-values like "100% - 250" for example.</p>
+<p>&#160;</p>
+<p>Within our next step we will add five buttons for the following title-screen options:</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li>New Game</li>
+<li>Load Game</li>
+<li>Quit</li>
+</ul>
+<p>&#160;</p>
+<p>We will use a stack-layout to order the options from top to bottom.</p>
+<p>&#160;</p>
+<p><span class="Code">ui.UIManager.layouts.titleLayout = {</span></p>
+<p><span class="Code">&#160;&#160;"type": "ui.FreeLayout",</span></p>
+<p><span class="Code">&#160;&#160;"frame": [0, 0, Graphics.width, Graphics.height],</span></p>
+<p><span class="Code">&#160;&#160;"controls": [</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"type": "ui.Image",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"image": "bg-generic",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"frame": [0, 0, "100%", "100%"]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"type": "ui.StackLayout",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"orientation": "vertical",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"frame": ["35%", "60%", "30%", "30%"]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"controls": [</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"type": "ui.Button",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"params": { "text": "New Game" },</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"resizable": true,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"margin": [0, 0, 0, 10]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"type": "ui.Button",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"params": { "text": "Load Game" },</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"resizable": true,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"margin": [0, 0, 0, 10]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"type": "ui.Button",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"params": { "text": "Quit" },</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"resizable": true,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"margin": [0, 0, 0, 10]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;}</span></p>
+<p><span class="Code">&#160;&#160;]</span></p>
+<p><span class="Code">}</span></p>
+<p>&#160;</p>
+<p>If we test-play our game now we will see our background with three buttons on it.</p>
+<p>&#160;</p>
+<p>After the image we added a new vertical stack-layout. If we take a look at the frame-property we only see percentage values. Like we already saw earlier, you can even use percentage-values for frame-property and also do calculations like "50% - 20". Percentage values allowing you to define position and size without knowing the exact screen or parent layout dimensions.</p>
+<p>&#160;</p>
+<p>We also set orientation-property to "vertical" to order our buttons vertically from top to bottom like a stack. We add three button controls for each option. Lets take a closer look to it:</p>
+<p>&#160;</p>
+<p><span class="Code">{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"type": "ui.Button",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"params": { "text": "New Game" },</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"resizable": true,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"margin": [0, 0, 0, 10]</span></p>
+<p><span class="Code">}</span></p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">type</p>
+</li>
+</ul>
+<p>We used "ui.Button" to create a button control. Actually, "ui.Button" is a template defined in "Templates" sub-folder in "Template_Button" script. We will handle templates in a later example.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">params</p>
+</li>
+</ul>
+<p>Since "ui.Button" is actually a template, we can use "params" to pass data to the template. In our case we are passing only one parameter "text" with the value "New Game" to the template. We don't need to know how the template is handling that data, all we need to know is that text defines the button's text.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">resizable</p>
+</li>
+</ul>
+<p>Defines if our button can be automatically resized by the layout if necessary so we don't need to specify frame-propery. We set it to true so we don't need to worry about the button's size.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">margin</p>
+</li>
+</ul>
+<p>The margin-property defines an empty space around the button. It can be use to define gaps between controls or if you just want to adjust a control a bit. The margin values are in pixels and defined as [&lt;left&gt;, &lt;top&gt;, &lt;right&gt;, &lt;bottom&gt;]. So in our example we are using 10px bottom-margin for each button.</p>
+<p>&#160;</p>
+<p>Lets finish this example by adding actions to our button. An action describes a piece of background-logic to execute if the button is clicked.</p>
+<p>&#160;</p>
+<p><span class="Code">ui.UIManager.layouts.titleLayout = {</span></p>
+<p><span class="Code">&#160;&#160;"type": "ui.FreeLayout",</span></p>
+<p><span class="Code">&#160;&#160;"frame": [0, 0, Graphics.width, Graphics.height],</span></p>
+<p><span class="Code">&#160;&#160;"controls": [</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"type": "ui.Image",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"image": "bg-generic",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"frame": [0, 0, "100%", "100%"]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"type": "ui.StackLayout",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"orientation": "vertical",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"frame": ["35%", "60%", "30%", "30%"]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"controls": [</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"type": "ui.Button",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"params": { "text": "New Game", "action": { "name": "newGame" } },</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"resizable": true,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"margin": [0, 0, 0, 10]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"type": "ui.Button",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"params": { "text": "Load Game", "action": { "name": "switchLayout", "params": { "name": "loadMenuLayout", "savePrevious": true } } },</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"resizable": true,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"margin": [0, 0, 0, 10]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"type": "ui.Button",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"params": { "text": "Quit", "action": { "name": "quitGame" } },</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"resizable": true,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"margin": [0, 0, 0, 10]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;}</span></p>
+<p><span class="Code">&#160;&#160;]</span></p>
+<p><span class="Code">}</span></p>
+<p>&#160;</p>
+<p>For each button we just pass a new parameter to the buttom-template called "action". An action has a unique name and optionally a set of parameters itself. Lets take a look at the action of our first button:</p>
+<p>&#160;</p>
+<p><span class="Code">"action": { "name": "newGame" }</span></p>
+<p>&#160;</p>
+<p>With that we define that the action "newGame" should be executed if the button is clicked. That action, like the name says, starts a new game. So if we click on our "New Game" button a new game will start.</p>
+<p>&#160;</p>
+<p>Lets take a look at our third button "Quit" next:</p>
+<p>&#160;</p>
+<p><span class="Code">"action": { "name": "quitGame" }</span></p>
+<p>&#160;</p>
+<p>Its similar, we are just executing a different action "quitGame" this time which quits the game.</p>
+<p>&#160;</p>
+<p>The second action for our "Load Game" button looks a little bit more complex at first but it is actually the same like before:</p>
+<p>&#160;</p>
+<p><span class="Code">"action": { "name": "switchLayout", "params": { "name": "loadMenuLayout", "savePrevious": true } }</span></p>
+<p>&#160;</p>
+<p>Here we are executing the action "switchLayout" which switches to another layout specified in the "params" property. So the difference between our two actions from before is that we have to specify some data passed to the action. The "switchLayout" expects the following parameters:</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">name</p>
+</li>
+</ul>
+<p>The name of the layout we want to switch to. In our case "loadMenuLayout" which is the unique name used for the load-menu's layout-definition. You can see that in "Layout_LoadMenu".</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">savePrevious</p>
+</li>
+</ul>
+<p>This parameter is optional, the default is false. But if set to true the previous scene, which is the title-screen in our case, is not completely erased but just</p>
+<p>paused and hidden. We can return to it using "returnToPrevious" action. But that is not covered by this example, we just have to set it to true to so that the load-menu can return to the title-screen if we click on the back-button.</p>
+<p>&#160;</p>
+<p>Now our own title-screen is finished!</p>
+</body>
+</html>

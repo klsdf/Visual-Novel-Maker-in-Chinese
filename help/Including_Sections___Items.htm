@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Including Sections &amp; Items</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "5.2.1.0_1";
+</script>
+ <meta name="topic-breadcrumbs" content="Script and Plugin Reference > Extension Documentation > Getting Started" />
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+ <p class="Topic_Heading"><span>Including Sections &amp; Items</span></p>
+</div>
+<p>&#160;</p>
+<p><span class="Topic_Start">T</span>o minimize redundant data, Visual Novel Maker offers advanced include mechanisms.</p>
+<p class="Sub_Heading"><br />
+Including Sections</p>
+<p>It is possible to include sections from an already existing view into another view and even overwrite some properties if necessary. To include sections from an already existing view, the following section-definition can be used:</p>
+<p>&#160;</p>
+<p><span class="Code">{ "include": "&lt;uid&gt;" }</span></p>
+<p>&#160;</p>
+<p>That section-definition will include all sections from the specified view. But it is also possible to only include specific sections:</p>
+<p>&#160;</p>
+<p><span class="Code">{ "include": "&lt;uid&gt;", "sections": ["mySection1", "otherSection"] }</span></p>
+<p>&#160;</p>
+<p>The above example includes only the sections with the identifier "mySection1" and "otherSection". All other sections are ignored. &#160;</p>
+<p>&#160;</p>
+<p>Sometimes it is also necessary to change some properties of the included sections like some labels or section titles. That is possible using the following include-definition:</p>
+<p>&#160;</p>
+<p><span class="Code">{ "include": "&lt;uid&gt;", "sections": ["mySection1", { "identifier": "otherSection", "overwrite": { "name": "New Title" } } ] }</span></p>
+<p>&#160;</p>
+<p>The above example overwrites the title of "otherSection" with "New Title". The overwrite-process just merges the overwrite-object with the section-properties.</p>
+<p>&#160;</p>
+<p class="Sub_Heading"><span>Including Items</span></p>
+<p>It is possible to include items of a section from an already existing view into another view's section and even overwrite some properties if necessary. To include items, the following item-definition can be used:</p>
+<p>&#160;</p>
+<p><span class="Code">{ "include": "&lt;uid&gt;", "section": "mySection1" }</span></p>
+<p>&#160;</p>
+<p>The above example includes all items of section "mySection1" from the specified view. But it is also possible to only include specific items:</p>
+<p>&#160;</p>
+<p><span class="Code">{ "include": "&lt;uid&gt;", "section": "mySection1", "items": ["item1", "item2"] }</span></p>
+<p>&#160;</p>
+<p>The above example includes only the items with the identifier "item1" and "item2". All other items are ignored. &#160;Sometimes it is also necessary to change some properties of the included items like some labels. That is possible using the following include-definition:</p>
+<p>&#160;</p>
+<p><span class="Code">{ "include": "&lt;uid&gt;", "section": "mySection1", "items": ["item1", { "identifier": "label", "overwrite": { "text": "New Text" } }] }</span></p>
+<p>&#160;</p>
+<p>The above example overwrites the text-property of "label" item with "New Text". The overwrite-process just merges the overwrite-object with the item-properties.</p>
+</body>
+</html>

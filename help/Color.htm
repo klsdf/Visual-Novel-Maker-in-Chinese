@@ -1,0 +1,259 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Color Class</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "";
+</script>
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+ <h2 style="font-family: 'Book Antiqua', serif; margin-bottom: 7pt; font-size: 24pt;">Color Class</h2>
+<hr width="60%" align="left" />
+</div>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-family: 'Book Antiqua', serif; font-weight: bold; font-size: 18pt;">A</span> class to describe RGBA colors. It also offers some helper methods.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-weight: bold; font-size: 18pt; font-family: 'Book Antiqua', serif;">Item Index</p>
+<hr width="60%" align="left" />
+<table style="border-collapse: separate; border-collapse: separate;" cellspacing="0" width="100%" border="1">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td colspan="2">
+<p style="text-align: center;"><span style="font-weight: bold;">Methods</span></p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; font-weight: bold;">equals (color) <span style="font-style: italic; font-size: 8pt; font-weight: normal;">[Boolean]</span></p>
+</td>
+<td>
+<p>Checks if the color is equal to the specified color.</p>
+<p>&#160;</p>
+<p style="font-weight: bold;">Parameters:</p>
+<ul style="list-style: disc;">
+<li style="font-weight: bold;">color <span style="font-style: italic; font-size: 8pt; font-weight: normal;">[gs.Color]</span><br />
+<span style="font-weight: normal;">The color to compare to.</span></li>
+</ul>
+<p>&#160;</p>
+<p style="font-weight: bold;">Returns:</p>
+<ul style="list-style: disc;">
+<li>
+<p style="font-weight: bold;">Boolean:<br />
+<span style="font-weight: normal;">If</span> true <span style="font-weight: normal;">both colors are equal. Otherwise</span> false.</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; font-weight: bold;">fromArray (a) <span style="font-style: italic; font-size: 8pt; font-weight: normal;">[gs.Color] [static]</span></p>
+</td>
+<td>Creates a new color from the specified color-value array. The should have 4 elements with the red, green, blue and alpha color-values in that order. <br />&#160;
+<p style="font-weight: bold;"><span style="font-weight: bold;">Parameters:</span></p>
+<ul style="list-style: disc;">
+<li style="font-weight: bold;">a <span style="font-style: italic; font-size: 8pt; font-weight: normal;">[Number]</span><br />
+<span style="font-weight: normal;">An array of color-values.</span></li>
+</ul>
+<p>&#160;</p>
+<p style="font-weight: bold;">Returns:</p>
+<ul style="list-style: disc;">
+<li style="font-weight: bold;">
+<p style="font-weight: bold;">gs.Color:<br />
+<span style="font-weight: normal;">A new created color with the specified color-values.</span></p>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; font-weight: bold;">rgbToHsl (r, g, b)&#160;<span style="font-style: italic; font-size: 8pt; font-weight: normal;">[Object] [static]</span></p>
+</td>
+<td>
+<p>Converts the specified RGB value to HSL space.</p>
+<p>&#160;</p>
+<p style="font-weight: bold;">Parameters:</p>
+<ul style="list-style: disc;">
+<li><span style="font-weight: bold;">r</span> <span style="font-style: italic; font-size: 8pt;">[Number]</span><br />
+The red value of the color to convert.</li>
+<li><span style="font-weight: bold;">g</span> <span style="font-style: italic; font-size: 8pt;">[Number]</span><br />
+The green value of the color to convert.</li>
+<li><span style="font-weight: bold;">b</span> <span style="font-style: italic; font-size: 8pt;">[Number]</span><br />
+The blue value of the color to convert.</li>
+</ul>
+<p>&#160;</p>
+<p style="font-weight: bold;">Returns:</p>
+<ul style="list-style: disc;">
+<li>
+<p style="font-weight: bold;">Object:<br />
+<span style="font-weight: normal;">The HSL values as object -&gt; {h, s, l}.</span></p>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; font-weight: bold;">rgbToHsl (h, s, l)&#160;<span style="font-style: italic; font-size: 8pt; font-weight: normal;">[Object] [static]</span></p>
+</td>
+<td>
+<p>Converts the specified HSL value to RGB space.</p>
+<p>&#160;</p>
+<p style="font-weight: bold;">Parameters:</p>
+<ul style="list-style: disc;">
+<li style="font-weight: normal;">
+<p style="font-weight: normal;"><span style="font-weight: bold;">h</span> <span style="font-style: italic; font-size: 8pt;">[Number]</span><br />
+The HUE value of the color to convert.</p>
+</li>
+<li style="font-weight: normal;">
+<p style="font-weight: normal;"><span style="font-weight: bold;">s</span> <span style="font-style: italic; font-size: 8pt;">[Number]</span><br />
+The saturation value of the color to convert.</p>
+</li>
+<li style="font-weight: normal;">
+<p style="font-weight: normal;"><span style="font-weight: bold;">l</span> <span style="font-style: italic; font-size: 8pt;">[Number]</span><br />
+The lightness value of the color to convert.</p>
+</li>
+</ul>
+<p style="font-weight: normal;">&#160;</p>
+<p style="font-weight: bold;">Returns:</p>
+<ul style="list-style: disc;">
+<li style="font-weight: normal;">
+<p style="font-weight: normal;"><span style="font-weight: bold;">Object</span>:<br />
+The RGB values as object -&gt; { r, g, b }.</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; font-weight: bold;">set ([red/color=null], [green=null], [blue=null], [alpha=null])</p>
+</td>
+<td>Sets the color values. <br />&#160;
+<p style="font-weight: bold;">Parameters:</p>
+<ul style="list-style: disc;">
+<li><span style="font-weight: bold;">[red/color=null]</span>&#160;<span style="font-style: italic; font-size: 8pt;">[Number] [optional]</span><br />
+The red value of the color OR another color to copy the color values from.</li>
+<li><span style="font-weight: bold;">[green=null]</span> <span style="font-style: italic; font-size: 8pt;">[Number] [optional]</span><br />
+The green value of the color.</li>
+<li><span style="font-weight: bold;">[blue=null]</span> <span style="font-style: italic; font-size: 8pt;">[Number] [optional]</span><br />
+The blue value of the color.</li>
+<li><span style="font-weight: bold;">[alpha=null]</span> <span style="font-style: italic; font-size: 8pt;">[Number] [optional]</span><br />
+The alpha value of the color.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; font-weight: bold;">toString () <span style="font-style: italic; font-size: 8pt; font-weight: normal;">&#160;[static]</span></p>
+</td>
+<td>
+<p>Returns the color as CSS string like rgba(r, g, b, a).</p>
+<p>&#160;</p>
+<p style="font-weight: bold;">Returns:</p>
+<ul style="list-style: disc;">
+<li>
+<p style="font-weight: bold;">String:<br />
+<span style="font-weight: normal;">The CSS string.</span></p>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+<p>&#160;</p>
+<table style="border-collapse: separate; border-collapse: separate;" cellspacing="0" width="100%" border="1">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr style="height: 23px;">
+<td colspan="2">
+<p style="text-align: center;"><span style="font-weight: bold;">Properties</span></p>
+</td>
+</tr>
+<tr style="height: 20px;">
+<td>
+<p style="text-align: center; font-family: Arial, sans-serif;"><span style="font-weight: bold;">alpha</span> <span style="font-style: italic; font-size: 8pt;">[Number]</span></p>
+</td>
+<td><span style="font-family: Arial, sans-serif;">The alpha value of the color.</span></td>
+</tr>
+<tr style="height: 23px;">
+<td>
+<p style="text-align: center; font-family: Arial, sans-serif; font-weight: bold;">BLACK <span style="font-style: italic; font-size: 8pt; font-weight: normal;">[gs.Color] [final] [static]</span></p>
+</td>
+<td><span style="font-family: Arial, sans-serif;">Black color.</span></td>
+</tr>
+<tr style="height: 23px;">
+<td>
+<p style="text-align: center; font-family: Arial, sans-serif;"><span style="font-weight: bold;">blue</span> <span style="font-style: italic; font-size: 8pt;">[Number]</span></p>
+</td>
+<td><span style="font-family: Arial, sans-serif;">The blue value of the color.</span></td>
+</tr>
+<tr style="height: 23px;">
+<td>
+<p style="text-align: center; font-family: Arial, sans-serif;"><span style="font-weight: bold;">green</span> <span style="font-style: italic; font-size: 8pt;">[Number]</span></p>
+</td>
+<td><span style="font-family: Arial, sans-serif;">The green value of the color.</span></td>
+</tr>
+<tr style="height: 23px;">
+<td>
+<p style="text-align: center; font-family: Arial, sans-serif;"><span style="font-weight: bold;">TRANSPARENT</span> <span style="font-style: italic; font-size: 8pt;">[gs.Color]&#160;[final] [static]</span></p>
+</td>
+<td><span style="font-family: Arial, sans-serif;">Transparent color.</span></td>
+</tr>
+<tr style="height: 23px;">
+<td>
+<p style="text-align: center; font-family: Arial, sans-serif;"><span style="font-weight: bold;">WHITE</span> <span style="font-style: italic; font-size: 8pt;">[gs.Color]&#160;[final] [static]</span></p>
+</td>
+<td><span style="font-family: Arial, sans-serif;">White color.</span></td>
+</tr>
+</table>
+<p>&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+</body>
+</html>

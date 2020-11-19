@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Create Game Package</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.5_4";
+</script>
+ <meta name="topic-breadcrumbs" content="Exploring the Editor" />
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+ <p class="Topic_Heading">Create Game Package</p>
+</div>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-family: 'Book Antiqua', serif; font-weight: bold; font-size: 18pt;">O</span>nce you finish your game, you are now ready to share it to the world!</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><img src="CreateGamePackage.png" alt="" style=" border:none; width:100%; max-width:550px;" border="0" /></p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading">General</p>
+<ul style="list-style: disc;">
+<li>
+<p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">Game Title</span> - The game's title.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">Output Folder -</span> The folder where the package will be saved.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">Platform</span> - The target platform you want to export the game for.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">Architecture -</span> &#160;Create a game package for specific computer architectures. This setting is ignored for Web and Mobile platforms.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">Auto-Fullscreen</span> - If checked, the game will start at fullscreen. This setting is ignored for Web and Mobile platforms.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">Encrypt Content -</span> If checked, the game's contents will be encrypted.</p>
+</li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading">Game Package Structure</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">Once your game package has been successfully created, you can find it at the selected location. The file structure of the game package depends on the platform you have selected. If you want to take control over the package-structure, check <a href="Getting_Started.htm">Build &amp; Run</a> section. The following example shows the file structure of a default Windows package.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><img src="image63.gif" alt="" style=" border:none; width:100%; max-width:144px;" border="0" /></p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">You can start the game by executing the Game.exe file. You don't need to know much about all that .dat, .dll, .bin or .pak files. They are part of the Runtime (NW.js) used for to play VN Maker Games on Windows. It is only important that you ship them all out.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">However, here is a quick overview about the other files.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">Game.exe</p>
+<p style="font-family: Arial, sans-serif;">Execute this file to play your game. However, that file doesn't store any game data or something. It just launches the runtime. It is important that you ship out ALL files in the folder and not only the Game.exe file.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">index.html</p>
+<p style="font-family: Arial, sans-serif;">This is the entry point of your game. It is an HTML file because at the time of writing, VN Maker uses HTML5 technology for all supported platforms.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">package.json</p>
+<p style="font-family: Arial, sans-serif;">That file is specific or Windows, Linux and Mac OS X packages. It regular it is not necessary to touch this file. But if you want, you can setup some special settings for the NW.js Runtime. See <a href="http://docs.nwjs.io/en/latest/References/Manifest Format/">NW.js Documentation</a> for more information.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">icon.png</p>
+<p style="font-family: Arial, sans-serif;">The icon which is used for your game window. It doesn't affect the icon of the Game.exe/Game.app. If you want to change that icon, for Windows you can use tools such as Resource Hacker to replace the icon with a custom one.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">signature</p>
+<p style="font-family: Arial, sans-serif;">This file is important if you make your game public. In VN Maker, all games are digitally signed. You can imagine that signature as a certificate that your game was created with a legal version of VN Maker and that the content of your game has not been changed/hacked.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">data</p>
+<p style="font-family: Arial, sans-serif;">Contains all the data files of your game</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">resources</p>
+<p style="font-family: Arial, sans-serif;">Contains all resources of your game</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Common Events</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "3.1.0_10";
+</script>
+ <meta name="topic-breadcrumbs" content="Beginner's Guide > The Basic Foundation" />
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<p class="Topic_Heading">Common Events</p>
+<p>&#160;</p>
+<p><span class="Topic_Start">I</span>n this tutorial we'll teach you about the so called <a href="Common_Events.htm">Common Events</a> you can find in <a href="Database.htm">Database</a>. If you work on a more complex Visual Novel, you will soon or later realize that there are elements, commands, etc. you use very often and maybe copy &amp; paste them again and again because you need them in several scenes in your game.</p>
+<p>&#160;</p>
+<p>That becomes very annoying after sometime, especially if you copy &amp; paste large blocks of commands. Because whenever there is a tiny little change, you have to go through all of your scenes and change it everywhere. Of course you could use <a href="Mass_Edit.htm">Mass Edit</a> and also lots of <a href="Learning_about_Switches.htm">Variables</a>, but even with that it would be still a huge effort.</p>
+<p>&#160;</p>
+<p>To solve that problem, VN Maker provides Common Events. With Common Events, you can store commonly used commands under a name and then execute that commands again and again using the <a href="System_Command.htm#Call_Common_Event">Call Common Event</a> command. Let's check that out next.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Detect a common element in your game</p>
+<p>&#160;</p>
+<p>Let's say in our game, the main character has money, which is one of the key-elements of our game. So in certain scenes, we want to display the character's amount of money at the top-right corner of the screen. To store the amount of money, we will just use a global number variable and call it "Money".</p>
+<p>&#160;</p>
+<p>In one of our scenes, we could easily use the following commands to display the amount of money on screen and then later hide it again.</p>
+<p>&#160;</p>
+<p><img src="image75.gif" alt="" style=" border:none; width:100%; max-width:1092px;" border="0" /></p>
+<p><img src="image76.gif" alt="" style=" border:none; width:100%; max-width:1092px;" border="0" /></p>
+<p>&#160;</p>
+<p>That example looks fine at first, we use</p>
+<p>&#160;</p>
+<p><img src="image79.gif" alt="" style=" border:none; width:100%; max-width:1090px;" border="0" /></p>
+<p>&#160;</p>
+<p>To show a background-box and then we show the amount of money on top of it. More below we use:</p>
+<p>&#160;</p>
+<p><img src="image77.gif" alt="" style=" border:none; width:100%; max-width:1092px;" border="0" /></p>
+<p>&#160;</p>
+<p>to hide it. But what if we want to show &amp; hide the amount of money in other scenes as well? Of course, we can just copy &amp; paste it but wait.... what if we want to change the animation or behavior of the money-display later? Whenever you get that kind of feeling, it is probably a good case for a common event. So let's use common events to solve that case more efficiently.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Create common events</p>
+<p>&#160;</p>
+<p>If we look at the commands from the example above, we can detect two common elements here.</p>
+<p>&#160;</p>
+<p>1. Show the current amount of money</p>
+<p>&#160;</p>
+<p><img src="image80.gif" alt="" style=" border:none; width:100%; max-width:1091px;" border="0" /></p>
+<p>&#160;</p>
+<p>2. Hide the current amount of money</p>
+<p>&#160;</p>
+<p><img src="image77.gif" alt="" style=" border:none; width:100%; max-width:1092px;" border="0" /></p>
+<p>&#160;</p>
+<p>So let's create two new common events in database and call them "Show Money" and "Hide Money".</p>
+<p>&#160;</p>
+<p><img src="CreateTwoCE.PNG" alt="" style=" border:none; width:100%; max-width:272px;" border="0" /></p>
+<p>&#160;</p>
+<p>Let's start with the "Show Money" common event.</p>
+<p>&#160;</p>
+<p><img src="ShowMoneyCode.pnb.PNG" alt="" style=" border:none; width:100%; max-width:1061px;" border="0" /></p>
+<p>&#160;</p>
+<p>First we use <a href="Picture.htm#Show_Picture">Show Picture</a> to display a box-image on the top-right of the screen which will be the background of our money-display. We use the following image:</p>
+<p><img src="ui_back.png" alt="" style=" border:none; width:100%; max-width:341px;" border="0" /></p>
+<p>Next, we use <a href="Text.htm#Show_Text">Show Text</a> to display the amount of money above the background box. We use the <a href="Message.htm#Text_Codes">Text Code</a> "{GN:1}" to display the value of global number variable 1, which contains the character's amount of money, on screen. That's it!</p>
+<p>&#160;</p>
+<p>Let's now take a look at the "Hide Money" common event.</p>
+<p>&#160;</p>
+<p><img src="HideMoneyCode.png" alt="" style=" border:none; width:100%; max-width:949px;" border="0" /></p>
+<p>&#160;</p>
+<p>Here we just erase the text and picture and that's it.</p>
+<p>&#160;</p>
+<p>Now let's put our new created common events in our scene instead of copy &amp; paste our commands over and over again.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Call Common Events</p>
+<p>&#160;</p>
+<p>Let's go back to our scene and replace our copy &amp; pasted commands with our common events.</p>
+<p>&#160;</p>
+<p><img src="image81.gif" alt="" style=" border:none; width:100%; max-width:1089px;" border="0" /></p>
+<p><img src="CE_ExampleCode_1.PNG" alt="" style=" border:none; width:100%; max-width:1090px;" border="0" /></p>
+<p>&#160;</p>
+<p>As we can see, we use <a href="System_Command.htm#Call_Common_Event">Call Common Event</a> command to call our common events. If we call a common event, the commands of that common events are executed and our scene will wait until the common event is finished and has executed all it's commands. There are a lot of more advanced settings and different ways how to call, use and configure common events.</p>
+<p>&#160;</p>
+<p>With that, our show/hide functionality is now stored at a central place in database. So we can edit the show/hide money animations and display just once and don't need to go through all our scenes.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Parallel Common Events</p>
+<p>&#160;</p>
+<p>In our last example we learned how to call common events instead of copy &amp; paste blocks of commands. In this example, we will learn about a new type of common events: Parallel Common Events, also sometimes just called "Parallel Processes".</p>
+<p>&#160;</p>
+<p>A parallel common event is executed in the background independent from the current scene. It doesn't need to be called directly, it automatically runs forever in a loop as long as it's running conditions are met. So parallel common events can be used for certain backgrounds tasks necessary in more complex Visual Novels such as Dating-Sims and more.</p>
+<p>&#160;</p>
+<p>Let's try that out with a new example, a very simple day-night simulation. So what we want is that after a certain amount of time, the screen should turn dark-blue so that it looks like night and then after some time it goes back to normal. So let's create a new common event called "Day / Night Simulation".</p>
+<p>&#160;</p>
+<p><img src="CE_DayNight.png" alt="" style=" border:none; width:100%; max-width:526px;" border="0" /></p>
+<p>&#160;</p>
+<p>What we can see here is that we selected "Auto" as Trigger and not "Call". With "Auto" we say that the common event should start running automatically without any explicit call. We also checked the "Runs parallel" check-box to make sure that the common event runs in parallel without blocking the scene.</p>
+<p>&#160;</p>
+<p>Let's add the following commands to it.</p>
+<p>&#160;</p>
+<p><img src="DayNightCE_Code.png" alt="" style=" border:none; width:100%; max-width:941px;" border="0" /></p>
+<p>&#160;</p>
+<p>As we can see, we first use the <a href="Basic.htm#Wait">Wait</a> command to wait for 60.000 milliseconds, which is one minute. Since our common event runs in parallel, our scene will not be blocked by that wait. After that waiting time is up, we tint the screen slowly into a dark-blue night-like color using the <a href="Screen.htm#Tint_Screen">Tint Screen</a> command to simulate a night-effect.</p>
+<p>&#160;</p>
+<p>After that tint is done, our scene will now look like night. We will next wait for another 60.000 milliseconds using the <a href="Basic.htm#Wait">Wait</a> command and after that we tint the screen with <a href="Screen.htm#Tint_Screen">Tint Screen</a> command back to normal to simulate day-time.</p>
+<p>&#160;</p>
+<p>If we now test our game, no matter in what scene we start, the screen will turn dark after 1 minute and will turn back to normal after another minute of waiting time. That cycle will repeat forever because the parallel common event will run forever in a loop. Since we haven't set any kind of condition in the common event, it will never stop running.</p>
+<p>&#160;</p>
+<p>To manually stop a parallel common event, you can use the <a href="System_Command.htm#Call_Common_Event">End Common Event</a> command. That command stops the common event execution immediately but doesn't reset it's state. However, if the trigger is "Auto" and there is no condition defined, the common event will restart execution immediately. To resume a stopped common event, you can use <a href="System_Command.htm#Resume_Common_Event">Resume Common Event</a> command. That command will resume the common event execution at the point where it has been stopped, that even works if the condition of the common event is not true.</p>
+<p>&#160;</p>
+<p>If you take a look at our common event in database now, you may have noticed that the "Runs parallel" setting can also be enabled if "Call" is selected as trigger. In that case, if you use "Call Common Event", that call is executed asynchronously in parallel to the scene, means that the Call Common Event command will not block the scene, the scene will continue immediately.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Parameterized Common Events</p>
+<p>&#160;</p>
+<p>In the first example we learned how to call common events to avoid copy &amp; paste commonly used blocks of commands. While that is already very powerful, we will go one step further in this example and call a common event with so called "Parameters". A common event with parameters can be seen as a common event template, where you put in placeholders for certain values. Those placeholders, also called "parameters", are replaced with real values at call-time. So when you call the common event, you can specify what values should be put in for the placeholders.</p>
+<p>&#160;</p>
+<p>That is useful if you end up creating common events with almost the same content and only a tiny little change such as a picture id, position, duration value or something. Because then you are running into the copy &amp; paste problem, if you have 10 common events with almost the same logic, if there is a small change, you have to change them all.</p>
+<p>&#160;</p>
+<p>Of course, in that case you could just create lots of global variables and access them from inside the common event. The problem is just that if you work on a huge project, with maybe 100 or 1000 different common events, you will end up with 1000+ different kind of global variables and you will have a hard time to keep the overview, maintain your game and fixing bugs.</p>
+<p>&#160;</p>
+<p>To avoid that, VN Maker provides parameterized common events. Let's try that out next! Let's say in our game, each of the main character's has money and depending on our scene we want to display the amount of money of a certain character. We want to solve that with one parameterized common event in a way that we only need to tell which character and then the common event just displays the amount of money of that character on the top-right of the screen.</p>
+<p>&#160;</p>
+<p>So first let's go to Database and give our main characters a parameter.</p>
+<p>&#160;</p>
+<p><img src="CE_CharacterParameters.PNG" alt="" style=" border:none; width:100%; max-width:296px;" border="0" /></p>
+<p>&#160;</p>
+<p>For more info about Character Parameters, read the <a href="Characters.htm">Characters</a> section.</p>
+<p>&#160;</p>
+<p>Next let's change our "Show Money" common event from the previous example a bit. You may have noticed that there is a "Parameters" section.</p>
+<p>&#160;</p>
+<p><img src="CE_Parameters.png" alt="" style=" border:none; width:100%; max-width:379px;" border="0" /></p>
+<p>&#160;</p>
+<p>Here we can setup all parameters for the common event. There are lots of different parameter configurations available but in our case, we keep it very simple. We just need one number parameter, the ID of the character, so let's add that one by double-clicking "&lt;new&gt;".</p>
+<p>&#160;</p>
+<p><img src="CE_ParameterSetting.png" alt="" style=" border:none; width:100%; max-width:689px;" border="0" /></p>
+<p>&#160;</p>
+<p>Parameter values are passed to the common event through it's local variables. So if we want to pass a number value, the ID of the character, we have to select "Number" and then select a local number variable of the common event to specify where the passed character ID should be stored so that we know how to access it later. For the second selection-box, we select "Characters" instead of "Number Value". The difference is that if we select "Characters", the Parameter-Input Popup-Box will generate a Character Selection Box instead of a number input field. We will see that later if we call that common event.</p>
+<p>&#160;</p>
+<p><img src="CE_ParametersOne.png" alt="" style=" border:none; width:100%; max-width:400px;" border="0" /></p>
+<p>&#160;</p>
+<p>Now let's change the common event's commands a bit.</p>
+<p>&#160;</p>
+<p><img src="CE_Parameterized.png" alt="" style=" border:none; width:100%; max-width:1058px;" border="0" /></p>
+<p>&#160;</p>
+<p>First we use <a href="Character.htm#Get_Parameter">Get Parameter</a> command to get the amount of money from the character we passed as a parameter and put it into local number variable 0002 "Money". Instead of selecting a character directly, we calculate the character by variable and use the local number variable 0001 "Character ID", which is the parameter containing the ID of the character. As a small hint: Select the parameter "Money" first before you calculate the character by variable. Because otherwise the parameter-box will be empty.</p>
+<p>&#160;</p>
+<p>Next we show our background picture and then in <a href="Text.htm#Show_Text">Show Text</a> command we use the <a href="Message.htm#Text_Codes">Text Code</a> {LN:2} to display the content of the common event's local number variable 0002 "Money" which stores the amount of money from the character. That's it, we are done here, so let's save our project and go back to our scene.</p>
+<p>&#160;</p>
+<p><img src="CE_ExampleCode_2.PNG" alt="" style=" border:none; width:100%; max-width:1091px;" border="0" /></p>
+<p><img src="CE_ExampleCode_2_2.PNG" alt="" style=" border:none; width:100%; max-width:1087px;" border="0" /></p>
+<p>&#160;</p>
+<p>If you take look at the Call Common Event command, there is a second field called "Parameters".</p>
+<p>&#160;</p>
+<p><img src="image84.gif" alt="" style=" border:none; width:100%; max-width:1094px;" border="0" /></p>
+<p>&#160;</p>
+<p>&#160;If you click on that one, a dialog box will appear which allows you to specify the values for the common event's parameters.</p>
+<p>&#160;</p>
+<p><img src="CallParameters.png" alt="" style=" border:none; width:100%; max-width:299px;" border="0" /></p>
+<p>&#160;</p>
+<p>Since we only defined one number parameter, the dialog box displays only one number field "Character:". Since we selected "Characters" in the parameter settings, the "number field" is displayed as a character selection box which makes it easier to select a character. We can now just select the character we want or even calculate that parameter value by variable if we click the "..." button. After we specified the parameter values for our Call Common Event command, we can test our game again and see that everything works as before.</p>
+<p>&#160;</p>
+<p>Unfortunately, this example is a little bit overkill because I try to keep this guide simple. It is more to show you how to use parameterized events for your own more complex situations. As a hint: If you end up duplicating common events because of small changes, think about if a parameterized common maybe can solve the problem.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Inline Common Events</p>
+<p>&#160;</p>
+<p>If you create a common event in database, you can check the "Inline" checkbox on the top-right which is unchecked by default.</p>
+<p>&#160;</p>
+<p><img src="image73.gif" alt="" style=" border:none; width:100%; max-width:1008px;" border="0" /></p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p>If a common event is marked as inline:</p>
+<p><img src="image74.gif" alt="" style=" border:none; width:100%; max-width:67px;" border="0" /></p>
+<p>The commands of that common event are copied and pasted into the scene at the position of the "Call Common Event" command at runtime. Since the call of a common event itself costs a little bit extra performance compared to just copy &amp; paste a block of commands, an inline common event can speed things up depending on the case.</p>
+<p>&#160;</p>
+<p>Since the commands of an inline common event are copied and pasted at runtime, there will be no extra performance costs anymore. However, that kind of optimization has a few disadvantages.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li>The local variables used in the inline common event referring to the local variables of the scene/root since the commands are just copied and pasted at runtime. So if you are not sure which local-variables are used, just imagine what would happen if you just copy &amp; paste the commands.</li>
+<li>If you use parameters, the common event cannot be inline.</li>
+<li>If the common event contains any kind of direct or indirect recursion, means if the common event or one of it's sub-calls is calling itself again, it cannot be inline.</li>
+</ul>
+<p>&#160;</p>
+<p>Basically, an inline common event is useful if it is called very often like 1000 0 times in a loop or something. Otherwise it makes not much sense since the performance over-head of a regular common event call is very small.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Single Instance vs. Multiple Instances</p>
+<p>&#160;</p>
+<p>You may have noticed the "Single Instance" check-box for each common event in database which is always checked by default.</p>
+<p>&#160;</p>
+<p><img src="image73.gif" alt="" style=" border:none; width:100%; max-width:1008px;" border="0" /></p>
+<p>&#160;</p>
+<p>If a common event is configured as "Single Instance", the states of it's local variables are not reset. Means that all local variables still have the values from the previous call, which can be an advantage depending on the situation. In addition, there is only one command-interpreter for that common-event no matter how often you call it. That means that recursive calls or parallel calls are not possible and will produce bugs in your game.</p>
+<p>&#160;</p>
+<p>In many cases, Single Instance is fine. But if you want to do multiple parallel calls or if a Common Event calls itself, direct or indirect like through another common event, it makes sense to allow multiple instances. So if you uncheck the "Single Instance" checkbox, each Call Common Event, parallel or not, creates a new own instance with own local variables and an own command-interpreter.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Performance</p>
+<p>&#160;</p>
+<p>When using Common Events, VN Maker tries to optimize it. But there still a few things you should keep in mind.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li>If you call a parameterized common event, the call itself will cost a little bit more performance than executing the block of commands directly in the scene or using an inline common event. Even if it is just a little bit, if you call a parameterized common event 10000 times in a loop it can affect performance depending on the case.</li>
+<li>If you create parallel common events, keep in mind that they run in the background in parallel to the scene. That means the more parallel common events you have, the more performance it will cost.</li>
+<li>If you use Call Common Event with a common event which has "Runs parallel" checked and "Single Instance" unchecked, a new independent instance is created which is running parallel to the scene. Means if you do 10000 calls in a loop, 10000 new instances are created which can slow-down the performance depending on the case.</li>
+<li>If you check the "Inline" checkbox of a common event, the commands are copied and pasted into the scene at runtime, so in that case there will be no performance overhead for the call. However, that does not work with parameterized common events and also not with recursion.</li>
+</ul>
+<p>&#160;</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p>&#160;</p>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Example: Data Bindings</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "5.3.1.0_6";
+</script>
+ <meta name="topic-breadcrumbs" content="Script and Plugin Reference > In-Game UI Documentation > Getting Started" />
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+ <p class="Topic_Heading"><span style="font-family: 'Book Antiqua', serif; font-size: 24pt;">Example: Data Bindings</span></p>
+</div>
+<p>&#160;</p>
+<p><span class="Topic_Start">A</span>fter we learned some basics in the last examples we try something more advanced in this example: Data Bindings. A data-binding allows us to display or even change background-data like game-settings, characters from the database, etc. Because bindings are more complex topic, please check the <a href="igui_doc/index.html">In-Game UI API Reference</a> and the already existing layouts and templates to learn more about bindings.</p>
+<p>&#160;</p>
+<p>The good thing is that if you just want to change the design of the In-Game UI without changing the logic you don't need to understand bindings completely in most cases. A good understanding of bindings is only necessary if you want to develop something new.</p>
+<p>&#160;</p>
+<p>But lets take a look at the following example:</p>
+<p>&#160;</p>
+<p><span class="Code">ui.UIManager.layouts.titleLayout = {</span></p>
+<p><span class="Code">&#160;&#160;"type": "ui.FreeLayout",</span></p>
+<p><span class="Code">&#160;&#160;"frame": [0, 0, Graphics.width, Graphics.height],</span></p>
+<p><span class="Code">&#160;&#160;"controls": [</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"type": "ui.Text",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"sizeToFit": true,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"bindings": [{ "sourceField": "$dataFields.database.characters[0].name", "targetField": "o.text" }]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"alignmentX": "center",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"alignmentY": "center"</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;}</span></p>
+<p><span class="Code">&#160;&#160;]</span></p>
+<p><span class="Code">}</span></p>
+<p>&#160;</p>
+<p>If we test-play our game with that title-layout, we will see a black-screen with the name of the first character centered on the screen. That is because we bound the name-property of the first character to the text-property of our text-control.</p>
+<p>With the bindings property we can add multiple bindings to a control. Lets take a look of the properties of a binding:</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">sourceField</p>
+</li>
+</ul>
+<p>Here we define the source-field we want to write into the target-field. In our case we defined the following source-field using binding-syntax:</p>
+<p>&#160;</p>
+<p><span class="Code">"$dataFields.database.characters[0].name"</span></p>
+<p>&#160;</p>
+<p>With $dataFields we are accessing the current defined data-source for the layout. In most cases that is the default-datasource defined in "DataSource_Default" script. But we will check that later. With "database" we are accessing the database and with "characters" we are accessing the characters-collection. With "[&lt;index&gt;]" we say which character we want to access. In our case it is "0" so we want to access the first character's name using "name" next.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="font-weight: bold; margin-left: -20px;">
+<p style="font-weight: bold;">targetField</p>
+</li>
+</ul>
+<p>Here we define the target-field. The value from source-field will be written into this field. We defined "o.text" as target-field. With "o" we say that we want to access the current object the binding-expression is executed on which is the text-control in our case and with "text" we say we want to write into the text property. That's why the characters's name appears on screen.</p>
+<p>&#160;</p>
+<p>Internally, binding-expressions are just JavaScript formulas. But you shouldn't abuse binding-expression to execute more complex JavaScript code. If the current possibilities are not powerful enough for you, you should just use Formulas or write an own component for that like we will learn in the next example.</p>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Audio Playback</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.3.1.0_3";
+</script>
+ <meta name="topic-breadcrumbs" content="Exploring the Editor > Scene Editor > Scene Content Commands" />
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+ <p class="Topic_Heading">Audio Playback</p>
+</div>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-family: 'Book Antiqua', serif; font-weight: bold; font-size: 18pt;">T</span>he Audio Playback commands are commands that allows you to set and control the music and sounds in your game.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Audio_Defaults" id="Audio_Defaults"></a>Audio Defaults</p>
+<p style="font-family: Arial, sans-serif;">This changes the default values for the Music, Sound and Voice Commands as long as the specific properties in those commands have the lock (<img src="locked-padlock.png" alt="" style=" border:none; width:100%; max-width:16px;" border="0" />) active.</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Music</span> - This affects the Music played in the game.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Volume</span> changes the volume of the music played.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Rate</span> changes the how high or low the music tempo is</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Sound</span> - This affects the Sound effects played in the game.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Volume</span> changes the volume of the sound played.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Rate</span> changes the how high or low the sound tempo is</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Voice</span> - This affects the Voices played in the game.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Volume</span> changes the volume of the voices played.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Rate</span> changes the how high or low the voice&#160;tempo is.</p>
+</li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Play_Music" id="Play_Music"></a>Play Music</p>
+<p style="font-family: Arial, sans-serif;">Plays a Music track.</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">File</span> - The music track that is going to be played.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Volume</span> - The volume of the music played.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Rate</span> - Changes the how high or low the &#160;tempo of the music is.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Fade</span> - The fade-in time for when the music plays.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Layer</span> - The index (ID) of the music being played. 0 being the lowest. This allows you to layer multiple music tracks when necessary.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Play Type</span> - How the music is going to be played.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Normal</span> plays the music normally</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Random</span> allows you to specify a play-time range and pause time such as, how long the music should be played and at the maximum value you set.</p>
+</li>
+<li style="list-style: none; display: inline;">
+<ul style="list-style: disc;">
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Play Time</span> - Its a range in seconds how many seconds the music should play before fade-out.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Pause Time</span> - Its a range in seconds how long the music should pause in between. It also defines how long the music needs to start playing first time.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p>
+<p class="Sub_Heading"><a name="Stop_Music" id="Stop_Music"></a>Stop Music</p>
+<p style="font-family: Arial, sans-serif;">Stops the Music from playing.</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Fade</span> - The fade-out time</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Layer</span> - The index (ID) of the music that you wish to stop.</p>
+</li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Play_Sound" id="Play_Sound"></a>Play Sound</p>
+<p style="font-family: Arial, sans-serif;">Plays a sound effect.</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">File</span> - The sound effect that is going to be played.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Volume</span> - The volume of the sound played.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Rate</span> - Changes the how high or low the tempo of the sound effect is.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Music Effect</span> - Sets the sound effect as a Music Effect (ME) or a fanfare jingle. The music fades out once the ME plays and fades back in after it's over.</p>
+</li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Pause_Music" id="Pause_Music"></a>Pause Music</p>
+<p style="font-family: Arial, sans-serif;">Pauses a Music track and saves its last position.</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Layer</span> - The index (ID) of the music that you wish to pause.</p>
+</li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Resume_Music" id="Resume_Music"></a>Resume Music</p>
+<p style="font-family: Arial, sans-serif;">Plays the paused music track from its last position. As of now, the music that is in layer 0 is the only one affected by the command.</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Layer</span> - The index (ID) of the music that you wish to resume.</p>
+</li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+</body>
+</html>

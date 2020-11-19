@@ -1,0 +1,244 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Scenes</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.3";
+</script>
+ <meta name="topic-breadcrumbs" content="Exploring the Editor" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<p class="Topic_Heading">Scene Editor</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><span class="Topic_Start">I</span>n 
+ Scene Editor, you can easily put your scene together by dragging commands 
+ into the Scene Content or just with your keyboard. The top area contains 
+ the Live Preview which gives a accurate preview of your current scene.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><img src="SceneEditor.png" alt="" style=" border:none; width:100%; max-width:1222px;" border="0" /></p>
+<p style="font-weight: bold; font-size: 18pt; font-family: 'Book Antiqua', serif;">&#160;</p>
+<p class="Sub_Heading">1 - Scenes</p>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">You can organize 
+ your Visual Novel with chapters and scenes. </p>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">Chapter - 
+ <span style="font-weight: normal;">Can contain scenes. This is useful 
+ to organize your scenes by chapters.</span></p>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">Scene <span 
+	 style="font-weight: normal;">- A single scene of the game. A scene 
+ can contain sub-scenes for better organization.</span></p>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p>
+<p class="Sub_Heading"><a name="2_-_Live_Preview"></a>2 - Live Preview</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-family: Arial, sans-serif; 
+	 font-weight: normal;"><img src="LivePreview.png" alt="" style=" border:none; width:100%; max-width:915px;" border="0" /></span></p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">By default, 
+ the top area of the Scene Content contains the Live Preview. The Live 
+ Preview shows you how your current scene looks like at the selected command. 
+ It does that by skipping through your scene until it reaches the selected 
+ command. That means that certain commands such as Wait or Wait for Input 
+ are ignored in Live Preview since it skips everything. Also, for better 
+ stability, commands such as <a href="SceneCommand.htm#Change_Scene">Change 
+ Scene</a> have no effect in Live Preview and all Audio commands are muted 
+ by default.</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">In <a href="Application_Preferences.htm">Application 
+ Preferences</a> you can configure Live Preview to your needs or deactivated 
+ if you don't need it. You can also turn off Live Preview for certain scenes 
+ only if you open <a href="Scene_Properties.htm">Scene Properties</a> from 
+ the scene's <a href="Context_Menu.htm">Context Menu</a>. Check <a href="The_Menu_Bar.htm">The 
+ Menu Bar</a> to learn how you can detach Live Preview and put it on a 
+ second monitor to get more space for commands.</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">You can 
+ also make a mouse click into the Live Preview which will then play your 
+ scene from the selected command normally including timing, waits, etc.</p>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p>
+<p class="Sub_Heading"><span>3 - Scene Content</span></p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">The contents 
+ of the Scene. You can read more information about the individual commands 
+ in the <a href="Scene_Content_Commands.htm">Scene Content Commands</a> 
+ page.</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-weight: bold; font-size: 18pt; font-family: 'Book Antiqua', serif;">4 
+ - Commands</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal; font-size: 12pt;">All 
+ commands sorted by category. You can easily drag &amp; drop a command 
+ into the scene or use your keyboard. See below for more information.</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="SubSubHeading"><a name="Database_Selection"></a>Database Selection</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">For some 
+ commands, you need to select a record/element from the database like a 
+ character or character expression.</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><img src="DataRecordSelection.png" alt="" style=" border:none; width:100%; max-width:778px;" border="0" /></p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">You can 
+ use the search-box at the top to filter the database records so you can 
+ easily find and select the record you want.</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<ul style="list-style: disc;">
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;">Press 
+	 the Tab(<img src="Keyboard_White_Tab.png" alt="" style=" border:none; width:100%; max-width:38px;" border="0" />) key to jump from the search-box to 
+	 the record-selection box and vice-versa.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;">In 
+	 search-box: Press the Escape(<img src="Keyboard_White_Esc.png" alt="" style=" border:none; width:100%; max-width:35px;" border="0" />) key 
+	 to erase the search-box content. Press it again to cancel the selection.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;">In 
+	 record-selection-box: Press the Enter/Return(<img src="Keyboard_White_Enter_Alt.png" alt="" style=" border:none; width:100%; max-width:35px;" border="0" />) 
+	 key to accept the selection.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;">In 
+	 record-selection-box: Press the Escape(<img src="Keyboard_White_Esc.png" alt="" style=" border:none; width:100%; max-width:35px;" border="0" />) key to 
+	 cancel the selection.</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="SubSubHeading">Graphical Editor &amp; Preview</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">For some 
+ commands such as <a href="Character.htm#Join_Scene">Join Character</a> 
+ or <a href="Picture.htm#Show_Picture">Show Picture</a>, a graphical editor 
+ can be used to make the positioning more easy.</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><img src="GraphicalEditor.png" alt="" style=" border:none; width:100%; max-width:672px;" border="0" /></p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-weight: normal; font-family: Arial, sans-serif;">If the 
+ graphical editor window is too big for your screen resolution, just open 
+ <a href="Application_Preferences.htm">Application Preferences</a> and 
+ uncheck the <span style="font-weight: bold;">Original Size Preview</span> 
+ checkbox.</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="SubSubHeading">Groups</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">For some 
+ game-object related commands such as Show Picture, you can specify a group 
+ to distinguish between your own game objects and game objects created 
+ and managed by extensions. You can just click on &quot;<span style="font-weight: bold;">@default</span>&quot; 
+ to switch to another group. </p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><img src="NumberDomain.png" alt="" style=" border:none; width:100%; max-width:1147px;" border="0" /></p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">You can 
+ learn more about groups and how to share content via extensions under 
+ <a href="Domains.htm">Sharing Content.</a></p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="SubSubHeading">Use your Keyboard</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-family: Arial, sans-serif; 
+	 font-weight: normal;">You can also just use your keyboard and start 
+ typing the name of the command you want to add and an auto-complete box 
+ will automatically appear.</span></p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><img src="CommandSearch.png" alt="" style=" border:none; width:100%; max-width:784px;" border="0" /></p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">Press Enter/Return 
+ (<img src="Keyboard_White_Enter_Alt.png" alt="" style=" border:none; width:100%; max-width:35px;" border="0" />) key to add the matched command 
+ to the scene. The command is inserted <span style="font-weight: bold;">after</span> 
+ the selected command.</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">Press Enter/Return 
+ (<img src="Keyboard_White_Shift.png" alt="" style=" border:none; width:100%; max-width:39px;" border="0" />+<img src="Keyboard_White_Enter_Alt.png" alt="" style=" border:none; width:100%; max-width:35px;" border="0" />) key to add the matched command to the scene. 
+ The command is inserted <span style="font-weight: bold;">before</span> 
+ the selected command.</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">Press Escape 
+ (<img src="Keyboard_White_Esc.png" alt="" style=" border:none; width:100%; max-width:35px;" border="0" />) key to cancel the auto-complete box.</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><span>Important Notes &amp; Shortcuts</span></p>
+<ul style="list-style: disc;">
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;">The 
+	 lock (<img src="locked-padlock.png" alt="" style=" border:none; width:100%; max-width:16px;" border="0" />) 
+	 icon indicates that a command will not change such fields or uses 
+	 the default values instead. The actual behavior depends on the implementation 
+	 of the command. Default Values can be changed using the corresponding 
+	 commands like Audio Defaults command, Character Defaults command, 
+	 etc.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;">If 
+	 you change the values manually, the icon shows an unlocked (<img src="padlock.png" alt="" style=" border:none; width:100%; max-width:16px;" border="0" />) icon as a visual indication.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;">Commands 
+	 that have Direct/Calculated position settings always using Top Left 
+	 coordinates for positioning regardless of their anchor point. The 
+	 anchor-point is only used for zooming, rotation, etc. but not for 
+	 positioning.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;">You 
+	 can press Delete (<img src="Keyboard_White_Del.png" alt="" style=" border:none; width:100%; max-width:30px;" border="0" />) to delete the selected command 
+	 or scene. On Mac, you have to press Fn+Backspace.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;">You 
+	 can press the Right Arrow (<img src="Keyboard_White_Arrow_Right.png" alt="" style=" border:none; padding-bottom:-5px; width:100%; max-width:35px;" border="0" />) 
+	 key to put a command under a Condition or disable it when it's not 
+	 under a command that requires tabbed commands. For Example: If a Condition 
+	 command is <span style="font-weight: bold;">true</span> it only executes 
+	 the tabbed commands under it. Otherwise it skips the tabbed commands 
+	 under it.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;">If 
+	 a command is Indented, you can press Left Arrow(<img src="Keyboard_White_Arrow_Left.png" alt="" style=" border:none; padding-bottom:-5px; width:100%; max-width:35px;" border="0" />) 
+	 key to move their position back to the left.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;">You 
+	 can press Up Arrow (<img src="Keyboard_White_Arrow_Up.png" alt="" style=" padding-bottom:-5px; border:none; width:100%; max-width:35px;" border="0" />) 
+	 key to select the previous command. Hold Shift (<img src="Keyboard_White_Shift.png" alt="" style=" border:none; width:100%; max-width:39px;" border="0" />) 
+	 key to extend current selection.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;">You 
+	 can press Down Arrow (<img src="Keyboard_White_Arrow_Down.png" alt="" style=" padding-bottom:-5px; border:none; width:100%; max-width:35px;" border="0" />) 
+	 key to select the next command. Hold Shift (<img src="Keyboard_White_Shift.png" alt="" style=" border:none; width:100%; max-width:39px;" border="0" />) 
+	 key to extend current selection.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;">You 
+	 can press the Tab (<img src="Keyboard_White_Tab.png" alt="" style=" border:none; width:100%; max-width:38px;" border="0" />) key to move to the next field. 
+	 Press Space (<img src="Keyboard_White_Space.png" alt="" style=" padding-bottom:-15px; border:none; width:100%; max-width:55px;" border="0" />) 
+	 key to edit the field.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;">You 
+	 can press Shift+Tab (<img src="Keyboard_White_Shift.png" alt="" style=" border:none; width:100%; max-width:39px;" border="0" />+<img src="Keyboard_White_Tab.png" alt="" style=" border:none; width:100%; max-width:38px;" border="0" />) to 
+	 move to the previous field. Press Space (<img src="Keyboard_White_Space.png" alt="" style=" padding-bottom:-15px; border:none; width:100%; max-width:55px;" border="0" />) 
+	 key to edit the field.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;">You 
+	 can press Shift+Space on a selected field to press the variable-button 
+	 (<img src="Keyboard_White_Shift.png" alt="" style=" border:none; width:100%; max-width:39px;" border="0" />+<img src="Keyboard_White_Space.png" alt="" style=" padding-bottom:-15px; border:none; width:100%; max-width:55px;" border="0" />) instead of directly editing 
+	 the field.</p></li>
+</ul>
+<p>&#160;</p>
+&#160; 
+</body>
+</html>

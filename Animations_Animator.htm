@@ -1,0 +1,328 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Animations</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<link rel="stylesheet" href="highlight/styles/default.css" type="text/css" />
+<script src="highlight/highlight.pack.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+//<![CDATA[
+hljs.initHighlightingOnLoad();
+//]]>
+</script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "4.2.0_2";
+</script>
+ <meta name="topic-breadcrumbs" content="Scripter's Guide > VN Engine" />
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<p class="Topic_Heading">Animations</p>
+<p>&#160;</p>
+<p><span class="Topic_Start">I</span>f you check out the <a href="Animation_Basics.htm">Animation Basics</a> topic you will learn about the basics of animation. The good thing is that VN Maker already provides an animation-system you can just use to simply animate game objects. If you want to know how to use animations together with the In-Game UI System, read the <a href="Example__Animations.htm">Example: Animations</a> topic of the <a href="IGUI_Getting_Started.htm">In-Game UI System</a> documentation.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">The Animator Component</p>
+<p>&#160;</p>
+<p>In VN Maker, the gs.Component_Animator component is one of the key-components for animations. Many game objects already have an animator-component by default which can be easily accessed by the animator-property. Let's try that out quickly:</p>
+<pre>
+<code class="coffee">
+# ===================================================================
+#
+#   Script: Component_TestBedBehavior
+#
+#   Put your name here
+#
+# ===================================================================
+class Component_TestBedBehavior extends gs.Component_SceneBehavior
+    ###*
+    * A test bed scene behavior. Here you can play around with Visual Novel Maker's 
+    * game engine to get a better feeling for everything.
+    ###
+    constructor: -&gt;
+        super
+        
+        # Define resource context property
+        @resourceContext = null
+    
+    ###*
+    * Initializes the scene. 
+    ###
+    initialize: -&gt;
+        super
+        
+        # Create a new resource context
+        @resourceContext = ResourceManager.createContext()
+        
+        # Set current object manager
+        gs.ObjectManager.current = SceneManager
+        
+        # Set it as the current resource context
+        ResourceManager.context = @resourceContext
+        
+    ###*
+    * Disposes the scene.
+    ###  
+    dispose: -&gt;
+        super
+        
+    ###*
+    * Prepares all visual game object for the scene.
+    ###  
+    prepareVisual: -&gt;
+        # Create a new image object
+        @imageObject = new ui.Object_Image()
+        # Set name of image to display
+        @imageObject.image = "diamond-large-on"
+        # Set position of the image on screen
+        @imageObject.dstRect.x = 100
+        @imageObject.dstRect.y = 100
+        # Set the anchor-point to the center of the object so that
+        # rotation goes around the center. 
+        @imageObject.anchor.set(0.5, 0.5)
+        # Add the animator component to the image object with ID "animator"
+        @imageObject.addComponent(new gs.Component_Animator(), "animator")
+        # Initialize the image object
+        @imageObject.setup()
+        
+        # Add the image object to the scene
+        @object.addObject(@imageObject)
+        
+        # We are done with preparing our visual objects. So we can start
+        # the screen transition to fade in our new created objects smoothly.
+        @transition()
+        
+    ###*
+    * Prepares all data for the scene and loads the necessary graphic and audio resources.
+    ### 
+    prepareData: -&gt;
+        # Load the diamond image
+        ResourceManager.getBitmap("Graphics/Pictures/diamond-large-on")
+    
+    ###*
+    * Start the scene. Called once after scene-transition is done and the scene is ready
+    * to start.
+    ###  
+    start: -&gt;
+        # Get the animator-component by it's ID.
+        animator = @imageObject.findComponentById("animator")
+        # Start a move-to animation to move the object to (500, 500) on screen
+        # in 100 frames.
+        animator.moveTo(500, 500, 100)
+        # Start a rotate animation to rotate the object clock-wise with 10 degree
+        # per frame for 100 frames.
+        animator.rotate(0, 10, 100)
+        
+    ###*
+    * Update the scene's content.
+    ###         
+    updateContent: -&gt;
+        
+gs.Component_LayoutSceneBehavior = Component_TestBedBehavior</code>
+</pre>
+<p>First we are creating an image-object and then adding an animator-component to it. That component allows us to execute different kind of animations on our image-object.</p>
+<p>This time, we are using the second parameter of addComponent method to add an ID to easily access that component later because ui.Object_Image does not define an animator-property for quick-access.</p>
+<p>&#160;</p>
+<p>We are also implementing a new method here called "start" which is automatically called when the scene-preparation and transition is done. So it's the perfect place to start some animations on our image-object. We are using the findComponentById method to access our animator component to execute a rotation and move animation on our image-object. If we test our game now we can see a white diamond moving and rotating over the screen.</p>
+<p>&#160;</p>
+<p>There are a lot more animations possible, just check out gs.Component_Animator to learn more and also check <a href="Game_Script_API_Reference.htm">Game Script API Reference</a>.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Extend the Animation System</p>
+<p>&#160;</p>
+<p>The animator-component provides a lot of different kind of animations by default. But maybe that is not enough for you, so instead of writing your own animation system from scratch, you can just extend the default one with an own custom animation type. Let's take a look at the Components &gt; Animation folder in script editor. In that folder, all animation components are stored. So each kind of animation is an own component added to a game object if necessary. For example: If you call myObject.animator.rotate a gs.Component_RotateAnimation is added to the game object to handle the actual rotation.</p>
+<p>&#160;</p>
+<p>To add a new animation type, we just add a new script called "Component_MyCustomAnimation" to the "Animation" folder with the following code.</p>
+<p>&#160;</p>
+<pre>
+<code class="coffee">
+# ===================================================================
+#
+#   Script: Component_MyCustomAnimation
+#
+#   Your name here
+#
+# ===================================================================
+class Component_MyCustomAnimation extends gs.Component_Animation
+    # A custom animation type.
+    constructor: -&gt;
+        super
+        
+        # Create easing-object to animate with different easing-types
+        @easing = new gs.Easing()
+        
+        # Callback function which needs to be called if you
+        @callback = null
+    
+    ###*
+    * Updates our custom-animation.
+    *
+    * @method update
+    ###      
+    update: -&gt;
+        super()
+        # If the easing-object is not running, the animation is not running/done so we
+        # can abort here.
+        if not @easing.isRunning then return
+        
+        # Update the easing-object
+        @easing.updateValue()
+        
+        # Get current value from the easing-object.
+        @object.angle = @easing.value
+        
+        # If easing-object is no longer running after update-call and if
+        # it is not an endless animation, we have to finish.
+        if not @easing.isRunning and not @easing.isEndless
+            # Round up the current value to get an integer value.
+            @object.angle = Math.round(@object.angle)
+            # Call the callback method if set.
+            @callback?(@object, this)
+    ###*
+    * Starts out custom animation.
+    *
+    * @method start
+    * @param {number} duration The duration in frames.
+    * @param {Object} easingType The easing-type.
+    * @param {function} [callback] An optional callback called if the animation is finished. 
+    ### 
+    start: (duration, easingType, callback) -&gt;
+        # Set the easing-type. Use linear-easing by default.
+        @easing.type = easingType || gs.Easings.EASE_LINEAR[gs.EasingTypes.EASE_IN]
+        # Set callback function.
+        @callback = callback
+        
+        # If the duration of the animation is zero or if the game is currently in
+        # skip-mode, we have to skip our animation.
+        if duration == 0 or GameManager.tempSettings.skip
+            # Set the rotation-angle to the end-value immediately.
+            @object.angle += 5 * duration
+            # Call the callback function to finish up.
+            @callback?(@object, this)
+        else
+            # Start the actual animation by providing the current angle and
+            # the end-value of the angle plus the animation duration.
+            @easing.startValue(@object.angle, 5 * duration, duration)
+        
+gs.Component_MyCustomAnimation = Component_MyCustomAnimation</code>
+</pre>
+<p>Our custom animation is a more simplified rotation-animation which just rotates a game object for a given duration with a speed of 5 degrees per frame. The actual animation is done by a gs.Easing object. The gs.Easing class is a helper to execute animations with different kind of easings. Learn more about easings in <a href="Easing_Effects.htm">Easing Effects</a> topic.</p>
+<p>&#160;</p>
+<p>In the update-method, which is called once per frame, the value-property of the easing-object contains the current value of our animation. In our example, it contains the current rotation-angle so we can just assign that value to the angle-property of our game object.</p>
+<p>&#160;</p>
+<p>An easing-object needs to be started first and the updateValue method needs to be called once per frame to update the actual animation. In the start-method, we set the easing-type and then call the startValue-method of the easing-object to start the animation by passing the 3 values.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li>The current value of the property we want to animate</li>
+<li>The value we want to reach</li>
+<li>The duration of the animation in frames</li>
+</ul>
+<p>&#160;</p>
+<p>As long as the animation is not done, the isRunning-property of the easing-object is set to true. So if that property becomes false, we have to stop the animation and call the callback method to finish up.</p>
+<p>&#160;</p>
+<p>So far, our animation-component is ready and we can add to a game object to animate it. If we want to make our custom animation accessible via animator-component, we have to extend that component. So let's create a new script in "Components" folder called "Component_MyCustomAnimator" with the following code. Its important to add that script below the "Component_Animator" script and not above.</p>
+<pre>
+<code class="coffee">
+# ===================================================================
+#
+#   Script: Component_MyCustomAnimator
+#
+#   Your name here
+#
+# ===================================================================
+class Component_MyCustomAnimator extends gs.Component_Animator
+    ###*
+    * An animator extension to add our custom animation.
+    ###
+    constructor: -&gt;
+        super
+        
+    ###*
+    * Rotates the game object clock-wise around its anchor-point with a speed of 5 degree
+    * per frame.
+    *
+    * @method rotateCustom
+    * @param {number} duration The duration in frames.
+    * @param {Object} easingType The easing-type.
+    ### 
+    rotateCustom: (duration, easingType) -&gt;
+        # Create the animation component
+        animation = new gs.Component_MyCustomAnimation()
+        # Add the animation component to the game object.
+        @object.addComponent(animation)
+        # Start our custom animation.
+        animation.start(duration, easingType, @callback)
+    
+gs.Component_Animator = Component_MyCustomAnimator</code>
+</pre>
+<p>As we can see, our component inherits everything from the default animator-component, so we are just adding our new stuff there. We can also see that the animator component is more like a delegate, the actual work is done by single animation components. Very important here is the last line:</p>
+<pre>
+<code class="coffee">
+gs.Component_Animator = Component_MyCustomAnimator</code>
+</pre>
+<p>Here we are "patching" the old animator-component definition so that gs.Component_Animator from now on refers to gs.Component_MyCustomAnimator so everywhere in the game engine gs.Component_MyCustomAnimator is used automatically now. If we go back to our scene, we can easily call our custom animation like this:</p>
+<pre>
+<code class="coffee">
+###*
+* Start the scene. Called once after scene-transition is done and the scene is ready
+* to start.
+###  
+start: -&gt;
+    # Get the animator-component by it's ID.
+    animator = @imageObject.findComponentById("animator")
+    # Start a move-to animation to move the object to (500, 500) on screen
+    # in 100 frames.
+    animator.moveTo(500, 500, 100)
+    # Start a rotate animation to rotate the object clock-wise with 10 degree
+    # per frame for 100 frames.
+    animator.rotateCustom(100)</code>
+</pre>
+<p>So we have to touch nothing else since we patched gs.Component_Animator so that it automatically refers to gs.Component_MyCustomAnimator. That allows us to just call our rotateCustom animation on it. If we test our game now, we can see our game object rotating with 5 degrees per frame but this time its done with our own custom animation type.</p>
+<p>&#160;</p>
+<p>That custom animation is just an example and is not really useful, feel free to implement any kind of animation you have in mind.</p>
+</body>
+</html>

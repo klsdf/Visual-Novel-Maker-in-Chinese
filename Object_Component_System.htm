@@ -1,0 +1,331 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Object Component System</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<link rel="stylesheet" href="highlight/styles/default.css" type="text/css" />
+<script src="highlight/highlight.pack.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+//<![CDATA[
+hljs.initHighlightingOnLoad();
+//]]>
+</script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "4.2.0_1";
+</script>
+ <meta name="topic-breadcrumbs" content="Scripter's Guide > VN Engine" />
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<p class="Topic_Heading">Object Component System</p>
+<p>&#160;</p>
+<p><span class="Topic_Start">V</span>N Maker's actual Visual Novel Engine, which is build on top of the Basic Engine, uses an Object Component System (OCS) design to keep things easier to extend and to maintain.</p>
+<p>&#160;</p>
+<p>For a beginner, it can be difficult to understand the actual advantages and disadvantages of VN Maker's OCS, that's why we will focus more on how to use VN Maker's OCS instead. Over the time you will get a much better feeling for it.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Game Objects</p>
+<p>&#160;</p>
+<p>In VN Maker's OCS, the entire game is separated into so called "Game Objects", maybe you heard that term before. Each game object represents a certain piece of the current game. For example: The background is a game object, the current character is game object, the message box is a game object, etc. A game object can also consists of other game objects.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Components</p>
+<p>&#160;</p>
+<p>A game object itself does not implement any game specific logic or behavior itself because that comes from the so called "Components" which are dynamically added to it. A component implements a specific piece of functionality such as: Rendering/Displaying an object on screen, the behavior of characters, etc. In most cases, components are created with the goal of independency and reusability.</p>
+<p>&#160;</p>
+<p>A game object knows all the components attached to it and a component knows its game object where it is attached to. A component can only be part of one concrete game object. If the game object is destroyed, all its attached components are destroyed too.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Properties</p>
+<p>&#160;</p>
+<p>Besides components, a game object can have a set of properties which can also be seen as kind of components. The big difference is that properties are passiv, just storing data in most of the cases and defining the current state of the game object. A property should be added to a game object if it makes sense to access or process that property from multiple independent components.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Creating a game object</p>
+<p>&#160;</p>
+<p>To create a new game object, we can just create a new instance of gs.Object_Base class and then we can add components and properties to it as we can see in the following example:</p>
+<pre>
+<code class="coffee">
+###*
+* Prepares all visual game object for the scene.
+###  
+prepareVisual: -&gt;
+    # Create a new game object
+    @gameObject = new gs.Object_Base()
+    # Make it visible
+    @gameObject.visible = yes
+    # No offset
+    @gameObject.offset = new gs.Point(0, 0)
+    # Upper-Left origin
+    @gameObject.origin = new gs.Point(0, 0)
+    # Set the position and size of the square on screen.
+    @gameObject.dstRect = new gs.Rect(0, 0, 100, 100)
+    # Set the color of the square.
+    @gameObject.color = new gs.Color(255, 0, 0, 255)
+    # Add a quad-component to the game object. A quad-component displays
+    # the game object as a square/quad on screen.
+    @gameObject.addComponent(new gs.Component_Quad())
+    
+    # Add the game object to the scene
+    @object.addObject(@gameObject)
+    # We are done with preparing our visual objects. So we can start
+    # the screen transition to fade in our new created objects smoothly.
+    @transition()</code>
+</pre>
+<p>&#160;</p>
+<p>If we test this example, we will see a red square at the top-left of the screen. That is only because we added a gs.Component_Quad component to our game object and also a color-property as well as some other necessary properties. The quad-component extends gs.Component_Visual and counts as a visualization component, means it adds functionality to the game object so that it can display itself on screen.</p>
+<p>&#160;</p>
+<p>To be more detailed: The quad-component accesses the color-property of the game object and displays it on screen by using a gs.Quad object from the Basic Engine. If you take a look at the gs.Component_Quad script you can see that yourself, it is a very simple component.</p>
+<p>&#160;</p>
+<p>With @object we are accessing the current scene, which is a game object itself. If we take a look at the class-definition of our test bed we see this:</p>
+<pre>
+<code class="coffee">class Component_TestBedBehavior extends gs.Component_SceneBehavior</code>
+</pre>
+<p>as we can see, our test-bed is actually a component itself. That is because the scene is a game object too, the root game object of the game. All other game objects like characters, backgrounds, etc. are under it.</p>
+<p>&#160;</p>
+<p>Each component has a reference to it's game object called "@object". So with "@object.addObject" we are adding our new created game object to the root game object, the current scene. That is very important because otherwise, our game object wouldn't be part of the current game, it wouldn't be updated and so it wouldn't be visible on screen.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Define a game object template class</p>
+<p>&#160;</p>
+<p>Even if our last example worked fine so far, there are some problems with it: First of all, its is not very comfortable to add all these properties everytime we want to create a red square. Well maybe that could be solved with a factory-pattern, but there is another problem: gs.Object_Base actually does not define a color-property and all the other properties we set. We just dynamically added these properties to the game object which is no problem thanks to the nature of JavaScript / CoffeeScript.</p>
+<p>&#160;</p>
+<p>In other programming languages, something like that would not be possible as is and even in JavaScript / CoffeeScript that approach can block JIT optimizations and slow-down performance. It is recommended to make an own class which extends gs.Object_Base and defines all necessary properties and also optionally instantiates necessary components. You can imagine that class definition as a game object template.</p>
+<p>&#160;</p>
+<p>The above example was only to show that the behavior and visual representation is not implemented in the game object's class itself but in multiple independent components instead.</p>
+<p>&#160;</p>
+<p>So let's create an own game object template next to display squares on screen much easier. First we need to add a new script called "Object_Square" to the "Objects" folder. We put the following code in:</p>
+<pre>
+<code class="coffee">
+# Define a new class which inherits from gs.Object_Base and serves as a
+# game object template for squares.
+class Object_Square extends gs.Object_Base
+    constructor: (color) -&gt;
+        super
+        
+        # Make it visible
+        @visible = yes
+        # No offset
+        @offset = new gs.Point(0, 0)
+        # Upper-Left origin
+        @origin = new gs.Point(0, 0)
+        # Set the position and size of the square on screen.
+        @dstRect = new gs.Rect(0, 0, 100, 100)
+        # Set the color of the square.
+        @color = color
+        # Add a quad-component to the game object. A quad-component displays
+        # the game object as a square/quad on screen.
+        @addComponent(new gs.Component_Quad())
+gs.Object_Square = Object_Square</code>
+</pre>
+<p>So we define a new class Object_Square and inherit from gs.Object_Base. In the constructor we are taking the square-color as a parameter and just defining all the necessary properties and also adding the quad-component. Now we go back to our test-bed component and change prepareVisual a bit:</p>
+<pre>
+<code class="coffee">
+###*
+* Prepares all visual game object for the scene.
+###  
+prepareVisual: -&gt;
+    # Create a new game object
+    @gameObject = new gs.Object_Square(new gs.Color(255, 0, 0))
+    # Add the game object to the scene
+    @object.addObject(@gameObject)
+    # We are done with preparing our visual objects. So we can start
+    # the screen transition to fade in our new created objects smoothly.
+    @transition()</code>
+</pre>
+<p>That looks much better and more comfortable now. We just need to create a new gs.Object_Square object, passing the color we want and then adding it to our scene and that's it.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Work with existing game object and component classes</p>
+<p>&#160;</p>
+<p>VN Maker comes with a set of game object and component classes forming the actual Visual Novel engine. It provides game object templates for backgrounds, characters, messages and much more. In the following example we will setup a very simple scene with a background, a character and a message in it.</p>
+<pre>
+<code class="coffee">
+###*
+* Prepares all visual game object for the scene.
+###  
+prepareVisual: -&gt;
+    # Create a new background object
+    @backgroundObject = new vn.Object_Background()
+    # Set the background image
+    @backgroundObject.image = "Bench_Morning"
+    # Initialize the game object
+    @backgroundObject.setup()
+    
+    # Get character data at 0006 in database
+    characterData = RecordManager.characters[5]
+    # Create a new character object. We are passing the character data to it.
+    @characterObject = new vn.Object_Character(characterData)
+    # We set the expression to the default expression of the character defined in database.
+    @characterObject.expression = RecordManager.characterExpressions[characterData.defaultExpressionId]
+    # Initialize the game object.
+    @characterObject.setup()
+    # Center the character on x-axis
+    @characterObject.dstRect.x = (Graphics.width - @characterObject.dstRect.width) / 2
+    # Update the character object manually to apply latest changes before the scene
+    # becomes visible.
+    @characterObject.update()
+    
+    # Create black-transparent message background object
+    @messageBackgroundObject = new gs.Object_Square(new gs.Color(0, 0, 0, 160))
+    # Set z-index to 800 to make sure it is displayed above the background + character
+    @messageBackgroundObject.zIndex = 800
+    # Set position and size. We place it at the bottom of the screen.
+    @messageBackgroundObject.dstRect.set(0, Graphics.height - 150, Graphics.width, 150)
+    # Initialize the message background object.
+    @messageBackgroundObject.setup()
+   
+    # Create a message object to display a message on screen.
+    @messageObject = new ui.Object_Message()
+    # Set position and size of the message
+    @messageObject.dstRect.set(0, Graphics.height - 150, Graphics.width, 150)
+    # Initialize the message object.
+    @messageObject.setup()
+    # Add a single message to the message object
+    @messageObject.behavior.addMessage("Hey! How is it going?", null, no, yes)
+ 
+    # Add the background object to the scene
+    @object.addObject(@backgroundObject)
+    # Add the character object to the scene
+    @object.addObject(@characterObject)
+    # Add the message background object to the scene
+    @object.addObject(@messageBackgroundObject)
+    # Add the message object to the scene
+    @object.addObject(@messageObject)
+    
+    # We are done with preparing our visual objects. So we can start
+    # the screen transition to fade in our new created objects smoothly.
+    @transition()
+    
+###*
+* Prepares all data for the scene and loads the necessary graphic and audio resources.
+### 
+prepareData: -&gt;
+    # Load the background image
+    ResourceManager.getBitmap("Graphics/Backgrounds/Bench_Morning")
+    # Load the character expression image
+    ResourceManager.getBitmap("Graphics/Characters/JaneDate_Normal")</code>
+</pre>
+<p>As we can see above, a background can easily be created using vn.Object_Background and just setting the image-property to the name of the background. A character can be added using vn.Object_Character class and a message using ui.Object_Message. We also use our previously created own game object template gs.Object_Square to display a dark background for our message to improve readability.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Communication between game objects</p>
+<p>&#160;</p>
+<p>It is a common scenario that two or more game objects need to communicate with each other. For example, if the player clicks on a button object, the scene object needs to get informed about that click to trigger an action. In VN Maker, game objects can communicate with each other using the gs.Component_EventEmitter component. That component allows a game object to send messages and allows other game objects to register for those messages to get informed as we can see in the following example:</p>
+<pre>
+<code class="coffee">
+###*
+* Prepares all visual game object for the scene.
+###  
+prepareVisual: -&gt;
+    # Create a colored square object
+    @squareObject = new gs.Object_Square(new gs.Color(255, 0, 0))
+    # Place it at the center of the game window
+    @squareObject.dstRect.set((Graphics.width - 100) / 2, (Graphics.height - 100) / 2, 100, 100)
+    # Initialize the game object.
+    @squareObject.setup()
+    
+    # Create a hotspot object to catch mouse-clicks from the user.
+    @hotspotObject = new ui.Object_Hotspot()
+    # Place the hotspot at the same location and same size as the square object.
+    @hotspotObject.dstRect.set((Graphics.width - 100) / 2, (Graphics.height - 100) / 2, 100, 100)
+    # Register for the "click" message/event. The events-property is a quick-accessor to the event-emitter component.
+    @hotspotObject.events.on "click", =&gt;
+        # If the hotspot gets clicked we change the color of the square to blue
+        @squareObject.color = new gs.Color(0, 0, 255)
+    # Initialize the hotspot object
+    @hotspotObject.setup()
+    
+    # Add the square object to the scene
+    @object.addObject(@squareObject)
+    # Add the htospot to the scene.
+    @object.addObject(@hotspotObject)</code>
+</pre>
+<p>We display a red square on screen using our custom gs.Object_Square game object. Then we add a hotspot, an area which responds to mouse-activity, and place it above the red square. Our scene-object then registers for the "click" message of our hotspot object, so when the hotspot gets clicked the callback-function is called and will set the square color to blue. So if we test our game and click on the red square it will turn into blue.</p>
+<p>&#160;</p>
+<p>However, the above approach has the disadvantage that both game objects need to know each other. The hotspot object needs to be accessible for the scene-object so that it can register itself for the "click" message. That creates a dependency between those two game object, which is totally fine in some cases but in other cases we need to keep things more independent.</p>
+<p>&#160;</p>
+<p>That's where gs.GlobalEventManager comes into play, which is itself just a global gs.Component_EventEmitter object. The global event manager acts like a notification center between two or more game objects so that the game objects no longer need to know each other directly. For example: A game object wants to send a message that it was clicked by the user. But instead of informing a certain registered game object, it just tells the global event manager that it has been clicked and then the global event manager will inform all game objects which are interested in that kind of message.</p>
+<pre>
+<code class="coffee">
+###*
+* Prepares all visual game object for the scene.
+###  
+prepareVisual: -&gt;
+    # Create a colored square object
+    @squareObject = new gs.Object_Square(new gs.Color(255, 0, 0))
+    # Place it at the center of the game window
+    @squareObject.dstRect.set((Graphics.width - 100) / 2, (Graphics.height - 100) / 2, 100, 100)
+    # Initialize the game object.
+    @squareObject.setup()
+    
+    # Create a hotspot object to catch mouse-clicks from the user.
+    @hotspotObject = new ui.Object_Hotspot()
+    
+    # Place the hotspot at the same location and same size as the square object.
+    @hotspotObject.dstRect.set((Graphics.width - 100) / 2, (Graphics.height - 100) / 2, 100, 100)
+    # Register for the "click" message/event. The events-property is a quick-accessor to the event-emitter component.
+    @hotspotObject.events.on "click", (sender) =&gt;
+        # Fire an event through global event manager
+        gs.GlobalEventManager.emit "hotspotClicked", sender
+    # Initialize the hotspot object
+    @hotspotObject.setup()
+    
+    # Register for "hotspotClicked" message
+    gs.GlobalEventManager.on "hotspotClicked", (sender) =&gt;
+        # If the hotspot gets clicked we change the color of the square to blue
+        @squareObject.color = new gs.Color(0, 0, 255)
+    
+    # Add the square object to the scene
+    @object.addObject(@squareObject)
+    # Add the hotspot to the scene.
+    @object.addObject(@hotspotObject)
+    
+    # We are done with preparing our visual objects. So we can start
+    # the screen transition to fade in our new created objects smoothly.
+    @transition()</code>
+</pre>
+<p>In the above example we can see that now our scene object gets informed without knowing the hotspot object directly because the communication goes over gs.GlobalEventManager. So both parties, the hotspot object and the scene object don't need to know each other. That way of communication is useful if the kind and amount of interested game objects is not clear and if those game objects are not accessible or have no knowledge about each other.</p>
+<p>&#160;</p>
+<p>However, the above approach should not be abused as the standard way of communication because the disadvantage is that a game object which registered for global event manager gets informed any time that message is sent no matter from what game object. In case of a simple "click" message, our scene object gets informed about every click message, not only from the panel object but from any game object which sends a "click" message via global event manager.</p>
+</body>
+</html>

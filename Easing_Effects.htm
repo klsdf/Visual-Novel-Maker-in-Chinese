@@ -1,0 +1,208 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Easing Effects</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.3.1_1";
+</script>
+ <meta name="topic-breadcrumbs" content="Exploring the Editor > Scene Editor" />
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+ <p class="Topic_Heading">Easing Effects</p>
+</div>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-family: 'Book Antiqua', serif; font-weight: bold; font-size: 18pt;">E</span>asing is an animation technique that adds acceleration and deceleration to objects you want to move.</p>
+<p style="font-family: Arial, sans-serif;">There are four types of Easing animations: Linear, Ease In, Ease Out, Ease In/Out.</p>
+<p style="font-family: Arial, sans-serif;">While there are seven types of Varied Tweens: <span style="font-family: Arial, sans-serif;">Quadratic, Quartic, Cubic, Sinusoidal (Sine), Qintic, Exponential and Circula.</span></p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><img src="EasingsNew.gif" alt="" style=" border:none; width:100%; max-width:429px;" border="0" /></p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading">Linear</p>
+<p>Linear means that the object will animate in equal amounts of value/velocity and time.</p>
+
+<table class="SimplyCentered" style="border-collapse: separate; border-collapse: separate;" cellspacing="0px" width="100%" border="1">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr class="t1st">
+<td>
+<p style="text-align: center;"><span style="font-weight: bold;">Linear</span></p>
+<p style="text-align: center;"><span style="font-weight: bold;"><img src="linear.png" alt="" style=" border:none; width:100%; max-width:256px;" border="0" />&#160;</span>&#160;</p>
+<p>There is no acceleration or deceleration</p>
+<p>&#160;</p>
+</td>
+<td>
+<p style="text-align: center;">&#160;</p>
+<p style="text-align: center;"><span style="font-weight: bold;"><img src="linearnew.gif" alt="" style=" border:none; width:100%; max-width:178px;" border="0" />&#160;</span>&#160;</p>
+<p style="text-align: center;">&#160;</p>
+</td>
+</tr>
+</table>
+
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading">Ease In</p>
+<p style="font-family: Arial, sans-serif;">Ease In means the object will start from zero value/velocity and then speeds up.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+
+<table class="SimplyCentered" style="border-collapse: separate; border-collapse: separate;" cellspacing="0px" width="100%" border="1">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr class="t1st">
+<td>
+<p style="text-align: center;"><img src="easequadin.png" alt="" style=" border:none; width:100%; max-width:256px;" border="0" /></p>
+<p>Accelerating from zero value</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+</td>
+<td>
+<p style="text-align: center; font-weight: bold;"><img src="EaseIn-New.gif" alt="" style=" border:none; width:100%; max-width:894px;" border="0" /></p>
+</td>
+</tr>
+</table>
+
+<p style="font-weight: bold;">&#160;</p>
+<p class="Sub_Heading"><span style="font-weight: bold; font-size: 18pt; font-family: 'Book Antiqua', serif;">Ease Out</span></p>
+<p style="font-family: Arial, sans-serif;">Ease Out means the object will start fast and then slows down to a stop.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+
+<table class="SimplyCentered" style="border-collapse: separate; border-collapse: separate;" cellspacing="0px" width="100%" border="1">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr class="t1st">
+<td>
+<p style="text-align: center;"><img src="easequadout.png" alt="" style=" border:none; width:100%; max-width:256px;" border="0" /></p>
+<p style="text-align: center;">Decelerating to zero value</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+</td>
+<td>
+<p style="text-align: center; font-weight: bold;"><img src="EaseOut.gif" alt="" style=" border:none; width:100%; max-width:894px;" border="0" /></p>
+</td>
+</tr>
+</table>
+
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><span style="font-weight: bold; font-size: 18pt; font-family: 'Book Antiqua', serif;">Ease In/Out</span></p>
+<p style="font-family: Arial, sans-serif;">Ease In/Out is half-half of the motion of Ease In and Ease Out. A visual example of Ease In/Out movement is an Elevator.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+
+<table class="SimplyCentered" style="border-collapse: separate; border-collapse: separate;" cellspacing="0px" width="100%" border="1">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr class="t1st">
+<td>
+<p style="text-align: center;"><img src="easequadinout.png" alt="" style=" border:none; width:100%; max-width:256px;" border="0" /></p>
+<p style="text-align: center;">Accelerating until halfway</p>
+<p style="text-align: center;">where it decelerates.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+</td>
+<td>
+<p style="text-align: center; font-weight: bold;"><img src="EaseInOut.gif" alt="" style=" border:none; width:100%; max-width:894px;" border="0" /></p>
+</td>
+</tr>
+</table>
+
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading">Varied Tweens</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">Varied Tweens are just different ways to do the easing motions based on a certain equation.</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">What's listed here is nothing more than a quick summary of the tweens. If you would like a more in-depth explanation, we will provide the links below.</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<ul style="list-style: disc;">
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Quadratic Easing</span> - Also known as 'normal' easing, the motion is based on a square variable (t<span style="vertical-align: Super;">2</span>).</p>
+</li>
+</ul>
+<ul style="list-style: disc;">
+<li style="font-weight: bold;">
+<p style="font-family: Arial, sans-serif; font-weight: bold;">Cubic&#160;Easing <span style="font-weight: normal;">- The motion is based on the power of three (t</span><span style="vertical-align: Super; font-weight: normal;">3</span><span style="font-weight: normal;">) and as a result, has a curved motion.</span></p>
+</li>
+</ul>
+<ul style="list-style: disc;">
+<li style="font-weight: bold;">
+<p style="font-weight: bold; font-family: Arial, sans-serif;">Quartic Easing <span style="font-weight: normal;">-</span> <span style="font-weight: normal;">The motion is based on the power of four (t</span><span style="vertical-align: Super; font-weight: normal;">4</span><span style="font-weight: normal;">) and as a result, applies a bend in the curved motion.</span><br />
+<span style="font-weight: normal;">This causes the acceleration to be more exaggerated.</span></p>
+</li>
+<li style="font-weight: bold;">
+<p style="font-family: Arial, sans-serif; font-weight: bold;">Quintic Easing <span style="font-weight: normal;">- The motion is based on the power of five(t</span><span style="vertical-align: Super; font-weight: normal;">5</span><span style="font-weight: normal;">) this causes the motion curve to be more pronounced. It starts quite slow then becomes quite fast.</span></p>
+</li>
+</ul>
+<ul style="list-style: disc;">
+<li style="font-weight: bold;">
+<p style="font-family: Arial, sans-serif; font-weight: bold;">Sinusoidal (Sine) Easing <span style="font-weight: normal;">- The equation is based on a sine or cosine (p(t) = sin(t × π/2) which both results to a sine wave motion.</span></p>
+</li>
+<li style="font-weight: bold;">
+<p style="font-family: Arial, sans-serif; font-weight: bold;">Exponential Easing <span style="font-weight: normal;">- The motion is something that resembles a slope. You have precise control over the duration of the tween,</span> <span style="font-family: Arial, sans-serif; font-weight: normal;">and can jump to any point in time without running the tween from the starting point.</span></p>
+</li>
+<li style="font-weight: bold;">
+<p style="font-family: Arial, sans-serif; font-weight: bold;">Circula Easing <span style="font-weight: normal;">- This is based on the equation for half of a circle, which uses a square root. Similar to Quintic and Exponential, the acceleration for circular easing is dramatic and sudden than the others.</span></p>
+</li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">For more information and visual guide, you can visit the websites below:</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<ul style="list-style: disc;">
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><a href="http://robertpenner.com/easing/" target="_blank">Robert Penner's Website</a></p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><a href="http://easings.net/" target="_blank">Easings.net</a></p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><a href="https://developers.google.com/web/fundamentals/design-and-ui/animations/the-basics-of-easing?hl=en" target="_blank">The Basics of Easing by Google</a></p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><a href="https://msdn.microsoft.com/en-us/library/ee308751.aspx" target="_blank">MSDN Easing Functions</a></p>
+</li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<div style="width: 100%; position: relative;" id="footer">
+ <p style="color: #808080;">The Graph Images on this page are based on Paul Lewis's <a href="https://developers.google.com/web/fundamentals/design-and-ui/animations/the-basics-of-easing?hl=en" target="_blank" style="color: #808080;">The Basics of Easing</a> graphs under <a href="http://creativecommons.org/licenses/by/3.0/" style="color: #808080;">Creative Commons Attribution 3.0 License</a>.</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Scene</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.3.1.0_6";
+</script>
+ <meta name="topic-breadcrumbs" content="Exploring the Editor > Scene Editor > Scene Content Commands" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">Scene</p>
+</div>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-family: 'Book Antiqua', serif; 
+												 font-weight: bold; font-size: 18pt;">T</span>he 
+ Scene commands are used for changing scenes or transitions. It also allows 
+ you to call specific layouts that can only be accessed through the menu 
+ or scripts.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Change_Scene" id="Change_Scene"></a>Change 
+ Scene</p>
+<p style="font-family: Arial, sans-serif;">Move to a new scene.</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Scene</span> - Specifies the new scene 
+	 to move to.</p></li>
+	<li style="margin-left: -20px;"><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Save Previous</span> - Determines if the 
+	 current scene should be saved so it is possible to go back to that 
+	 scene using the <a href="#Previous_Scene">Previous Scene</a> command. 
+	 That is useful for a scene-based In-Game UI.</p></li>
+	<li style="margin-left: -20px;"><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Duration</span> - Sets the fade in and 
+	 fade out time when moving to a new scene.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Erase 
+	 Objects</span> &#160;- Removes certain objects when moving to a new 
+	 scene.</p></li>
+	<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Erase 
+	 Picture</span> - Removes all currently displayed pictures when moving 
+	 to a new scene.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Erase Texts</span> - Removes all currently 
+	 displayed texts when moving to a new scene.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Erase Videos -</span> Removes all currently 
+	 displayed videos when moving to a new scene.</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Previous_Scene" id="Previous_Scene"></a>Previous 
+ Scene</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">Returns 
+ to the previous scene. That only works if <a href="#Change_Scene">Change 
+ Scene</a> was used with Save Previous set to Yes.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Change_Transition" id="Change_Transition"></a>Change 
+ Transition</p>
+<p style="font-family: Arial, sans-serif;">Visually changes how moving 
+ from one scene to another appears by using a Transition/Mask Image.</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">File</span> - The Mask image file set.</p></li>
+	<li style="margin-left: -20px;"><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Vague</span> - Sets the smoothness of the 
+	 mask. The higher it is, the smoother it becomes (0-255 value).</p></li>
+	<li style="margin-left: -20px;"><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Duration</span> - Sets the time length 
+	 of the scene transition.</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Switch_Layout" id="Switch_Layout"></a>Switch 
+ Layout</p>
+<p style="font-family: Arial, sans-serif;">Calls a UI Menu/Layout that 
+ can only be accessed through menu commands in-game. This includes but 
+ not limited to, Title Screen, Save menu, etc.</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Name</span> - The layout you want to call.</p></li>
+	<li style="margin-left: -20px;"><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Save Previous</span> - This command allows 
+	 you to switch back to the previous scene when using the back button. 
+	 This is useful for custom menus.</p></li>
+	<li style="margin-left: -20px;"><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Duration</span> - Sets the fade-in time 
+	 of the scene transition.</p></li>
+</ul>
+<p style="font-weight: normal; font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Call_Scene" id="Call_Scene"></a>Call Scene</p>
+<p style="font-family: Arial, sans-serif;">Calls the selected scene in 
+ the same way like a Common Event. It does <span style="font-weight: bold;">not</span> 
+ <span>switch to the selected scene, it just executes its commands synchronously.</span></p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Scene</span> - Specifies the new scene 
+	 to call.</p></li>
+	<li style="margin-left: -20px;"><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Duration</span> - Sets the fade in and 
+	 fade out time when moving to a new scene.</p></li>
+</ul>
+</body>
+</html>

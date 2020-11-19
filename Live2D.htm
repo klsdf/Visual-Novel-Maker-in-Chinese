@@ -1,0 +1,428 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Live2D</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.3.1.0_8";
+</script>
+ <meta name="topic-breadcrumbs" content="Exploring the Editor > Scene Editor > Scene Content Commands" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">Live2D&#160;Commands</p>
+</div>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-family: 'Book Antiqua', serif; 
+												 font-weight: bold; font-size: 18pt;">T</span>he 
+ Live2D commands are used to display Live2D models on the screen.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><span style="font-weight: bold; font-size: 18pt; 
+							 font-family: 'Book Antiqua', serif;"><span>Important 
+ Notes</span></span></p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;">The commands 
+	 [Move Character], [Move Character along Path], [Zoom Character], [Shake 
+	 Character] and [Blend Character] from <a href="Character.htm">Characters</a> 
+	 category affect Live2D models too.</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Live2D_Join_Scene" id="Live2D_Join_Scene"></a>Live2D 
+ Join Scene</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-family: Arial, sans-serif; 
+												 font-weight: normal;">Lets 
+ a Live2D Character join the scene.</span></p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Character</span> 
+	 - The character to join.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Model</span> 
+	 - The Live2D model to use.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Position</span> 
+	 - The position of the Live2D character.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Predefined</span> <span>a</span>llows to 
+	 select one of the predefined positions configured in Database &gt; 
+	 System &gt; Predefined Object Positions.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Direct</span> allows you to set the position 
+	 using the graphical editor.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Calculated</span> allows you to calculate 
+	 the position by variable.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Duration</span> 
+	 - The duration of the join-animation in milliseconds.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Continue</span> will make the scene immediately 
+	 continue.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Wait</span> will make the scene wait until 
+	 the join animation is done.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Effects</span> 
+	 - These options affect how the Character will appear.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Easing</span> sets the tween movement of 
+	 the character. More information can be seen in <a href="Easing_Effects.htm">Easing 
+	 Effects</a> page.</p></li>
+	<li><p style="font-weight: bold; font-family: Arial, sans-serif;">Motion 
+	 Blur <span style="font-weight: normal;">- Set Yes to apply motion 
+	 blur, No to turn it off.</span></p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-weight: bold; font-family: Arial, sans-serif;">Spawn 
+		 Time <span style="font-weight: normal;">- The amount of frames 
+		 after a new copy is created.. By default, the amount is 2.</span></p></li>
+		<li><p style="font-weight: bold; font-family: Arial, sans-serif;">Dissolve 
+		 Speed <span style="font-weight: normal;">- The rate at which the 
+		 spawned copies dissipate. Specifically, the opacity of the copies 
+		 are dropped every frame.</span></p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: bold;"><span 
+		 style="font-family: Arial, sans-serif; font-weight: bold;">Opacity</span> 
+		 <span style="font-family: Arial, sans-serif; font-weight: normal;">- 
+		 The opacity the copied image starts at the time it is spawned. 
+		 By default, it is at 100.<br />
+		For example, if the dissolve speed is 2, the shadow/ghost/particle 
+		 is completely invisible/dead after 50 frames.</span></p></li>
+	</ul></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Display</span> 
+	 - Allows you to specify the display order and anchor for the character.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Anchor</span> sets the anchor point of 
+	 your character between top-left and center. Setting the anchor to 
+	 center is only important when the zoom and rotation commands will 
+	 used and will not affect positioning.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Z-Order</span> sets the display order of 
+	 the characters.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Viewport</span>&#160;- The viewport the 
+	 character will be assigned to. The viewport determines if the character 
+	 gets affected by camera-movements or screen effects or not.</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Scene</span> - The character is assigned 
+		 to the scene-viewport and behaves like an object which belongs 
+		 to the scene so it gets affected by camera-movements and screen 
+		 effects.</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">User Interface</span> - The character 
+		 is assigned to the ui-viewport and behaves like an object which 
+		 belongs to the user interface so it doesn't get affected by camera-movements 
+		 and screen effects.</p></li>
+	</ul></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p>
+<p class="Sub_Heading"><a name="Live2D_Exit_Scene" id="Live2D_Exit_Scene"></a>Live2D 
+ Exit Scene</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-family: Arial, sans-serif; 
+												 font-weight: normal;">Lets 
+ a Live2D Character exit the scene.</span></p>
+<ul style="list-style: disc;">
+	<li style="font-family: Arial, sans-serif; margin-left: -20px;"><p 
+		 style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Character</span> - The character to remove 
+	 from scene.</p></li>
+	<li style="font-family: Arial, sans-serif; margin-left: -20px;"><p 
+		 style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Duration</span> - The duration of the exit 
+	 animation in milliseconds.</p></li>
+	<li style="font-family: Arial, sans-serif;"><p style="font-family: Arial, sans-serif; 
+													 font-weight: normal;"><span 
+	 style="font-weight: bold;">Continue</span> will make the scene immediately 
+	 continue.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Wait</span> will make the scene wait until 
+	 the exit animation is done.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Effects</span> 
+	 - These options affect how the Character will disappear.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Easing</span> sets the tween movement of 
+	 the character. More information can be seen in <a href="Easing_Effects.htm">Easing 
+	 Effects</a> page.</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Animation</span> sets the movement of the 
+	 character.</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+		 style="font-weight: bold;">Movement</span> moves the character 
+		 out of the screen in Left/Top/Right/Bottom direction.</p></li>
+		<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+		 style="font-weight: bold;">Blending</span> allows you to fade 
+		 out the Character.</p></li>
+		<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+		 style="font-weight: bold;">Masking</span> allows you to mask the 
+		 Character to a Masks file.</p></li>
+		<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+			<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+			 style="font-family: Arial, sans-serif; font-weight: bold;">Vague</span> 
+			 <span style="font-family: Arial, sans-serif; font-weight: normal;">the 
+			 smoothness of the mask edges.</span></p></li>
+		</ul></li>
+	</ul></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Live2D_Motion" id="Live2D_Motion"></a>Live2D 
+ Motion</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-family: Arial, sans-serif; 
+												 font-weight: normal;">Sets 
+ a new motion for the Live2D character.</span></p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Character</span> 
+	 - The Live2D character to set the motion for.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Motion</span> 
+	 - The motion to set.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Repeat</span> 
+	 - Indicates if the motion should be repeated.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Duration</span> 
+	 - The duration of the exit animation in milliseconds.</p></li>
+	<li style="font-family: Arial, sans-serif;"><p style="font-family: Arial, sans-serif; 
+													 font-weight: normal;"><span 
+	 style="font-weight: bold;">Continue</span> will make the scene immediately 
+	 continue.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Wait</span> will make the scene wait until 
+	 the exit animation is done.</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Live2D_Motion_Group" id="Live2D_Motion_Group"></a>Live2D 
+ Motion Group</p>
+<p style="font-family: Arial, sans-serif;">Sets a new motion-group for 
+ the Live2D character. A motion-group is a set of regular motions configured 
+ in the Live2D file which can be played randomly or in order.</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Character</span> 
+	 - The Live2D character to set the motion-group for.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Motion 
+	 Group</span> - The motion-group to set.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Repeat</span> 
+	 - Indicates if the motion-group should be repeated.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Duration</span> 
+	 - The duration of the exit-animation in milliseconds.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Continue</span> will make the scene immediately 
+	 continue.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Wait</span> will make the scene wait until 
+	 the exit animation is done.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Fade-In</span> 
+	 - Adds a fade-in time for motions. If set to 0, the motion will be 
+	 displayed instantly.</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Live2D_Expression" id="Live2D_Expression"></a>Live2D 
+ Expression</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-family: Arial, sans-serif; 
+												 font-weight: normal;">Changes 
+ the face expression of a Live2D character.</span></p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Character</span> 
+	 - The Live2D character to change the face expression for.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Expression</span> 
+	 - The new Live2D face expression to set.</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Live2D_Move" id="Live2D_Move"></a>Live2D 
+ Move</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-family: Arial, sans-serif; 
+												 font-weight: normal;">Moves 
+ a Live2D character to a specified position on screen.</span></p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Character</span> 
+	 - The Live2D character to move</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Model</span> 
+	 - The Live2D model to use.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Position</span> 
+	 - The target-position of the Live2D character.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Predefined -</span> Allows to select one 
+	 of the predefined positions configured in Database &gt; System &gt; 
+	 Predefined Object Positions.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Direct</span> - Allow to set the target-position 
+	 using the graphical editor.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Calculated</span> - Allows to calculate 
+	 the target-position by variable.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Duration</span> 
+	 - The duration of the move-animation in milliseconds.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">Continue 
+	 <span style="font-weight: normal;">will make the scene immediately 
+	 continue.</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Wait</span> will make the scene wait until 
+	 the move-animation is done.</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Live2D_Parameter" id="Live2D_Parameter"></a>Live2D 
+ Parameter</p>
+<p style="font-family: Arial, sans-serif;">Sets or animates a model parameter 
+ of a Live2D character to a specified value.</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Character</span> - The Live2D character 
+	 to animate the parameter for.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Parameter</span> - The parameter to set/animate. 
+	 It must be a valid parameter of the Live2D model such as PARAM_ANGLE_X, 
+	 PARAM_EYE_L_OPEN, etc. </p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Value</span> - The target value to set.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Duration</span> - The duration of the animation 
+	 in milliseconds.</p></li>
+	<li><p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">Continue</span> 
+	 will make the scene immediately continue.</p></li>
+	<li><p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">Wait</span> 
+	 will make the scene wait until the animation is done.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Easing</span> sets easing algorithm for 
+	 the animation. More information can be seen in <a href="Easing_Effects.htm">Easing 
+	 Effects</a> page.</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Live2D_Settings" id="Live2D_Settings"></a>Live2D 
+ Settings</p>
+<p style="font-family: Arial, sans-serif;">Allows to change the settings 
+ of a Live2D character such as default idle animation and eye blinking.</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Character</span> - The Live2D character 
+	 to change the settings for.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Breath Intensity</span> - The intensity 
+	 of the breath-animation, ranges from 0.0% to 100.0%. If 0.0% is specified, 
+	 the breathing will be disabled.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Idle Intensity</span> - The intensity of 
+	 the default idle-animation, ranges from 0.0% to 100.0%. If 0.0% is 
+	 specified, the idle-animation will be disabled.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Lip-Sync Sensitivity</span> - The higher 
+	 the value the more the mouth-openness will be influenced by the volume 
+	 of the voice. If 0.0% is specified, the mouth-openness will not be 
+	 influenced even at high voice volume.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Eye Blink</span> &#160;- Allows you to 
+	 configure eye-blinking</p></li>
+	<li><p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">Enabled</span> 
+	 - Enabled/Disable default eye-blinking animation.</p></li>
+	<li><p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">Interval</span> 
+	 - The max. time-interval between two blinks in milliseconds.</p></li>
+	<li><p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">Closed 
+	 Motion</span> - The time in milliseconds how long the eyes stay closed.</p></li>
+	<li><p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">Closing 
+	 Motion</span>&#160;- The time in milliseconds how long the close-animation 
+	 of the eyes will take.</p></li>
+	<li><p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">Opening 
+	 Motion</span>&#160;- The time in milliseconds how long the opening-animation 
+	 of the eyes will take.</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Live2D_Defaults" id="Live2D_Defaults"></a>Live2D 
+ Defaults</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-family: Arial, sans-serif; 
+												 font-weight: normal;">Allows 
+ to override default values for Live2D specific commands.</span></p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Appear 
+	 Duration</span> is the duration of the join-animation in milliseconds.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Disappear 
+	 Duration</span> is the duration of the exit-animation in milliseconds.</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Appear 
+	 Effects - Easing</span> is the easing settings used for the join-animation.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Appear 
+	 Effects - Animation</span> is the animation settings for the join-animation.</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Disappear 
+	 Effects - Easing</span> is the easing settings used for the exit-animation.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Disappear 
+	 Effects - Animation</span> is the animation settings for the exit-animation.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Display 
+	 - Z-Order</span> is the Z-Index of a Live2D character.</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+</body>
+</html>

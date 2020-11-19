@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Plugin Getting Started</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "5.2.1";
+</script>
+ <meta name="topic-breadcrumbs" content="Script and Plugin Reference > Extension Documentation" />
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+ <p class="Topic_Heading"><span style="font-family: 'Book Antiqua', serif; font-size: 24pt;">Getting Started: Extensions</span></p>
+</div>
+<p><br />
+<span class="Topic_Start">V</span>isual Novel Maker provides a powerful extension system which allows to develop new functions for the Editor or Game Engine and share them with others. To develop extensions, open the Extension Editor through View &gt; Extension or click on the Extension Editor tab.</p>
+<p>&#160;</p>
+<p><img src="ExtensionEditor.PNG" alt="" style=" border:none; width:100%; max-width:1190px;" border="0" /></p>
+<p>&#160;</p>
+<p class="Sub_Heading"><span style="font-weight: bold; font-size: 18pt; font-family: 'Book Antiqua', serif;">Extension Documents</span></p>
+<p>On the left side you can see all so called "Extension Documents" of your project. You can freely organize your extension documents using folders. Whenever you save your project, all edited extension documents are compiled to an internal JavaScript Object and you get informed about syntax errors. If there is a syntax error, just fix it and save your project again.</p>
+<p>&#160;</p>
+<p class="Sub_Heading"><span>The Script / Code Editor</span></p>
+<p>On the right side you can see the Code Editor showing you the content of your current selected extension document.. Visual Novel Maker uses ACE Code Editor, see <a href="https://ace.c9.io">www.ace.c9.io</a> for more information about ACE itself. You can use CTRL+,(COMMA) or CMD+,(Comma) to open ACE settings where you can change things like font size, etc.</p>
+<p>&#160;</p>
+<p class="Sub_Heading"><span>Creating an Extension</span></p>
+<p>If you are a developer and like to add new features to Visual Novel Maker you can use this guide as a starting point. If you need more help just check the <a href="plugin_doc/index.html">Plugin API Reference</a> and take a look into our forums.</p>
+<p>&#160;</p>
+<p>To create an extension, just open the Extension Composer through the Menu under <span style="font-weight: bold;">Tools &gt; Developer Tools &gt; Create Extension…</span></p>
+<p>&#160;</p>
+<p>However, before you can create an extension you first need to develop it by making some changes to the editor or the game engine.</p>
+<p>&#160;</p>
+<p class="Sub_Heading"><span>Modifying the Game Engine</span></p>
+<p>To modify the game engine, just open the <a href="GameScript_Getting_Started.htm">Script Editor</a> through the menu under View &gt; Script. Here you can see all game scripts which you can modify or even delete. If you want to extend a script/class it is recommended to create a new script instead of modifying a certain script directly. Otherwise collisions between extensions would happen.</p>
+<p>&#160;</p>
+<p class="Sub_Heading"><span style="font-weight: bold; font-size: 18pt; font-family: 'Book Antiqua', serif;">Modifying the Game Editor</span></p>
+<p>To modify the editor, just open the Extension Editor through the Menu under <span style="font-weight: bold;">View &gt; Extension</span>.</p>
+<p>&#160;</p>
+<p>In Extension Editor you can create/modify the following elements of the editor.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">Data Record Views</p>
+</li>
+</ul>
+<p>A Data Record View describes a category in the database. It contains the name, backend fields and the whole UI for a single category data record. You can see all existing categories like characters, etc. and can modify or even delete them. However, it is not recommended to delete "System " DataRecordView because that view must be always present for internal technical reasons.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">Scene Commands</p>
+</li>
+</ul>
+<p>A scene command describes a single command in scene view the user can use to define the logic of a scene. So you can add new commands here or even modify or delete existing ones.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">Custom Views</p>
+</li>
+</ul>
+<p>A custom view is an independent view which can be used by other views or scene commands in many different ways. For example, a custom view can be used as a popup-dialog for a popup-control or can be embedded into another view as a partial-view.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">JavaScript Files</p>
+</li>
+</ul>
+<p>A JavaScript file can be used by views or scene commands to define constants, calculating texts or other kind of logic at runtime or to compose JSON during design time.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">Objective-J Files</p>
+</li>
+</ul>
+<p>An Objective-J File can be used to create custom UI controls, resource pipeline processors, more powerful script agents and other things where more control is needed. It is important that the file name <span style="font-weight: bold;">matches the Objective-J class name.</span></p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">Language Bundles</p>
+</li>
+</ul>
+<p>A language bundle can be used to translate the UI of your views and scene commands into different languages.</p>
+<p>&#160;</p>
+<p class="Sub_Heading"><span>Using JSON to Design a View</span></p>
+<p>A view is defined using JSON. So no real programming is necessary except for calculating texts or other small logics at runtime. You just need to define the sections and UI controls and describe how they should handle the data and into which backend fields the data should be written.</p>
+<p>&#160;</p>
+<p>A view is separated into sections and each section can have a border + title and a list of items to display. An item is a UI control to let the user interact with the view. There are many different types of items like text fields, check boxes, radio buttons, etc. You can find a detailed list in the <a href="plugin_doc/index.html">Plugin API Reference</a>.</p>
+<p>&#160;</p>
+<p class="Sub_Heading"><span>Case Examples</span></p>
+<p>Please check out the examples below to learn more about how to make your own extensions.</p>
+<p>&#160;</p>
+<p class="SubSubHeading"><a href="Example__Adding_a_new_database_category.htm">Example 1: Adding a new Database category</a></p>
+<p>This tutorial teaches you how to add a new category to the editor’s database.</p>
+<p>&#160;</p>
+<p class="SubSubHeading"><a href="Example__Adding_a_new_scene_command.htm">Example 2: Adding a new Scene command</a></p>
+<p>Visual Novel Maker comes with a lot of useful built-in commands to easily create own visual novels. However, in special situations depending on the complexity of the visual novel the built-in commands are maybe not enough or it is necessary to modify them.</p>
+<p>&#160;</p>
+<p class="SubSubHeading"><a href="Example__Implementing_a_new_command_on_script-side.htm">Example 3: Implementing a new command on script-side</a></p>
+<p>In our last example we added a new scene command to the editor. However, if we use that scene command now it has no in-game effect because didn’t implement the logic for that command yet. To do that, we have to open the Script Editor under View &gt; Script.</p>
+<p>&#160;</p>
+<p class="SubSubHeading"><a href="Example_Create_a_Language_Bundle.htm">Example 4: Create a Language Bundle</a></p>
+<p>In this example we will create a language bundle to translate our extension into another language.</p>
+<p>&#160;</p>
+<p class="SubSubHeading"><a href="Example_Create_an_Extension.htm">Example 5: Create an Extension</a></p>
+<p>Now we can finally create our card extension using Extension Composer and share it with other people.</p>
+<p>&#160;</p>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Example: Implementing a new command on script-side</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "5.2.1.1.0_3";
+</script>
+ <meta name="topic-breadcrumbs" content="Script and Plugin Reference > Extension Documentation > Getting Started > Examples" />
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+ <p class="Topic_Heading"><span style="font-family: 'Book Antiqua', serif; font-size: 24pt;">Example: Implementing a new Command on script-side</span></p>
+</div>
+<p><br />
+<span class="Topic_Start">I</span>n our last example we added a new scene command to the editor. However, if we use that scene command now it has no in-game effect because didn’t implement the logic for that command yet. To do that, we have to open the Script Editor under View &gt; Script.</p>
+<p>&#160;</p>
+<p>The script editor contains all editable game scripts defining the visual novel engine. See <a href="GameScript_Getting_Started.htm">Script Documentation</a> &#160;for more info. In our case, we need to modify the command-interpreter so that it processes our new command. We can find the command-interpreter in Components &gt; Component_CommandInterpreter. However, instead of directly modifying the that script we will create a new script in a new folder. So lets create a new folder"Custom " in"Components " folder and add a new script"Component_CommandInterpreterCardExtension ". Now lets puts the following script code in:</p>
+<p>&#160;</p>
+<p><span class="Code">class Component_CommandInterpreterCardExtension extends gs.Component_CommandInterpreter</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;constructor: () -&gt;</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super()</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;# We need to override this method to assign our command function to</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;# the command.</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;assignCommand: (command) -&gt;</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super(command)</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;switch command.id</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;when "ext.ShowCard" then command.execute = @commandExtShowCard</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;# Our method to handle the commands logic. &#160;&#160;&#160;&#160;&#160;</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;commandExtShowCard: -&gt;</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;card = RecordManager.cards[@interpreter.numberValueOf(@params.cardId)]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;x = @interpreter.numberValueOf(@params.position.x)</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;y = @interpreter.numberValueOf(@params.position.y)</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;console.log("Show Card executed!")</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;console.log("Card: #{card.name}")</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;console.log("Position: #{x}, #{y}")</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Command Logic...</span></p>
+<p>&#160;</p>
+<p><span class="Code"># This line is very important, we are overriding the current default class with our own</span></p>
+<p><span class="Code"># implementation. So multiple extensions can add new commands independent from each other.</span></p>
+<p><span class="Code">gs.Component_CommandInterpreter = Component_CommandInterpreterCardExtension</span></p>
+<p>&#160;</p>
+<p>If we now use our new command in a scene, we can see something like this:</p>
+<p>&#160;</p>
+<p><span class="Code">Show Card executed!</span></p>
+<p><span class="Code">Card: My Card</span></p>
+<p><span class="Code">Position: 10, 10</span></p>
+<p>&#160;</p>
+<p>On the game's debug console (F12 or option+cmd+i). As we can see our new command is processed by the interpreter. We only need to finish the logic of the command and display the card’s image on screen. But that is not covered by this guide to keep this example simple as possible.</p>
+</body>
+</html>

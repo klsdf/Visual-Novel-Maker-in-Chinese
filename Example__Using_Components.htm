@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Example: Using Components</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "5.3.1.0_8";
+</script>
+ <meta name="topic-breadcrumbs" content="Script and Plugin Reference > In-Game UI Documentation > Getting Started" />
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+ <p class="Topic_Heading"><span style="font-family: 'Book Antiqua', serif; font-size: 24pt;">Example: Using Components</span></p>
+</div>
+<p>&#160;</p>
+<p><span class="Topic_Start">W</span>ith components you can add specific kind of logic to a control. You can add already existing components or write your own. If you are familiar with Entity-Component Systems you probably already know what components are.</p>
+<p>&#160;</p>
+<p>Lets take a look at the following example:</p>
+<p>&#160;</p>
+<p><span class="Code">{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"type": "ui.StackLayout",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;</span><span class="Code" style="font-weight: bold;">"components": [{ "id": "numberInput", "type": "Component_NumberInput", "params": { "digits": ($ -&gt; $tempFields.digits) } }]</span><span class="Code">,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"sizeToFit": true,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"id": "numberField",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"zIndex": 10,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"alignmentX": "center",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"frame": [12, 50],</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"dataField": $ -&gt; $tempFields.digits</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"template": {</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"type": "ui.FreeLayout",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"margin": [5, 5, 5, 5],</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"sizeToFit": true,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"controls": [</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"type": "ui.Image",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"image": "entrybox"</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"type": "ui.Text",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"frame": [0, 0],</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"sizeToFit": true,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"alignmentX": "center",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"alignmentY": "center",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"style": "numberInputEntryText",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"text": "0"</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;}</span></p>
+<p><span class="Code">}</span></p>
+<p>&#160;</p>
+<p>That example defines a text-control with the text "New Game" and also assigned an action to it. But the problem is that a text-control doesn't support on-click actions by default. We need to add this kind of behavior first using the components-property. With that property we can add multiple components to our control. In our example we only add one component of type "Component_HotspotBehavior". With that component, our text-control supports on-click actions now and will start a new game if we click on it.</p>
+<p>&#160;</p>
+<p>If we take a look at "Components" folder in Script-Editor we will see that there is a component-class called gs.Component_HotspotBehavior. That is no accident, the type property we used refers to the class-name of the component we like to add. The component needs to be part of gs-module by default or you can specify another module using module-property. To add your own custom component, just use its class name and define in as part of gs-module or specify your own module (which is recommended).</p>
+<p>&#160;</p>
+<p class="Sub_Heading"><span>Writing your own component</span></p>
+<p>In the last example we saw how to add an existing component to allow a text-control executing on-click actions. In this example, we will write our own custom component to add some new behavior to a control.</p>
+<p>&#160;</p>
+<p><span class="Code">class Component_MyCustomBehavior extends gs.Component</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;constructor: (params) -&gt;</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Create your component from optional params-object.</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;setup: -&gt;</span></p>
+<p style="margin-left: 80px;"><span class="Code"># Setup your component, the object-reference has been set to the control-object.</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;update: -&gt;</span></p>
+<p style="margin-left: 80px;"><span class="Code"># Implement your update code if necessary.</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;action_method1: (sender, params) -&gt;</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Implement action logic here</span></p>
+<p><span class="Code">gs.Component_MyCustomBehavior = Component_MyCustomBehavior</span></p>
+<p>&#160;</p>
+<p>You can see the above example as a template for your own custom components. To use our own component now, we just write:</p>
+<p>&#160;</p>
+<p><span class="Code">"components": [{ "id": "custom_component", "type": "Component_MyCustomBehavior", "params": { "param1": "Hello" } }]</span></p>
+<p>&#160;</p>
+<p>The id-property is optional but allows you to specify your component as an action-target to call actions on your component like described in Example 6. The params-property is optional too and allows you to pass parameters to the component's constructor.</p>
+<p>&#160;</p>
+<p>If you want to see a more advanced example, take a look at gs.Component_NumberInput component for example.</p>
+</body>
+</html>

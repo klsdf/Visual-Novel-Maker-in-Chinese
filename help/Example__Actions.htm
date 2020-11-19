@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Example: Actions</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "5.3.1.0_5";
+</script>
+ <meta name="topic-breadcrumbs" content="Script and Plugin Reference > In-Game UI Documentation > Getting Started" />
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+ <p class="Topic_Heading"><span style="font-family: 'Book Antiqua', serif; font-size: 24pt;">Example: Actions</span></p>
+</div>
+<p>&#160;</p>
+<p><span class="Topic_Start">W</span>ith actions you can execute different kind of background-functions like start a new game, save the game, quit the game, switch to another layout and many other functions. You can even define your own actions if necessary. We already used actions in our first example for our own title-screen to start a new game or to quit the game. Now lets take a more closer look at it. For our title-screen we used an action to start a new game:</p>
+<p>&#160;</p>
+<p><span class="Code">{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;"type": "ui.Button",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;"params": { "text": "New Game", "action": { "name": "newGame" } },</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;"style": "titleScreenButton"</span></p>
+<p><span class="Code">}</span></p>
+<p>&#160;</p>
+<p>If we click on that button, a new game will start. Sometimes it is also necessary to pass additional data to an action like in the following example:</p>
+<p>&#160;</p>
+<p><span class="Code">{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;"type": "ui.Button",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;"params": { "text": "Load Game", "action": { "name": "switchLayout", "params": { "name": "loadMenuLayout" } } },</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;"style": "titleScreenButton"</span></p>
+<p><span class="Code">}</span></p>
+<p>&#160;</p>
+<p>Here we execute the action "switchLayout" which switches to a new layout. But we need to specify the name of the layout we want to switch to.</p>
+<p>&#160;</p>
+<p>The logic of an action is defined in the action's target. By default the target is the scene-component like Component_LayoutSceneBehavior or Component_GameSceneBehavior. In the above example the action "newGame" is defined in Component_LayoutSceneBehavior script just as a regular method.</p>
+<p>&#160;</p>
+<p><span class="Code">newGame: (sender, params) -&gt;</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;...........................</span></p>
+<p>&#160;</p>
+<p>A method which is called as an action-method should always provide two parameters: sender and params. The sender is the object which triggered this action, in our case it would be the button-object. The params-objects contains the data we passed to the action via the params-attribute.</p>
+<p>&#160;</p>
+<p>So the name of the action must match the name of one of the target object's methods. The method takes the sender object as first and the params-object as second parameter.</p>
+<p>&#160;</p>
+<p>It is not necessary but recommended to use "action_" prefix for an action-method like "action_myMethod" to make clear that this method can be safely executed as an action-method.</p>
+</body>
+</html>

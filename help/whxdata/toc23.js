@@ -1,0 +1,1 @@
+gXMLBuffer ="<?xml version=\"1.0\" encoding=\"utf-8\" ?><data  src=\"toc21.js\"  name=\"Extension Documentation\"><book name=\"Getting Started\" url=\"Plugin_Getting_Started.htm\" src=\"toc24.js\" /><item name=\"API Reference\" url=\"plugin_doc/index.html\" /><item name=\"Objective-J API\" url=\"objj_doc/html/index.html\" /></data>";

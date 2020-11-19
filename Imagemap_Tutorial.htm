@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Image Map and Hotspot Tutorial</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "3.2.6.0_1";
+</script>
+ <meta name="topic-breadcrumbs" content="Beginner's Guide > Customizing your Game > UI Series" />
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+ <p class="Topic_Heading">Image Map and Hotspot Tutorial</p>
+</div>
+<p>&#160;</p>
+<p><span class="Topic_Start">B</span>efore we move to the Evented UI series, we will need to understand <a href="Picture.htm#Show_Image_Map">Image Maps</a> and <a href="Picture.htm#Add_Hotspot">Hotspots</a>. They are one of the ways for you to create your own customized GUI.</p>
+<p>&#160;</p>
+<p style="text-align: center;"><script>
+	if(supports_mp4_video()) 
+		document.write("<video  controls=\"controls\"    style=\"border: none;; max-width: 100%\"><source src=\"ImageMapHotspotTutorial.mp4\" type=\"video/mp4\" />");
+</script><object type="video/quicktime" data="ImageMapHotspotTutorial.mp4" style="border: none;" height="300px" width="400px"><param name="autoplay" value="false" /><param name="autostart" value="false" /><param name="ShowControls" value="1" /><param name="controller" value="true" /></object><script>
+if(supports_mp4_video()) document.write("</video>");</script></p>
+<p style="text-align: center;">&#160;</p>
+<p style="text-align: center;">&#160;</p>
+<p class="Sub_Heading">What is an Image Map?</p>
+<p>An <a href="Picture.htm#Show_Image_Map">Image Map</a> is an image with clickable areas, known as <a href="Picture.htm#Add_Hotspot">Hotspots</a>, that are triggered depending on the assigned state. To learn of the function of its each specific command, the link provides a quick overview of their functions.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Preparing your Graphics</p>
+<p>We need to prepare two instances of our image map. <span style="font-weight: bold;">It's important to remember that both versions of the image must be at the same size.</span></p>
+<p><img src="ImageMapHotspotTutorial_en.jpg" alt="" style=" border:none; width:100%; max-width:640px;" border="0" /></p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p class="MsoNormal"><b style="mso-bidi-font-weight: normal;">Ground</b> - This image is the 'idle' state of your image map.</p>
+</li>
+<li style="margin-left: -20px;">
+<p class="MsoNormal"><b style="mso-bidi-font-weight: normal;">Hover</b> - This image is the 'activated' state of your image map. This is what the image would look like if you hover or click one of its <a href="Picture.htm#Add_Hotspot">Hotspots</a>.</p>
+</li>
+</ul>
+<p>&#160;</p>
+<p>After we're done, <a href="Importing_Resources.htm">let's import the images into our game</a>. Just put them in the Pictures Folder. This is how I made mine:</p>
+<p><img src="ImageMapTut2.jpg" alt="" style=" border:none; width:100%; max-width:522px;" border="0" /></p>
+<p>&#160;</p>
+<p class="Sub_Heading">Setting up the Image Map</p>
+<p>Now that we have prepared the resources, it's time to add them in the Scene Content!</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li>Create a new Scene.</li>
+<li>Click the <img src="PicCmd.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" /><span style="font-weight: bold;">Picture -&gt; Show Image Map.</span></li>
+</ul>
+<p style="text-align: center; font-weight: bold;"><img src="ImageMapTut1.jpg" alt="" style=" border:none; width:100%; max-width:902px;" border="0" /></p>
+<p style="text-align: center; font-weight: normal;">&#160;</p>
+<ul style="list-style: disc;">
+<li>As stated earlier, just set the images on their respective Ground and Hover locations.</li>
+<li><span style="font-weight: bold;">OPTIONAL:</span> <span>Click the arrow and select</span> <span style="font-weight: bold;">Animation -&gt; Blending</span> <span>so the image map fades in.</span></li>
+</ul>
+<p>&#160;</p>
+<p class="Sub_Heading"><a name="Setting_up_the_Hotspots" id="Setting_up_the_Hotspots"></a>Setting up the Hotspots</p>
+<ul style="list-style: disc;">
+<li>Click the <span style="font-weight: bold;">Hotspots</span> button.</li>
+<li>A window will appear. Press <span style="font-weight: bold;">Add Hotspot</span>. You will notice that a small box will appear. If your background is too dark, just remember that a Hotspot will always spawn at the top left.<br />
+<img src="ImageMapTut3.jpg" alt="" style=" border:none; width:100%; max-width:260px;" border="0" /></li>
+<li>Now just set your Hotspots. Afterwards, either <span style="font-weight: bold;">Double Click</span> or <span style="font-weight: bold;">Right Click -&gt; Properties</span> the box<span>. You will see a small window called</span> <span style="font-weight: bold;">Hotspot Properties</span>. Here's a video to show how to do so:</li>
+</ul>
+<p style="text-align: center;"><script>
+	if(supports_mp4_video()) 
+		document.write("<video  controls=\"controls\"    style=\"border: none;; max-width: 100%\"><source src=\"ImageMapHotspotTutorial2.mp4\" type=\"video/mp4\" />");
+</script><object type="video/quicktime" data="ImageMapHotspotTutorial2.mp4" style="border: none;" height="300px" width="400px"><param name="autoplay" value="false" /><param name="autostart" value="false" /><param name="ShowControls" value="1" /><param name="controller" value="true" /></object><script>
+if(supports_mp4_video()) document.write("</video>");</script></p>
+<ul style="list-style: disc;">
+<li>
+<p>Click the button for <span style="font-weight: bold;">Jump To</span> and set a label. For mine, I used "ask" and "leave" respectively. It would look like this:<br />
+<img src="ImageMapTut4.jpg" alt="" style=" border:none; width:100%; max-width:203px;" border="0" /></p>
+</li>
+<li>
+<p>Keep doing this until all the options have a hotspot.</p>
+</li>
+</ul>
+<p>&#160;</p>
+<p class="Sub_Heading">Setting up the Scene</p>
+<p>Now it's time to set up the responses for the hotspots. In its most condensed form, it will look like this:</p>
+<p><img src="ImageMapTut5.jpg" alt="" style=" border:none; width:100%; max-width:938px;" border="0" /></p>
+<ul style="list-style: disc;">
+<li>You must add the <a href="Basic.htm#Idle">Idle</a> command after the <a href="Picture.htm#Show_Image_Map">Image Map</a> and before the <a href="Basic.htm#Label">Labels</a>. This prevents the Labels from triggering before you picked <span style="font-style: italic;">or</span> <span>executing a label that isn't supposed to be activated after the correct one was finished.</span></li>
+<li>In order to avoid the user to trigger the hotspot again, especially whenever a response is still being executed, we must <a href="Picture.htm#Erase_Image_Map">erase the image map.</a> However, make sure to add a background if you don't want to leave the user on a black screen.</li>
+<li>Just enter the response to your image maps. This is how mine looked like:<br />
+<img src="ImageMapTut6.jpg" alt="" style=" border:none; width:100%; max-width:928px;" border="0" /></li>
+</ul>
+<p>&#160;</p>
+<p>And that's about it! Now you're ready to tackle the Evented UI series.</p>
+<p>&#160;</p>
+<p style="text-align: center;"><img src="Metisnotes8_en.png" alt="" style=" border:none; width:100%; max-width:465px;" border="0" /></p>
+<p style="text-align: center;">&#160;</p>
+<div style="width: 100%; position: relative;" id="footer">
+ <p>The cute animal stickers used are <a href="http://www.freepik.com">Designed by Freepik</a>.</p>
+</div>
+</body>
+</html>

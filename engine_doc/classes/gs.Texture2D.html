@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>gs.Texture2D</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="icon" href="../assets/favicon.ico">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+                <h1><img src="../assets/css/logo.png" title="" width="117" height="52"></h1>
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: </em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+                    <h2 class="off-left">APIs</h2>
+                    <div id="api-tabview" class="tabview">
+                        <ul class="tabs">
+                            <li><a href="#api-classes">Classes</a></li>
+                            <li><a href="#api-modules">Modules</a></li>
+                        </ul>
+                
+                        <div id="api-tabview-filter">
+                            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                        </div>
+                
+                        <div id="api-tabview-panel">
+                            <ul id="api-classes" class="apis classes">
+                                <li><a href="../classes/gs.Application.html">gs.Application</a></li>
+                                <li><a href="../classes/gs.Audio.html">gs.Audio</a></li>
+                                <li><a href="../classes/gs.AudioBuffer.html">gs.AudioBuffer</a></li>
+                                <li><a href="../classes/gs.AudioBufferReference.html">gs.AudioBufferReference</a></li>
+                                <li><a href="../classes/gs.Bitmap.html">gs.Bitmap</a></li>
+                                <li><a href="../classes/gs.BlendMode.html">gs.BlendMode</a></li>
+                                <li><a href="../classes/gs.BlurEffect.html">gs.BlurEffect</a></li>
+                                <li><a href="../classes/gs.Color.html">gs.Color</a></li>
+                                <li><a href="../classes/gs.Data.html">gs.Data</a></li>
+                                <li><a href="../classes/gs.Effect.html">gs.Effect</a></li>
+                                <li><a href="../classes/gs.EffectCollection.html">gs.EffectCollection</a></li>
+                                <li><a href="../classes/gs.EffectInfo.html">gs.EffectInfo</a></li>
+                                <li><a href="../classes/gs.Font.html">gs.Font</a></li>
+                                <li><a href="../classes/gs.Frame.html">gs.Frame</a></li>
+                                <li><a href="../classes/gs.GameStorage.html">gs.GameStorage</a></li>
+                                <li><a href="../classes/gs.GameStorageLocations.html">gs.GameStorageLocations</a></li>
+                                <li><a href="../classes/gs.GraphicEffect.html">gs.GraphicEffect</a></li>
+                                <li><a href="../classes/gs.GraphicEffectType.html">gs.GraphicEffectType</a></li>
+                                <li><a href="../classes/gs.GraphicObject.html">gs.GraphicObject</a></li>
+                                <li><a href="../classes/gs.Graphics.html">gs.Graphics</a></li>
+                                <li><a href="../classes/gs.Input.html">gs.Input</a></li>
+                                <li><a href="../classes/gs.Live2DModel.html">gs.Live2DModel</a></li>
+                                <li><a href="../classes/gs.Live2DMotionManager.html">gs.Live2DMotionManager</a></li>
+                                <li><a href="../classes/gs.Live2DMotionPlayTypes.html">gs.Live2DMotionPlayTypes</a></li>
+                                <li><a href="../classes/gs.Live2DObject.html">gs.Live2DObject</a></li>
+                                <li><a href="../classes/gs.Mask.html">gs.Mask</a></li>
+                                <li><a href="../classes/gs.MaskingType.html">gs.MaskingType</a></li>
+                                <li><a href="../classes/gs.MotionBlur.html">gs.MotionBlur</a></li>
+                                <li><a href="../classes/gs.MouseInput.html">gs.MouseInput</a></li>
+                                <li><a href="../classes/gs.PixelateEffect.html">gs.PixelateEffect</a></li>
+                                <li><a href="../classes/gs.Point.html">gs.Point</a></li>
+                                <li><a href="../classes/gs.Quad.html">gs.Quad</a></li>
+                                <li><a href="../classes/gs.Rect.html">gs.Rect</a></li>
+                                <li><a href="../classes/gs.Renderer.html">gs.Renderer</a></li>
+                                <li><a href="../classes/gs.RenderTask.html">gs.RenderTask</a></li>
+                                <li><a href="../classes/gs.Sprite.html">gs.Sprite</a></li>
+                                <li><a href="../classes/gs.Texture2D.html">gs.Texture2D</a></li>
+                                <li><a href="../classes/gs.TextureFilter.html">gs.TextureFilter</a></li>
+                                <li><a href="../classes/gs.ThreePartImage.html">gs.ThreePartImage</a></li>
+                                <li><a href="../classes/gs.Tilemap.html">gs.Tilemap</a></li>
+                                <li><a href="../classes/gs.TilemapLayer.html">gs.TilemapLayer</a></li>
+                                <li><a href="../classes/gs.TilemapRenderInfo.html">gs.TilemapRenderInfo</a></li>
+                                <li><a href="../classes/gs.TilesetConfiguration.html">gs.TilesetConfiguration</a></li>
+                                <li><a href="../classes/gs.TilingSprite.html">gs.TilingSprite</a></li>
+                                <li><a href="../classes/gs.Tone.html">gs.Tone</a></li>
+                                <li><a href="../classes/gs.Video.html">gs.Video</a></li>
+                                <li><a href="../classes/gs.Viewport.html">gs.Viewport</a></li>
+                                <li><a href="../classes/gs.WobbleEffect.html">gs.WobbleEffect</a></li>
+                            </ul>
+                
+                
+                            <ul id="api-modules" class="apis modules">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+                    Show:
+                    <label for="api-show-inherited">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected">
+                        <input type="checkbox" id="api-show-protected">
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private">
+                        <input type="checkbox" id="api-show-private">
+                        Private
+                    </label>
+                    <label for="api-show-deprecated">
+                        <input type="checkbox" id="api-show-deprecated">
+                        Deprecated
+                    </label>
+            
+                </div>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+<h1>gs.Texture2D Class</h1>
+<div class="box meta">
+
+
+
+
+</div>
+
+
+<div class="box intro">
+    <p>A class to deal with textures. This class has a lot of more functions and properties than
+actually documented. That is because this class is actually for internal usage only. The only exception
+is if you work with custom GLSL shaders.</p>
+<p>If you want to learn more about why certain classes of the Basic Engine are hidden and not editable, read the Basic Engine chapter
+in Help File.</p>
+</div>
+
+    <div class="constructor">
+        <h2>Constructor</h2>
+<div id="method_gs.Texture2D" class="method item">
+    <h3 class="name"><code>gs.Texture2D</code></h3>
+
+        <span class="paren">()</span>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+
+
+
+</div>
+    </div>
+
+<div id="classdocs" class="tabview">
+    <ul class="api-class-tabs">
+        <li class="api-class-tab index"><a href="#index">Index</a></li>
+
+            <li class="api-class-tab methods"><a href="#methods">Methods</a></li>
+            <li class="api-class-tab properties"><a href="#properties">Properties</a></li>
+    </ul>
+
+    <div>
+        <div id="index" class="api-class-tabpanel index">
+            <h2 class="off-left">Item Index</h2>
+
+                <div class="index-section methods">
+                    <h3>Methods</h3>
+
+                    <ul class="index-list methods">
+                            <li class="index-item method">
+                                <a href="#method_setFilter">setFilter</a>
+
+                            </li>
+                    </ul>
+                </div>
+
+                <div class="index-section properties">
+                    <h3>Properties</h3>
+
+                    <ul class="index-list properties">
+                            <li class="index-item property">
+                                <a href="#property_@defaultStrikeThrough">@defaultStrikeThrough</a>
+
+                                    <span class="flag static">static</span>
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_@defaultUnderline">@defaultUnderline</a>
+
+                                    <span class="flag static">static</span>
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_ascent">ascent</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_defaultBold">defaultBold</a>
+
+                                    <span class="flag static">static</span>
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_defaultBorder">defaultBorder</a>
+
+                                    <span class="flag static">static</span>
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_defaultBorderColor">defaultBorderColor</a>
+
+                                    <span class="flag static">static</span>
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_defaultColor">defaultColor</a>
+
+                                    <span class="flag static">static</span>
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_defaultItalic">defaultItalic</a>
+
+                                    <span class="flag static">static</span>
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_defaultName">defaultName</a>
+
+                                    <span class="flag static">static</span>
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_defaultShadow">defaultShadow</a>
+
+                                    <span class="flag static">static</span>
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_defaultShadowColor">defaultShadowColor</a>
+
+                                    <span class="flag static">static</span>
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_defaultSize">defaultSize</a>
+
+                                    <span class="flag static">static</span>
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_descent">descent</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_filter">filter</a>
+
+                                    <span class="flag static">static</span>
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_filter">filter</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_height">height</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_height">height</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_id">id</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_isPowerOf2">isPowerOf2</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_lineHeight">lineHeight</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_mipmap">mipmap</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_realHeight">realHeight</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_realWidth">realWidth</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_width">width</a>
+
+                            </li>
+                    </ul>
+                </div>
+
+
+        </div>
+
+            <div id="methods" class="api-class-tabpanel">
+                <h2 class="off-left">Methods</h2>
+
+<div id="method_setFilter" class="method item">
+    <h3 class="name"><code>setFilter</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>filter</code>
+                </li>
+                <li class="arg">
+                        <code>mipmap</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Sets the filter for the texture.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">filter</code>
+                        <span class="type"><a href="../classes/gs.TextureFilter.html" class="crosslink">gs.TextureFilter</a></span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The filter to set</li>
+</ul>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">mipmap</code>
+                        <span class="type">Boolean</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>Indicates if mip-mapping should be enabled.</li>
+</ul>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+            </div>
+
+            <div id="properties" class="api-class-tabpanel">
+                <h2 class="off-left">Properties</h2>
+
+<div id="property_@defaultStrikeThrough" class="property item">
+    <h3 class="name"><code>@defaultStrikeThrough</code></h3>
+    <span class="type">Boolean</span>
+
+
+
+
+        <span class="flag static">static</span>
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Indicates if the the default style is strike-through.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_@defaultUnderline" class="property item">
+    <h3 class="name"><code>@defaultUnderline</code></h3>
+    <span class="type">Boolean</span>
+
+
+
+
+        <span class="flag static">static</span>
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Indicates if the the default style is underline.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_ascent" class="property item">
+    <h3 class="name"><code>ascent</code></h3>
+    <span class="type">Number</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>The ascent-value of the font.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_defaultBold" class="property item">
+    <h3 class="name"><code>defaultBold</code></h3>
+    <span class="type">Boolean</span>
+
+
+
+
+        <span class="flag static">static</span>
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Indicates if the the default style is bold.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_defaultBorder" class="property item">
+    <h3 class="name"><code>defaultBorder</code></h3>
+    <span class="type">Boolean</span>
+
+
+
+
+        <span class="flag static">static</span>
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Indicates if the default font has an outline.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_defaultBorderColor" class="property item">
+    <h3 class="name"><code>defaultBorderColor</code></h3>
+    <span class="type"><a href="../classes/gs.Color.html" class="crosslink">gs.Color</a></span>
+
+
+
+
+        <span class="flag static">static</span>
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>The default font outline color.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_defaultColor" class="property item">
+    <h3 class="name"><code>defaultColor</code></h3>
+    <span class="type"><a href="../classes/gs.Color.html" class="crosslink">gs.Color</a></span>
+
+
+
+
+        <span class="flag static">static</span>
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>The default font color.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_defaultItalic" class="property item">
+    <h3 class="name"><code>defaultItalic</code></h3>
+    <span class="type">Boolean</span>
+
+
+
+
+        <span class="flag static">static</span>
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Indicates if the the default style is italic.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_defaultName" class="property item">
+    <h3 class="name"><code>defaultName</code></h3>
+    <span class="type">String</span>
+
+
+
+
+        <span class="flag static">static</span>
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>The default font name.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_defaultShadow" class="property item">
+    <h3 class="name"><code>defaultShadow</code></h3>
+    <span class="type">Boolean</span>
+
+
+
+
+        <span class="flag static">static</span>
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Indicates if the default font has shadow.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_defaultShadowColor" class="property item">
+    <h3 class="name"><code>defaultShadowColor</code></h3>
+    <span class="type"><a href="../classes/gs.Color.html" class="crosslink">gs.Color</a></span>
+
+
+
+
+        <span class="flag static">static</span>
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>The default font shadow color.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_defaultSize" class="property item">
+    <h3 class="name"><code>defaultSize</code></h3>
+    <span class="type">Number</span>
+
+
+
+
+        <span class="flag static">static</span>
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>The default font size.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_descent" class="property item">
+    <h3 class="name"><code>descent</code></h3>
+    <span class="type">Number</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>The descent-value of the font.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_filter" class="property item">
+    <h3 class="name"><code>filter</code></h3>
+    <span class="type"><a href="../classes/gs.TextureFilter.html" class="crosslink">gs.TextureFilter</a></span>
+
+
+
+
+        <span class="flag static">static</span>
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>The default texture filter used for newly created textures. If you want to create a game
+with pixel-look, it is recommended to set gs.TextureFilter.NEAREST.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_filter" class="property item">
+    <h3 class="name"><code>filter</code></h3>
+    <span class="type"><a href="../classes/gs.TextureFilter.html" class="crosslink">gs.TextureFilter</a></span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>The current texture filter. If you want to set the filter, use setFilter method.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_height" class="property item">
+    <h3 class="name"><code>height</code></h3>
+    <span class="type">Number</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>The original height of the texture.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_height" class="property item">
+    <h3 class="name"><code>height</code></h3>
+    <span class="type">Number</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>The height of the font.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_id" class="property item">
+    <h3 class="name"><code>id</code></h3>
+    <span class="type">Number</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>The OpenGL ID of the texture.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_isPowerOf2" class="property item">
+    <h3 class="name"><code>isPowerOf2</code></h3>
+    <span class="type">Boolean</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Indicates if the dimensions of the texture are power-of-2.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_lineHeight" class="property item">
+    <h3 class="name"><code>lineHeight</code></h3>
+    <span class="type">Number</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>The line-height of the font.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_mipmap" class="property item">
+    <h3 class="name"><code>mipmap</code></h3>
+    <span class="type">Boolean</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Indicates if mip-mapping is enabled for this texture. If you want to change mip-mapping, use setFilter method.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_realHeight" class="property item">
+    <h3 class="name"><code>realHeight</code></h3>
+    <span class="type">Number</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>The real width of the texture.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_realWidth" class="property item">
+    <h3 class="name"><code>realWidth</code></h3>
+    <span class="type">Number</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>The real width of the texture.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_width" class="property item">
+    <h3 class="name"><code>width</code></h3>
+    <span class="type">Number</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>The original width of the texture.</p>
+
+    </div>
+
+
+
+</div>
+            </div>
+
+
+    </div>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

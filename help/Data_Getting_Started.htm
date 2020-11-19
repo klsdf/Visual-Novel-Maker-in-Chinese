@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Data Getting Started</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "5.1.0_1";
+</script>
+ <meta name="topic-breadcrumbs" content="Script and Plugin Reference > Data Formats Documentation" />
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+ <p class="Topic_Heading"><span>Getting Started: Data Formats</span></p>
+</div>
+<p>&#160;</p>
+<p><span class="Topic_Start">A</span>s a developer or if you just doing some scripting in Visual Novel Maker, you will access different kind of project files and data structures. This guide gives you a very quick overview about the structure of a Visual Novel Maker project. For more detailed information about certain data structures, please check the <a href="data_doc/index.html">Data Formats Reference</a>.</p>
+<p>&#160;</p>
+<p class="Sub_Heading"><span>Project Structure</span></p>
+<p>A valid Visual Novel Maker project consists of the following files and folders.</p>
+<p>&#160;</p>
+<p><img src="image4.gif" alt="" style=" border:none; width:100%; max-width:166px;" border="0" /></p>
+<p>&#160;</p>
+<p class="SubSubHeading">data</p>
+<p>This folder contains all data about the project excluding resources like graphics and audio.</p>
+<p>&#160;</p>
+<p class="SubSubHeading">resources</p>
+<p>This folder contains all graphic and audio resources for the project. However, you should only import new resources using Resource Manager.</p>
+<p>&#160;</p>
+<p class="SubSubHeading">Game.vnproject</p>
+<p>The project file, it doesn't stores any data but is more like an anchor-point to open and identify a Visual Novel Maker project.</p>
+<p>&#160;</p>
+<p class="SubSubHeading">icon.png</p>
+<p>The default game icon. That icon is not used for the game's executable but only for the game window. The executable icon has to be configured separately depending on the platform.</p>
+</body>
+</html>

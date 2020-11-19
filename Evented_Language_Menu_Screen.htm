@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Evented Language Menu Screen</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "3.2.6.0_2";
+</script>
+ <meta name="topic-breadcrumbs" content="Beginner's Guide > Customizing your Game > UI Series" />
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+ <p class="Topic_Heading">Evented Language Menu Screen</p>
+</div>
+<p>&#160;</p>
+<p><span class="Topic_Start">L</span>et's start with the easiest of them all. We will recreate the language menu screen through pure eventing. But for this tutorial, we're going to use an <a href="Picture.htm#Show_Image_Map">Image Map</a>. Make sure to read the <a href="Imagemap_Tutorial.htm">Image Map and Hotspot Tutoria</a>l first!</p>
+<p>&#160;</p>
+<p style="text-align: center;"><img src="wtd_language_idle.png" alt="" style=" border:none; width:100%; max-width:645px;" border="0" /></p>
+<p>&#160;</p>
+<p class="Sub_Heading">Prepare your Graphics</p>
+<p>We need to prepare two instances of our language screen. As usual, it's important to remember that both versions must be at the same size. Here is an example image:</p>
+<p><img src="wtd_language_idle.jpg" alt="" style=" border:none; width:100%; max-width:640px;" border="0" /></p>
+<p>&#160;</p>
+<p>After we're done, <a href="Importing_Resources.htm">let's import the images into our game!</a> I highly recommend adding a suffix at your filenames like filename_ground and filename_hover.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Setting up the Scene</p>
+<p><img src="EventedUILang_en.jpg" alt="" style=" border:none; width:100%; max-width:857px;" border="0" /></p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li><a href="Imagemap_Tutorial.htm#Setting_up_the_Hotspots">First, we created two Hotspots.</a> This is because we only have two supported languages, English and Japanese. So we must create two labels. I recommend keeping your label names as lowercase for an easier time.</li>
+<li>Under each label, we add <a href="System_Command.htm#Set_Game_Data">Set Game Data</a> command with "Language - Code." What this does is set the current language by it's code. <a href="Language_Configuration.htm">The code is set when you manage the Language Profile.</a> So if the English hotspot gets clicked, we jump to "english" label and set "en_US" as code to select English. If Japanese is clicked we jump to "japanese" and set the code to "jp" to select Japanese.</li>
+<li>By the end of it, we will change the Scene to <a href="Evented_Title_Screen.htm">Title Screen</a>.</li>
+</ul>
+<p>&#160;</p>
+</body>
+</html>

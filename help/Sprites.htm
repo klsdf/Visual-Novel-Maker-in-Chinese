@@ -1,0 +1,378 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Sprites</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<link rel="stylesheet" href="highlight/styles/default.css" type="text/css" />
+<script src="highlight/highlight.pack.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+//<![CDATA[
+hljs.initHighlightingOnLoad();
+//]]>
+</script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "4.1.0_4";
+</script>
+ <meta name="topic-breadcrumbs" content="Scripter's Guide > Basic Engine" />
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<p class="Topic_Heading">Sprites</p>
+<p>&#160;</p>
+<p><span class="Topic_Start">S</span>prites are graphic objects used to display bitmaps and videos on screen. There are different kind of sprites for different purposes, we will go through them step by step. If you are more interested in how to display videos, check out the <a href="Videos.htm">Videos</a> chapter.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Regular Sprites</p>
+<p>&#160;</p>
+<p>Regular sprites are gs.Sprite objects which are used to display a bitmap on screen. They are the most common kind of sprites. It is possible to add certain effects like rotation, zooming, tinting, etc. as we can see in the following example</p>
+<pre>
+<code class="coffee">
+###*
+* Prepares all visual game object for the scene.
+###  
+prepareVisual: -&gt;
+    # Create a new sprite object to show our bitmap on screen.
+    @sprite = new gs.Sprite(Graphics.viewport)
+    # Assign our bitmap to the sprite to display it on screen
+    @sprite.bitmap = @bitmap
+    # Setup the position on screen. We make it centered.
+    @sprite.x = (Graphics.width - @bitmap.width) / 2
+    @sprite.y = (Graphics.height - @bitmap.height) / 2
+    # Define the portion of the bitmap we want to display on screen.
+    @sprite.srcRect = new gs.Rect(0, 0, @bitmap.width, @bitmap.height)
+    
+    # Set the anchor-point to the center of the sprite so that rotation and zooming
+    # are done around the center of the sprite and not the top-left corner.
+    @sprite.anchor.x = 0.5
+    @sprite.anchor.y = 0.5
+    
+    # Set rotation angle to 45 degree.
+    @sprite.angle = 45
+    
+    # Set vertical and horizontal zoom-level to 50% (0.5).
+    @sprite.zoomX = 0.5
+    @sprite.zoomY = 0.5
+    
+    # Change the color-tone to reach a sepia-like tint.
+    @sprite.tone.set(35, -35, -70, 255)
+    
+    # We are done with preparing our visual objects. So we can start
+    # the screen transition to fade in our new created objects smoothly.
+    @transition()
+    
+###*
+* Prepares all data for the scene and loads the necessary graphic and audio resources.
+### 
+prepareData: -&gt;
+    # Load the background image "Bench_Morning".
+    @bitmap = ResourceManager.getBitmap("Graphics/Backgrounds/Bench_Morning")</code>
+</pre>
+<p>As we can see in that example, it is very easy to rotate, zoom or tint a sprite. We just need to set the corresponding properties of the sprite object.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Tiling Sprites</p>
+<p>&#160;</p>
+<p>A regular sprite only displays it's assigned bitmap one time but a tiling sprite, as the name suggests, tiles the assigned bitmap over the screen or a defined area. It is useful for in-game UI decorations such as in-game window backgrounds and other stuff..</p>
+<p>&#160;</p>
+<pre class="coffee">
+<code class="coffee">
+###*
+* Prepares all visual game object for the scene.
+###  
+prepareVisual: -&gt;
+    # Create a new tiling sprite object to tile our bitmap over a defined
+    # area on screen.
+    @sprite = new gs.TilingSprite(Graphics.viewport)
+    # Assign our bitmap to the sprite to tile it.
+    @sprite.bitmap = @bitmap
+    # Setup the position and size on screen. We make it centered with a size of
+    # 400x400 pixels. The assigned bitmap is tiled over that area.
+    @sprite.rect.x = (Graphics.width - 400) / 2
+    @sprite.rect.y = (Graphics.height - 400) / 2
+    @sprite.rect.width = 400
+    @sprite.rect.height = 400
+    
+    # Define the portion of the bitmap we want to tile.
+    @sprite.srcRect = new gs.Rect(0, 0, @bitmap.width, @bitmap.height)
+    
+    # We are done with preparing our visual objects. So we can start
+    # the screen transition to fade in our new created objects smoothly.
+    @transition()
+    
+###*
+* Prepares all data for the scene and loads the necessary graphic and audio resources.
+### 
+prepareData: -&gt;
+    # Load the image "skin-tile", useful for in-game UI.
+    @bitmap = ResourceManager.getBitmap("Graphics/Pictures/skin-tile")</code>
+</pre>
+<p>As we can see in the above code, we are using gs.TilingSprite now. It supports almost the same kind of settings as a regular sprite. The main difference is that we have to define a rectangular area instead of just specifying a position. The assigned bitmap will be tiled over that rectangular area. The result will look like this:</p>
+<p>&#160;</p>
+<p><img src="image30.gif" alt="" style=" border:none; width:100%; max-width:479px;" border="0" /></p>
+<p>&#160;</p>
+<p>We get a 400x400 pixel area centered on screen. If we look at the original bitmap:</p>
+<p>&#160;</p>
+<p><img src="image31.gif" alt="" style=" border:none; width:100%; max-width:128px;" border="0" /></p>
+<p>&#160;</p>
+<p>We can see that our bitmap is now tiled on not just displayed once.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Tiling Planes</p>
+<p>&#160;</p>
+<p>A tiling plane, represented by gs.TilingPlane class, is very similar to a tiling sprite, the main differences are</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li>It has no rectangular area but x- and y-coordinate instead like a regular sprite</li>
+<li>It is always tiled over the entire screen, but it can be controlled via clip-rects.</li>
+<li>It can be scrolled endless and animated</li>
+</ul>
+<p>&#160;</p>
+<p>So a tiling plane is useful for parallax scrolling, animated backgrounds, etc.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Frames</p>
+<p>&#160;</p>
+<p>A frame, represented by gs.Frame class, displays a graphical frame on screen which is useful for In-Game UI decorations such as In-Game Windows, Cursors, etc.</p>
+<p>&#160;</p>
+<p><img src="image47.gif" alt="" style=" border:none; width:100%; max-width:274px;" border="0" /></p>
+<p>&#160;</p>
+<p>The actual look depends on the assigned bitmap, also called skin. Of course it looks much better with a proper window background in addition to the frame. In the above example, the assigned skin-bitmap looks like this:</p>
+<p>&#160;</p>
+<p><img src="image48.gif" alt="" style=" border:none; width:100%; max-width:64px;" border="0" /></p>
+<p>&#160;</p>
+<p>So a frame does not just display the assigned bitmap at once, it only displays multiple pieces of it and connects them together to form a frame.</p>
+<p>&#160;</p>
+<p><img src="image49.gif" alt="" style=" border:none; width:100%; max-width:64px;" border="0" /></p>
+<p>&#160;</p>
+<p>The yellow marked areas are the corners and the red marked areas are the sides which are stretched to fit the size of the frame. The size of the corners and sides can be configured via properties of the frame object. Let´s take a look at the following example. Please import the following skin-graphic into your Graphics/Pictures folder and call it "WindowFrame":</p>
+<p>&#160;</p>
+<p><img src="WindowFrame.png" alt="" style=" border:none; width:100%; max-width:64px;" border="0" /></p>
+<p>&#160;</p>
+<pre>
+<code class="coffee">
+# ===================================================================
+#
+#   Script: Component_TestBedBehavior
+#
+#   Put your name here
+#
+# ===================================================================
+class Component_TestBedBehavior extends gs.Component_SceneBehavior
+    ###*
+    * A test bed scene behavior. Here you can play around with Visual Novel Maker's 
+    * game engine to get a better feeling for everything.
+    ###
+    constructor: -&gt;
+        super
+        
+        # Define resource context property
+        @resourceContext = null
+    
+    ###*
+    * Initializes the scene. 
+    ###
+    initialize: -&gt;
+        super
+        
+        # Create a new resource context
+        @resourceContext = ResourceManager.createContext()
+        # Set current object manager
+        gs.ObjectManager.current = SceneManager
+        # Set it as the current resource context
+        ResourceManager.context = @resourceContext
+        # Load all scene documents
+        @scenes = DataManager.getDocumentsByType("vn.scene")
+        
+    ###*
+    * Disposes the scene.
+    ###  
+    dispose: -&gt;
+        super
+    
+    ###*
+    * Prepares all visual game object for the scene.
+    ###  
+    prepareVisual: -&gt;
+        # Create a frame
+        @frame = new gs.Frame(Graphics.viewport)
+        # Assign skin bitmap
+        @frame.skin = ResourceManager.getBitmap("Graphics/Pictures/WindowFrame")
+        # Set thickness of the frame
+        @frame.thickness = 16
+        # Set corner-size of the frame
+        @frame.cornerSize = 16
+        # Set width of the frame
+        @frame.width = 250
+        # Set height of the frame
+        @frame.height = 250
+        # Set position of the frame. Center it on screen
+        @frame.x = (Graphics.width - @frame.width) / 2
+        @frame.y = (Graphics.height - @frame.height) / 2
+        
+        # Start Screen Transition
+        @transition()
+        
+    ###*
+    * Prepares all data for the scene and loads the necessary graphic and audio resources.
+    ### 
+    prepareData: -&gt;
+        # Load skin bitmap
+        ResourceManager.getBitmap("Graphics/Pictures/WindowFrame")
+        
+    ###*
+    * Update the scene's content.
+    ###         
+    updateContent: -&gt;
+        
+gs.Component_LayoutSceneBehavior = Component_TestBedBehavior</code>
+</pre>
+<p>As we can see, we are using gs.Frame to create a new frame-object. The skin-property expects the bitmap object which should be used to construct the frame. With thickness and cornerSize we can freely configure the size of the sides and corners. That's it.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Three-Part Image</p>
+<p>&#160;</p>
+<p>A three-part image, represented through the gs.ThreePartImage class, splits up the assigned skin-bitmap into three different parts which are displayed differently. It is a more simple form of a gs.Frame object.</p>
+<p>&#160;</p>
+<p><img src="image50.gif" alt="" style=" border:none; width:100%; max-width:123px;" border="0" /></p>
+<p>&#160;</p>
+<p>The yellow marked left and right parts are fixed where the middle red-marked part is stretched. The actual bitmap looks like this:</p>
+<p>&#160;</p>
+<p><img src="image51.gif" alt="" style=" border:none; width:100%; max-width:60px;" border="0" /></p>
+<p>&#160;</p>
+<p>It is scaled-up of course and has a light-green background to make it more visible in the help-file. The original bitmap has a transparent background. The size of the left, right and middle part can be configured and also the orientation can be changed to vertical instead.</p>
+<p>&#160;</p>
+<p>A three-part image is useful for In-Game UI related things such as simple buttons, scroll-bars, etc. If you look at the scroll-bar of the default In-Game UI:</p>
+<p>&#160;</p>
+<p><img src="InGameScrollBar.PNG" alt="" style=" border:none; width:100%; max-width:624px;" border="0" /></p>
+<p>&#160;</p>
+<p>That scroll-bar on the right is done using a three-part image.</p>
+<p>&#160;</p>
+<p>Let's see a three-part image in action:</p>
+<pre>
+<code class="coffee">
+# ===================================================================
+#
+#   Script: Component_TestBedBehavior
+#
+#   Put your name here
+#
+# ===================================================================
+class Component_TestBedBehavior extends gs.Component_SceneBehavior
+    ###*
+    * A test bed scene behavior. Here you can play around with Visual Novel Maker's 
+    * game engine to get a better feeling for everything.
+    ###
+    constructor: -&gt;
+        super
+        
+        # Define resource context property
+        @resourceContext = null
+    
+    ###*
+    * Initializes the scene. 
+    ###
+    initialize: -&gt;
+        super
+        
+        # Create a new resource context
+        @resourceContext = ResourceManager.createContext()
+        # Set current object manager
+        gs.ObjectManager.current = SceneManager
+        # Set it as the current resource context
+        ResourceManager.context = @resourceContext
+        # Load all scene documents
+        @scenes = DataManager.getDocumentsByType("vn.scene")
+        
+    ###*
+    * Disposes the scene.
+    ###  
+    dispose: -&gt;
+        super
+    
+    ###*
+    * Prepares all visual game object for the scene.
+    ###  
+    prepareVisual: -&gt;
+        # Create a frame
+        @threePartImage = new gs.ThreePartImage(Graphics.viewport)
+        # Assign skin bitmap
+        @threePartImage.skin = ResourceManager.getBitmap("Graphics/Pictures/scrollbar")
+        # Set size of the first fixed part.
+        @threePartImage.firstPartSize = 7
+        # Set size of the middle streched part.
+        @threePartImage.middlePartSize = 1
+        # Set size of the last fixed part.
+        @threePartImage.lastPartSize = 7
+        # Set orientation
+        @threePartImage.orientation = 0
+        
+        # Set width of the frame
+        @threePartImage.width = 450
+        # Set height of the frame
+        @threePartImage.height = 15
+        # Set position of the frame. Center it on screen
+        @threePartImage.x = (Graphics.width - @threePartImage.width) / 2
+        @threePartImage.y = (Graphics.height - @threePartImage.height) / 2
+        
+        # Start Screen Transition
+        @transition()
+        
+    ###*
+    * Prepares all data for the scene and loads the necessary graphic and audio resources.
+    ### 
+    prepareData: -&gt;
+        # Load skin bitmap
+        ResourceManager.getBitmap("Graphics/Pictures/scrollbar")
+        
+    ###*
+    * Update the scene's content.
+    ###         
+    updateContent: -&gt;
+        
+gs.Component_LayoutSceneBehavior = Component_TestBedBehavior</code>
+</pre>
+<p>&#160;</p>
+<p>As we can see, we just need to create an instance of gs.ThreePartImage class and setup the part-sizes and orientation and that's it.</p>
+</body>
+</html>

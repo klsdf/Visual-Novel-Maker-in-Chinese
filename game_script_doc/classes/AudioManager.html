@@ -1,0 +1,2057 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>AudioManager</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="icon" href="../assets/favicon.ico">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+                <h1><img src="../assets/css/logo.png" title="" width="117" height="52"></h1>
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: </em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+                    <h2 class="off-left">APIs</h2>
+                    <div id="api-tabview" class="tabview">
+                        <ul class="tabs">
+                            <li><a href="#api-classes">Classes</a></li>
+                            <li><a href="#api-modules">Modules</a></li>
+                        </ul>
+                
+                        <div id="api-tabview-filter">
+                            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                        </div>
+                
+                        <div id="api-tabview-panel">
+                            <ul id="api-classes" class="apis classes">
+                                <li><a href="../classes/AnimationLoopType.html">AnimationLoopType</a></li>
+                                <li><a href="../classes/AnimationTypes.html">AnimationTypes</a></li>
+                                <li><a href="../classes/AudioManager.html">AudioManager</a></li>
+                                <li><a href="../classes/CircularDistortionEffect.html">CircularDistortionEffect</a></li>
+                                <li><a href="../classes/Colors.html">Colors</a></li>
+                                <li><a href="../classes/CommandFieldFlags.html">CommandFieldFlags</a></li>
+                                <li><a href="../classes/Component.html">Component</a></li>
+                                <li><a href="../classes/Component_ActionHandler.html">Component_ActionHandler</a></li>
+                                <li><a href="../classes/Component_Animation.html">Component_Animation</a></li>
+                                <li><a href="../classes/Component_AnimationExecutor.html">Component_AnimationExecutor</a></li>
+                                <li><a href="../classes/Component_AnimationHandler.html">Component_AnimationHandler</a></li>
+                                <li><a href="../classes/Component_Animator.html">Component_Animator</a></li>
+                                <li><a href="../classes/Component_BindingHandler.html">Component_BindingHandler</a></li>
+                                <li><a href="../classes/Component_BlendAnimation.html">Component_BlendAnimation</a></li>
+                                <li><a href="../classes/Component_BlurAnimation.html">Component_BlurAnimation</a></li>
+                                <li><a href="../classes/Component_CallSceneInterpreter.html">Component_CallSceneInterpreter</a></li>
+                                <li><a href="../classes/Component_CharacterBehavior.html">Component_CharacterBehavior</a></li>
+                                <li><a href="../classes/Component_CommandInterpreter.html">Component_CommandInterpreter</a></li>
+                                <li><a href="../classes/Component_CommonEventBehavior.html">Component_CommonEventBehavior</a></li>
+                                <li><a href="../classes/Component_Container.html">Component_Container</a></li>
+                                <li><a href="../classes/Component_DataGridBehavior.html">Component_DataGridBehavior</a></li>
+                                <li><a href="../classes/Component_DomainContainer.html">Component_DomainContainer</a></li>
+                                <li><a href="../classes/Component_Draggable.html">Component_Draggable</a></li>
+                                <li><a href="../classes/Component_EventEmitter.html">Component_EventEmitter</a></li>
+                                <li><a href="../classes/Component_FieldAnimation.html">Component_FieldAnimation</a></li>
+                                <li><a href="../classes/Component_Frame.html">Component_Frame</a></li>
+                                <li><a href="../classes/Component_FrameAnimation.html">Component_FrameAnimation</a></li>
+                                <li><a href="../classes/Component_FreeLayoutBehavior.html">Component_FreeLayoutBehavior</a></li>
+                                <li><a href="../classes/Component_GameSceneBehavior.html">Component_GameSceneBehavior</a></li>
+                                <li><a href="../classes/Component_GridLayoutBehavior.html">Component_GridLayoutBehavior</a></li>
+                                <li><a href="../classes/Component_Handler.html">Component_Handler</a></li>
+                                <li><a href="../classes/Component_HotspotBehavior.html">Component_HotspotBehavior</a></li>
+                                <li><a href="../classes/Component_ImageAnimation.html">Component_ImageAnimation</a></li>
+                                <li><a href="../classes/Component_ImageMap.html">Component_ImageMap</a></li>
+                                <li><a href="../classes/Component_InputHandler.html">Component_InputHandler</a></li>
+                                <li><a href="../classes/Component_IntervalTimer.html">Component_IntervalTimer</a></li>
+                                <li><a href="../classes/Component_LayoutBehavior.html">Component_LayoutBehavior</a></li>
+                                <li><a href="../classes/Component_LayoutSceneBehavior.html">Component_LayoutSceneBehavior</a></li>
+                                <li><a href="../classes/Component_Live2D.html">Component_Live2D</a></li>
+                                <li><a href="../classes/Component_Live2DAnimation.html">Component_Live2DAnimation</a></li>
+                                <li><a href="../classes/Component_MaskAnimation.html">Component_MaskAnimation</a></li>
+                                <li><a href="../classes/Component_MessageBehavior.html">Component_MessageBehavior</a></li>
+                                <li><a href="../classes/Component_MessageTextRenderer.html">Component_MessageTextRenderer</a></li>
+                                <li><a href="../classes/Component_MoveAnimation.html">Component_MoveAnimation</a></li>
+                                <li><a href="../classes/Component_NumberInput.html">Component_NumberInput</a></li>
+                                <li><a href="../classes/Component_PanelBehavior.html">Component_PanelBehavior</a></li>
+                                <li><a href="../classes/Component_PathAnimation.html">Component_PathAnimation</a></li>
+                                <li><a href="../classes/Component_PixelateAnimation.html">Component_PixelateAnimation</a></li>
+                                <li><a href="../classes/Component_Quad.html">Component_Quad</a></li>
+                                <li><a href="../classes/Component_RotateAnimation.html">Component_RotateAnimation</a></li>
+                                <li><a href="../classes/Component_SceneBehavior.html">Component_SceneBehavior</a></li>
+                                <li><a href="../classes/Component_ShakeAnimation.html">Component_ShakeAnimation</a></li>
+                                <li><a href="../classes/Component_SpreadLayoutBehavior.html">Component_SpreadLayoutBehavior</a></li>
+                                <li><a href="../classes/Component_Sprite.html">Component_Sprite</a></li>
+                                <li><a href="../classes/Component_StackLayoutBehavior.html">Component_StackLayoutBehavior</a></li>
+                                <li><a href="../classes/Component_TextBehavior.html">Component_TextBehavior</a></li>
+                                <li><a href="../classes/Component_TextInput.html">Component_TextInput</a></li>
+                                <li><a href="../classes/Component_TextRenderer.html">Component_TextRenderer</a></li>
+                                <li><a href="../classes/Component_ThreePartImage.html">Component_ThreePartImage</a></li>
+                                <li><a href="../classes/Component_TilingPlane.html">Component_TilingPlane</a></li>
+                                <li><a href="../classes/Component_TilingSprite.html">Component_TilingSprite</a></li>
+                                <li><a href="../classes/Component_Timer.html">Component_Timer</a></li>
+                                <li><a href="../classes/Component_TintAnimation.html">Component_TintAnimation</a></li>
+                                <li><a href="../classes/Component_UIBehavior.html">Component_UIBehavior</a></li>
+                                <li><a href="../classes/Component_Viewport.html">Component_Viewport</a></li>
+                                <li><a href="../classes/Component_Visual.html">Component_Visual</a></li>
+                                <li><a href="../classes/Component_WebStartBehavior.html">Component_WebStartBehavior</a></li>
+                                <li><a href="../classes/Component_WobbleAnimation.html">Component_WobbleAnimation</a></li>
+                                <li><a href="../classes/Component_ZoomAnimation.html">Component_ZoomAnimation</a></li>
+                                <li><a href="../classes/ContainerDisposeBehavior.html">ContainerDisposeBehavior</a></li>
+                                <li><a href="../classes/DataManager.html">DataManager</a></li>
+                                <li><a href="../classes/DataOptimizer.html">DataOptimizer</a></li>
+                                <li><a href="../classes/Easing.html">Easing</a></li>
+                                <li><a href="../classes/Easings.html">Easings</a></li>
+                                <li><a href="../classes/EasingTypes.html">EasingTypes</a></li>
+                                <li><a href="../classes/Fonts.html">Fonts</a></li>
+                                <li><a href="../classes/Formula.html">Formula</a></li>
+                                <li><a href="../classes/GameManager.html">GameManager</a></li>
+                                <li><a href="../classes/GameTemp.html">GameTemp</a></li>
+                                <li><a href="../classes/Helper.html">Helper</a></li>
+                                <li><a href="../classes/ImageHandling.html">ImageHandling</a></li>
+                                <li><a href="../classes/InterpreterContext.html">InterpreterContext</a></li>
+                                <li><a href="../classes/LanguageManager.html">LanguageManager</a></li>
+                                <li><a href="../classes/LayoutManagementMode.html">LayoutManagementMode</a></li>
+                                <li><a href="../classes/LivePreviewInfo.html">LivePreviewInfo</a></li>
+                                <li><a href="../classes/Main.html">Main</a></li>
+                                <li><a href="../classes/MessageSettings.html">MessageSettings</a></li>
+                                <li><a href="../classes/Object_Animation.html">Object_Animation</a></li>
+                                <li><a href="../classes/Object_Background.html">Object_Background</a></li>
+                                <li><a href="../classes/Object_Base.html">Object_Base</a></li>
+                                <li><a href="../classes/Object_Character.html">Object_Character</a></li>
+                                <li><a href="../classes/Object_CommonEvent.html">Object_CommonEvent</a></li>
+                                <li><a href="../classes/Object_Container.html">Object_Container</a></li>
+                                <li><a href="../classes/Object_DataGrid.html">Object_DataGrid</a></li>
+                                <li><a href="../classes/Object_DomainContainer.html">Object_DomainContainer</a></li>
+                                <li><a href="../classes/Object_Frame.html">Object_Frame</a></li>
+                                <li><a href="../classes/Object_FreeLayout.html">Object_FreeLayout</a></li>
+                                <li><a href="../classes/Object_GridLayout.html">Object_GridLayout</a></li>
+                                <li><a href="../classes/Object_Hotspot.html">Object_Hotspot</a></li>
+                                <li><a href="../classes/Object_Image.html">Object_Image</a></li>
+                                <li><a href="../classes/Object_ImageMap.html">Object_ImageMap</a></li>
+                                <li><a href="../classes/Object_IntervalTimer.html">Object_IntervalTimer</a></li>
+                                <li><a href="../classes/Object_Layout.html">Object_Layout</a></li>
+                                <li><a href="../classes/Object_Live2DCharacter.html">Object_Live2DCharacter</a></li>
+                                <li><a href="../classes/Object_Message.html">Object_Message</a></li>
+                                <li><a href="../classes/Object_MessageArea.html">Object_MessageArea</a></li>
+                                <li><a href="../classes/Object_Panel.html">Object_Panel</a></li>
+                                <li><a href="../classes/Object_Picture.html">Object_Picture</a></li>
+                                <li><a href="../classes/Object_Scene.html">Object_Scene</a></li>
+                                <li><a href="../classes/Object_SpreadLayout.html">Object_SpreadLayout</a></li>
+                                <li><a href="../classes/Object_StackLayout.html">Object_StackLayout</a></li>
+                                <li><a href="../classes/Object_Text.html">Object_Text</a></li>
+                                <li><a href="../classes/Object_ThreePartImage.html">Object_ThreePartImage</a></li>
+                                <li><a href="../classes/Object_Timer.html">Object_Timer</a></li>
+                                <li><a href="../classes/Object_UIElement.html">Object_UIElement</a></li>
+                                <li><a href="../classes/Object_Video.html">Object_Video</a></li>
+                                <li><a href="../classes/Object_Viewport.html">Object_Viewport</a></li>
+                                <li><a href="../classes/Object_Visual.html">Object_Visual</a></li>
+                                <li><a href="../classes/ObjectManager.html">ObjectManager</a></li>
+                                <li><a href="../classes/RecordManager.html">RecordManager</a></li>
+                                <li><a href="../classes/RendererTextLine.html">RendererTextLine</a></li>
+                                <li><a href="../classes/RendererToken.html">RendererToken</a></li>
+                                <li><a href="../classes/ResourceLoader.html">ResourceLoader</a></li>
+                                <li><a href="../classes/ResourceManager.html">ResourceManager</a></li>
+                                <li><a href="../classes/SceneManager.html">SceneManager</a></li>
+                                <li><a href="../classes/Space.html">Space</a></li>
+                                <li><a href="../classes/Sprite_Debug.html">Sprite_Debug</a></li>
+                                <li><a href="../classes/Style.html">Style</a></li>
+                                <li><a href="../classes/UIElementPoint.html">UIElementPoint</a></li>
+                                <li><a href="../classes/UIElementRectangle.html">UIElementRectangle</a></li>
+                                <li><a href="../classes/UIManager.html">UIManager</a></li>
+                                <li><a href="../classes/UpdateBehavior.html">UpdateBehavior</a></li>
+                                <li><a href="../classes/VariableStore.html">VariableStore</a></li>
+                            </ul>
+                
+                
+                            <ul id="api-modules" class="apis modules">
+                                <li><a href="../modules/gs.html">gs</a></li>
+                                <li><a href="../modules/gs.RendererTextLine.html">gs.RendererTextLine</a></li>
+                                <li><a href="../modules/ui.html">ui</a></li>
+                                <li><a href="../modules/vn.html">vn</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+                    Show:
+                    <label for="api-show-inherited">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected">
+                        <input type="checkbox" id="api-show-protected">
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private">
+                        <input type="checkbox" id="api-show-private">
+                        Private
+                    </label>
+                    <label for="api-show-deprecated">
+                        <input type="checkbox" id="api-show-deprecated">
+                        Deprecated
+                    </label>
+            
+                </div>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+<h1>AudioManager Class</h1>
+<div class="box meta">
+
+
+
+            Module: <a href="../modules/gs.html">gs</a>
+
+</div>
+
+
+<div class="box intro">
+    <p>Manages the audio playback of the game.</p>
+
+</div>
+
+
+<div id="classdocs" class="tabview">
+    <ul class="api-class-tabs">
+        <li class="api-class-tab index"><a href="#index">Index</a></li>
+
+            <li class="api-class-tab methods"><a href="#methods">Methods</a></li>
+            <li class="api-class-tab properties"><a href="#properties">Properties</a></li>
+    </ul>
+
+    <div>
+        <div id="index" class="api-class-tabpanel index">
+            <h2 class="off-left">Item Index</h2>
+
+                <div class="index-section methods">
+                    <h3>Methods</h3>
+
+                    <ul class="index-list methods">
+                            <li class="index-item method">
+                                <a href="#method_changeMusic">changeMusic</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_disposeMusic">disposeMusic</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_loadMusic">loadMusic</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_loadSound">loadSound</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_play">play</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_playMusic">playMusic</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_playMusicRandom">playMusicRandom</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_playSound">playSound</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_playVoice">playVoice</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_prepare">prepare</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_restore">restore</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_resumeMusic">resumeMusic</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_stopAllMusic">stopAllMusic</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_stopAllSounds">stopAllSounds</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_stopAllVoices">stopAllVoices</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_stopMusic">stopMusic</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_stopSound">stopSound</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_stopVoice">stopVoice</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_update">update</a>
+
+                            </li>
+                            <li class="index-item method protected">
+                                <a href="#method_updateAudioBuffers">updateAudioBuffers</a>
+
+                            </li>
+                            <li class="index-item method protected">
+                                <a href="#method_updateAudioBuffers">updateAudioBuffers</a>
+
+                            </li>
+                            <li class="index-item method protected">
+                                <a href="#method_updateRandomAudio">updateRandomAudio</a>
+
+                            </li>
+                    </ul>
+                </div>
+
+                <div class="index-section properties">
+                    <h3>Properties</h3>
+
+                    <ul class="index-list properties">
+                            <li class="index-item property protected">
+                                <a href="#property_audioLayers">audioLayers</a>
+
+                            </li>
+                            <li class="index-item property protected">
+                                <a href="#property_buffers">buffers</a>
+
+                            </li>
+                            <li class="index-item property protected">
+                                <a href="#property_buffers">buffers</a>
+
+                            </li>
+                            <li class="index-item property protected">
+                                <a href="#property_generalMusicVolume">generalMusicVolume</a>
+
+                            </li>
+                            <li class="index-item property protected">
+                                <a href="#property_generalSoundVolume">generalSoundVolume</a>
+
+                            </li>
+                            <li class="index-item property protected">
+                                <a href="#property_generalVoiceVolume">generalVoiceVolume</a>
+
+                            </li>
+                            <li class="index-item property protected">
+                                <a href="#property_music">music</a>
+
+                            </li>
+                            <li class="index-item property protected">
+                                <a href="#property_musicVolume">musicVolume</a>
+
+                            </li>
+                            <li class="index-item property protected">
+                                <a href="#property_soundReferences">soundReferences</a>
+
+                            </li>
+                            <li class="index-item property protected">
+                                <a href="#property_soundVolume">soundVolume</a>
+
+                            </li>
+                            <li class="index-item property protected">
+                                <a href="#property_voiceVolume">voiceVolume</a>
+
+                            </li>
+                    </ul>
+                </div>
+
+
+        </div>
+
+            <div id="methods" class="api-class-tabpanel">
+                <h2 class="off-left">Methods</h2>
+
+<div id="method_changeMusic" class="method item">
+    <h3 class="name"><code>changeMusic</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>music</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Changes the current music to the specified one.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">music</code>
+                        <span class="type">Object</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The music to play. If <b>null</b> the current music will stop playing.</li>
+</ul>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_disposeMusic" class="method item">
+    <h3 class="name"><code>disposeMusic</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>layer</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Disposes a music.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">layer</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The audio layer of the music to dispose.</li>
+</ul>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_loadMusic" class="method item">
+    <h3 class="name"><code>loadMusic</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>name</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Loads the specified music.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">name</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The name of the music to load.</li>
+</ul>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_loadSound" class="method item">
+    <h3 class="name"><code>loadSound</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>name</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Loads the specified sound.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">name</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The name of the sound to load.</li>
+</ul>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_play" class="method item">
+    <h3 class="name"><code>play</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>path</code>
+                </li>
+                <li class="arg">
+                        <code>volume</code>
+                </li>
+                <li class="arg">
+                        <code>rate</code>
+                </li>
+                <li class="arg">
+                        <code>fadeInTime</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Plays an audio resource.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">path</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The path to the audio resource.</li>
+</ul>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">volume</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The volume.</li>
+</ul>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">rate</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The playback rate.</li>
+</ul>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">fadeInTime</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The fade-in time in frames.</li>
+</ul>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_playMusic" class="method item">
+    <h3 class="name"><code>playMusic</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>name</code>
+                </li>
+                <li class="arg">
+                        <code>volume</code>
+                </li>
+                <li class="arg">
+                        <code>rate</code>
+                </li>
+                <li class="arg">
+                        <code>fadeInTime</code>
+                </li>
+                <li class="arg">
+                        <code>layer</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Plays a music.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">name</code>
+                        <span class="type">String | Object</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The music to play. Can be just a name or a music data-object.</li>
+</ul>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">volume</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The music's volume in percent.</li>
+</ul>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">rate</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The music's playback rate in percent.</li>
+</ul>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">fadeInTime</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The fade-in time.</li>
+</ul>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">layer</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The layer to play the music on.</li>
+</ul>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_playMusicRandom" class="method item">
+    <h3 class="name"><code>playMusicRandom</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>music</code>
+                </li>
+                <li class="arg">
+                        <code>fadeTime</code>
+                </li>
+                <li class="arg">
+                        <code>layer</code>
+                </li>
+                <li class="arg">
+                        <code>playTime</code>
+                </li>
+                <li class="arg">
+                        <code>playRange</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Plays a music as a random music. A random music will fade-in and fade-out
+at random times. That can be combined with other audio-layers to create a
+much better looping of an audio track.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">music</code>
+                        <span class="type">Object</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The music to play.</li>
+</ul>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">fadeTime</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The time for a single fade-in/out in frames.</li>
+</ul>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">layer</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The audio layer to use.</li>
+</ul>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">playTime</code>
+                        <span class="type">gs.Range</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>Play-Time range like 10s to 30s.</li>
+</ul>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">playRange</code>
+                        <span class="type">gs.Range</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>Play-Range.</li>
+</ul>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_playSound" class="method item">
+    <h3 class="name"><code>playSound</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>name</code>
+                </li>
+                <li class="arg">
+                        <code>volume</code>
+                </li>
+                <li class="arg">
+                        <code>rate</code>
+                </li>
+                <li class="arg">
+                        <code>musicEffect</code>
+                </li>
+                <li class="arg">
+                        <code>voice</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Plays a sound.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">name</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The name of the sound to play.</li>
+</ul>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">volume</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The sound's volume.</li>
+</ul>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">rate</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The sound's playback rate.</li>
+</ul>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">musicEffect</code>
+                        <span class="type">Boolean</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>Indicates if the sound should be played as a music effect. In that case, the current music
+at audio-layer will be paused until the sound finishes playing.</li>
+</ul>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">voice</code>
+                        <span class="type">Boolean</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>Indicates if the sound should be handled as a voice.</li>
+</ul>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_playVoice" class="method item">
+    <h3 class="name"><code>playVoice</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>name</code>
+                </li>
+                <li class="arg">
+                        <code>volume</code>
+                </li>
+                <li class="arg">
+                        <code>rate</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Plays a voice.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">name</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The name of the voice to play.</li>
+</ul>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">volume</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The voice volume.</li>
+</ul>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">rate</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The voice playback rate.</li>
+</ul>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_prepare" class="method item">
+    <h3 class="name"><code>prepare</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>music</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Prepares.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">music</code>
+                        <span class="type">Object</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The music to play. If <b>null</b> the current music will stop playing.</li>
+</ul>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_restore" class="method item">
+    <h3 class="name"><code>restore</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>layers</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Restores audio-playback from a specified array of audio layers.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">layers</code>
+                        <span class="type">gs.AudioLayerInfo</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>An array of audio layer info objects.</li>
+</ul>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_resumeMusic" class="method item">
+    <h3 class="name"><code>resumeMusic</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>fadeInTime</code>
+                </li>
+                <li class="arg">
+                        <code>layer</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Resumes a paused music.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">fadeInTime</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The fade-in time in frames.</li>
+</ul>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">layer</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The audio layer to resume.</li>
+</ul>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_stopAllMusic" class="method item">
+    <h3 class="name"><code>stopAllMusic</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>fadeOutTime</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Stops all music/audio layers.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">fadeOutTime</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The fade-out time in frames.</li>
+</ul>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_stopAllSounds" class="method item">
+    <h3 class="name"><code>stopAllSounds</code></h3>
+
+        <span class="paren">()</span>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Stops all sounds.</p>
+
+    </div>
+
+
+
+
+</div>
+<div id="method_stopAllVoices" class="method item">
+    <h3 class="name"><code>stopAllVoices</code></h3>
+
+        <span class="paren">()</span>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Stops all voices.</p>
+
+    </div>
+
+
+
+
+</div>
+<div id="method_stopMusic" class="method item">
+    <h3 class="name"><code>stopMusic</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>fadeOutTime</code>
+                </li>
+                <li class="arg">
+                        <code>layer</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Stops a music.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">fadeOutTime</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The fade-out time in frames.</li>
+</ul>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">layer</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The audio layer to stop.</li>
+</ul>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_stopSound" class="method item">
+    <h3 class="name"><code>stopSound</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>name</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Stops a sound and all references of it.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">name</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The name of the sound to stop.</li>
+</ul>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_stopVoice" class="method item">
+    <h3 class="name"><code>stopVoice</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>name</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Stops a voice.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">name</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The name of the voice to stop.</li>
+</ul>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_update" class="method item">
+    <h3 class="name"><code>update</code></h3>
+
+        <span class="paren">()</span>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Updates the audio-playback.</p>
+
+    </div>
+
+
+
+
+</div>
+<div id="method_updateAudioBuffers" class="method item protected">
+    <h3 class="name"><code>updateAudioBuffers</code></h3>
+
+        <span class="paren">()</span>
+
+
+
+        <span class="flag protected">protected</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Updates all audio-buffers depending on the play-type.</p>
+
+    </div>
+
+
+
+
+</div>
+<div id="method_updateAudioBuffers" class="method item protected">
+    <h3 class="name"><code>updateAudioBuffers</code></h3>
+
+        <span class="paren">()</span>
+
+
+
+        <span class="flag protected">protected</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Updates all audio-buffers depending on the play-type.</p>
+
+    </div>
+
+
+
+
+</div>
+<div id="method_updateRandomAudio" class="method item protected">
+    <h3 class="name"><code>updateRandomAudio</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>buffer</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+        <span class="flag protected">protected</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Updates a randomly played audio buffer.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">buffer</code>
+                        <span class="type">gs.AudioBuffer</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The audio buffer to update.</li>
+</ul>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+            </div>
+
+            <div id="properties" class="api-class-tabpanel">
+                <h2 class="off-left">Properties</h2>
+
+<div id="property_audioLayers" class="property item protected">
+    <h3 class="name"><code>audioLayers</code></h3>
+    <span class="type">gs.AudioLayerInfo</span>
+
+
+        <span class="flag protected">protected</span>
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Stores audio layer info-data for each layer.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_buffers" class="property item protected">
+    <h3 class="name"><code>buffers</code></h3>
+    <span class="type">gs.AudioBuffer</span>
+
+
+        <span class="flag protected">protected</span>
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Stores all audio buffers.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_buffers" class="property item protected">
+    <h3 class="name"><code>buffers</code></h3>
+    <span class="type">gs.AudioBuffer</span>
+
+
+        <span class="flag protected">protected</span>
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Stores all audio buffers by layer.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_generalMusicVolume" class="property item protected">
+    <h3 class="name"><code>generalMusicVolume</code></h3>
+    <span class="type">Number</span>
+
+
+        <span class="flag protected">protected</span>
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>General music volume</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_generalSoundVolume" class="property item protected">
+    <h3 class="name"><code>generalSoundVolume</code></h3>
+    <span class="type">Number</span>
+
+
+        <span class="flag protected">protected</span>
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>General sound volume</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_generalVoiceVolume" class="property item protected">
+    <h3 class="name"><code>generalVoiceVolume</code></h3>
+    <span class="type">Number</span>
+
+
+        <span class="flag protected">protected</span>
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>General voice volume</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_music" class="property item protected">
+    <h3 class="name"><code>music</code></h3>
+    <span class="type">Object</span>
+
+
+        <span class="flag protected">protected</span>
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Current Music (Layer 0)</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_musicVolume" class="property item protected">
+    <h3 class="name"><code>musicVolume</code></h3>
+    <span class="type">Number</span>
+
+
+        <span class="flag protected">protected</span>
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Current music volume.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_soundReferences" class="property item protected">
+    <h3 class="name"><code>soundReferences</code></h3>
+    <span class="type">gs.AudioBufferReference</span>
+
+
+        <span class="flag protected">protected</span>
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Stores all audio buffer references for sounds.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_soundVolume" class="property item protected">
+    <h3 class="name"><code>soundVolume</code></h3>
+    <span class="type">Number</span>
+
+
+        <span class="flag protected">protected</span>
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Current sound volume.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_voiceVolume" class="property item protected">
+    <h3 class="name"><code>voiceVolume</code></h3>
+    <span class="type">Number</span>
+
+
+        <span class="flag protected">protected</span>
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Current voice volume.</p>
+
+    </div>
+
+
+
+</div>
+            </div>
+
+
+    </div>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

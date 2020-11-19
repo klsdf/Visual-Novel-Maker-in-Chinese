@@ -1,0 +1,274 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Resource Standards</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.5_3";
+</script>
+ <meta name="topic-breadcrumbs" content="Exploring the Editor" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">Resource Standards</p>
+</div>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-family: 'Book Antiqua', serif; 
+												 font-weight: bold; font-size: 18pt;">V</span>isual 
+ Novel Maker allows you to import your own resources. <span style="font-family: Arial, sans-serif;">There 
+ is no standard image size for all the assets unless specified. We recommend 
+ that users don't go beyond 1024px ~ 2048px if they are planning to make 
+ games for mobile.</span></p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><span>Characters</span></p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">Images 
+ used for Character Expressions.</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Data 
+	 Format</span>&#160;- PNG</p></li>
+	<li style="font-weight: bold; margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+															 font-weight: bold;">For 
+	 animated characters<span style="font-weight: normal;">, they have 
+	 to be individual images per frame.</span><br />
+	<img src="willow.jpg" alt="" style=" border:none; width:100%; max-width:334px;" border="0" /></p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p>
+<p class="Sub_Heading"><span>Backgrounds</span></p>
+<p>Images used for Backgrounds.</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Data 
+	 Format</span>&#160;- PNG, JPG</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><span>Pictures</span></p>
+<p>Images used for CGs, Animations, System, Picture and UI commands.</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Data 
+	 Format</span>&#160;- PNG, JPG</p></li>
+	<li style="margin-left: -20px; font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+															 font-weight: bold;">Image 
+	 Size:</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">CG Gallery Thumbs:</span> The size of a 
+	 gallery-thumb is 1 / 8 of the screen resolution. For example, if you 
+	 have 1280x720 it would be 160x90.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">Animations: 
+	 <span style="font-weight: normal;">They have to be imported as sprite 
+	 sheets. The size varies based on the grid size of the image. For example:</span><br />
+	<img src="ANIMATIONSHEET.jpg" alt="Created and Owned by Archeia" title="Created and Owned by Archeia" style=" border:none; width:100%; max-width:194px;" border="0" /><br />
+	<span style="font-weight: normal;">If your character grid is 24 width 
+	 (X) x 32 height (Y), then to calculate:</span></p></li>
+	<li><table style=" border-collapse:separate; width:100%; max-width:30.356%;" cellspacing="0" border="1">
+		<col style="width: 29.864%;" />
+		<col style="width: 70.136%;" />
+		<tr>
+			<td colspan="2"><p style="text-align: center; font-family: Arial, sans-serif; 
+								 font-weight: bold;">(Width*Frames) px 
+			 by (Height*Frames) px</p></td>
+			
+		</tr>
+		<tr>
+			<td><span style="font-weight: bold;">Width</span></td>
+			<td><span>24 x 3 frames = 72</span></td>
+		</tr>
+		<tr>
+			<td><span style="font-weight: bold;">Height</span></td>
+			<td><span>32 x 4 frames = 128</span></td>
+		</tr>
+		<tr>
+			<td><span style="font-weight: bold;">Final Image Size</span></td>
+			<td><span>72px by 128px</span></td>
+		</tr>
+	</table></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p>
+<p class="SubSubHeading">Frames</p>
+<p>A frame displays a graphical frame on screen which is useful for In-Game 
+ UI decorations such as In-Game Windows, Cursors, etc. It can be used if 
+ the <span style="font-weight: bold;">Visual Type</span> of the <a href="Picture.htm#Show_Picture">Show 
+ Picture</a> command is set to <span style="font-weight: bold;">Frame.</span></p>
+<p>&#160;</p>
+<p><img src="image47.gif" alt="" style=" border:none; width:100%; max-width:274px;" border="0" /></p>
+<p>&#160;</p>
+<p>The actual look depends on image, also called skin. Of course it looks 
+ much better with a proper window background in addition to the frame. 
+ In the above example, the imported skin-image looks like this:</p>
+<p>&#160;</p>
+<p><img src="image48.gif" alt="" style=" border:none; width:100%; max-width:64px;" border="0" /></p>
+<p>&#160;</p>
+<p>So a frame does not just displays the image at once, it displays multiple 
+ pieces of it and connects them together to form a frame.</p>
+<p>&#160;</p>
+<p><img src="image49.gif" alt="" style=" border:none; width:100%; max-width:64px;" border="0" /></p>
+<p>&#160;</p>
+<p>The yellow marked areas are the corners and the red marked areas are 
+ the sides which are stretched to fit the size of the frame. The size of 
+ the corners and sides can be configured via fields of the <a href="Picture.htm#Show_Picture">Show 
+ Picture</a> command.</p>
+<p>&#160;</p>
+<p class="SubSubHeading">Three-Part Images</p>
+<p>A three-part image splits up the image into three different parts which 
+ are displayed differently. It is a more simple form of a frame. It can 
+ be used if the <span style="font-weight: bold;">Visual Type</span> of 
+ the <a href="Picture.htm#Show_Picture">Show Picture</a> command is set 
+ to <span style="font-weight: bold;">Three-Part Image.</span>.</p>
+<p>&#160;</p>
+<p><img src="image50.gif" alt="" style=" border:none; width:100%; max-width:123px;" border="0" /></p>
+<p>&#160;</p>
+<p>The yellow marked left and right parts are fixed where the middle red-marked 
+ part is stretched. The actual image looks like this:</p>
+<p>&#160;</p>
+<p><img src="image51.gif" alt="" style=" border:none; width:100%; max-width:60px;" border="0" /></p>
+<p>&#160;</p>
+<p>It is scaled-up of course and has a light-green background to make it 
+ more visible in the help-file. The original image has a transparent background. 
+ The size of the left, right and middle part can be configured via fields 
+ of the <a href="Picture.htm#Show_Picture">Show Picture</a> command and 
+ also the orientation can be changed to vertical instead.</p>
+<p>&#160;</p>
+<p>A three-part image is useful for In-Game UI related things such as simple 
+ buttons, scroll-bars, etc. If you look at the scroll-bar of the default 
+ In-Game UI:</p>
+<p>&#160;</p>
+<p><img src="InGameScrollBar.PNG" alt="" style=" border:none; width:100%; max-width:624px;" border="0" /></p>
+<p>&#160;</p>
+<p>That scroll-bar on the right is done using a three-part image.</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><span>Icons</span></p>
+<p>Images used for Language Selection window.</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Data 
+	 Format</span>&#160;- PNG, JPG</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><span>Masks</span></p>
+<p>Images used for Masks.</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Data 
+	 Format</span>&#160;- PNG, JPG</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><span>Fonts</span></p>
+<p>Fonts to be used for the game.</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Data 
+	 Format</span>&#160;- WOFF, FNT</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">WOFF 
+	 Fonts:</span> You can easily convert TTF files to WOFF by using tools 
+	 such as <a href="https://andrewsun.com/tools/woffer-woff-font-converter/">WOFFer</a>.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Bitmap 
+	 Fonts:</span> Supported are <a href="http://www.angelcode.com/products/bmfont/">bmfont</a> 
+	 and <a href="https://www.bmglyph.com/">bmGlyph</a> fonts and any other 
+	 font-generator exporting to fnt/bmfont format. The file format needs 
+	 to be fnt-text. XML/Binary is not supported.. For bmGlyph, just select 
+	 &quot;bmfont&quot; as output format. Formatting has no effect on bitmap 
+	 fonts except text-color changes.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Important 
+	 Note:</span> Bitmap fonts can consume a lot of memory depending on 
+	 charset, style, size and how many different bitmap fonts are used. 
+	 &#160;Use bitmap fonts with care, especially on mobile devices like 
+	 smartphones.</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><span>Music and Sounds</span></p>
+<p>Audio tracks to be used in the game</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Data 
+	 Format</span>&#160;- OGG, M4A</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading">Live2D</p>
+<p>Files for Live2D.</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">Data Format 
+	 <span style="font-weight: normal;">-</span> <span style="font-weight: normal;">The 
+	 live2D model, motions and face-expresions are automatically packed 
+	 into a .live2d archive (which is just a .zip archive) during the import 
+	 process. To import a Live2D model, you have to select the .model.json 
+	 file like described on this screenshot:</span></p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><img src="live2d_model.png" alt="" style=" border:none; width:100%; max-width:227px;" border="0" /></p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">Most Live2D 
+ models come in JSON format. If not, you can use the <a href="http://www.live2d.com/en/download">Live2D 
+ Viewer</a> app to export your Live2D model as JSON if you only have the 
+ raw model files. Make sure that your add all expressions, motions, physics 
+ and pose files properly before export the</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">JSON file.</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><img src="Live2DViewer.png" alt="" style=" border:none; width:100%; max-width:995px;" border="0" /></p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">Select 
+ <span style="font-weight: bold;">File &gt; Write &gt; Settings File</span> 
+ from the menubar to export to JSON.</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><img src="image61.gif" alt="" style=" border:none; width:100%; max-width:252px;" border="0" /></p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><span>Movies</span></p>
+<p>Movie files for Movie commands.</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Data 
+	 Format</span>&#160;- WEBM</p></li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Bitmap Basics</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<link rel="stylesheet" href="highlight/styles/default.css" type="text/css" />
+<script src="highlight/highlight.pack.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+//<![CDATA[
+hljs.initHighlightingOnLoad();
+//]]>
+</script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "4.1.0_3";
+</script>
+ <meta name="topic-breadcrumbs" content="Scripter's Guide > Basic Engine" />
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<p class="Topic_Heading">Bitmap Basics</p>
+<p>&#160;</p>
+<p><span class="Topic_Start">I</span>n this chapter we will learn more about bitmaps and also how to display a text on screen.</p>
+<p>&#160;</p>
+<p>As we learned in the chapters before, a bitmap object is just storing the image data without any knowledge about how to display itself on screen. But it also allows us to manipulate the image data by using its draw- and fill methods to draw colored shapes, other bitmaps and text on it. You can imagine a bitmap object</p>
+<p>like a sheet of paper where you can freely draw on. Of course you cannot draw beyond the bounds of the paper sheet, same for bitmaps.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Draw simple shapes</p>
+<p>&#160;</p>
+<p>We will start very simple by creating an in-memory bitmap, means a bitmap which is not loaded from disk, with a size of 400x400 pixels and draw two colored overlapping squares on it.</p>
+<pre>
+<code class="coffee">
+###*
+* Prepares all visual game object for the scene.
+###  
+prepareVisual: -&gt;
+    # Create a new in-memory bitmap
+    @bitmap = new gs.Bitmap(400, 400)
+    # Draw a red square at the top-left of the bitmap with a size of 250x250 pixels.
+    @bitmap.fillRect(0, 0, 250, 250, new gs.Color(255, 0, 0))
+    # Draw a blue square starting from pixel 150, 150 with a size of 250x250 pixels.
+    @bitmap.fillRect(150, 150, 250, 250, new gs.Color(0, 0, 255))
+    
+    # Create a new sprite object to show our bitmap on screen.
+    @sprite = new gs.Sprite(Graphics.viewport)
+    # Assign our bitmap to the sprite to display it on screen
+    @sprite.bitmap = @bitmap
+    # Setup the position on screen. We make it centered.
+    @sprite.x = (Graphics.width - @bitmap.width) / 2
+    @sprite.y = (Graphics.height - @bitmap.height) / 2
+    # Define the portion of the bitmap we want to display on screen.
+    @sprite.srcRect = new gs.Rect(0, 0, @bitmap.width, @bitmap.height)
+    
+    # We are done with preparing our visual objects. So we can start
+    # the screen transition to fade in our new created objects smoothly.
+    @transition()
+    
+###*
+* Prepares all data for the scene and loads the necessary graphic and audio resources.
+### 
+prepareData: -&gt;
+    # We don't need to do anything here since our bitmap is created in memory and not
+    # loaded from disk this time.</code>
+</pre>
+<p>&#160;</p>
+<p>We only need to change prepareVisual method to create our in-memory bitmap and then create a sprite to display the bitmap on screen in the same way as we did in the <a href="Display_a_Picture.htm">Display a Picture</a> chapter. We can leave prepareData empty this time since we don't need to load anything or prepare any kind of game data.</p>
+<p>&#160;</p>
+<p>If we start our game now, we can see two colored overlapping squares at the center of the screen.</p>
+<p>&#160;</p>
+<p><img src="image26.gif" alt="" style=" border:none; width:100%; max-width:507px;" border="0" /></p>
+<p>&#160;</p>
+<p class="Sub_Heading">Draw text</p>
+<p>&#160;</p>
+<p>Next we want to do something more interesting: Let's draw a text on our bitmap!</p>
+<pre>
+<code class="coffee">
+###*
+* Prepares all visual game object for the scene.
+###  
+prepareVisual: -&gt;
+    # Create a new in-memory bitmap
+    @bitmap = new gs.Bitmap(400, 400)
+    # Draw a red square at the top-left of the bitmap with a size of 250x250 pixels.
+    @bitmap.fillRect(0, 0, 250, 250, new gs.Color(255, 0, 0))
+    # Draw a blue square starting from pixel 150, 150 with a size of 250x250 pixels.
+    @bitmap.fillRect(150, 150, 250, 250, new gs.Color(0, 0, 255))
+    
+    # Set "Time New Roman" as font family
+    @bitmap.font.name = "Times New Roman"
+    # Set font size to 32 pixel.
+    @bitmap.font.size = 32
+    # Set a default black border
+    @bitmap.font.border = yes
+    # Set italic style
+    @bitmap.font.italic = yes
+    # Draw the text "VN Maker!" at the center of the bitmap.
+    @bitmap.drawText(0, 0, 400, 400, "VN Maker!", 1, 1)
+    
+    # Create a new sprite object to show our bitmap on screen.
+    @sprite = new gs.Sprite(Graphics.viewport)
+    # Assign our bitmap to the sprite to display it on screen
+    @sprite.bitmap = @bitmap
+    # Setup the position on screen. We make it centered.
+    @sprite.x = (Graphics.width - @bitmap.width) / 2
+    @sprite.y = (Graphics.height - @bitmap.height) / 2
+    # Define the portion of the bitmap we want to display on screen.
+    @sprite.srcRect = new gs.Rect(0, 0, @bitmap.width, @bitmap.height)
+    
+    # We are done with preparing our visual objects. So we can start
+    # the screen transition to fade in our new created objects smoothly.
+    @transition()</code>
+</pre>
+<p>&#160;</p>
+<p>The only part we have changed from our square example is this one:</p>
+<pre>
+<code class="coffee">
+# Set "Time New Roman" as font family
+@bitmap.font.name = "Times New Roman"
+# Set font size to 32 pixel.
+@bitmap.font.size = 32
+# Set a default black border
+@bitmap.font.border = yes
+# Set italic style
+@bitmap.font.italic = yes
+# Draw the text "VN Maker!" at the center of the bitmap.
+@bitmap.drawText(0, 0, 400, 400, "VN Maker!", gs.TextAlignment.CENTER, gs.TextAlignment.CENTER)</code>
+</pre>
+<p>Each bitmap object has an own gs.Font object which can be accessed via the font-property. So we can easily set common font properties like the font family, size, style, etc.</p>
+<p>&#160;</p>
+<p>With drawText method we can draw a text on the bitmap. We just have to specify a rectangular area on our bitmap where we want to draw the text. That area is also used to align the text with the last two optional parameters where we pass gs.TextAlignment.CENTER for both, the horizontal and the vertical align. Since the size of the rectangular area is 400x400 pixel, which is the same size as our bitmap, the text appears centered on the bitmap.</p>
+<p>&#160;</p>
+<p><img src="image28.gif" alt="" style=" border:none; width:100%; max-width:457px;" border="0" /></p>
+<p>&#160;</p>
+<p>While that sounds a bit complicated for a beginner at first, if you feel a bit unsure about it, just play around with it. Try to remove the last two parameters and see what happens then and also try to modify the x- and y coordinates of the rectangular area(the first two parameters) to see how the text moves. Don't hesitate to ask questions in our forums!</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Draw bitmaps</p>
+<p>&#160;</p>
+<p>In the last two examples we drew some shapes and text but it is also possible to draw a bitmap on another bitmap. In the next example, we will draw an image icon and a text next to it like in an item-menu for example.</p>
+<pre>
+<code class="coffee">
+###*
+* Prepares all visual game object for the scene.
+###  
+prepareVisual: -&gt;
+    # Create a new in-memory bitmap with 400 pixels width and
+    # the height of the diamond icon bitmap.
+    @bitmap = new gs.Bitmap(400, @diamondBitmap.height)
+    # Draws the diamond bitmap on our in-memory bitmap at the left side (0, 0).
+    @bitmap.blt(0, 0, @diamondBitmap, @diamondBitmap.bounds)
+    # Set "Time New Roman" as font family
+    @bitmap.font.name = "Times New Roman"
+    # Set font size to 32 pixel.
+    @bitmap.font.size = 32
+    # Set a default black border
+    @bitmap.font.border = yes
+    # Set italic style
+    @bitmap.font.italic = yes
+    # Draw the text "A diamond!" next to the diamond icon. We set the x-coordinate to the 
+    # width of the diamond-icon to let the text appear next to the diamond. We add 10 pixel
+    # extra space to make it look more nice.
+    @bitmap.drawText(@diamondBitmap.width + 10, 0, @bitmap.width, @bitmap.height, "A diamond!")
+    
+    # Create a new sprite object to show our bitmap on screen.
+    @sprite = new gs.Sprite(Graphics.viewport)
+    # Assign our bitmap to the sprite to display it on screen
+    @sprite.bitmap = @bitmap
+    # Setup the position on screen. We make it centered.
+    @sprite.x = (Graphics.width - @bitmap.width) / 2
+    @sprite.y = (Graphics.height - @bitmap.height) / 2
+    # Define the portion of the bitmap we want to display on screen.
+    @sprite.srcRect = new gs.Rect(0, 0, @bitmap.width, @bitmap.height)
+    
+    # We are done with preparing our visual objects. So we can start
+    # the screen transition to fade in our new created objects smoothly.
+    @transition()
+    
+###*
+* Prepares all data for the scene and loads the necessary graphic and audio resources.
+### 
+prepareData: -&gt;
+    # Load the diamond icon image
+    @diamondBitmap = ResourceManager.getBitmap("Graphics/Pictures/diamond-large-on")</code>
+</pre>
+<p>As we can see in this example, with the blt-method we can draw another bitmap an our bitmap. In our case we draw the loaded diamond icon at the left side of our bitmap. In the next step, we are just draw a text "A diamond!" next to the diamond icon.</p>
+<p>&#160;</p>
+<p><img src="image29.gif" alt="" style=" border:none; width:100%; max-width:231px;" border="0" /></p>
+<p>&#160;</p>
+<p>If you feel a bit unsure, you should try to play around more with bitmaps and drawing to get a better feeling for it. Just grab the Basic Engine documentations to see what kind of other methods are available for gs.Bitmap and gs.Font and do some experimenting.</p>
+</body>
+</html>

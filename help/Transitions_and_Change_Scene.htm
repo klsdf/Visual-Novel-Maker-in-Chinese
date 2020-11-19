@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Transitions and Change Scene</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "3.1.0_8";
+</script>
+ <meta name="topic-breadcrumbs" content="Beginner's Guide > The Basic Foundation" />
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+ <p class="Topic_Heading">Transitions and Change Scene</p>
+</div>
+<p>&#160;</p>
+<p><span class="Topic_Start">N</span>ow that we covered the basics and some essential knowledge, it's time to learn how to move from one scene to the next.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Basic Change Scene</p>
+<p>A basic change scene by default is a basic Fade-Out.</p>
+<ul style="list-style: disc;">
+<li>To add the command, go to <span style="font-weight: bold;"><img src="SceneCmd.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />Scene -&gt; <a href="SceneCommand.htm#Change_Scene">Change Scene</a></span><span style="font-weight: bold;">.</span></li>
+<li>Click on the 'Scene' tab of said command and just select the Scene you want to go to.</li>
+</ul>
+<p style="font-weight: bold; text-align: center;"><img src="Metisnotes010_en.png" alt="" style=" border:none; width:100%; max-width:465px;" border="0" /></p>
+<p style="font-weight: bold; text-align: center;">&#160;</p>
+<p class="Sub_Heading">Fancy Change Scene</p>
+<p>A fancy change scene involves the use of transition masks. This changes your scene dynamically to another. For example, if you want a scene looks like it's 'blinking' then you would use a transition mask that looks like an eyelid.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li>First, add the command <span style="font-weight: bold;"><img src="SceneCmd.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />Scene -&gt; <a href="SceneCommand.htm#Change_Transition">Change Transition</a>.</span> <span>&#160;For more information about each individual command, please check the page link.</span></li>
+<li>Add the command <span style="font-weight: bold;"><img src="SceneCmd.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />Scene -&gt; <a href="SceneCommand.htm#Change_Scene">Change Scene</a></span> <span>right after Change Transition.</span></li>
+</ul>
+<p>&#160;</p>
+<p class="Sub_Heading">Remember!</p>
+<ul style="list-style: disc;">
+<li><a href="SceneCommand.htm#Change_Scene">Change Scene</a> and <a href="SceneCommand.htm#Call_Scene">Call Scene</a> are two completely different commands.</li>
+<li><span><a href="SceneCommand.htm#Change_Transition" style="font-weight: normal;">Change Transition</a></span> is global! If you want the change scene use the classic fade in and fade out, just use another change transition and set the file to none.</li>
+<li>If you find yourself with a scene containing a BGM and wanting to remove it, you will need to manually add the command &#160;<span style="font-weight: bold;"><img src="AudioCmd.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />Audio Playback -&gt; <a href="Audio_Playback.htm#Stop_Music">Stop Music</a></span> <span>before the Change Scene command.</span></li>
+</ul>
+<p>&#160;</p>
+<p>&#160;</p>
+</body>
+</html>

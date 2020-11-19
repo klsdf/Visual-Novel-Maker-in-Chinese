@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Templates</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "5.3.1.0_4";
+</script>
+ <meta name="topic-breadcrumbs" content="Script and Plugin Reference > In-Game UI Documentation > Getting Started" />
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+ <p class="Topic_Heading"><span style="font-family: 'Book Antiqua', serif; font-size: 24pt;">Example: Templates</span></p>
+</div>
+<p>&#160;</p>
+<p><span class="Topic_Start">I</span>n Example 2, we learned how styles can help us to avoid redundant data in our layouts. But since styles are limited, we will learn a more powerful way in this example called "Templates". A template defines a custom control-type for common used controls. There are already a lot of templates in "Templates" folder for the default in-game UI. Even the "ui.Button" item we used in the past examples is actually just a template called "Template_Button". Lets take a look at that template:</p>
+<p>&#160;</p>
+<p><span class="Code">ui.UIManager.customTypes["ui.Button"] = {</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"type": "ui.FreeLayout",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"controls":[</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"type": "ui.SelectableWindow",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"frame": [0, 0, "100%", "100%"],</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"margin": [0, 0, 0, 30],</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"params": {</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"action": -&gt; p.action</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"zIndex": 4999</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"type": "ui.Text",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"sizeToFit": true,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"styles": ["regularUIText"],</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"alignmentX": "center",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"alignmentY": "center",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"frame": [0, 0],</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"margin": [0, 0, 0, 0]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"text": -&gt; p.text</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"zIndex": 5100</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;]</span></p>
+<p><span class="Code">}</span></p>
+<p>&#160;</p>
+<p>The first line, similar to layouts and styles, has always the same format like this:</p>
+<p>&#160;</p>
+<p><span class="Code">ui.UIManager.customTypes["&lt;module&gt;.&lt;unique_template_name&gt;"] = {</span></p>
+<p>&#160;</p>
+<p>or also just:</p>
+<p>&#160;</p>
+<p><span class="Code">ui.UIManager.customTypes.&lt;unique_template_name&gt; = {</span></p>
+<p>&#160;</p>
+<p>It is not necessary to understand that line completely, you only need to know that you have to use a unique name for your template.</p>
+<p>&#160;</p>
+<p>We can see here how ui.Button is actually defined. We can see that a ui.Button is just a free-layout with a ui.SelectableWindow and a ui.Text control inside. The ui.SelectableWindow is also a template itself. So templates can use other templates which allows you to build more complex UIs.</p>
+<p>&#160;</p>
+<p>The ui.SelectableWindow is a frame with shadow in default UI design. It uses "100%" for its size to scale it and fit the dimensions of the parent free-layout. So percentages values are very useful in templates to make a template usable with dynamic sizes.</p>
+<p>&#160;</p>
+<p>The ui.Text just displays the text of the text property. In that example the text is set to "-&gt; p.text" &#160;which is not actual text to display but a placeholder-function since we want that the button works with any kind of text. Placeholders can be used for any kind of property in a template. Whenever we want to make a certain value adjustable we can define a placeholder using the following format:</p>
+<p>&#160;</p>
+<p><span class="Code">-&gt; p.&lt;placeholder_name&gt;</span></p>
+<p>&#160;</p>
+<p>The placeholder name should be unique inside the template and shouldn't contain spaces or special characters. The actual value for a placeholder can be set if the template is used with the help of the params-property. We already did that in our title-screen example.</p>
+<p>&#160;</p>
+<p><span class="Code">{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"type": "ui.Button",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"params": { "text": "New Game" },</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"resizable": true,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"margin": [0, 0, 0, 10]</span></p>
+<p><span class="Code">}</span></p>
+<p>&#160;</p>
+<p>So the params-property contains the values for all placeholders of the used template. The params-property is only valid for templates. &#160;</p>
+<p>&#160;</p>
+<p>If the value of a placeholder is not passed to the template using params property, the value is null/empty by default. But you can define a default-value for a placeholder if necessary using the following format:</p>
+<p>&#160;</p>
+<p><span class="Code">-&gt; p.&lt;placeholder_name&gt; or &lt;default_value&gt;</span></p>
+<p>&#160;</p>
+<p>Like:</p>
+<p>&#160;</p>
+<p><span class="Code">-&gt; p.text</span> <span class="Code" style="font-weight: bold;">?</span> <span class="Code">"A Button"</span></p>
+<p>&#160;</p>
+<p>We are using the ?-operator, so if we don't specify a valid value for text-placeholder the text will be "A Button".</p>
+<p>&#160;</p>
+<p>So with templates you can build complex controls and layouts very easily. If you take a look at the default templates you will see that templates very often using other templates. But there is a small set of basic controls which are not defined as a template like ui.Text or ui.Image. In regular, you are using this basic controls to build your own more powerful controls.</p>
+</body>
+</html>

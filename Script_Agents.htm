@@ -1,0 +1,170 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Script Agents</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "5.2.1.0_4";
+</script>
+ <meta name="topic-breadcrumbs" content="Script and Plugin Reference > Extension Documentation > Getting Started" />
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+ <p class="Topic_Heading"><span>Script Agents</span></p>
+</div>
+<p>&#160;</p>
+<p><span class="Topic_Start">S</span>cript Agents are a special kind of Script in Extension-Editor. A Script Agent allows to request and process input from the user in the following way:</p>
+<p>&#160;</p>
+<p>If a Script-Agent has a Custom View associated, it will show that Custom View as a dialog box to the user first. Once the user accepted the dialog, the Script Agent can run over all documents of the project and modifying them depending on the input or even create new documents or delete existing ones.</p>
+<p>&#160;</p>
+<p>A Script Agent is automatically loaded and added to Visual Novel Maker’s Main-Menu under "Tools &gt; Script Agents ". An example implementation of a Script Agent is the "Character Expression Importer " agent shipped out with Visual Novel Maker to easily import a high amount of characters based on file names.</p>
+<p>&#160;</p>
+<p>An example script agent could look like this:</p>
+<p>&#160;</p>
+<p><span class="Code">{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"name": "Test Agent",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"type": "GSScriptAgent",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"category": { "name": "My Name/Company", "identifier": "com.example" },</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"target": "none",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"dialog": { "uid": "437DE2FE934E8148B15918D9CB1146033372" },</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"process": {</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"description": "Testing...",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"run": function(object, context){</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;var documents = context.getDocumentsByType("scenes");</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;documents.forEachAsync(function(doc){</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;// Modify document</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;context.markDocumentAsUnsaved(doc);</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}, function(){</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;context.finishExecution("Execution successfully finished!");</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;});</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;}</span></p>
+<p><span class="Code">}</span></p>
+<p>&#160;</p>
+<p>Lets take a look at the properties:</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">name</p>
+</li>
+</ul>
+<p>The display name of the agent in Visual Novel Maker’s main-menu.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">type</p>
+</li>
+</ul>
+<p>The internal object type, must be "GSScriptAgent ".</p>
+<p style="font-weight: bold;">&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">category</p>
+</li>
+</ul>
+<p>The category the script agent will be added to.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">category.name</p>
+</li>
+</ul>
+<p>The display name of the category in Visual Novel Maker’s main-menu.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">category.identifier</p>
+</li>
+</ul>
+<p>Unique identifier of the category.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">target</p>
+</li>
+</ul>
+<p>Reserved. Always "none ".</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">dialog</p>
+</li>
+</ul>
+<p>A dialog to request input data from the user before the agent is executed. If not present, the agent will be executed immediately.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">process.description</p>
+</li>
+</ul>
+<p>Agent description shown in progress-window. (Can be changed by the agent at runtime).</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">process.run</p>
+</li>
+</ul>
+<p>A JavaScript function defining the logic of the agent. It takes two arguments:<br /></p>
+<ul style="list-style: disc;">
+<li>
+<p style="font-weight: bold;">object<br />
+<span style="font-weight: normal;">Contains the input data from the user if dialog-property is present. Otherwise null.</span></p>
+</li>
+<li>
+<p style="font-weight: bold;">context<br />
+<span style="font-weight: normal;">The script context (GSScriptContext) object which allows to get, modify, create and delete documents and other actions.</span></p>
+</li>
+</ul>
+<p>&#160;</p>
+<p class="Sub_Heading"><span>Using Objective-J</span></p>
+<p>To get more control, it is also possible to use Objective-J for a script agent. Since Objective-J is a superset of JavaScript, you can just create an Objective-J file instead of a JavaScript File and all other steps are identical with the difference that you can access the Objective-J API now.</p>
+</body>
+</html>

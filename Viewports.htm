@@ -1,0 +1,239 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Viewports</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<link rel="stylesheet" href="highlight/styles/default.css" type="text/css" />
+<script src="highlight/highlight.pack.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+//<![CDATA[
+hljs.initHighlightingOnLoad();
+//]]>
+</script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "4.1.0_8";
+</script>
+ <meta name="topic-breadcrumbs" content="Scripter's Guide > Basic Engine" />
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<p class="Topic_Heading">Viewports</p>
+<p>&#160;</p>
+<p><span class="Topic_Start">I</span>f you browse through the source code of VN Maker's engine you will stumble about something called "gs.Viewport". In VN Maker, a single viewport contains a list of graphic objects such as sprites, tiling sprites, etc. and controls their rendering. For example, the Graphics.viewport is the root-viewport.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Using a Viewport as an In-Game Camera</p>
+<p>&#160;</p>
+<p>A viewport defines an area on screen, in case of Graphics.viewport that area takes up the entire screen. All child-objects are relative to that area which means that if the viewport's are starts at 100,100 instead of 0,0, a gs.Sprite with the position (0,0) will appear at 100,100 on screen. Because it's position is relative to the viewport's area.</p>
+<p>&#160;</p>
+<p>In addition, a viewport is a graphic object itself and can also be moved, rotated, tinted, etc. The interesting thing about transformations such as rotation is that it automatically affects all child-objects as well. So if the viewport is moved, all child-objects are moved too. And if the viewport is rotated around it's center, all child-objects are rotated around the viewport's center too. That's turns the viewport into an in-game camera allowing you to scroll through the &#160;game scene.</p>
+<p>&#160;</p>
+<p>If a viewport gets tinted or colored, only the viewport's area gets tinted or colored. In case of Graphics.viewport, if you set a sepia tone for that viewport, the entire screen becomes sepia which is useful for special effects. Let's try that out quickly:</p>
+<pre>
+<code class="coffee">
+# ===================================================================
+#
+#   Script: Component_TestBedBehavior
+#
+#   Put your name here
+#
+# ===================================================================
+class Component_TestBedBehavior extends gs.Component_SceneBehavior
+    ###*
+    * A test bed scene behavior. Here you can play around with Visual Novel Maker's 
+    * game engine to get a better feeling for everything.
+    ###
+    constructor: -&gt;
+        super
+        
+        # Define resource context property
+        @resourceContext = null
+    
+    ###*
+    * Initializes the scene. 
+    ###
+    initialize: -&gt;
+        super
+        
+        # Create a new resource context
+        @resourceContext = ResourceManager.createContext()
+        
+        # Set current object manager
+        gs.ObjectManager.current = SceneManager
+        
+        # Set it as the current resource context
+        ResourceManager.context = @resourceContext
+        
+    ###*
+    * Disposes the scene.
+    ###  
+    dispose: -&gt;
+        super
+    
+    ###*
+    * Prepares all visual game object for the scene.
+    ###  
+    prepareVisual: -&gt;
+        # Create a background sprite and assign it to the root-viewport.
+        @background = new gs.Sprite(Graphics.viewport)
+        # Assign "Bench_Morning" bitmap to it.
+        @background.bitmap = ResourceManager.getBitmap("Graphics/Backgrounds/Bench_Morning")
+        # Set srcRect to display entire bitmap
+        @background.srcRect = new gs.Rect(0, 0, @background.bitmap.width, @background.bitmap.height)
+        
+        # Create a character sprite and assign it to the root-viewport
+        @character = new gs.Sprite(Graphics.viewport)
+        # Assign "JaneDate_Normal" bitmap to it.
+        @character.bitmap = ResourceManager.getBitmap("Graphics/Characters/JaneDate_Normal")
+        # Set srcRect to display entire bitmap
+        @character.srcRect = new gs.Rect(0, 0, @character.bitmap.width, @character.bitmap.height)
+        # Place character centered on screen.
+        @character.x = (Graphics.width - @character.bitmap.width) / 2
+        
+        # Set the viewport's anchor point to it's center.
+        Graphics.viewport.anchor.x = 0.5
+        Graphics.viewport.anchor.y = 0.5
+        # Set the viewport's tone to sepia
+        Graphics.viewport.tone.set(35, -35, -70, 255)
+        # Zoom the viewport to 150%
+        Graphics.viewport.zoomX = 1.5
+        Graphics.viewport.zoomY = 1.5
+        
+        # We are done with preparing our visual objects. So we can start
+        # the screen transition to fade in our new created objects smoothly.
+        @transition()
+        
+    ###*
+    * Prepares all data for the scene and loads the necessary graphic and audio resources.
+    ### 
+    prepareData: -&gt;
+        # Load the background image
+        ResourceManager.getBitmap("Graphics/Backgrounds/Bench_Morning")
+        # Load the character image
+        ResourceManager.getBitmap("Graphics/Characters/JaneDate_Normal")
+        
+    ###*
+    * Update the scene's content.
+    ###         
+    updateContent: -&gt;
+        # We need to update the viewport once per frame to apply transformations, effects, etc.
+        Graphics.viewport.update();
+        
+gs.Component_LayoutSceneBehavior = Component_TestBedBehavior</code>
+</pre>
+<p>If we test that out, we will see a background with a character on it both appearing completely sepia tinted and zoomed in. What we do here is that we first tint the root- viewport into sepia and then add a zoom to it which will tint and zoom the entire scene. Of course that kind of zooming can also be combined with animation to achieve nice and smooth in-game camera movements.</p>
+<p>&#160;</p>
+<p>That's all because both sprites, the background and the character, belong to the root-viewport since we passed the root-viewport to the contstructor to both sprites. You can try next to change the angle-property of the viewport to rotate the entire scene!</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Custom Viewports</p>
+<p>&#160;</p>
+<p>In some cases it makes sense to create a custom viewport. For example, you can put all characters and backgrounds into one viewport and all messages and in-game UI elements into another viewport. Then if you only want to tint the scene but keeping the In-Game UI colored you just need to tint the viewport containing the characters and backgrounds. Same for an in-game camera, if you want to scroll through the scene or zoom in, you probably don't want that the in-game UI gets affected by the scrolling or zooming.</p>
+<p>&#160;</p>
+<p>So in the above cases, it makes sense to create a custom viewport. You can create a custom viewport easily by just creating an instance of the gs.Viewport class. Then if you create other graphic objects such as sprites you just have to pass your custom viewport object to the constructor of the graphic object.</p>
+<p>&#160;</p>
+<pre>
+<code class="coffee">
+###*
+* Prepares all visual game object for the scene.
+###  
+prepareVisual: -&gt;
+    # Create a custom viewport
+    @viewport = new gs.Viewport(0, 0, Graphics.width, Graphics.height, Graphics.viewport)
+    # Set the viewport's anchor point to it's center.
+    @viewport.anchor.x = 0.5
+    @viewport.anchor.y = 0.5
+    # Set the viewport's tone to sepia
+    @viewport.tone.set(35, -35, -70, 255)
+    # Zoom the viewport to 150%
+    @viewport.zoomX = 1.5
+    @viewport.zoomY = 1.5
+    
+    # Create a background sprite and assign it to the root-viewport.
+    @background = new gs.Sprite(@viewport)
+    # Assign "Bench_Morning" bitmap to it.
+    @background.bitmap = ResourceManager.getBitmap("Graphics/Backgrounds/Bench_Morning")
+    # Set srcRect to display entire bitmap
+    @background.srcRect = new gs.Rect(0, 0, @background.bitmap.width, @background.bitmap.height)
+    
+    # Create a character sprite and assign it to the root-viewport
+    @character = new gs.Sprite(@viewport)
+    # Assign "JaneDate_Normal" bitmap to it.
+    @character.bitmap = ResourceManager.getBitmap("Graphics/Characters/JaneDate_Normal")
+    # Set srcRect to display entire bitmap
+    @character.srcRect = new gs.Rect(0, 0, @character.bitmap.width, @character.bitmap.height)
+    # Place character centered on screen.
+    @character.x = (Graphics.width - @character.bitmap.width) / 2
+    
+    # Create a square object which could be used to display a message for example.
+    # We assign it to the root-viewport so it does not get affected by the zooming.
+    @square = new gs.Quad(Graphics.viewport)
+    # Set color to transparent black
+    @square.color = new gs.Color(0, 0, 0, 100)
+    # Place it at the bottom of the screen
+    @square.rect.set(0, Graphics.height - 150, Graphics.width, 150)
+    
+    # We are done with preparing our visual objects. So we can start
+    # the screen transition to fade in our new created objects smoothly.
+    @transition()
+    
+    ###*
+    * Update the scene's content.
+    ###         
+    updateContent: -&gt;
+        # We need to update the viewport once per frame to apply transformations, effects, etc.
+        @viewport.update();</code>
+</pre>
+<p>Here we create an own gs.Viewport object and pass it to the constructor of our both sprites. We also create a square but passing the root-viewport to it. If we test that out, we will see that only the character and background sprites got affected. Our square object does not change, because we want to use it maybe to display a message so it would become part of the In-Game UI so we don't want to zoom it. Since a viewport is a graphic object itself, the default root-viewport needs to be passed to it's constructor.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">The Root Viewport</p>
+<p>&#160;</p>
+<p>The root-viewport, which can be accessed via Graphics.viewport, is a special viewport. Unlike other viewports, the root-viewport automatically contains all graphic objects of the game no matter what viewport you have passed to the graphic object's constructor. So even you create a custom viewport and assign your graphic object it, the graphic object will also automatically be added to the root-viewport.</p>
+<p>&#160;</p>
+<p>That is because the root-viewport manages the actual rendering of the graphic objects.</p>
+</body>
+</html>

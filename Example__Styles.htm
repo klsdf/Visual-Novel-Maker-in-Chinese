@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Example: Styles</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "5.3.1.0_2";
+</script>
+ <meta name="topic-breadcrumbs" content="Script and Plugin Reference > In-Game UI Documentation > Getting Started" />
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+ <p class="Topic_Heading"><span>Example: Styles</span></p>
+</div>
+<p>&#160;</p>
+<p><span class="Topic_Start">I</span>f you look at our custom title-screen from the first example, you will see that our button definitions have some redundant data like a bottom-margin of 10 pixel and they are all resizable. It is fine in our example, but in more complex scenarios this becomes a huge problem if we decide later to make a change like using 15 pixel margin instead of 10. Because then we have to go through all of our controls and change it. That's where styles can help you out!</p>
+<p>&#160;</p>
+<p class="Sub_Heading"><span>Define a style</span></p>
+<p>A style allows you to define a set of properties just once and then re-use it for as many controls or layouts as you like. If you want to define a new style, you can do it in every script you like or even create a new script. All default styles are in "Styles" folder in "Style_Default" script. An example style could look like this:</p>
+<p>&#160;</p>
+<p><span class="Code">ui.UIManager.styles.titleScreenButton = {</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"resizable": true,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"margin": [0, 0, 0, 10]</span></p>
+<p><span class="Code">}</span></p>
+<p>&#160;</p>
+<p>We put that at the end of "Style_Default" script. The first line always has the same format:</p>
+<p>&#160;</p>
+<p><span class="Code">ui.UIManager.styles.&lt;style_name&gt; = {</span></p>
+<p>&#160;</p>
+<p>Its not necessary to completely understand that line but it is important to know that you have to define a unique name for your style. The name shouldn't contain any spaces or special characters.</p>
+<p>&#160;</p>
+<p>After we defined our style, we can change our title-screen example as follows:</p>
+<p>&#160;</p>
+<p><span class="Code">ui.UIManager.layouts.titleLayout = {</span></p>
+<p><span class="Code">&#160;&#160;"type": "ui.FreeLayout",</span></p>
+<p><span class="Code">&#160;&#160;"frame": [0, 0, Graphics.width, Graphics.height],</span></p>
+<p><span class="Code">&#160;&#160;"controls": [</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"type": "ui.Image",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"image": "bg-generic",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"frame": [0, 0, "100%", "100%"]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"type": "ui.StackLayout",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"orientation": "vertical",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"frame": ["35%", "60%", "30%", "30%"]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"controls": [</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"type": "ui.Button",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"params": { "text": "New Game", "action": { "name": "newGame" } },</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"style": "titleScreenButton"</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"type": "ui.Button",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"params": { "text": "Load Game", "action": { "name": "switchLayout", "params": { "name": "loadMenuLayout", "savePrevious": true } } },</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"style": "titleScreenButton"</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"type": "ui.Button",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"params": { "text": "Quit", "action": { "name": "quitGame" } },</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"style": "titleScreenButton"</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;}</span></p>
+<p><span class="Code">&#160;&#160;]</span></p>
+<p><span class="Code">}</span></p>
+<p>&#160;</p>
+<p>You can even apply multiple styles on one item like this:</p>
+<p>&#160;</p>
+<p><span class="Code">"styles": ["titleScreenButton", "otherStyle"]</span></p>
+<p>&#160;</p>
+<p>In that case the styles are applied one after another. If there are colliding properties like if two styles contain the same property, the last applied style wins.</p>
+<p>&#160;</p>
+<p class="Sub_Heading"><span>Events</span></p>
+<p>It is also possible to change the style of a control at runtime if a certain event takes place. For Example: If we hover a control's area with the mouse pointer, another style can be applied to give some visual feedback to the use like changing the control's color.</p>
+<p>&#160;</p>
+<p>To bind a style to an event, you first need to define the base style used as long as no special event takes place:</p>
+<p>&#160;</p>
+<p><span class="Code">ui.UIManager.styles.hyperlink = {</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"font": { "color": [255, 255, 255], "size": 30 }</span></p>
+<p><span class="Code">}</span></p>
+<p>&#160;</p>
+<p>In .this example, we want to make a style which can be used to make hyperlinks. So if we hover over it the text color will change.</p>
+<p>&#160;</p>
+<p><span class="Code">ui.UIManager.styles["hyperlink:hover"] = {</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"font": { "color": [255, 0, 0], "size": 30 }</span></p>
+<p><span class="Code">}</span></p>
+<p>&#160;</p>
+<p>To bind a style to an event, we use the syntax:</p>
+<p>&#160;</p>
+<p><span class="Code">:&lt;event&gt;</span></p>
+<p>&#160;</p>
+<p>The following events are available:</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li>hover - Applies the style if the control's area is hovered with mouse pointer.</li>
+<li>selected - Applies the style if the control is selected.</li>
+</ul>
+<p>&#160;</p>
+<p>In our example, we used the "hover" event so our styles is applied on mouse-hover to each control with the base "hyperlink" style set. So if we create text like this now:</p>
+<p>&#160;</p>
+<p><span class="Code">{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"type": "ui.Text",</span></p>
+<p style="margin-left: 40px;"><span class="Code">"style": "hyperlink",</span></p>
+<p style="margin-left: 40px;"><span class="Code">"text": "Hover Me",</span></p>
+<p style="margin-left: 40px;"><span class="Code">"frame": [0, 0],</span></p>
+<p style="margin-left: 40px;"><span class="Code">"sizeToFit": true</span></p>
+<p><span class="Code">}</span></p>
+<p>&#160;</p>
+<p>It will change its color on hover!</p>
+</body>
+</html>

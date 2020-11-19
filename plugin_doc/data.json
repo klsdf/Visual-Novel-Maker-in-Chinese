@@ -1,0 +1,2885 @@
+{
+    "project": {},
+    "files": {
+        "plugin_reference.js": {
+            "name": "plugin_reference.js",
+            "modules": {},
+            "classes": {
+                "GSViewItem": 1,
+                "GSLabel": 1,
+                "GSTextField": 1,
+                "GSCheckBox": 1,
+                "GSRadioButton": 1,
+                "GSStepper": 1,
+                "GSButton": 1,
+                "GSColorView": 1,
+                "GSPopupField": 1,
+                "GSSlider": 1,
+                "GSDataRecordField": 1,
+                "GSDispositionView": 1,
+                "GSDocumentTree": 1,
+                "GSLive2DView": 1,
+                "GSResourcePopupField": 1,
+                "GSToneView": 1,
+                "GSSceneContentView": 1,
+                "GSSceneToolBox": 1,
+                "GSSpacer": 1,
+                "GSParameterView": 1,
+                "GSTable": 1,
+                "GSTabView": 1,
+                "GSImageView": 1,
+                "GSGraphicalPathView": 1,
+                "GSFilePathBox": 1,
+                "GSCollectionView": 1,
+                "GSContainer": 1,
+                "GSSplitView": 1,
+                "DialogDescriptor": 1,
+                "DataSourceDescriptor": 1,
+                "DataRecordView": 1,
+                "SceneCommand": 1,
+                "GSQItem": 1,
+                "GSQStepper": 1,
+                "GSQTextArea": 1,
+                "GSQPopupField": 1,
+                "GSQDataRecordField": 1,
+                "GSQCheckBox": 1,
+                "GSQSlider": 1,
+                "View": 1,
+                "LanguageBundle": 1,
+                "GS.GAME": 1,
+                "FormatHelper": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {},
+    "classes": {
+        "GSViewItem": {
+            "name": "GSViewItem",
+            "shortname": "GSViewItem",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "plugin_reference.js",
+            "line": 1,
+            "description": "Items are UI controls like text fields, check boxes, etc. used in sections of a view to let the user interact with the view. All general/shared\nproperties which can be used for mostly every items are listed here."
+        },
+        "GSLabel": {
+            "name": "GSLabel",
+            "shortname": "GSLabel",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "plugin_reference.js",
+            "line": 147
+        },
+        "GSTextField": {
+            "name": "GSTextField",
+            "shortname": "GSTextField",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "plugin_reference.js",
+            "line": 196,
+            "description": "A text-field to let the user enter a text. It can be single- or multiline."
+        },
+        "GSCheckBox": {
+            "name": "GSCheckBox",
+            "shortname": "GSCheckBox",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "plugin_reference.js",
+            "line": 233,
+            "description": "A check-box to allow the user to turn on/off certain features/options."
+        },
+        "GSRadioButton": {
+            "name": "GSRadioButton",
+            "shortname": "GSRadioButton",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "plugin_reference.js",
+            "line": 248,
+            "description": "A radio-button to allows the user to select between certain features/options."
+        },
+        "GSStepper": {
+            "name": "GSStepper",
+            "shortname": "GSStepper",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "plugin_reference.js",
+            "line": 263,
+            "description": "A number-field to allow the user to input integer numbers only."
+        },
+        "GSButton": {
+            "name": "GSButton",
+            "shortname": "GSButton",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "plugin_reference.js",
+            "line": 279,
+            "description": "A button allows to trigger a certain action/delegate or to open a popup-window. If a popup-window\nis associated to a button the button is able to write the data from the popup-window to the\nspecified <b>attribute</b>."
+        },
+        "GSColorView": {
+            "name": "GSColorView",
+            "shortname": "GSColorView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "plugin_reference.js",
+            "line": 313,
+            "description": "A color-view can be used to preview a color used for commands like \"Flash Screen\", etc. but\ncan also be used to let the user select a custom color if <b>selectable</b> attribute is set."
+        },
+        "GSPopupField": {
+            "name": "GSPopupField",
+            "shortname": "GSPopupField",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "plugin_reference.js",
+            "line": 355,
+            "description": "A popup-field shows a popup-window on click to let the user input more complex data. It is displayed\nsimilar to a text-field and shows a single-line preview-text about its current data."
+        },
+        "GSSlider": {
+            "name": "GSSlider",
+            "shortname": "GSSlider",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "plugin_reference.js",
+            "line": 376,
+            "description": "A slider allows the user to select a number value buy moving a graphical slider-knob\nusing the mouse. Useful for number selections where an exact value isn't important."
+        },
+        "GSDataRecordField": {
+            "name": "GSDataRecordField",
+            "shortname": "GSDataRecordField",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "plugin_reference.js",
+            "line": 398,
+            "description": "A data-record field looks like GSPopupField but shows just a small popup-box to let the\nselect a data-record from the database."
+        },
+        "GSDispositionView": {
+            "name": "GSDispositionView",
+            "shortname": "GSDispositionView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "plugin_reference.js",
+            "line": 425,
+            "description": "A disposition view lets the user select the position, size and properties of one or multiple graphical cells.\nA cell can have an image associated or just a color. Depending on the settings the user can drag and move\nthe cells and can resize them. A double-click opens custom cell-properties if configured.\n<br>"
+        },
+        "GSDocumentTree": {
+            "name": "GSDocumentTree",
+            "shortname": "GSDocumentTree",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "plugin_reference.js",
+            "line": 503,
+            "description": "A document tree shows a hierarchical structure of documents like scenes or chapters and\nallows the user to select a document. It stores only the UID of the document. It is useful if\nyou like to let the user select a scene or another type of document."
+        },
+        "GSLive2DView": {
+            "name": "GSLive2DView",
+            "shortname": "GSLive2DView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "plugin_reference.js",
+            "line": 566,
+            "description": "A Live2D shows a preview of an associated Live2D model and allows to move and zoom it. It is useful\nto let the user select a position for a Live2D model or to show a preview of a Live2D motion."
+        },
+        "GSResourcePopupField": {
+            "name": "GSResourcePopupField",
+            "shortname": "GSResourcePopupField",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "plugin_reference.js",
+            "line": 613,
+            "description": "A resource popup-field allows the user to select a graphic, video or audio resource\nfrom the specified resource folder. A selected resource is stored in the following\nformat:<br><br>\n<b>Graphic Resource</b><br>\n{ name: \"resource name\" }\n<b>Video Resource</b><br>\n{ name: \"resource name\" }\n<b>Audio Resource</b><br>\n{ name: \"resource name\", volume: [volume in percent], rate: [playback rate in percent] }"
+        },
+        "GSToneView": {
+            "name": "GSToneView",
+            "shortname": "GSToneView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "plugin_reference.js",
+            "line": 648,
+            "description": "A tone-view can be used to preview a tone used for commands like \"Tint Screen\", etc."
+        },
+        "GSSceneContentView": {
+            "name": "GSSceneContentView",
+            "shortname": "GSSceneContentView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "plugin_reference.js",
+            "line": 710,
+            "description": "A scene content view which allows the user to edit and interact with scene commands to\nto build a logic for a scene or an event. This view cannot be used in windows/dialogs/popups."
+        },
+        "GSSceneToolBox": {
+            "name": "GSSceneToolBox",
+            "shortname": "GSSceneToolBox",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "plugin_reference.js",
+            "line": 736,
+            "description": "A scene tool box allows to drag & add new commmands to a GSSceneContentView."
+        },
+        "GSSpacer": {
+            "name": "GSSpacer",
+            "shortname": "GSSpacer",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "plugin_reference.js",
+            "line": 748,
+            "description": "A spacer is an invisible control which does nothing except taking layout-space. It\ncan be used in special situations if some space is necessary and the layout cannot provide\na solution."
+        },
+        "GSParameterView": {
+            "name": "GSParameterView",
+            "shortname": "GSParameterView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "plugin_reference.js",
+            "line": 757,
+            "description": "A parameter view allows to easily setup RPG like parameters like hit points, magic point, attack power, etc for\neach level."
+        },
+        "GSTable": {
+            "name": "GSTable",
+            "shortname": "GSTable",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "plugin_reference.js",
+            "line": 788,
+            "description": "A table-view with one or multiple columns. The user can add/remove items using a context\nmenu or double-clicking the last row(if configured)."
+        },
+        "GSTabView": {
+            "name": "GSTabView",
+            "shortname": "GSTabView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "plugin_reference.js",
+            "line": 956,
+            "description": "A tab-view."
+        },
+        "GSImageView": {
+            "name": "GSImageView",
+            "shortname": "GSImageView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "plugin_reference.js",
+            "line": 968,
+            "description": "An image view allows the user to select a graphic resource by clicking on it and show a preview of\nthe current selected graphic resource."
+        },
+        "GSGraphicalPathView": {
+            "name": "GSGraphicalPathView",
+            "shortname": "GSGraphicalPathView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "plugin_reference.js",
+            "line": 1006,
+            "description": "A graphical path view allows a user to draw quadratic bezier-curves and connecting them. That is useful for\nanimations like for the \"Move XXX along Path\" scene commands. It stores an array of curves and each curve has the format: { pt1: { x, y }, cpt: { x, y }, pt2: { x, y } }.<br><br>\n\n<ul>\n<li>pt1 = Start Point</li>\n<li>pt2 = End point</li>\n<li>cpt = Control Point</li>\n</ul>"
+        },
+        "GSFilePathBox": {
+            "name": "GSFilePathBox",
+            "shortname": "GSFilePathBox",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "plugin_reference.js",
+            "line": 1020,
+            "description": "Allows the user to select a folder on the local file system."
+        },
+        "GSCollectionView": {
+            "name": "GSCollectionView",
+            "shortname": "GSCollectionView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "plugin_reference.js",
+            "line": 1033,
+            "description": "A collection-view displays its items like a grid. All items have the same size and an optional image associated."
+        },
+        "GSContainer": {
+            "name": "GSContainer",
+            "shortname": "GSContainer",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "plugin_reference.js",
+            "line": 1073,
+            "description": "A container defines a sub-view or can embed a custom view into the current view."
+        },
+        "GSSplitView": {
+            "name": "GSSplitView",
+            "shortname": "GSSplitView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "plugin_reference.js",
+            "line": 1099,
+            "description": "A split view."
+        },
+        "DialogDescriptor": {
+            "name": "DialogDescriptor",
+            "shortname": "DialogDescriptor",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "plugin_reference.js",
+            "line": 1129,
+            "description": "Describes a dialog-popup supported by some UI controls like GSPopupField, GSTable, etc."
+        },
+        "DataSourceDescriptor": {
+            "name": "DataSourceDescriptor",
+            "shortname": "DataSourceDescriptor",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "plugin_reference.js",
+            "line": 1181,
+            "description": "Describes a data source used for controls like GSComboBox, GSTable, etc."
+        },
+        "DataRecordView": {
+            "name": "DataRecordView",
+            "shortname": "DataRecordView",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "plugin_reference.js",
+            "line": 1240,
+            "description": "Describes a database category."
+        },
+        "SceneCommand": {
+            "name": "SceneCommand",
+            "shortname": "SceneCommand",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "plugin_reference.js",
+            "line": 1274,
+            "description": "Describes a scene command. Commands are used in scene view to define logic/flow."
+        },
+        "GSQItem": {
+            "name": "GSQItem",
+            "shortname": "GSQItem",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "plugin_reference.js",
+            "line": 1372,
+            "description": "Describes all general properties each GSQ item can have. A GSQ item is used to describe a single field of a\nscene command like a character-selection, duration value, a popup-list, etc."
+        },
+        "GSQStepper": {
+            "name": "GSQStepper",
+            "shortname": "GSQStepper",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "plugin_reference.js",
+            "line": 1479,
+            "description": "A number input control which allow the user to input a number value."
+        },
+        "GSQTextArea": {
+            "name": "GSQTextArea",
+            "shortname": "GSQTextArea",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "plugin_reference.js",
+            "line": 1499,
+            "description": "A text input control which allow the user to input a text value."
+        },
+        "GSQPopupField": {
+            "name": "GSQPopupField",
+            "shortname": "GSQPopupField",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "plugin_reference.js",
+            "line": 1519,
+            "description": "A popup-field shows a popup-window on click to let the user input more complex data. It is displayed\nsimilar to a text-field and shows a single-line preview-text about its current data."
+        },
+        "GSQDataRecordField": {
+            "name": "GSQDataRecordField",
+            "shortname": "GSQDataRecordField",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "plugin_reference.js",
+            "line": 1532,
+            "description": "A data-record field looks like a GSQPopupField but shows just a small popup-box to let the user\nselect a data-record from the database."
+        },
+        "GSQCheckBox": {
+            "name": "GSQCheckBox",
+            "shortname": "GSQCheckBox",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "plugin_reference.js",
+            "line": 1545,
+            "description": "<p>The check-box field is based on GSQPopupField but only contains \"Yes\" and \"No\". So a check-box field\ncan also be created by using GSQPopupField directly but using GSQCheckBox instead makes it a lot more comfortable like you\ncan see in the following example:</p>\n<code>\n{\n  \"label\": \"My Checkbox\",\n  \"type\": \"GSQCheckBox\",\n  \"attribute\": \"myField\"\n}\n</code>\n<p>So you don't need to specify <i>valueFormula</i> and <i>dataSource</i>.</p>"
+        },
+        "GSQSlider": {
+            "name": "GSQSlider",
+            "shortname": "GSQSlider",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "plugin_reference.js",
+            "line": 1562,
+            "description": "<p>A slider allows the user to select a number value buy moving a graphical slider-knob\nusing the mouse. Useful for number selections where an exact value isn't important. A slider's value\ncannot be calculated by variable.</p>"
+        },
+        "View": {
+            "name": "View",
+            "shortname": "View",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "plugin_reference.js",
+            "line": 1583,
+            "description": "A (custom) view can be used in many different places like for popup-windows or as embeddable\nview. The same format is also used for the views of a split or tab-view."
+        },
+        "LanguageBundle": {
+            "name": "LanguageBundle",
+            "shortname": "LanguageBundle",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "plugin_reference.js",
+            "line": 1618,
+            "description": "A language bundle can be used to translate the UI of your views and scene commands into different languages. The bundle\nshould have a unique name with a language code suffix like \".jp\" for japanese or \".de\" for german. The bundle\nwithout any language code suffix is the default bundle and always used if there is no other language bundle\navailable for the current language. For Example: If the user's language is japanese(.jp) but there is no\nlanguage bundle with .jp suffix then the default bundle is used instead. It is recommended to use english\nlanguage for the default bundle."
+        },
+        "GS.GAME": {
+            "name": "GS.GAME",
+            "shortname": "GS.GAME",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "plugin_reference.js",
+            "line": 1640,
+            "description": "GS.GAME contains a few functions to get info about certain game settings like resolution for use in\nscripts or formula."
+        },
+        "FormatHelper": {
+            "name": "FormatHelper",
+            "shortname": "FormatHelper",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "plugin_reference.js",
+            "line": 1669,
+            "description": "The format-helper contains a of functions usable inside of scripts or javascript formulas which are in regular used to calculate display text. The functions are technically not bound\nto a FormatHelper class. Example:\n\n<b>WRONG:</b>\n<code>\n{\n    ........\n    \"valueFormula\": \"return FormatHelper.fmtNumVar(p.variable)\"\n}\n</code>\n<b>CORRECT:</b>\n<code>\n{\n    ........\n    \"valueFormula\": \"return fmtNumVar(p.variable)\"\n}\n</code>"
+        }
+    },
+    "elements": {},
+    "classitems": [
+        {
+            "file": "plugin_reference.js",
+            "line": 6,
+            "description": "A unique name/identifier for the item. That identifier can be used in bindings, delegates and\nother places whenever it is necessary specify an item. An item without an identifier cannot be\nused in combination bindings, delegates.",
+            "itemtype": "property",
+            "name": "identifier",
+            "type": "string",
+            "class": "GSViewItem"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 13,
+            "description": "<p>The path of the backend-field where the item should store its data. For Example:</p>\n<code>myField</code>\n<p>Stores the data in data.myField of the data-record object. It is also possible to specify paths like:</p>\n<code>myField.mySubField</code>\n<p>In the above example the data is written into data.myField.mySubField of the data-record object. If <i>myField</i>\ndoesn't exist it will be automatically created an initialized with an empty object. It is also possible to specify paths to array values like:</p>\n<code>myField.mySubArray.4</code>\n<p>In the above example the data is written into <i>data.myField.mySubArray[4]</i> of the data-record object. If the array or the index doesn't exist it it\nautomatically created. In our example, the values from index 0 to 3 are initializes with <b>null</b>.",
+            "itemtype": "property",
+            "name": "attribute",
+            "type": "string",
+            "class": "GSViewItem"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 26,
+            "description": "Indicates if the item should have a border. The color and size of the border depends on the current UI theme.",
+            "default": "false",
+            "itemtype": "property",
+            "name": "border",
+            "type": "boolean",
+            "class": "GSViewItem"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 32,
+            "description": "A tooltip/help-text which is displayed if the user places the cursor above the item and waits\n1-2 seconds. The behavior of the tooltip-box depends on the OS.",
+            "itemtype": "property",
+            "name": "tooltip",
+            "type": "string",
+            "class": "GSViewItem"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 38,
+            "description": "The item's default value if the backend-object is new created.",
+            "itemtype": "property",
+            "name": "defaultValue",
+            "type": "Object",
+            "class": "GSViewItem"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 43,
+            "description": "Assigns the item to the specified group. How the group association is handled depends on the item. \nFor example: A radio-button uses the group to disable all other radio-buttons in that group on click while\na label uses the group to resize itself to the label with higest width-value in the group.",
+            "itemtype": "property",
+            "name": "group",
+            "type": "string",
+            "class": "GSViewItem"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 50,
+            "description": "The position & size of the item as array of coordinates like [0, 0, -1, 200]. The position coordinates\nare not in pixels. It depends on the layout how it interprets the coordinates. But for the most common\nand standard layout, the \"dynamicGrid\", the position is a [column, row] pair. So to show items in a way like\nthis:<br><br>\n\nitem1 item2<br>\nitem3 item4<br><br>\n\nthe position of these items would be: [0, 0], [1, 0], [0, 1] and [1, 1]<br><br>\n\nThe size is optional for most items. Exceptions are multiline text-fields, table-views, document-trees, etc. In regular\nthe size is calculated automatically depending on the layout. It is also possible to specify -1 for a size-value\nto let the layout handle it. For example, to only specify the height for an item you can just specify [0, 0, -1, 200] to\nset the height to 200px while the width is still automatically calculated by the layout.<br><br>\n\nThe size is in pixels for all layouts.",
+            "itemtype": "property",
+            "name": "frame",
+            "type": "number[]",
+            "class": "GSViewItem"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 70,
+            "description": "A formula to calculate the size of the item at runtime. It needs to return a size-object like { w, h }. The formula doesn't have any parameters.",
+            "itemtype": "property",
+            "name": "sizeFormula",
+            "type": "string",
+            "class": "GSViewItem"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 75,
+            "description": "<p>A value-translator can be used to convert the item's value before written or after read. It has the\nfollowing format:</p>\n\n<pre>\nvalueTranslator: { read: \"return ROUND(v * 100)\", write: \"return v / 100\" }\n</pre>\n\n<ul>\n<li>read - A formula is used to convert the value after read but before transferring it to the item. It has one parameter \"v\" which is the original value.</li>\n<li>write - A formula is used to convert the value before it is written to the backend. It has one parameter \"v\" which is the original value.</li>\n</ul>\n<p>In the above example the value is stored as a factor between 0.0 and 1.0 but displayed as a percentage between 0 and 100.</p>",
+            "itemtype": "property",
+            "name": "valueTranslator",
+            "type": "Object",
+            "class": "GSViewItem"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 92,
+            "description": "Delegates are used to delegate user actions to a specified item-controller routine. An good example\nis a GSButton item which adds a new item to a GSTable or GSCollectionView if clicked. That button\njust delegates the click to a routine of the table-view's internal controller. Each item has an internal\ncontroller managing the logic of the item. Many controllers offering public routines which can be\ncalled using delegates to trigger a certain action.<br><br>\n\nDelegates are defined using the following format:<br>\n<pre>\n\"delegates\": [\n    { \"identifiers\": [\"myTable\"], \"selector\": \"addItemUsingDialog\" }\n]\n</pre>\n\n<ul>\n<li>identifiers - Array of items where the specified selector should be called on.</li>\n<li>selector - The action/routine to call.</li>\n</ul>\n\nWhen delegates are triggered depends on the item.",
+            "itemtype": "property",
+            "name": "delegates",
+            "type": "Object[]",
+            "class": "GSViewItem"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 116,
+            "description": "Bindings are used to bind an item's attribute to another item's attribute. A good example is a\ncolor-selection where you have three sliders for the red, green and blue color-component\nand a GSColorView for the preview and want to update the color-view whenever a slider is changed. \nThe <b>value</b> attribute of each slider would be bound\nto the corresponding color-component of the GSColorView in that case.<br><br>\n\nBindings are defined using the following format:<br>\n<code>\n\"bindings\": [\n    { \"source\": \"value\", \"to\": \"colorView\", \"target\": \"red\" }\n]\n</code>\n\n<ul>\n<li>source - The source-value from the current item to bind.</li>\n<li>to - The identifier of the target-item</li>\n<li>target - The target-attribute where the source-value should be bound to.</li>.\n<li>asImageFromFolder - Name of a resource folder. If defined, the source-value will be treated\nas an image name and automatically converted to a native image before written to the target.</li>\n<li>asDataFromFolder - Name of a resource folder. If defined, the source-value will be treated\nas a name of a Live2D model and automatically converted to a native Live2D model before written to the target.</li>\n</ul>\n\nWhenever the source-value changes it will be automatically written to the target-attribute of\nthe target-item. Bindings are used very often to let multiple items work together.",
+            "itemtype": "property",
+            "name": "bindings",
+            "type": "Object[]",
+            "class": "GSViewItem"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 150,
+            "description": "The label's text.",
+            "itemtype": "property",
+            "name": "text",
+            "type": "string",
+            "class": "GSLabel"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 155,
+            "description": "Allows to calculate the label’s text using a JavaScript formula. The formula has two local variables.",
+            "itemtype": "property",
+            "name": "textForumla",
+            "type": "string",
+            "class": "GSLabel"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 160,
+            "description": "Allows to calculate the label’s text using a JavaScript formula. The formula has two local variables.",
+            "itemtype": "property",
+            "name": "textForumla",
+            "type": "string",
+            "class": "GSLabel"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 165,
+            "description": "Allows to calculate the label’s text using a JavaScript formula. The formula has two local variables.",
+            "itemtype": "property",
+            "name": "textForumla",
+            "type": "string",
+            "class": "GSLabel"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 170,
+            "description": "The local-data object of the view.",
+            "itemtype": "property",
+            "name": "textFormula.local",
+            "type": "Object",
+            "class": "GSLabel"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 175,
+            "description": "The custom-data object which contains a reference to the view’s data object.",
+            "itemtype": "property",
+            "name": "textFormula.customData",
+            "type": "string",
+            "class": "GSLabel"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 180,
+            "description": "Automatically resizes the label to fit its text-size.",
+            "itemtype": "property",
+            "name": "sizeToTextSize",
+            "type": "string",
+            "class": "GSLabel"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 185,
+            "description": "The alignment of the label’s text. Can be <b>left</b> or <b>center</b>",
+            "itemtype": "property",
+            "name": "alignment",
+            "type": "string",
+            "class": "GSLabel"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 190,
+            "description": "The group the label belongs to.",
+            "itemtype": "property",
+            "name": "group",
+            "type": "string",
+            "class": "GSLabel"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 200,
+            "description": "Indicates that the text field is multiline. In that case it is necessary to specify a height-value for text-field’s size.",
+            "itemtype": "property",
+            "name": "multiline",
+            "type": "boolean",
+            "class": "GSTextField"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 205,
+            "description": "Indicates that the content of the text-field can be translated in different languages by the user using the language configuration view.",
+            "itemtype": "property",
+            "name": "localizable",
+            "type": "boolean",
+            "class": "GSTextField"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 210,
+            "description": "Indicates if the text-field is read-only. A read-only text-field will not write/save any data.",
+            "itemtype": "property",
+            "name": "readOnly",
+            "type": "boolean",
+            "class": "GSTextField"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 215,
+            "description": "The text-field’s font descriptor to specify which font should be used.",
+            "itemtype": "property",
+            "name": "font",
+            "type": "Object",
+            "class": "GSTextField"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 220,
+            "description": "The font’s name.",
+            "itemtype": "property",
+            "name": "font.name",
+            "type": "string",
+            "class": "GSTextField"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 225,
+            "description": "The font’s size.",
+            "itemtype": "property",
+            "name": "font.size",
+            "type": "number",
+            "class": "GSTextField"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 237,
+            "description": "The check-box’s label text.",
+            "itemtype": "property",
+            "name": "text",
+            "type": "string",
+            "class": "GSCheckBox"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 242,
+            "description": "The group the check-box belongs to.",
+            "itemtype": "property",
+            "name": "group",
+            "type": "string",
+            "class": "GSCheckBox"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 252,
+            "description": "The radio-button’s label text.",
+            "itemtype": "property",
+            "name": "text",
+            "type": "string",
+            "class": "GSRadioButton"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 257,
+            "description": "The group the radio-button belongs to.",
+            "itemtype": "property",
+            "name": "group",
+            "type": "string",
+            "class": "GSRadioButton"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 267,
+            "description": "The minimum number value the user can enter. The minimum value is used as default if no explicit default-value\nis present.",
+            "itemtype": "property",
+            "name": "minimum",
+            "type": "number",
+            "class": "GSStepper"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 273,
+            "description": "The maximum number value the user can enter.",
+            "itemtype": "property",
+            "name": "maximum",
+            "type": "number",
+            "class": "GSStepper"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 285,
+            "description": "The button's text.",
+            "itemtype": "property",
+            "name": "text",
+            "type": "string",
+            "class": "GSButton"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 290,
+            "description": "The popup dialog shown up if the user clicks the button. The data of the popup dialog is automatically\nstored if <b>attribute</b> is present.",
+            "itemtype": "property",
+            "name": "dialog",
+            "type": "DialogDescriptor",
+            "class": "GSButton"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 296,
+            "description": "Changes where the button should store the data from the popup-window. Can be \"local.data.[path]\" to\nstore in local data object of the view or \"user.data.[path]\" to store in the user-profile.",
+            "itemtype": "property",
+            "name": "dataReference",
+            "type": "string",
+            "class": "GSButton"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 302,
+            "description": "Custom data the button will automatically send to delegates and bindings if clicked.",
+            "itemtype": "property",
+            "name": "data",
+            "type": "Object",
+            "class": "GSButton"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 307,
+            "description": "Custom data the button will automatically send to delegates and bindings if clicked.",
+            "itemtype": "property",
+            "name": "data (Binding)",
+            "type": "Object",
+            "class": "GSButton"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 318,
+            "description": "If <b>true</b> the color-view can be clicked and shows a popup-window to let the user select a custom\ncolor. Otherwise it cannot be clicked and only shows a color-preview of its color-data.",
+            "itemtype": "property",
+            "name": "selectable",
+            "type": "boolean",
+            "class": "GSColorView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 324,
+            "description": "The maximum number value the user can enter.",
+            "itemtype": "property",
+            "name": "maximum",
+            "type": "number",
+            "class": "GSColorView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 329,
+            "description": "The red-value of the color. Goes from 0 to 255.",
+            "itemtype": "property",
+            "name": "red (Binding)",
+            "type": "number",
+            "class": "GSColorView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 334,
+            "description": "The green-value of the color. Goes from 0 to 255.",
+            "itemtype": "property",
+            "name": "green (Binding)",
+            "type": "number",
+            "class": "GSColorView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 339,
+            "description": "The blue-value of the color. Goes from 0 to 255.",
+            "itemtype": "property",
+            "name": "blue (Binding)",
+            "type": "number",
+            "class": "GSColorView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 344,
+            "description": "The alpha-value of the color. Goes from 0 to 255.",
+            "itemtype": "property",
+            "name": "alpha (Binding)",
+            "type": "number",
+            "class": "GSColorView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 349,
+            "description": "Sets the color-data of the color-view. The color-data must be RAW object like: { red: 0, green: 0, blue: 0, alpha: 0}",
+            "itemtype": "property",
+            "name": "setValue:value: (Delegate)",
+            "type": "Delegate",
+            "class": "GSColorView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 360,
+            "description": "The popup-window shown if the user clicks the popup-field.",
+            "itemtype": "property",
+            "name": "dialog",
+            "type": "DialogDescriptor",
+            "class": "GSPopupField"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 365,
+            "description": "A JavaScript formula to calculate the current text of the popup-field.",
+            "itemtype": "property",
+            "name": "text",
+            "type": "string",
+            "class": "GSPopupField"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 370,
+            "description": "The current data of the popup-field.",
+            "itemtype": "property",
+            "name": "text.d",
+            "type": "Object",
+            "class": "GSPopupField"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 381,
+            "description": "The minimum number value the user can enter. The minimum value is used as default if no explicit default-value\nis present.",
+            "itemtype": "property",
+            "name": "minimum",
+            "type": "number",
+            "class": "GSSlider"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 387,
+            "description": "The maximum number value the user can enter.",
+            "itemtype": "property",
+            "name": "maximum",
+            "type": "number",
+            "class": "GSSlider"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 392,
+            "description": "The slider's orientation. Can be <b>vertical</b> or <b>horizontal</b>.",
+            "itemtype": "property",
+            "name": "orientation",
+            "type": "string",
+            "class": "GSSlider"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 403,
+            "description": "The data source must be a database category.",
+            "itemtype": "property",
+            "name": "dataSource",
+            "type": "DataSourceDescriptor",
+            "class": "GSDataRecordField"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 408,
+            "description": "A formula which calculates the data source descriptor at runtime.",
+            "itemtype": "property",
+            "name": "dataSourceFormula",
+            "type": "string",
+            "class": "GSDataRecordField"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 413,
+            "description": "The data-object of the view which contains all written data.",
+            "itemtype": "property",
+            "name": "dataSourceFormula.d",
+            "type": "Object",
+            "class": "GSDataRecordField"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 418,
+            "description": "Indicates if the user can select \"(None)\" from the list of data records. In that case the data-record\nfield store a <b>null</b> value.",
+            "itemtype": "property",
+            "name": "allowEmptySelection",
+            "type": "boolean",
+            "class": "GSDataRecordField"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 433,
+            "description": "A dialog used for the cell-properties if a cell is double-clicked. The data is automatically written\nto the cell object.",
+            "itemtype": "property",
+            "name": "cellPropertiesDialog",
+            "type": "DialogDescriptor",
+            "class": "GSDispositionView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 439,
+            "description": "Indicates if the user can resize a cell.",
+            "itemtype": "property",
+            "name": "allowCellResize",
+            "type": "boolean",
+            "class": "GSDispositionView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 444,
+            "description": "General cell color. This color is used if a cell doesn't have an own color defined.",
+            "itemtype": "property",
+            "name": "cellColor",
+            "type": "Object",
+            "class": "GSDispositionView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 449,
+            "description": "An array of predefined cells.",
+            "itemtype": "property",
+            "name": "cells",
+            "type": "Object[]",
+            "class": "GSDispositionView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 454,
+            "description": "The x-coordinate of the cell's position.",
+            "itemtype": "property",
+            "name": "cells[cell].x",
+            "type": "number",
+            "class": "GSDispositionView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 459,
+            "description": "The y-coordinate of the cell's position.",
+            "itemtype": "property",
+            "name": "cells[cell].y",
+            "type": "number",
+            "class": "GSDispositionView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 464,
+            "description": "The cell's color. Must be a color object like: { red: 255, green: 255, blue: 255, alpha: 255 }",
+            "itemtype": "property",
+            "name": "cells[cell].color",
+            "type": "Object",
+            "class": "GSDispositionView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 469,
+            "description": "The cell's size. Must be a size object like: { width: 100, height: 100 }",
+            "itemtype": "property",
+            "name": "cells[cell].size",
+            "type": "Object",
+            "class": "GSDispositionView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 474,
+            "description": "Controls how the data is stored. If <b>single</b> only the first cell will be directly stored. If <b>multiple</b> an array of all cells will be stored.",
+            "itemtype": "property",
+            "name": "storeMode",
+            "defaultvalue": "\"multiple\"",
+            "type": "string",
+            "class": "GSDispositionView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 480,
+            "description": "Indicates if the view is dynamic or static. A dynamic view allows add/remove cells at runtime like through\nbuttons or other kind of controls.",
+            "itemtype": "property",
+            "name": "dynamic",
+            "defaultvalue": "false",
+            "type": "string",
+            "class": "GSDispositionView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 487,
+            "description": "Sets the binding-value to",
+            "itemtype": "property",
+            "name": "BindingSlot.cells.[index]",
+            "type": "Object[]",
+            "class": "GSDispositionView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 492,
+            "description": "Sets the image of the specified background-layer.",
+            "itemtype": "property",
+            "name": "BindingSlot.backgrounds.[index]",
+            "type": "Image",
+            "class": "GSDispositionView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 497,
+            "description": "Sets the zoom-level for all cells. Its a percentage value.",
+            "itemtype": "property",
+            "name": "BindingSlot.zoom",
+            "type": "number",
+            "class": "GSDispositionView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 510,
+            "description": "Name of the internal tree-controller class used for the view. It can be one of the following values:<br>\n<ul>\n<li>GSDocumentTreeController - General Document Controller</li>\n<li>GSVNSceneTreeController - Scene Document Controller. Provides additional actions and handling for scenes.</li>\n</ul>",
+            "itemtype": "property",
+            "name": "controller",
+            "defaultvalue": "\"GSDocumentTreeController\"",
+            "type": "string",
+            "class": "GSDocumentTree"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 520,
+            "description": "Indicates if a document automatically gets loaded on selection. In most cases that isn't necessary.",
+            "itemtype": "property",
+            "name": "autoLoad",
+            "defaultvalue": "true",
+            "type": "boolean",
+            "class": "GSDocumentTree"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 526,
+            "description": "Indicates if documents can only be selected without options to edit, delete or add documents.",
+            "itemtype": "property",
+            "name": "readOnly",
+            "defaultvalue": "false",
+            "type": "boolean",
+            "class": "GSDocumentTree"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 532,
+            "description": "Indicates if the root-node, which is the project-document, will be hidden.",
+            "itemtype": "property",
+            "name": "rootHidden",
+            "defaultvalue": "false",
+            "type": "boolean",
+            "class": "GSDocumentTree"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 538,
+            "description": "Array of document types like vn.scene, vn.chapter, etc.",
+            "itemtype": "property",
+            "name": "documentTypes",
+            "defaultvalue": "[]",
+            "type": "string[]",
+            "class": "GSDocumentTree"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 544,
+            "description": "Indicates if the tree-view should have an outline/border.",
+            "itemtype": "property",
+            "name": "outline",
+            "defaultvalue": "true",
+            "type": "boolean",
+            "class": "GSDocumentTree"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 550,
+            "description": "The header-text for the tree-view. If not present the header-line is hidden.",
+            "itemtype": "property",
+            "name": "headerText",
+            "defaultvalue": "\"\"",
+            "type": "string",
+            "class": "GSDocumentTree"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 556,
+            "description": "Allows to set any item of the selected document's items collection.",
+            "itemtype": "property",
+            "name": "BindingSlot.[itemName]",
+            "type": "Object",
+            "class": "GSDocumentTree"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 561,
+            "description": "Allows to send any item of the selected document's items collection.",
+            "itemtype": "property",
+            "name": "BindingSignal.[itemName]",
+            "type": "Object",
+            "class": "GSDocumentTree"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 571,
+            "description": "Folder used to load the Live2D model from.",
+            "itemtype": "property",
+            "name": "folder",
+            "defaultvalue": "\"Live2D\"",
+            "type": "string",
+            "class": "GSLive2DView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 577,
+            "description": "Sets the name of the Live2D motion to play.",
+            "itemtype": "property",
+            "name": "BindingSlot.motion",
+            "type": "string",
+            "class": "GSLive2DView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 582,
+            "description": "Sets the name of the Live2D motion-group to play.",
+            "itemtype": "property",
+            "name": "BindingSlot.motionGroup",
+            "type": "string",
+            "class": "GSLive2DView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 587,
+            "description": "Sets the play-type of the Live2D motion-group.<br><br>\n<ul>\n<li>0 = ORDERED</li>\n<li>1 = RANDOM</li>\n</ul>",
+            "itemtype": "property",
+            "name": "BindingSlot.motionGroupPlayType",
+            "type": "string",
+            "class": "GSLive2DView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 596,
+            "description": "Sets the name of the Live2D expression to set.",
+            "itemtype": "property",
+            "name": "BindingSlot.expression",
+            "type": "string",
+            "class": "GSLive2DView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 601,
+            "description": "Sets the zoom-level of the Live2D model in percentage.",
+            "itemtype": "property",
+            "name": "BindingSlot.zoom",
+            "type": "number",
+            "class": "GSLive2DView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 606,
+            "description": "Sends the current zoom-level of the Live2D model in percentage.",
+            "itemtype": "property",
+            "name": "BindingSignal.zoom",
+            "type": "number",
+            "class": "GSLive2DView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 625,
+            "description": "Folder used to load the resource from.",
+            "itemtype": "property",
+            "name": "folder",
+            "type": "string",
+            "class": "GSResourcePopupField"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 630,
+            "description": "Indicates which type of resource can be selected. Can be \"graphic\", \"video\" or \"audio\".",
+            "itemtype": "property",
+            "name": "resourceType",
+            "defaultvalue": "\"graphic\"",
+            "type": "string",
+            "class": "GSResourcePopupField"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 636,
+            "description": "The current selected image object.",
+            "itemtype": "property",
+            "name": "BindingSignal.image",
+            "type": "Image",
+            "class": "GSResourcePopupField"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 641,
+            "description": "The current selected resource object in the format: { name: \"resource name\"}.",
+            "itemtype": "property",
+            "name": "BindingSignal.resource",
+            "type": "Object",
+            "class": "GSResourcePopupField"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 652,
+            "description": "Indicates if the tone-view can be clicked to show a popup-window for more complex input.",
+            "itemtype": "property",
+            "name": "selectable",
+            "type": "boolean",
+            "class": "GSToneView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 657,
+            "description": "A dialog to show if the tone-view is clicked and the <b>selectable</b> attribute is set.",
+            "itemtype": "property",
+            "name": "dialog",
+            "type": "DialogDescriptor",
+            "class": "GSToneView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 662,
+            "description": "A custom graphic used for the tone-preview. If not present a color-spectrum graphic is used.",
+            "itemtype": "property",
+            "name": "graphic",
+            "type": "Object",
+            "class": "GSToneView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 667,
+            "description": "Name of the custom graphic resource.",
+            "itemtype": "property",
+            "name": "graphic.name",
+            "type": "string",
+            "class": "GSToneView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 672,
+            "description": "Resource folder the graphic should be loaded from.",
+            "itemtype": "property",
+            "name": "graphic.folder",
+            "type": "string",
+            "class": "GSToneView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 677,
+            "description": "Source-Rectangle of the custom graphic resource as object like: { x: 0, y: 0, w: 100, h: 100 }",
+            "itemtype": "property",
+            "name": "graphic.srcRect",
+            "type": "Object",
+            "class": "GSToneView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 682,
+            "description": "Red value of the tone.",
+            "itemtype": "property",
+            "name": "BindingSlot.red",
+            "type": "number",
+            "class": "GSToneView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 687,
+            "description": "Green value of the tone.",
+            "itemtype": "property",
+            "name": "BindingSlot.green",
+            "type": "number",
+            "class": "GSToneView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 692,
+            "description": "Blue value of the tone.",
+            "itemtype": "property",
+            "name": "BindingSlot.blue",
+            "type": "number",
+            "class": "GSToneView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 697,
+            "description": "Alpha value of the tone.",
+            "itemtype": "property",
+            "name": "BindingSlot.alpha",
+            "type": "number",
+            "class": "GSToneView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 702,
+            "description": "Sets the whole tone. Needs to be a tone object like: { red: 0, green: 0, blue: 0, grey: 0}",
+            "itemtype": "property",
+            "name": "BindingSlot.tone",
+            "type": "Object",
+            "class": "GSToneView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 715,
+            "description": "Array of commands currently displayed.",
+            "itemtype": "property",
+            "name": "BindingSlot.commands",
+            "type": "Object[]",
+            "class": "GSSceneContentView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 720,
+            "description": "If <b>true</b> the view is locked and the user cannot make any changes to the commands.",
+            "itemtype": "property",
+            "name": "BindingSlot.locked",
+            "type": "boolean",
+            "class": "GSSceneContentView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 725,
+            "description": "Adds a new command after the current selected command or at the end of the view.",
+            "itemtype": "property",
+            "name": "BindingSlot.newCommand",
+            "type": "Object",
+            "class": "GSSceneContentView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 730,
+            "description": "Array of commands currently displayed.",
+            "itemtype": "property",
+            "name": "BindingSignal.commands",
+            "type": "Object[]",
+            "class": "GSSceneContentView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 740,
+            "description": "Sends the selected command if just clicked (not dragged). Can be combined with the\n<b>BindingSlot.newCommand</b> of GSSceneContentView",
+            "see": [
+                "GSSceneContentView"
+            ],
+            "itemtype": "property",
+            "name": "BindingSignal.commandEntry",
+            "type": "Object",
+            "class": "GSSceneToolBox"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 762,
+            "description": "The max. value the parameter can reach.",
+            "defaultvalue": "9999",
+            "itemtype": "property",
+            "name": "maxValue",
+            "type": "number",
+            "class": "GSParameterView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 768,
+            "description": "The max. index. You can also see this as the max. level a character can reach.",
+            "defaultvalue": "99",
+            "itemtype": "property",
+            "name": "maxIndex",
+            "type": "number",
+            "class": "GSParameterView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 774,
+            "description": "The color of the graphical parameter curve. The color format is { red, green, blue }.",
+            "itemtype": "property",
+            "name": "color",
+            "type": "Object",
+            "class": "GSParameterView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 779,
+            "description": "The label displayed at the top-left corner of the parameter curve like \"Max. LP\" or \"Attack\".",
+            "itemtype": "property",
+            "name": "label",
+            "type": "string",
+            "class": "GSParameterView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 793,
+            "description": "Indicates if the table-header is visible.",
+            "defaultvalue": "true",
+            "itemtype": "property",
+            "name": "headerView",
+            "type": "boolean",
+            "class": "GSTable"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 799,
+            "description": "An array of columns for the table.",
+            "defaultvalue": "[]",
+            "itemtype": "property",
+            "name": "columns",
+            "type": "Object[]",
+            "class": "GSTable"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 805,
+            "description": "Indicates if the column is hidden.",
+            "itemtype": "property",
+            "name": "columns[column].hidden",
+            "type": "boolean",
+            "class": "GSTable"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 810,
+            "description": "The column's width in pixels.",
+            "itemtype": "property",
+            "name": "columns[column].width",
+            "type": "number",
+            "class": "GSTable"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 815,
+            "description": "Name of the icon used for the column.",
+            "itemtype": "property",
+            "name": "columns[column].icon",
+            "type": "string",
+            "class": "GSTable"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 820,
+            "description": "Header text of the column if table-header is visible.",
+            "itemtype": "property",
+            "name": "columns[column].text",
+            "type": "string",
+            "class": "GSTable"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 825,
+            "description": "The columns content. It can be just a formula or a key-value map. The formula has\none parameter \"d\" which is the current table-item.<br><br>\n\nThe key-value map has the format { key: \"aKey\", values: { key1: value, key2: value, ... } }.\nThe \"key\" is a attribute-name of the current table-item. The value of that attribute is used\nas a key for the <b>values</b> to get and display the value. For Example:<br><br>\n\nColumn Content-Property: { key: \"favoriteFruit\", values: { \"apple\": \"Apple\", \"banana\": \"Banana\" } }<br>\nItem Data: { favoriteFruit: \"apple\" }<br><br>\n\nThat example would return \"Apple\" for the example item data.",
+            "itemtype": "property",
+            "name": "columns[column].content",
+            "type": "Object|string",
+            "class": "GSTable"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 841,
+            "description": "The dialog used to add/edit items. If not present no items can be add/edit by the user.",
+            "itemtype": "property",
+            "name": "dialog",
+            "type": "DialogDescriptor",
+            "class": "GSTable"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 846,
+            "description": "The table's data source. That is only for table which are read-only and cannot be modified\nby the user. The data source can be a data-record collection or a predefined array of values.\nSee DataSourceDescriptor for more info.",
+            "itemtype": "property",
+            "name": "dataSource",
+            "type": "DataSourceDescriptor",
+            "class": "GSTable"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 853,
+            "description": "A formula used to sort the items of the tabel. It takes two parameters \"a\" and \"b\" which\nare both table-items.",
+            "itemtype": "property",
+            "name": "sortFormula",
+            "type": "string",
+            "class": "GSTable"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 859,
+            "description": "The context-menu for the table. Can be used to provide actions like copy, paste, delete, etc.",
+            "itemtype": "property",
+            "name": "contextMenu",
+            "type": "ContextMenu",
+            "class": "GSTable"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 864,
+            "description": "A mime-type describing the type of data in the table. If not present, the type is novelsharp/<item-identifier>. If <b>identifier</b> is not present, the type is novelsharp/custom-item.",
+            "itemtype": "property",
+            "name": "dataType",
+            "type": "string",
+            "class": "GSTable"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 869,
+            "description": "Indicates if the table uses an extra row to allow the user adding new items through double-click on that row. The\ntext of that row can be controlled using <b>emptyItemText</b> attribute.",
+            "defautlvalue": "true",
+            "itemtype": "property",
+            "name": "emptyItem",
+            "type": "boolean",
+            "class": "GSTable"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 876,
+            "description": "The text for the extra row if <b>emptyItem</b> is set.",
+            "defautlvalue": "\"<New>\"",
+            "itemtype": "property",
+            "name": "emptyItemText",
+            "type": "string",
+            "class": "GSTable"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 882,
+            "description": "Any attribute of the current selected item can be set.",
+            "itemtype": "property",
+            "name": "BindingSlot.[attributeName]",
+            "type": "Object",
+            "class": "GSTable"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 887,
+            "description": "The current selected item.",
+            "itemtype": "property",
+            "name": "BindingSignal.selectedItem",
+            "type": "Object",
+            "class": "GSTable"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 892,
+            "description": "All items.",
+            "itemtype": "property",
+            "name": "BindingSignal.items",
+            "type": "Object",
+            "class": "GSTable"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 897,
+            "description": "All attributes of the current selected item.",
+            "itemtype": "property",
+            "name": "BindingSignal.[attributeName]",
+            "type": "Object",
+            "class": "GSTable"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 902,
+            "description": "Cuts the selected item.",
+            "itemtype": "property",
+            "name": "cutItem:",
+            "type": "Delegate",
+            "class": "GSTable"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 907,
+            "description": "Copys the selected item.",
+            "itemtype": "property",
+            "name": "copyItem:",
+            "type": "Delegate",
+            "class": "GSTable"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 912,
+            "description": "Paste an item from clipboard.",
+            "itemtype": "property",
+            "name": "pasteItem:",
+            "type": "Delegate",
+            "class": "GSTable"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 917,
+            "description": "Deletes the selected item.",
+            "itemtype": "property",
+            "name": "deleteItem:",
+            "type": "Delegate",
+            "class": "GSTable"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 922,
+            "description": "Adds a new item by using the default values of the table-columns.",
+            "itemtype": "property",
+            "name": "addItem",
+            "type": "Delegate",
+            "class": "GSTable"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 927,
+            "description": "Adds a new item by using the specified data. The data describes the item itself.",
+            "itemtype": "property",
+            "name": "addItem:withData:",
+            "type": "Delegate",
+            "class": "GSTable"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 932,
+            "description": "Adds a new item after the current selected item by using the specified data. The data describes the item itself.",
+            "itemtype": "property",
+            "name": "addItemAtSelectedIndex:withData:",
+            "type": "Delegate",
+            "class": "GSTable"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 937,
+            "description": "Adds a new item by using the associated dialog-popup.",
+            "itemtype": "property",
+            "name": "addItemUsingDialog",
+            "type": "Delegate",
+            "class": "GSTable"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 942,
+            "description": "Edits the selected item using the associated dialog-popup.",
+            "itemtype": "property",
+            "name": "editItemUsingDialog",
+            "type": "Delegate",
+            "class": "GSTable"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 947,
+            "description": "Removes the selected item.",
+            "itemtype": "property",
+            "name": "removeSelectedItem",
+            "type": "Delegate",
+            "class": "GSTable"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 960,
+            "description": "An array of tab-pages to display. Each tab is a regular view descriptor.",
+            "itemtype": "property",
+            "name": "tabs",
+            "type": "ViewDescriptor[]",
+            "class": "GSTabView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 973,
+            "description": "Indicates if the image should be centered if the image-view is larger than the image.",
+            "default": "false",
+            "itemtype": "property",
+            "name": "centerImage",
+            "type": "boolean",
+            "class": "GSImageView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 979,
+            "description": "An image-position offset.",
+            "default": "{ x: 0, y: 0 }",
+            "itemtype": "property",
+            "name": "imageOffset",
+            "type": "Object",
+            "class": "GSImageView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 985,
+            "description": "Image scale factor.",
+            "default": "1.0",
+            "itemtype": "property",
+            "name": "scale",
+            "type": "number",
+            "class": "GSImageView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 991,
+            "description": "Scales the image to fit into the image-view.",
+            "default": "false",
+            "itemtype": "property",
+            "name": "scaleImageToFit",
+            "type": "boolean",
+            "class": "GSImageView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 997,
+            "description": "Resource folder to select the graphic resource from.",
+            "default": "\"Graphics/Pictures\"",
+            "itemtype": "property",
+            "name": "folder",
+            "type": "string",
+            "class": "GSImageView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1024,
+            "description": "The text for the browse-button.",
+            "default": "\"...\"",
+            "itemtype": "property",
+            "name": "buttonText",
+            "type": "string",
+            "class": "GSFilePathBox"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1037,
+            "description": "The size for each item in the view.",
+            "default": "[200 , 200]",
+            "itemtype": "property",
+            "name": "itemSize",
+            "type": "number[]",
+            "class": "GSCollectionView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1043,
+            "description": "Controls how the view stores its data. If \"single\" the view only stores the current selected item. If\n\"list\" the view stores all items.",
+            "default": "\"single\"",
+            "itemtype": "property",
+            "name": "storeMode",
+            "type": "string",
+            "class": "GSCollectionView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1050,
+            "description": "Current items of the collection view.",
+            "itemtype": "property",
+            "name": "BindingSlot.content",
+            "type": "Object[]",
+            "class": "GSCollectionView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1055,
+            "description": "Removes the current selected item.",
+            "itemtype": "property",
+            "name": "removeSelectedItem: (Action)",
+            "type": "Delegate",
+            "class": "GSCollectionView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1060,
+            "description": "Adds the specified item to the collection view.",
+            "itemtype": "property",
+            "name": "addItem:item: (Action)",
+            "type": "Delegate",
+            "class": "GSCollectionView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1065,
+            "description": "Adds the specified items to the collection view.",
+            "itemtype": "property",
+            "name": "addItems:items: (Action)",
+            "type": "Delegate",
+            "class": "GSCollectionView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1077,
+            "description": "The UID of the view to embed.",
+            "itemtype": "property",
+            "name": "viewUid",
+            "type": "string",
+            "class": "GSContainer"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1082,
+            "description": "Parameters which are passed to the embedded view. The parameters object has the following structure:<br><br>\n\n{ identifier1: { fd1: value, fd2: value, fd3: value, ... }, identifier2: { fd1: value, ... }, ... }<br><br>\n\nThe identifier describes to which section or item the parameters should be passed and the fdX pairs\ndescribing the different field-values to set for the section or item. Example:<br><br>\n\n{ \"myCheckBox\": { \"text\": \"Check Me\", \"attribute\": \"checked\" } }<br><br>\n\nIn that example, the \"text\" and \"attribute\" attributes of an item with the identifier \"myCheckBox\"\nare set/overriden to the values \"Check Me\" and \"checked\". That is useful to make more reusable and more\nflexible embeddable views.",
+            "itemtype": "property",
+            "name": "parameters",
+            "type": "Object",
+            "class": "GSContainer"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1103,
+            "description": "The orientation of the split view. Can be \"vertical\" or \"horizontal\".",
+            "default": "\"horizontal\"",
+            "itemtype": "property",
+            "name": "orientation",
+            "type": "string",
+            "class": "GSSplitView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1109,
+            "description": "Indicates if the split-view has a thick pane-splitter to resize the views instead of a thin one.",
+            "default": "false",
+            "itemtype": "property",
+            "name": "paneSplitter",
+            "type": "boolean",
+            "class": "GSSplitView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1115,
+            "default": "[0, 0]",
+            "itemtype": "property",
+            "name": "minDividerMargin",
+            "type": "number[]",
+            "class": "GSSplitView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1120,
+            "description": "An array of views displayed by the split-view. The views are separated by a divider and the divider can be used\nresize the views. Each view is just a regular view descriptor.",
+            "itemtype": "property",
+            "name": "views",
+            "type": "View[]",
+            "class": "GSSplitView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1133,
+            "description": "The UID of the custom view used for the popup-dialog. There are 5 reserved UIDs used\nto show internal popup-dialogs like graphic or audio selection:<br><br>\n\n<ul>\n<li>\"dialog.selectGraphicResource\" - Shows a popup-dialog to select a graphic resource.</li>\n<li>\"dialog.selectVideoResource\" - Shows a popup-dialog to select a video resource.</li>\n<li>\"dialog.selectAudioResource\" - Shows a popup-dialog to select an audio resource.</li>\n<li>\"dialog.selectVariable\" - Shows a popup-dialog to select a variable.</li>\n<li>\"dialog.selectParameters\" - Shows a popup-dialog to select parameters like for a common event.</li>\n</ul>",
+            "itemtype": "property",
+            "name": "uid",
+            "type": "string",
+            "class": "DialogDescriptor"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1147,
+            "description": "The parameters are used to pass options to internal popup-dialogs like the folder for a \ngraphic selection popup-dialog. The following parameters are supported:<br><br>\n\n<ul>\n<li>dialog.selectGraphicResource - { folder, multiSelection, emptySelection }</li>\n<li>dialog.selectVideoResource - { folder, multiSelection, emptySelection }</li>\n<li>dialog.selectAudioResource - { folder }</li>\n<li>dialog.selectVariable - { dataSource }</li>\n<li>dialog.selectParameters - No Parameters</li>\n</ul>",
+            "itemtype": "property",
+            "name": "parameters",
+            "type": "string",
+            "class": "DialogDescriptor"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1161,
+            "description": "A formula to calculate the UID of the custom view to use for the popup-dialog. <b>Only supported by GSTable</b>",
+            "itemtype": "property",
+            "name": "uidFormula",
+            "type": "string",
+            "class": "DialogDescriptor"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1166,
+            "description": "A formula to calculate the dialog parameters for internal popup-dialog.",
+            "itemtype": "property",
+            "name": "parameterFormula",
+            "type": "string",
+            "class": "DialogDescriptor"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1171,
+            "description": "Indicates if the popup-dialog's data-object has a <b>parentObject</b> containing the data from the calling view. Useful if the popup-dialog needs to access data from the calling view. <b>Only supported by GSTable</b>",
+            "default": "false",
+            "itemtype": "property",
+            "name": "inheritParentObject",
+            "type": "boolean",
+            "class": "DialogDescriptor"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1185,
+            "description": "The source where the data should be taken from. It can be the name of a database category or a predefined\narray of items. If not configured different, the index of the selected item is stored. If there is a\n<b>prefixSource</b> defined the count of items from the prefix-source is added to the index-value. \nFor a predefined array, each item can be just a string like:<br><br>\n\n[\"Apple\", \"Banana\", \"Orange\"]<br><br>\n\nIn that case the index of the selected item is stored. But it is also possible to define\na separate alias-value which is stored instead like:<br><br>\n\n[{ name: \"Apple\", alias: \"fruit_apple\"}, { name: \"Banana\", alias: \"fruit_banana\" }]<br><br>\n\nwhere <b>name</b> only the display name and <b>alias</b> is the value stored.",
+            "itemtype": "property",
+            "name": "source",
+            "type": "string|Object[]",
+            "class": "DataSourceDescriptor"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1203,
+            "description": "The prefix-source is put before the <b>source</b>. It is a predefined\narray of items. Each item can be just a string like:<br><br>\n\n[\"Apple\", \"Banana\", \"Orange\"]<br><br>\n\nIn that case the index of the selected item is stored. But it is also possible to define\na separate alias-value which is stored instead like:<br><br>\n\n[{ name: \"Apple\", alias: \"fruit_apple\"}, { name: \"Banana\", alias: \"fruit_banana\" }]<br><br>\n\nwhere <b>name</b> only the display name and <b>alias</b> is the value stored.",
+            "itemtype": "property",
+            "name": "prefixSource",
+            "type": "Object[]",
+            "class": "DataSourceDescriptor"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1219,
+            "description": "A formula to calculate the <b>source</b> at runtime. It takes one parameter \"d\" which is the\ndata-object of the view.",
+            "itemtype": "property",
+            "name": "sourceFormula",
+            "type": "Object[]",
+            "class": "DataSourceDescriptor"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1225,
+            "description": "Indiciates if the data source provides a \"(None)\" value for empty/none selection.",
+            "itemtype": "property",
+            "name": "allowEmptySelection",
+            "type": "boolean",
+            "class": "DataSourceDescriptor"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1230,
+            "description": "A formula which filters the items from the source at runtime. It has two parameters, \"d\" is the\ncurrent item and \"customData.object\" contains the data-object of the view. The filter should return\n<b>true</b> to let an item pass. Otherwise it should return <b>false</b> to skip the item.",
+            "itemtype": "property",
+            "name": "filter",
+            "type": "string",
+            "class": "DataSourceDescriptor"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1244,
+            "description": "The backend field name of the category. It should be a unique name in camel-case notation. It is also used\naccess the category by other controls through a <b>DataSource</b>.",
+            "itemtype": "property",
+            "name": "category",
+            "type": "string",
+            "class": "DataRecordView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1250,
+            "description": "Contains the details about the view used for each single record of the category.",
+            "itemtype": "property",
+            "name": "descriptor",
+            "type": "Object",
+            "class": "DataRecordView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1255,
+            "description": "The display name of the category.",
+            "itemtype": "property",
+            "name": "descriptor.name",
+            "type": "string",
+            "class": "DataRecordView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1260,
+            "description": "The display name of the category. The backend field name of the category. It should be a unique name in camel-case notation. It is also used\naccess the category by other controls through a <b>DataSource</b>. Should have the same value like <b>category</b>.",
+            "itemtype": "property",
+            "name": "descriptor.attribute",
+            "type": "string",
+            "class": "DataRecordView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1266,
+            "description": "Array of sections for the view.",
+            "itemtype": "property",
+            "name": "descriptor.sections",
+            "type": "ViewSection[]",
+            "class": "DataRecordView"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1278,
+            "description": "The unique identifier for the command. It can be any kind of text as long as it is \nunique. So you don’t need to follow any kind of format or syntax. However, the default syntax \nis [module].[name] like commands which are more specific for visual novels using vn.[name] while more\ngeneral commands are using gs.[name]. However, you shouldn’t use vn.[name] or gs.[name] to avoid confusion since they are only for built-in commands.",
+            "itemtype": "property",
+            "name": "id",
+            "type": "string",
+            "class": "SceneCommand"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1286,
+            "description": "The group/category where the new command should be added to. \nYou can use any of the already existing categories or just define your own like „My Custom Commands“. If the specified category\ndoesn't exist a new category is created.",
+            "itemtype": "property",
+            "name": "group",
+            "type": "string",
+            "class": "SceneCommand"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1293,
+            "description": "The default values for the command used if the command is new created like if the users drags a new command from the toolbox to scene content.",
+            "itemtype": "property",
+            "name": "defaultValue",
+            "type": "string",
+            "class": "SceneCommand"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1298,
+            "description": "Indicates if the command is in expanded state by default.",
+            "default": "false",
+            "itemtype": "property",
+            "name": "expanded",
+            "type": "boolean",
+            "class": "SceneCommand"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1304,
+            "description": "Defines an inline-image displayed on the top-right of the command. In regular this is\nused to display the character's image on commands like \"Join Scene\" or \"Show Message\" so\nthe user can recognize faster which character is acting.",
+            "default": "false",
+            "itemtype": "property",
+            "name": "inlineImage",
+            "type": "Object",
+            "class": "SceneCommand"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1312,
+            "description": "A formula to calculate the resource used for the inline-image. It has one parameter\n\"p\" containing the current command parameters/data. The formula must return a resource\nobject like: { name: \"MyPicture\" }.",
+            "itemtype": "property",
+            "name": "inlineImage.formula",
+            "type": "string",
+            "class": "SceneCommand"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1319,
+            "description": "The resource folder used to load the inline-image from.",
+            "itemtype": "property",
+            "name": "inlineImage.folder",
+            "type": "string",
+            "class": "SceneCommand"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1324,
+            "description": "Array of GSQ items to let the user input the necessary data needed by the command. Quick items\nare always visible to allow quick changes. They should be used for items which often\nneeds to be changed or which are important.",
+            "itemtype": "property",
+            "name": "quickItems",
+            "type": "GSQItem[]",
+            "class": "SceneCommand"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1331,
+            "description": "The expanded view contains GSQ items which are only visible if the user expands\nthe command by clicking on the expand-arrow icon. It should be used for settings\nwhich are not so important or which are not changing very often.<br><br>\n\nThe expanded view is separated into columns and each column has a set of sections shown belows each other. Each section can have an own header-text to describe\nits content a bit more. Each section contains a set of rows and each row contains a set of items which\nare displayed next to each other. <br><br>\n\nExample:<br>\n<pre>\n\"expandedView\": {\n      \"columns\": [\n          {\n              \"sections\": [\n                  {\n                      \"label\": \"Header Text\",\n                      \"rows\": [\n                          { \"items\": [] }\n                      ]\n                  } \n              ]\n          }\n      ]       \n  }\n</pre>",
+            "itemtype": "property",
+            "name": "expandedView",
+            "type": "Object[]",
+            "class": "SceneCommand"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1360,
+            "description": "Full-Size items are only visible if the user expands the command by clicking on the expand-arrow icon.\nThey displayed below each other and each items takes up the full width of the command-size. There is also no\nlabel displayed. In regular full-size items are used for multi-line text input for commands\nlike \"Show Message\".",
+            "itemtype": "property",
+            "name": "fullSizeItems",
+            "type": "GSQItem[]",
+            "class": "SceneCommand"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1377,
+            "description": "The unique identifier of the item. It can be any kind of text as long as it is \nunique inside the command. So you don’t need to follow any kind of format or syntax. If <i>identifier</i> is\nnot present, the <i>attribute</i> is automatically used as identifier. The identifier can be used\nrefer to the item like in <i>enableItems</i> or <i>showItems</i> property.",
+            "itemtype": "property",
+            "name": "identifier",
+            "type": "string",
+            "class": "GSQItem"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1385,
+            "description": "The field's label text to display a short description of the field.",
+            "itemtype": "property",
+            "name": "label",
+            "type": "string",
+            "class": "GSQItem"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1390,
+            "description": "<p>The field's width in pixels or percentage. Can be:</p>\n<ul>\n<li>\"50%\" - Percentage value</li>\n<li>50 - Number value describing the width in pixels</li>\n<li>\"auto\" - The width is calculated automatically</li>",
+            "itemtype": "property",
+            "name": "width",
+            "default": "\"auto\"",
+            "type": "number|string",
+            "class": "GSQItem"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1400,
+            "description": "<p>The path of the backend-field where the item should store its data. For Example:</p>\n<code>myField</code>\n<p>Stores the data in params.myField of the command object. It is also possible to specify paths like:</p>\n<code>myField.mySubField</code>\n<p>In the above example the data is written into params.myField.mySubField of the command object. If <i>myField</i>\ndoesn't exist it will be automatically created an initialized with an empty object. It is also possible to specify paths to array values like:</p>\n<code>myField.mySubArray.4</code>\n<p>In the above example the data is written into <i>params.myField.mySubArray[4]</i>. If the array or the index doesn't exist it it\nautomatically created. In our example, the values from index 0 to 3 are initializes with <b>null</b>",
+            "itemtype": "property",
+            "name": "attribute",
+            "type": "string",
+            "class": "GSQItem"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1413,
+            "description": "<p>Defines a JavaScript formula calculating the display text of the fields value. The local variable \"p\" is a reference to the params-object. If the formula doesn't return a string the <i>toString</i> method is executed on the return-value. For Example:</p>\n<code>\"valueFormula\": \"return p.myValue\"</code>",
+            "itemtype": "property",
+            "name": "valueFormula",
+            "type": "string",
+            "class": "GSQItem"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1419,
+            "description": "<p>Indicates if the field is lockable and displays a lock-icon on the left side. If <b>true</b> the params-object contains\na special property <i>fieldFlags</i> which contains flags for each property. If the field is locked, the flag 0x01 is set. For Example:</p>\n<code>locked = params.fieldFlags[\"myField\"] & 0x01</code>\n<p>The above example checks if <i>myField</i> is locked. In game script there is a constant which can be used instead of 0x01:</p>\n<code>locked = params.fieldFlags[\"myField\"] & gs.CommandFieldFlags.LOCKED</code>\n<p>Or the helper method:</p>\n<code>locked = gs.CommandFieldFlags.isLocked(params.fieldFlags[\"myField\"])</code>\n<p>A field which is locked is ignored by the command and the default value is used. But the exact behavior depends on the command's implementation in\n<i>gs.Component_CommandInterpreter</i> class.</p>",
+            "itemtype": "property",
+            "name": "lockable",
+            "type": "boolean",
+            "class": "GSQItem"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1432,
+            "description": "<p>A value-translator can be used to convert the item's value before written or after read. It has the\nfollowing format:</p>\n\n<pre>\nvalueTranslator: { read: \"return ROUND(v * 100)\", write: \"return v / 100\" }\n</pre>\n\n<ul>\n<li>read - A formula is used to convert the value after read but before transferring it to the item. It has one parameter \"v\" which is the original value.</li>\n<li>write - A formula is used to convert the value before it is written to the backend. It has one parameter \"v\" which is the original value.</li>\n</ul>\n<p>In the above example the value is stored as a factor between 0.0 and 1.0 but displayed as a percentage between 0 and 100.</p>",
+            "itemtype": "property",
+            "name": "valueTranslator",
+            "type": "Object",
+            "class": "GSQItem"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1449,
+            "description": "Displays a popup help-text if the mouse-pointer is place above the field for a few seconds. The exact behavior \nof the help-text popup depends on the operating system.",
+            "itemtype": "property",
+            "name": "tooltip",
+            "type": "string",
+            "class": "GSQItem"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1455,
+            "description": "<p>The type of items like if its a number field, a text field, etc. The following types are supported:</p>\n<ul>\n<li>GSQStepper</li>\n<li>GSQTextArea</li>\n<li>GSQPopupField</li>\n<li>GSQDataRecordField</li>\n<li>GSQCheckBox</li>\n<li>GSQSlider</li>\n</ul>",
+            "itemtype": "property",
+            "name": "type",
+            "type": "string",
+            "class": "GSQItem"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1468,
+            "description": "<p>Indicates if the field can be calculated by variable. Only available for GSQStepper, GSQTextArea, GSQPopupField and GSQDataRecordField. The object has the format:</p>\n<code>\"variableButton\": { \"dataSource\": \"numbers \"}</code>\n<p>The <i>dataSource</i> describes the variable type and can be \"numbers\", \"strings\", \"booleans\" or \"lists\".</p>",
+            "itemtype": "property",
+            "name": "variableButton",
+            "type": "Object",
+            "class": "GSQItem"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1483,
+            "description": "The minimum value the user can enter.",
+            "itemtype": "property",
+            "name": "minimum",
+            "default": "0",
+            "type": "number",
+            "class": "GSQStepper"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1489,
+            "description": "The maximum value the user can enter.",
+            "itemtype": "property",
+            "name": "maximum",
+            "default": "100",
+            "type": "number",
+            "class": "GSQStepper"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1503,
+            "description": "Indiciates if the text-field is multiline. Only works correctly if the text-field placed in <i>fullSizeItems</i>. A multiline text-area\ncannot be calculated by variable using <i>variableButton</i> property.",
+            "itemtype": "property",
+            "name": "multiline",
+            "default": "false",
+            "type": "boolean",
+            "class": "GSQTextArea"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1510,
+            "description": "Indicates that the content of the text-field can be translated into different languages by the user using the language configuration view.",
+            "default": "false",
+            "itemtype": "property",
+            "name": "localizable",
+            "type": "boolean",
+            "class": "GSQTextArea"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1524,
+            "description": "The popup-window shown if the user clicks the popup-field.",
+            "itemtype": "property",
+            "name": "dialog",
+            "type": "DialogDescriptor",
+            "class": "GSQPopupField"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1537,
+            "description": "The data source must be a database category.",
+            "itemtype": "property",
+            "name": "dataSource",
+            "type": "DataSourceDescriptor",
+            "class": "GSQDataRecordField"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1568,
+            "description": "The minimum value.",
+            "itemtype": "property",
+            "name": "minimum",
+            "default": "0",
+            "type": "number",
+            "class": "GSQSlider"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1574,
+            "description": "The maximum value.",
+            "itemtype": "property",
+            "name": "maximum",
+            "default": "100",
+            "type": "number",
+            "class": "GSQSlider"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1588,
+            "description": "Defines the window title if the view is displayed as a popup-window.",
+            "itemtype": "property",
+            "name": "windowTitle",
+            "type": "string",
+            "class": "View"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1593,
+            "description": "Defines the window size if the view is displayed as a popup-window. The format\nis { w, h }.",
+            "itemtype": "property",
+            "name": "windowSize",
+            "type": "Object",
+            "class": "View"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1599,
+            "description": "Calculates the window size using a formula if the view is displayed as a popup-window. The formula\nhas no parameters. The formula must return a size as object like { w, h }.",
+            "itemtype": "property",
+            "name": "windowSizeFormula",
+            "type": "Object",
+            "class": "View"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1605,
+            "description": "An array of bindings for the view to bind local view-data to items.",
+            "itemtype": "property",
+            "name": "bindings",
+            "type": "Binding[]",
+            "class": "View"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1610,
+            "description": "An array of sections defining the content of the view.",
+            "itemtype": "property",
+            "name": "sections",
+            "type": "ViewSection[]",
+            "class": "View"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1627,
+            "description": "Contains key:value pairs describing the phrases of the bundle. Example:<br><br>\n\n<pre>\n\"phrases\": {\n      \"802F93E8KF2A4A483DS8DE2E6CE060645507\": \"Text\"\n}\n</pre>",
+            "itemtype": "property",
+            "name": "phrases",
+            "type": "Object",
+            "class": "LanguageBundle"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1646,
+            "description": "Returns the scale-factor used by disposition views and other graphical editors to scale down\nthe graphics. The scale-factor is 1.0 if \"Original Size Preview\" is set in project preferences. Otherwise\nit is 0.5 so all graphics are scaled down by 50% to make placement easier for large game resolutions.",
+            "itemtype": "method",
+            "name": "previewScale",
+            "return": {
+                "description": "The scale factor depending on settings.",
+                "type": "Number"
+            },
+            "class": "GS.GAME"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1654,
+            "description": "Returns the game's resolution used to resize disposition view to match game screen size. The resolution is scaled down by 50% if \"Original Size Preview\" is <b>not</b> set in project preferences. \nOtherwise it returns the original game screen size.",
+            "itemtype": "method",
+            "name": "previewResolution",
+            "return": {
+                "description": "The game' resolution as { width, height } object.",
+                "type": "Object"
+            },
+            "class": "GS.GAME"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1661,
+            "description": "Returns the game's screen size.",
+            "itemtype": "method",
+            "name": "resolution",
+            "return": {
+                "description": "The game' screen size as { width, height } object.",
+                "type": "Object"
+            },
+            "class": "GS.GAME"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1689,
+            "description": "Returns the display text for the specified number variable or value. If the specified variable is actually\na number value the number value will be returned without any formatting.",
+            "itemtype": "method",
+            "name": "fmtNumVar",
+            "params": [
+                {
+                    "name": "variableOrValue",
+                    "description": "- The variable or constant value.",
+                    "type": "Variable|number"
+                }
+            ],
+            "return": {
+                "description": "The formatted display text or the constant number value.",
+                "type": "String|number"
+            },
+            "class": "FormatHelper"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1696,
+            "description": "Returns the display text for the specified string variable or value. If the specified variable is actually\na string value the string value will be returned without any formatting.",
+            "itemtype": "method",
+            "name": "fmtStrVar",
+            "params": [
+                {
+                    "name": "variableOrValue",
+                    "description": "- The variable or constant value.",
+                    "type": "Variable|string"
+                }
+            ],
+            "return": {
+                "description": "The formatted display text or the constant string value.",
+                "type": "String"
+            },
+            "class": "FormatHelper"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1703,
+            "description": "Returns the display text for the specified boolean variable (Switch) or value. If the specified variable is actually\na boolean value the boolean value will be returned without any formatting.",
+            "itemtype": "method",
+            "name": "fmtBoolVar",
+            "params": [
+                {
+                    "name": "variableOrValue",
+                    "description": "- The variable or constant value.",
+                    "type": "Variable|boolean"
+                }
+            ],
+            "return": {
+                "description": "The formatted display text or the constant boolean value.",
+                "type": "String|boolean"
+            },
+            "class": "FormatHelper"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1710,
+            "description": "Returns the display text for the specified list variable.",
+            "itemtype": "method",
+            "name": "fmtListVar",
+            "params": [
+                {
+                    "name": "variable",
+                    "description": "- The list variable",
+                    "type": "Variable"
+                }
+            ],
+            "return": {
+                "description": "The formatted display text.",
+                "type": "String"
+            },
+            "class": "FormatHelper"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1716,
+            "description": "Indicates if the specified value is actually a variable.",
+            "itemtype": "method",
+            "name": "isVar",
+            "params": [
+                {
+                    "name": "value",
+                    "description": "- The value to check.",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "If <b>true</b> the value is a variable. Otherwise <b>false</b>.",
+                "type": "Boolean"
+            },
+            "class": "FormatHelper"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1722,
+            "description": "Returns the display text for the specified variable or value. If the specified variable is actually\na constant value the value will be returned without any formatting.",
+            "itemtype": "method",
+            "name": "fmtVar",
+            "params": [
+                {
+                    "name": "variableOrValue",
+                    "description": "- The variable or constant value.",
+                    "type": "Variable|number|string|boolean"
+                },
+                {
+                    "name": "type",
+                    "description": "- The variable type, can be: \"numbers\", \"strings\", \"booleans\" or \"lists\".",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "The formatted display text or the constant number value.",
+                "type": "String|number|string|boolean"
+            },
+            "class": "FormatHelper"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1730,
+            "description": "Returns the display text for the specified color.",
+            "itemtype": "method",
+            "name": "fmtColor",
+            "params": [
+                {
+                    "name": "color",
+                    "description": "- The color to get the display text for.",
+                    "type": "Color"
+                }
+            ],
+            "return": {
+                "description": "The formatted display text.",
+                "type": "String"
+            },
+            "class": "FormatHelper"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1736,
+            "description": "Returns the display text for the specified tone.",
+            "itemtype": "method",
+            "name": "fmtTone",
+            "params": [
+                {
+                    "name": "tone",
+                    "description": "- The tone to get the display text for.",
+                    "type": "Tone"
+                }
+            ],
+            "return": {
+                "description": "The formatted display text.",
+                "type": "String"
+            },
+            "class": "FormatHelper"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1742,
+            "description": "Returns the display text for the specified database record.",
+            "itemtype": "method",
+            "name": "fmtRecord",
+            "params": [
+                {
+                    "name": "category",
+                    "description": "- The database category name",
+                    "type": "String"
+                },
+                {
+                    "name": "index",
+                    "description": "- The index of the database record to get the display text for. The index starts at 0.",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "The formatted display text.",
+                "type": "String"
+            },
+            "class": "FormatHelper"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1749,
+            "description": "Returns the display text for the specified document.",
+            "itemtype": "method",
+            "name": "fmtDocument",
+            "params": [
+                {
+                    "name": "uid",
+                    "description": "- The UID of the document to get the diplay text for.",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "The formatted display text.",
+                "type": "String"
+            },
+            "class": "FormatHelper"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1755,
+            "description": "Returns the display text for a duration value. It converts the duration value, which is stored in frames internally, into\nmilliseconds and adds \"ms\" suffix. So an input value of 60 results in \"1000ms\" display text. (If GS.CONST.GAME_FRAME_RATE is 60).",
+            "itemtype": "method",
+            "name": "fmtDuration",
+            "params": [
+                {
+                    "name": "durationValue",
+                    "description": "- The duration value to get the display text for.",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "The display text.",
+                "type": "String"
+            },
+            "class": "FormatHelper"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1762,
+            "description": "Returns the display text for a resource. The specified resource can also be a string variable.",
+            "itemtype": "method",
+            "name": "fmtResource",
+            "params": [
+                {
+                    "name": "resource",
+                    "description": "- The resource to get the display text for.",
+                    "type": "Resource"
+                }
+            ],
+            "return": {
+                "description": "The display text.",
+                "type": "String"
+            },
+            "class": "FormatHelper"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1768,
+            "description": "Returns database record at the specified index.",
+            "itemtype": "method",
+            "name": "record",
+            "params": [
+                {
+                    "name": "category",
+                    "description": "- The database category name",
+                    "type": "String"
+                },
+                {
+                    "name": "index",
+                    "description": "- The index of the database record to get. The index starts at 0.",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "The database record which is <b>not</b> the whole document but only the <b>items.data</b> content.",
+                "type": "Object"
+            },
+            "class": "FormatHelper"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1775,
+            "description": "Returns the translated phrase for the specified phrase-key. The name \"lcs\" originally stand for \"Language Configuration String\".",
+            "itemtype": "method",
+            "name": "lcs",
+            "params": [
+                {
+                    "name": "key",
+                    "description": "- The phrase's key. It can also be <bundle-name>.<key> to directly specify the bundle.",
+                    "type": "String"
+                },
+                {
+                    "name": "bundleName",
+                    "description": "- The name of the bundle to read the phrase from. Can be omitted if the bundle name is already specified in key-string.",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "The translated phrase.",
+                "type": "String"
+            },
+            "class": "FormatHelper"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1782,
+            "description": "<p>Returns the text for the specified localizable string. It can be a localized string object like or a constant string.\nThe function will check if a text for the <b>lcId</b> of the localized string object exists in the \ngame's language configuration. If not, the <b>defaultText</b> property of the localized string object \nwill be returned. If that property is <b>null</b> or not present the function returns:</p> \n\n<code>STRING NOT FOUND: <key></code>\n\n<p>If a constant string is specified the function will just return that string. The name \"lcsg\" originally stand for \"Language Configuration String Game\". See data-format reference for more\ninfo about LocalizedString object.</p>",
+            "itemtype": "method",
+            "name": "lcsg",
+            "params": [
+                {
+                    "name": "text",
+                    "description": "- The localized string object to get the text for.",
+                    "type": "String|LocalizedString"
+                }
+            ],
+            "return": {
+                "description": "The text for the localized string object.",
+                "type": "String"
+            },
+            "class": "FormatHelper"
+        },
+        {
+            "file": "plugin_reference.js",
+            "line": 1796,
+            "description": "<p>Executes a quick switch-case on the specified values. For Example:</p>\n<code>scase(1, [0, 1, 2], [\"Apple\", \"Orange\", \"Banana\"])</code>\n<p>Output:</p>\n<code>Orange</code>\n<p>The name \"scase\" stands for \"switch-case\".</p>",
+            "itemtype": "method",
+            "name": "scase",
+            "params": [
+                {
+                    "name": "value",
+                    "description": "- The value to check.",
+                    "type": "Object"
+                },
+                {
+                    "name": "values",
+                    "description": "- The values to check against.",
+                    "type": "Object[]"
+                },
+                {
+                    "name": "results",
+                    "description": "- The result values.",
+                    "type": "Object[]"
+                }
+            ],
+            "return": {
+                "description": "The matching value or <b>null</b> if none of the specified values matches.",
+                "type": "Object"
+            },
+            "class": "FormatHelper"
+        }
+    ],
+    "warnings": [
+        {
+            "message": "unknown tag: defaultvalue",
+            "line": " plugin_reference.js:474"
+        },
+        {
+            "message": "unknown tag: defaultvalue",
+            "line": " plugin_reference.js:480"
+        },
+        {
+            "message": "unknown tag: defaultvalue",
+            "line": " plugin_reference.js:510"
+        },
+        {
+            "message": "unknown tag: defaultvalue",
+            "line": " plugin_reference.js:520"
+        },
+        {
+            "message": "unknown tag: defaultvalue",
+            "line": " plugin_reference.js:526"
+        },
+        {
+            "message": "unknown tag: defaultvalue",
+            "line": " plugin_reference.js:532"
+        },
+        {
+            "message": "unknown tag: defaultvalue",
+            "line": " plugin_reference.js:538"
+        },
+        {
+            "message": "unknown tag: defaultvalue",
+            "line": " plugin_reference.js:544"
+        },
+        {
+            "message": "unknown tag: defaultvalue",
+            "line": " plugin_reference.js:550"
+        },
+        {
+            "message": "unknown tag: defaultvalue",
+            "line": " plugin_reference.js:571"
+        },
+        {
+            "message": "unknown tag: defaultvalue",
+            "line": " plugin_reference.js:630"
+        },
+        {
+            "message": "unknown tag: defaultvalue",
+            "line": " plugin_reference.js:762"
+        },
+        {
+            "message": "unknown tag: defaultvalue",
+            "line": " plugin_reference.js:768"
+        },
+        {
+            "message": "unknown tag: defaultvalue",
+            "line": " plugin_reference.js:793"
+        },
+        {
+            "message": "unknown tag: defaultvalue",
+            "line": " plugin_reference.js:799"
+        },
+        {
+            "message": "unknown tag: defautlvalue",
+            "line": " plugin_reference.js:869"
+        },
+        {
+            "message": "unknown tag: defautlvalue",
+            "line": " plugin_reference.js:876"
+        }
+    ]
+}

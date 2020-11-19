@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Camera Tutorial</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "3.2.4.0_2";
+</script>
+ <meta name="topic-breadcrumbs" content="Beginner's Guide > Customizing your Game > Camera Movement" />
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+ <p class="Topic_Heading">Camera Tutorial</p>
+</div>
+<p>&#160;</p>
+<p><span class="Topic_Start">I</span>n this tutorial, we are going to teach you some Screen, also known as Camera, effects that you can use to bring life to your Visual Novel. Here is an example scene to showcase how you can utilize these features!</p>
+<p>&#160;</p>
+<p style="text-align: center;"><script>
+	if(supports_mp4_video()) 
+		document.write("<video  controls=\"controls\"    style=\"border: none;; max-width: 100%\"><source src=\"CameraTutorialSimple.mp4\" type=\"video/mp4\" />");
+</script><object type="video/quicktime" data="CameraTutorialSimple.mp4" style="border: none;" height="300px" width="400px"><param name="autoplay" value="false" /><param name="autostart" value="false" /><param name="ShowControls" value="1" /><param name="controller" value="true" /></object><script>
+if(supports_mp4_video()) document.write("</video>");</script></p>
+<p style="text-align: center;">&#160;</p>
+<p class="Sub_Heading">Implementation</p>
+<p>In the example we have shown, there's at least two things we wanted to do:</p>
+<p>&#160;</p>
+<p>1. Pan the Screen to whoever is talking.</p>
+<p>2. Pan the Screen to an area of the background to reveal a third character.</p>
+<p>&#160;</p>
+<p>You can find all the commands under <img src="ScreenCmd.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" /><span style="font-weight: bold;">Screen.</span> Here is our command list:</p>
+<p><img src="CameraTut-01.jpg" alt="" style=" border:none; width:100%; max-width:1016px;" border="0" /></p>
+<p>&#160;</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li>First, I added a <a href="Screen.htm#Zoom_Screen">Zoom Screen</a> with the values 180%. This is necessary for Pan Screen later.</li>
+<li>For the second line of commands, I added the characters and the backgrounds. Once they appear, they're already at 180% Zoom, making it more natural.</li>
+<li>Now I just added <a href="Screen.htm#Pan_Screen">Pan Screen</a> commands. The X and Y fields are basically adding offsets to your current X/Y position.</li>
+</ul>
+<p>&#160;</p>
+<p>And that's about it! You can also do interesting scenes by adding Shake Screen, Rotate Screen and/or transitions. Here's an example scene. Try it out and see if you can replicate it!</p>
+<p>&#160;</p>
+<p style="text-align: center;"><script>
+	if(supports_mp4_video()) 
+		document.write("<video  controls=\"controls\"    style=\"border: none;; max-width: 100%\"><source src=\"CameraTutorial.mp4\" type=\"video/mp4\" />");
+</script><object type="video/quicktime" data="CameraTutorial.mp4" style="border: none;" height="300px" width="400px"><param name="autoplay" value="false" /><param name="autostart" value="false" /><param name="ShowControls" value="1" /><param name="controller" value="true" /></object><script>
+if(supports_mp4_video()) document.write("</video>");</script></p>
+<p style="text-align: center;">&#160;</p>
+</body>
+</html>

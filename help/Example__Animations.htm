@@ -1,0 +1,191 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Example: Animations</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "5.3.1.0_3";
+</script>
+ <meta name="topic-breadcrumbs" content="Script and Plugin Reference > In-Game UI Documentation > Getting Started" />
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+ <p class="Topic_Heading"><span style="font-family: 'Book Antiqua', serif; font-size: 24pt;">Example: Animations</span></p>
+</div>&#160; <br /><span class="Topic_Start">A</span>nimations can give a UI a more smoother feeling, on the other hand they can be annoying for the player if over-used or if your animations are too slow. So use animations with care. <br />&#160;
+<p class="Sub_Heading">A Shake-Effect</p>
+<p>The following example shows only a small part of what is possible with animations. Check the <a href="igui_doc/index.html">In-Game UI API Reference</a> to see more details about the animation features.</p>
+<p>&#160;</p>
+<p>For our title-screen, we want to add a "shake-effect" effect by adding offsets to the button's position if the mouse pointer is over the button.</p>
+<p>&#160;</p>
+<p><span class="Code">ui.UIManager.styles.titleScreenButton = {</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"resizable": true,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"margin": [0, 0, 0, 10],</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"animations": [</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"event": "onMouseHover",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"flow": [</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{ "type": "changeTo", "duration": 45,"field": "o.offset.x", "value": 10, "easing": "quad_inout", "wait": true },</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{ "type": "changeTo", "duration": 45,"field": "o.offset.x", "value": -10, "easing": "quad_inout", "wait": true }</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"event": "onMouseLeave",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"flow": [</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{ "type": "changeTo", "duration": 0,"field": "o.offset.x", "value": 0, "easing": "quad_inout" }</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;]</span></p>
+<p><span class="Code">}</span></p>
+<p>&#160;</p>
+<p>As we can see, animations can be added to a control using animations-property. But instead of adding that property to each button we put it into our titleScreenButton style so it is automatically applied to our three buttons. If we test-play our game now, the buttons while shake on mouse hover.</p>
+<p>&#160;</p>
+<p>An animation needs to be bound to an event like a mouse-action for example. In our case we have actually two animations, one is bound to onMouseHover event and is only executed if the mouse-pointer is over the button. The other is bound to onMouseLeave event and is only executed if the mouse-pointer leaves the button's area.</p>
+<p>&#160;</p>
+<p>An animation defines an animation-flow containing multiple primitive/basic animations to form the actual animation effect. Basic animations are simple movements, rotation, zooming, etc and can be played one after another or even in parallel. So its possible to move an image while rotating and zooming it at the same time. In our example we are using two "changeTo" animations to first move the button to the right and with the second "changeTo" we move the button to the left.</p>
+<p>&#160;</p>
+<p>The animation-flow is always looped. If the last basic-animation has been finished the flow repeats and starts again with the first basic-animation of the animation-flow.</p>
+<p>&#160;</p>
+<p>In addition, we defined a second animation played once if the mouse leaves the button's area. That is necessary to set the button's x-offset back to zero so the button goes back to its original position. We set the animation duration to zero to finish the animation immediately. You can play around with it and remove the "onMouseLeave" animation to see what happens then.</p>
+<p>&#160;</p>
+<p>Lets take a closer look to the properties:</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">animations</p>
+</li>
+</ul>
+<p>A list of animations executed for the control if the event occurres. Each animation needs to be bound to a different event.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">event</p>
+</li>
+</ul>
+<p>The event when the animation should be executed. Like onMouseHover, onMouseLeave, onMouseDown, onAlways, etc.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">flow</p>
+</li>
+</ul>
+<p>The animation-flow which is a list of basic animations to create the actual animation-effect. In our case we want to create a shake-effect.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">type</p>
+</li>
+</ul>
+<p>The type of the primitive animation. In our case it is changeTo which allows us to animate any kind of visual-properties. In our case we want to animate the x-offset of the button to create a shake effect.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">duration</p>
+</li>
+</ul>
+<p>The duration of the basic animation, in our case 45 frames. (1 frame = 1 / FRAMERATE (60 by default) seconds).</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">easing</p>
+</li>
+</ul>
+<p>The easing-type used for the animation. We are using quad_inout, a quadratic easing-function to make the movements more smooth. But there are many other easing-functions available. To disable easing, just use linear_inout. Check <a href="Easing_Effects.htm">Easings Effects</a> page for more information.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">wait</p>
+</li>
+</ul>
+<p>Indicates if the animation-flow should wait until the current basic animation is done before playing the next. In our case we need to wait until the shake in right-direction is done before we start to shake into the other direction. But in other cases it is necessary to run two or more basic animations in parallel like to move and rotate an image at the same time for example.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">field</p>
+</li>
+</ul>
+<p>This property is specific for the changeTo animation. Here we can define a field to animate using binding-syntax, see Data Bindings example for more info about bindings.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">value</p>
+</li>
+</ul>
+<p>This property is specific for the changeTo animation. Here we can specify the target-value we want to reach. In our case, we want to animate x-offset to 30 pixels in first step and then animate x-offset to -30 in second step.</p>
+<p>&#160;</p>
+<p class="Sub_Heading"><span>A Pulse-Effect</span></p>
+<p>After we learned some basics about animations the last example, we will try another animation next: A "pulse-effect" if the mouse-pointer is over the button's area.</p>
+<p>&#160;</p>
+<p><span class="Code">ui.UIManager.styles.titleScreenButton = {</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"resizable": true,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"margin": [0, 0, 0, 10],</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"anchor": [0.5, 0.5],</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"animations": [</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"event": "onMouseHover",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"flow": [</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{ "type": "zoomTo", "duration": 45,"zoom": [110, 110], "easing": "quad_inout", "wait": true },</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{ "type": "zoomTo", "duration": 45,"zoom": [100, 100], "easing": "quad_inout", "wait": true }</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"event": "onMouseLeave",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"flow": [</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{ "type": "zoomTo", "duration": 0,"zoom": [100, 100], "easing": "quad_inout", "wait": true }</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;]</span></p>
+<p><span class="Code">}</span></p>
+<p>&#160;</p>
+<p>If we test-play our game now, our buttons will zoom-in and out ("pulsing") if we move the mouse-pointer over a button's area. We are using a new type of basic-animation in this example called zoomTo which zooms the button to the percentage defined in zoom property. Lets go through the animation-flow step by step:</p>
+<p>&#160;</p>
+<p>In first step we are zooming the button by 110% to reach a zoom-out of the button. Then we wait until our zoom-out is done by setting wait property to true. In next step we are zooming the button back to 100% and then wait again until the zoom-animation is done by setting wait property to true. Since the animation-flow is always looped it looks like the button is "pulsing" by zooming in and out.</p>
+<p>&#160;</p>
+<p>You maybe notice that we also added a new property "anchor" to the button. With anchor-property we can change the button's anchor-point to its own center (0.5, 0.5) so that the zoom-effect goes in all 4 directions. Without that, the zoom effect would only go into lower-right direction. The best way to understand this is if you remove the anchor property to see what happens then.</p>
+</body>
+</html>

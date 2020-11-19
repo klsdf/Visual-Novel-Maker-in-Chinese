@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Common Events</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.2.0_6";
+</script>
+ <meta name="topic-breadcrumbs" content="Exploring the Editor > Database" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">Common Events</p>
+</div>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><img src="15.jpg" alt="" style=" border:none; width:100%; max-width:1283px;" border="0" /></p>
+<p style="font-weight: bold; font-size: 18pt; font-family: 'Book Antiqua', serif;">&#160;</p>
+<p class="Sub_Heading">General</p>
+<ul style="list-style: disc;">
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">Name 
+	 <span style="font-weight: normal;">- The name of the common event.</span></p></li>
+	<li><p style="font-weight: bold; font-family: Arial, sans-serif;">Trigger 
+	 <span style="font-weight: normal;">- The condition for running the 
+	 common event.</span></p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Call</span> - The common event will 
+		 run if you use the Call Common Event scene command.</p></li>
+		<li><p style="font-weight: bold; font-family: Arial, sans-serif;">Auto 
+		 <span style="font-weight: normal;">- The common event will automatically 
+		 activate itself. It will stop all processes unless Runs Parallel 
+		 is checked.</span></p></li>
+	</ul></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">Condition 
+	 Switch <span style="font-weight: normal;">- Use a switch as a condition 
+	 to run the common event.</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">Runs 
+	 Parallel <span style="font-weight: normal;">- Also known as Asynchronous. 
+	 If Parallel is checked, it will let the current scene to continue 
+	 playing while running the common event.</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">Auto 
+	 Preload <span style="font-weight: normal;">- Determines if the common 
+	 event is processed by the resource preloader. That only works for 
+	 common events with trigger set to &quot;Auto&quot;. &#160;If checked, 
+	 all resources used in that common event are preloaded. That is useful 
+	 for Auto/Parallel common events, since they are never called in a 
+	 scene, this is the only way to tell the resource-preloader to preload 
+	 used resources at start-up time. Keep in mind that if you have a huge 
+	 amount of Auto/Parallel common events with Auto Preload set, all resources 
+	 used by that common events are loaded at start-up time and never freed 
+	 which can consume a huge amount of memory.</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">Single 
+	 Instance <span style="font-weight: normal;">- Determines if only a 
+	 single-instance of that common event can exist at a time. If unchecked, 
+	 each Call Common Event produces a new instance with an own command-interpreter 
+	 and own local variables. This is useful for parallel calls or recursion.</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;"><span>Inline</span> 
+	 <span style="font-weight: normal;">- If checked, the engine tries 
+	 to optimize the call to that common event by copy &amp; paste it's 
+	 commands directly into the caller's command-list to speed up execution. 
+	 That is useful if a common event is called very often like 1000 or 
+	 10000 times in a loop or something. It has no effect if the Trigger 
+	 set to Auto or if the common event has parameters or uses recursion(Calling 
+	 itself).</span></p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p>
+<p class="Sub_Heading">Parameters</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">Parameters 
+ allows you to define some values like Numbers, Texts, etc. to trigger 
+ the common event. If you want an example, you can check the <a href="Tips_and_Tricks.htm">Tips 
+ and Tricks</a> page.</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<ul style="list-style: disc;">
+	<li><p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">Name</span> 
+	 - The name of the parameter displayed in auto-generated UI window..</p></li>
+	<li><p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">Number</span> 
+	 - Inserts a numerical value or ID to a number variable.</p></li>
+	<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif;">List 
+	 Entries <span style="font-weight: normal;">- A user-defined list. 
+	 Each list-entry is Name : Number-Value pair. The number-value of the 
+	 selected entry is stored in the number-variable</span></p></li>
+	<li><p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">Switch</span> 
+	 - Inserts a switch value into a switch variable.</p></li>
+	<li><p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">Text</span> 
+	 - Inserts a text value into a text variable.</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p>
+<p class="Sub_Heading"><span>Scene Content</span></p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">The contents 
+ of the Common Event. You can read more information about the individual 
+ commands in the <a href="Scene_Content.htm">Scenes</a> page.</p>
+</body>
+</html>

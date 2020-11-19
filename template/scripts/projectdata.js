@@ -1,0 +1,14 @@
+// Publish project specific data
+(function() {
+rh = window.rh;
+model = rh.model;
+
+rh.consts('DEFAULT_TOPIC', encodeURI("#Visual_Novel_Maker.htm".substring(1)));
+rh.consts('START_FILEPATH', encodeURI('index.htm'));
+rh.consts('HELP_ID', '3F134751-3EA7-424B-BADA-2DDCB404581F' || 'preview');
+rh.consts('LNG_STOP_WORDS', ["a", "about", "after", "against", "all", "also", "among", "an", "and", "are", "as", "at", "be", "became", "because", "been", "between", "but", "by", "can", "come", "do", "during", "each", "early", "for", "form", "found", "from", "had", "has", "have", "he", "her", "his", "however", "in", "include", "into", "is", "it", "its", "late", "later", "made", "many", "may", "me", "med", "more", "most", "near", "no", "non", "not", "of", "on", "only", "or", "other", "over", "several", "she", "some", "such", "than", "that", "the", "their", "then", "there", "these", "they", "this", "through", "to", "under", "until", "use", "was", "we", "were", "when", "where", "which", "who", "with", "you"]);
+rh.consts('LNG_SUBSTR_SEARCH', 1);
+
+model.publish(rh.consts('KEY_DIR'), "ltr");
+model.publish(rh.consts('KEY_LNG'), {"Reset":"Reset","SearchResultsPerScreen":"Search results per page","SyncToc":"SyncToc","HomeButton":"Home","WebSearchButton":"WebSearch","ApplyTip":"Apply","HighlightSearchResults":"Highlight Search Results","GlossaryFilterTerms":"Filter Terms","WebSearch":"WebSearch","Show":"Show","EnableAndSearch":"Display results with all search words","ShowAll":"All","Next":"Next","Print":"Print","NoScriptErrorMsg":"Enable JavaScript support in the browser to view this page.","PreviousLabel":"Previous","Hide":"Hide","Search":"-Search-","Contents":"Contents","ShowHide":"Show/Hide","Canceled":"Canceled","EndOfResults":"End of search results.","Loading":"Loading...","SidebarToggleTip":"Expand/Collapse","ContentFilterChanged":"Content filter is changed, search again","Logo":"Logo","Logo/Author":"Powered By","JS_alert_LoadXmlFailed":"Failed to load XML file","SearchTitle":"Search","Searching":"Searching...","Disabled Next":">>","Cancel":"Cancel","JS_alert_InitDatabaseFailed":"Failed to initialize database","ResultsFoundText":"%1 result(s) found for %2","UnknownError":"Unknown error","Seperate":"|","Index":"Index","TopicsNotFound":"No results found","SearchPageTitle":"Search Results","Glossary":"Glossary","Filter":"Filter","HideAll":"Hide All","TableOfContents":"Table of Contents","NextLabel":"Next","Disabled Prev":"<<","Back":"Back","SearchOptions":"Search Options","OpenLinkInNewTab":"Open in new tab","Prev":"Previous","ToTopTip":"Go to top","NavTip":"Menu","IeCompatibilityErrorMsg":"This page cannot be viewed in Internet Explorer 8 or earlier version.","IndexFilterKewords":"Filter Keywords","JS_alert_InvalidExpression_1":"The search string you typed is not valid."});
+})();

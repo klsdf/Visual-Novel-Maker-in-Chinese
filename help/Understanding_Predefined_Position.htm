@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Understanding Predefined Position</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "3.2.2.0_1";
+</script>
+ <meta name="topic-breadcrumbs" content="Beginner's Guide > Customizing your Game > How to Display a Bust Image" />
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+ <p class="Topic_Heading">Understanding Predefined Object Positions</p>
+</div>
+<p>&#160;</p>
+<p><span class="Topic_Start">P</span>redefined Position is a nifty feature that allows you to set formulas to position a character on the screen. One of its major benefits is that it allows you to change your work as needed. This is useful for cases such as if you need to change your assets with different file dimensions or you changed your mind on where to position the characters. You can normally find them at commands that requires coordinates. <a href="https://www.khanacademy.org/math/geometry-home/geometry-coordinate-plane">If you are unfamiliar or need a refresher towards Coordinate Planes, here are some videos.</a> For example, you can find it here in Join Scene:</p>
+<p>&#160;</p>
+<p><img src="PredefinedObjectPosition.jpg" alt="" style=" border:none; width:100%; max-width:841px;" border="0" /></p>
+<p>&#160;</p>
+<p>If you need a refresher for Geometry's Coordinate Plane, <a href="https://www.khanacademy.org/math/basic-geo/basic-geo-coord-plane">here are a few lessons from Khan Academy</a>.</p>
+<p>&#160;</p>
+<p>You can find, modify and/or create Predefined Object Positions in <span style="font-family: 'Book Antiqua', serif; font-size: 14pt; text-decoration: underline;"><img src="icon_database_view.png" alt="" style=" border:none; max-width:16px; width:100%;" border="0" /></span><span style="font-family: Arial, sans-serif; font-weight: bold;">Database -&gt; <img src="icon_database_system.png" alt="" style=" border:none; width:100%; max-width:16px;" border="0" />System</span><span style="font-family: Arial, sans-serif;">.</span></p>
+<p>&#160;</p>
+<p class="Sub_Heading">Understanding Objects</p>
+<p>When you see the Predefined Object Position for the first time, You will notice that there's Top Left, Top, Top Right, Bottom Left, Bottom, Bottom Right, Left and Center. The reason they're named this way is because of the target object's anchor point. Here's an image to explain:</p>
+<p>&#160;</p>
+<p style="text-align: center;"><img src="AnchorPoints.png" alt="" style=" border:none; width:100%; max-width:223px;" border="0" /></p>
+<p style="text-align: center;">&#160;</p>
+<p>You might wonder, what is the difference between Top, Bottom and Center because they essentially do the same function; center the character on the screen. To understand the difference, let's say you want to display Ace on the screen, then the proximity of his body will be displayed like this:</p>
+<p style="text-align: center;"><img src="topcenterbottomaceimage.jpg" alt="" style=" border:none; width:100%; max-width:198px;" border="0" /></p>
+<p style="text-align: center;">&#160;</p>
+<p>This means, if you want to show Ace's head, you will select the Top Left, Top and Top Right coordinates. If you want to focus on his body, then you will go with center and so forth. The proximity of the display also depends on the image's width and height; this means that you have take into consideration even the transparent areas of the image. So if you were wondering how it knows whether it should display top left, left or right of the screen.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Deconstructing the Formula</p>
+<p>So we know which part of the character is going to be displayed; but how about their position on this screen? Looking at the example formula might intimidate you at first, but don't worry! It's not as complicated as you might think. Let's break down the formula for Top.</p>
+<pre>
+return { x: (Graphics.width - object.dstRect.width * object.zoom.x) / 2, y: 0  }
+</pre>
+<p class="SubSubHeading">How does it work?</p>
+<p>First, we need to know the width of our screen. By default, the in-game resolution is 720p (1280x720).</p>
+<p>Now, let's divide that screen by two (2). We will be left with 640.</p>
+<p>&#160;</p>
+<p>But if you display the object (character), it wouldn't be immediately centered. &#160;It will look like something like this:</p>
+<p>&#160;<img src="ScreenExplain.png" alt="" style=" border:none; width:100%; max-width:640px;" border="0" /></p>
+<p>&#160;</p>
+<p>Now, we want to center the object, you need to divide the object by two (2) and then subtract it from other half of the screen.</p>
+<p>In pseudo-code form, it should look something like this:</p>
+<pre>
+x = (Screen Width / 2) - (Object Width / 2)
+</pre>
+<p>Assuming that you didn't zoom the object, this is how it will look like. Visually what the code does is this:</p>
+<p><img src="ScreenExplain2.png" alt="" style=" border:none; width:100%; max-width:640px;" border="0" /></p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SubSubHeading">Writing the Formula from scratch</p>
+<p>Now let's simplify it by starting from scratch. Remember the order of operations in Mathematics, PEMDAS (<span style="color: rgb(34, 34, 34); font-family: Arial, sans-serif; font-size: 16px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none; font-weight: bold;">P</span><span style="color: rgb(34, 34, 34); font-family: Arial, sans-serif; font-size: 16px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">arentheses,</span> <span style="color: rgb(34, 34, 34); font-family: Arial, sans-serif; font-size: 16px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none; font-weight: bold;">E</span><span style="color: rgb(34, 34, 34); font-family: Arial, sans-serif; font-size: 16px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">xponents,</span> <span style="color: rgb(34, 34, 34); font-family: Arial, sans-serif; font-size: 16px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none; font-weight: bold;">M</span><span style="color: rgb(34, 34, 34); font-family: Arial, sans-serif; font-size: 16px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">ultiplication,</span> <span style="color: rgb(34, 34, 34); font-family: Arial, sans-serif; font-size: 16px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none; font-weight: bold;">D</span><span style="color: rgb(34, 34, 34); font-family: Arial, sans-serif; font-size: 16px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">ivision,</span> <span style="color: rgb(34, 34, 34); font-family: Arial, sans-serif; font-size: 16px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none; font-weight: bold;">A</span><span style="color: rgb(34, 34, 34); font-family: Arial, sans-serif; font-size: 16px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">ddition,</span> <span style="color: rgb(34, 34, 34); font-family: Arial, sans-serif; font-size: 16px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none; font-weight: bold;">S</span><span style="color: rgb(34, 34, 34); font-family: Arial, sans-serif; font-size: 16px; font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; background-color: #ffffff; display: inline ! important ; float: none;">ubtraction). If you are unfamiliar or just need to brush up on your algebra, <a href="https://www.khanacademy.org/math/pre-algebra/pre-algebra-arith-prop/pre-algebra-order-of-operations/v/introduction-to-order-of-operations">Khan Academy has an awesome tutorial that you can watch here</a>.</span></p>
+<p>&#160;</p>
+<p>First, write the formula like this:</p>
+<pre>
+return {  }
+</pre>
+<ul style="list-style: disc;">
+<li><span style="font-weight: bold;">return</span> - it means that it will put the results of the formula to the coordinate fields of the command.</li>
+<li><span style="font-weight: bold;">brackets</span> <span>({ }) - this is where you will insert the parameters and their formulas.</span></li>
+</ul>
+<pre>
+return { x:  }
+</pre>
+<ul style="list-style: disc;">
+<li><span style="font-weight: bold;">x:</span> - this is for the x-coordinate of the command. This is our first parameter.</li>
+</ul>
+<pre>
+return { x: (Graphics.width - object.dstRect.width) / 2 }
+</pre>
+<ul style="list-style: disc;">
+<li><span style="font-weight: bold;">Graphics.width</span> <span>- The In-Game's Screen width.</span></li>
+<li><span style="font-weight: bold;">object.dsRect.width</span> <span>- The Object's width.</span></li>
+<li style="font-weight: bold;">Division Operator (/) <span style="font-weight: normal;">- Divide the result to the number specified, in this case 2.</span></li>
+</ul>
+<p>&#160;</p>
+<p>Now, let's say that you might want to zoom in/out the object later, we cannot use this formula. When an object is zoomed in/out, their positioning changes as well due to the changed width and height. So we would need to add another variable.</p>
+<pre>
+return { x: (Graphics.width - object.dstRect.width * object.zoom.x) / 2 }
+</pre>
+<ul style="list-style: disc;">
+<li style="font-weight: bold;">object.zoom.x <span style="font-weight: normal;">- this will take into consideration the scale of your image from the X Axis.</span></li>
+</ul>
+<p>&#160;</p>
+<p>Finally, we'll check the character's Y coordinate. Since this is for Top Center, we just need to input 0.</p>
+<pre>
+return { x: (Graphics.width - object.dstRect.width * object.zoom.x) / 2, y: 0  }
+</pre>
+<ul style="list-style: disc;">
+<li><span style="font-weight: bold;">y</span> <span>-</span>&#160;this is for the y-coordinate of the command. This is our second parameter.</li>
+<li><span style="font-weight: bold;">comma (,)</span> <span>- is to separate parameters. In this case, x and y.</span></li>
+</ul>
+<p>&#160;</p>
+<p>That's about it! If you want another example on how to use predefined position for your Visual Novel, go over <a href="Understanding_Predefined_Objects.htm">Displaying a Bust Image!</a></p>
+</body>
+</html>

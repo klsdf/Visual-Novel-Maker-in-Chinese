@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Changing your Game Font</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "3.2.6.0_4";
+</script>
+ <meta name="topic-breadcrumbs" content="Beginner's Guide > Customizing your Game > UI Series" />
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+ <p class="Topic_Heading">Changing your Game Font</p>
+</div>
+<p>&#160;</p>
+<p><span class="Topic_Start">C</span>hanging your game's font can bring a lot of personality to your game. It is important to note that there are four areas where you might want to change your font for consistency.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="font-weight: normal;"><span style="font-weight: bold;">Adventure (ADV) Message Text -</span> <span>When using the default message box.</span></li>
+<li style="font-weight: normal;"><span style="font-weight: bold;">Novel (NVL) Message Text</span> <span>- When using the NVL Command.</span></li>
+<li style="font-weight: normal;"><span style="font-weight: bold;">Backlog Message Text</span> <span>- When checking Backlog.</span></li>
+<li style="font-weight: normal;"><span style="font-weight: bold;">Custom Message Text</span> <span>- When using Set Message Area.</span></li>
+</ul>
+<p>&#160;</p>
+<p>There are many ways you can do this.</p>
+<ul style="list-style: disc;">
+<li><a href="Message.htm#Text_Codes">Text Codes</a></li>
+<li><a href="Message.htm#Message_Settings">Message Settings</a></li>
+<li>Script Calls</li>
+<li>Script Editor</li>
+</ul>
+<p>&#160;</p>
+<p class="Sub_Heading">Using the Script Editor</p>
+<p>If you are feeling courageous, we can use the Script Editor to change the font.</p>
+<p style="text-align: center;"><img src="Metisnotes12_en.png" alt="" style=" border:none; width:100%; max-width:465px;" border="0" /></p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li>Go to <span style="font-family: Arial, sans-serif; font-weight: bold;"><img src="icon_code_edit.png" alt="" style=" border:none; max-width:16px; width:100%;" border="0" />Script Editor</span><span style="font-family: Arial, sans-serif;">.</span><br />
+<img src="ScriptEditor.jpg" alt="" style=" border:none; width:100%; max-width:383px;" border="0" /></li>
+<li>Right Click -&gt; Add <span style="font-weight: bold;"><img src="icon_folder_closed_new.png" alt="" style=" border:none; width:100%; max-width:16px;" border="0" />New Folder</span> <span>and</span> <span style="font-weight: bold;">place it above Main.</span> <span>Like this:</span><br />
+<img src="SCRIPTEDITOR-2.jpg" alt="" style=" border:none; width:100%; max-width:386px;" border="0" /></li>
+<li>Right Click -&gt; <span style="font-weight: bold;"><img src="icon_folder_closed.png" alt="" style=" border:none; width:100%; max-width:16px;" border="0" /></span><span style="font-weight: bold; font-family: Arial, sans-serif;">New Folder -&gt; Properties</span><span style="font-family: Arial, sans-serif;">. Then name it however you like.</span></li>
+<li><span style="font-family: Arial, sans-serif;">Select the folder you just made. R</span>ight Click -&gt; <img src="icon_code_beanshell_new.png" alt="" style=" border:none; width:100%; max-width:16px;" border="0" /><span style="font-weight: bold; font-family: Arial, sans-serif;">New CoffeeScript File.</span></li>
+<li><span style="font-family: Arial, sans-serif;">R</span>ight Click -&gt; <img src="icon_code_beanshell_new.png" alt="" style=" border:none; width:100%; max-width:16px;" border="0" /><span style="font-weight: bold; font-family: Arial, sans-serif;">New CoffeeScript File -&gt; Properties.</span> <span style="font-family: Arial, sans-serif;">Let's name it Style_New.</span></li>
+<li><span style="font-family: Arial, sans-serif;">Insert the code below!</span></li>
+</ul>
+<pre style="width: 588px; float: none;">
+###<br /># CONSTANTS FOR FONT SIZE<br />###<br />class DesktopUIConstants<br />    @TEXT_SIZE_SMALL = 20<br />    @TEXT_SIZE_MESSAGE = 24<br />    @TEXT_SIZE_MESSAGE_NAME = 25<br />gs.DesktopUIConstants = DesktopUIConstants<br />gs.UIConstants = DesktopUIConstants<br />###<br /># NAME BOX<br />###<br />ui.UIManager.styles.messageBoxNameText = {<br />    "font": { <br />        "name": "Times New Roman", <br />        "size": gs.UIConstants.TEXT_SIZE_MESSAGE_NAME, <br />        "smallCaps": false, <br />        "italic": false, <br />        "color": [59, 59, 59, 255],<br />    }<br />}<br />###<br /># ADV MODE<br />###<br />ui.UIManager.styles.advMessageText = {<br />    "font": { <br />        "name": "Times New Roman", <br />        "size": gs.UIConstants.TEXT_SIZE_MESSAGE, <br />        "smallCaps": false, <br />        "italic": false, <br />        "color": [59, 59, 59, 255],<br />    }<br />}<br />###<br /># NVL MODE<br />###<br />ui.UIManager.styles.nvlMessageText = {<br />    "font": { <br />        "name": "Times New Roman", <br />        "size": gs.UIConstants.TEXT_SIZE_MESSAGE, <br />        "smallCaps": false, <br />        "italic": false, <br />        "color": [59, 59, 59, 255],<br />        <br />    }<br />}<br />###<br /># CUSTOM MESSAGE<br />###<br />ui.UIManager.styles.customMessageText = {<br />    "font": { <br />        "name": "Times New Roman", <br />        "size": gs.UIConstants.TEXT_SIZE_MESSAGE, <br />        "smallCaps": false, <br />        "italic": false, <br />        "color": [59, 59, 59, 255],<br />        } <br />}<br />###<br /># BACKLOG, ETC.<br />###<br />ui.UIManager.styles.messageText = {<br />    "font": { <br />    "name": "Times New Roman", <br />    "size": gs.UIConstants.TEXT_SIZE_MESSAGE, <br />    "smallCaps": false, <br />    "italic": false, <br />    }<br />}<br />###<br /># Defines the font used for the name-column of the message backlog.<br />###<br />ui.UIManager.styles.backlogNameText = {<br />    "font": { <br />        "name": "Times New Roman", <br />        "size": gs.UIConstants.TEXT_SIZE_MESSAGE_NAME, <br />        "smallCaps": false, <br />        "italic": false, <br />        "border": true, <br />        "borderSize": 4 }<br />}
+</pre>
+<p>Here's a quick breakdown:</p>
+<ul style="list-style: disc;">
+<li><span style="font-weight: bold;">name</span> - the font's name when imported in your Fonts folder. You can also use a system default like Times New Roman or Arial</li>
+<li><span style="font-weight: bold;">size -</span> the font's size. You can change this to a number if you don't want to use a constant.</li>
+<li><span style="font-weight: bold;">TEXT_SIZE_MESSAGE -</span> <span>The default size of the message font.</span></li>
+<li><span style="font-weight: bold;">TEXT_SIZE_MESSAGE_NAME -</span> <span>The default size of the name font.</span></li>
+<li><span style="font-weight: bold;">smallCaps</span> <span>- Change all text to lowercase.</span></li>
+<li><span style="font-weight: bold;">italic</span> <span>- Italicizes the font.</span></li>
+<li><span style="font-weight: bold;">outline -</span> <span>The font's outline color and size.</span></li>
+</ul>
+<p>&#160;</p>
+<p>You can also add your own properties. For example, adding bold to messages would look like this:</p>
+<pre>
+###<br /># ADV MODE<br />###<br />ui.UIManager.styles.advMessageText = {<br />    "font": { <br />        "name": "Times New Roman", <br />        "size": gs.UIConstants.TEXT_SIZE_MESSAGE, <br />        "smallCaps": false, <br />        "italic": false, <br />        <span style="background-color: #ffff00;">"bold": true,</span>
+<br />
+        "color": [59, 59, 59, 255],<br />    }<br />}
+</pre>
+<p>Don't be afraid to play around with it! The editor will tell you if an error occurs. So you don't have to worry if you might break your project.</p>
+<p><br /></p>
+<p>Now that we have given you ways to change your game font, have fun!</p>
+</body>
+</html>

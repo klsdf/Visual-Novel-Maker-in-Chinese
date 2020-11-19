@@ -1,0 +1,984 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Example: Movable Character</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<link rel="stylesheet" href="highlight/styles/default.css" type="text/css" />
+<script src="highlight/highlight.pack.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+//<![CDATA[
+hljs.initHighlightingOnLoad();
+//]]>
+</script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "4.2.0_3";
+</script>
+ <meta name="topic-breadcrumbs" content="Scripter's Guide > VN Engine" />
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<p class="Topic_Heading">Example: Movable Character</p>
+<p>&#160;</p>
+<p><span class="Topic_Start">I</span>n this example, we want to make a RPG/Adventure game style character who can walk over the screen using keyboard and also a NPC who walks by itself. In addition, we will display the current position of the character at the top-left of the screen.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Planning</p>
+<p>&#160;</p>
+<p>To follow VN Maker's Object-Component design, we first have to think about what kind of game objects and components we need.</p>
+<p>&#160;</p>
+<p class="SubSubHeading">Game Objects</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li>A character who can be controlled by the player</li>
+<li>A NPC who walks by itself</li>
+<li>A text at the top-left corner displaying the position of the playable character</li>
+</ul>
+<p>&#160;</p>
+<p class="SubSubHeading">Components</p>
+<p>&#160;</p>
+<p>Let's think about what kind of components we need for our two characters. For our playable character, we need the following functionality:</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li>Display a character on screen</li>
+<li>Allow a character to walk in 4 different directions with animation</li>
+<li>Allow a character to walk in 4 different directions using keyboard</li>
+</ul>
+<p>&#160;</p>
+<p>For our NPC, we need the following funcationality:</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li>Display a character on screen</li>
+<li>Allow a character to walk in 4 different directions with animation</li>
+<li>Allow a character to walk along a hard-coded route/pattern like an NPC.</li>
+</ul>
+<p>&#160;</p>
+<p>As we can see, the first two abilities are the same for both characters. Only the last one is different. If we break that down into components, we will end up with 3 components per character and 4 different kind of components in total.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li>gs.Component_Sprite - To display a character on screen</li>
+<li>gs.Component_CharacterWalking - To allow walking in 4 different directions with animation</li>
+<li>gs.Component_CharacterPlayer - To allow walking in 4 different directions using keyboard</li>
+<li>gs.Component_CharacterNpc - To allow walking in 4 different directions based on a route/pattern.</li>
+</ul>
+<p>&#160;</p>
+<p>For the first point, we can reuse the default sprite component to display our character on screen. But the other three components do not exist yet so we have to develop them ourselves.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Setup our Scene</p>
+<p>&#160;</p>
+<p>First, before we start to develop any new components, we will setup our scene and create two new game object templates in "Objects" folder called "Object_NpcCharacter" and "Object_PlayerCharacter" with the following content.</p>
+<pre>
+<code class="coffee">
+# Game Object Template for the Player Character
+class Object_PlayerCharacter extends gs.Object_Visual
+    constructor: -&gt;
+        super
+        
+        # Define image-property for the spritesheet
+        @image = null
+        # Define srcRect-property to control which portion of the spritesheet is
+        # displayed on screen.
+        @srcRect = new gs.Rect()
+        # Define visual-property for quick-access to the visualization component.
+        @visual = new gs.Component_Sprite()
+        # Add sprite component to the object.
+        @addComponent(@visual)
+        
+gs.Object_PlayerCharacter = Object_PlayerCharacter</code>
+</pre>
+<p>&#160;</p>
+<pre>
+<code class="coffee">
+# Game Object Template for NPC Character
+class Object_NpcCharacter extends gs.Object_Visual
+    constructor: -&gt;
+        super
+        
+        # Define image-property for the spritesheet
+        @image = null
+        # Define srcRect-property to control which portion of the spritesheet is
+        # displayed on screen.
+        @srcRect = new gs.Rect()
+        # Define visual-property for quick-access to the visualization component.
+        @visual = new gs.Component_Sprite()
+        # Add sprite component to the object.
+        @addComponent(@visual)
+        
+gs.Object_NpcCharacter = Object_NpcCharacter</code>
+</pre>
+<p>&#160;</p>
+<p>Next, we will setup our basic scene and create two game objects using our new game object templates.</p>
+<pre>
+<code class="coffee">
+# ===================================================================
+#
+#   Script: Component_TestBedBehavior
+#
+#   Put your name here
+#
+# ===================================================================
+class Component_TestBedBehavior extends gs.Component_SceneBehavior
+    ###*
+    * A test bed scene behavior. Here you can play around with Visual Novel Maker's 
+    * game engine to get a better feeling for everything.
+    ###
+    constructor: -&gt;
+        super
+        
+        # Define resource context property
+        @resourceContext = null
+    
+    ###*
+    * Initializes the scene. 
+    ###
+    initialize: -&gt;
+        super
+        
+        # Create a new resource context
+        @resourceContext = ResourceManager.createContext()
+        
+        # Set current object manager
+        gs.ObjectManager.current = SceneManager
+        
+        # Set it as the current resource context
+        ResourceManager.context = @resourceContext
+        
+    ###*
+    * Disposes the scene.
+    ###  
+    dispose: -&gt;
+        super
+        
+    ###*
+    * Prepares all visual game object for the scene.
+    ###  
+    prepareVisual: -&gt;
+        # Create NPC Character Object
+        @npcObject = new gs.Object_NpcCharacter()
+        # Set image to "Naia" spritesheet.
+        @npcObject.image = "Naia"
+        # Place NPC Character to the right.
+        @npcObject.dstRect.x = Graphics.width - 228
+        @npcObject.dstRect.y = 50
+        # Initialize the NPC character object.
+        @npcObject.setup()
+        
+        # Create Player Character Object
+        @playerObject = new gs.Object_PlayerCharacter()
+        # Set image to "Naia" spritesheet.
+        @playerObject.image = "Naia"
+        # Place Player Character to the left
+        @playerObject.dstRect.x = 100
+        @playerObject.dstRect.y = 50
+        # Initialize the Player character object.
+        @playerObject.setup()
+        
+        # Add the NPC Character to the scene
+        @object.addObject(@npcObject)
+        # Add the Player Character to the scene
+        @object.addObject(@playerObject)
+        
+        # We are done with preparing our visual objects. So we can start
+        # the screen transition to fade in our new created objects smoothly.
+        @transition()
+        
+    ###*
+    * Prepares all data for the scene and loads the necessary graphic and audio resources.
+    ### 
+    prepareData: -&gt;
+        # Load the spritesheet image
+        ResourceManager.getBitmap("Graphics/Pictures/Naia")
+        
+    ###*
+    * Update the scene's content.
+    ###         
+    updateContent: -&gt;
+        
+        
+gs.Component_LayoutSceneBehavior = Component_TestBedBehavior</code>
+</pre>
+<p>If we test our game now, we will see two fully visible spritesheets on the screen. One more on the left side and the other more on the right side. However, they are not doing much, they are not showing the correct frame, they are not animated, not moving and we are not able to move one of them with our keyboard. That is because we only added a sprite-component to each of them so far. We need to develop and add the other components next to make our example work.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">The Walking Component</p>
+<p>&#160;</p>
+<p>To allow our characters to walk over the screen, we will develop a new component called gs.Component_CharacterWalking. To do that, we create a new script "Component_CharacterWalking" in Components folder and put the following code in.</p>
+<pre>
+<code class="coffee">
+# A component which allows a character to walk
+class Component_CharacterWalking extends gs.Component
+    # Define component properties, etc. here.
+    constructor: -&gt;
+        super
+        
+    # Initialize the component
+    setup: -&gt;
+        super
+        
+gs.Component_CharacterWalking = Component_CharacterWalking</code>
+</pre>
+<p>&#160;</p>
+<p>Next we go back to our Object_PlayerCharacter and Object_NpcCharacter script and add our new component to allow them to move.</p>
+<p>&#160;</p>
+<pre>
+<code class="coffee">
+# Game Object Template for the Player Character
+class Object_PlayerCharacter extends gs.Object_Visual
+    constructor: -&gt;
+        super
+        
+        # Define image-property for the spritesheet
+        @image = null
+        # Define direction-property to know where the character is looking at.
+        @direction = 0
+        # Define visual-property for quick-access to the visualization component.
+        @visual = new gs.Component_Sprite()
+        # Define walking-property for quick-access to the walking component.
+        @walking = new gs.Component_CharacterWalking()
+        
+        # Add sprite component to the object.
+        @addComponent(@visual)
+        # Add walking component to the object.
+        @addComponent(@walking)
+        
+gs.Object_PlayerCharacter = Object_PlayerCharacter</code>
+</pre>
+<p>&#160;</p>
+<pre>
+<code class="coffee">
+# Game Object Template for NPC Character
+class Object_NpcCharacter extends gs.Object_Visual
+    constructor: -&gt;
+        super
+        
+        # Define image-property for the spritesheet
+        @image = null
+        # Define direction-property to know where the character is looking at.
+        @direction = 0
+        # Define visual-property for quick-access to the visualization component.
+        @visual = new gs.Component_Sprite()
+        # Define walking-property for quick-access to the walking component.
+        @walking = new gs.Component_CharacterWalking()
+        
+        # Add sprite component to the object.
+        @addComponent(@visual)
+        # Add walking component to the object.
+        @addComponent(@walking)
+        
+gs.Object_NpcCharacter = Object_NpcCharacter</code>
+</pre>
+<p>&#160;</p>
+<p>If we test our game now, we will see that... nothing has changed. Our characters are still not able to walk over the screen. We are still just seeing the entire spritesheet. If we go back to Component_CharacterWalking, we will see the reason: Our component is almost empty and does not add any new behavior to our game object. Let's change that next.</p>
+<p>&#160;</p>
+<p>Let's think about what kind of functionality our component should add to the character.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li>Only show a single character-frame and not the entire sprite-sheet</li>
+<li>Allow the character to watch into 4 different directions by displaying the appropriate character-frame</li>
+<li>Allow the character to walk into 4 different directions with a walk-animation</li>
+<li>If the character is not walking, the stand-pose for the current direction should be displayed.</li>
+</ul>
+<p>&#160;</p>
+<p>One thing mentioned in each point is the direction. We need a way to know at what direction our character is currently looking so that our walking component can move the character in the right direction. That's why we added a direction-property to store a number value describing the current direction</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li>0 = Look Down</li>
+<li>1 = Look Left</li>
+<li>2 = Look Up</li>
+<li>3 = Look Right</li>
+</ul>
+<p>&#160;</p>
+<p>We added that property to the game object, not to the walking component. That is because the direction is more a general element of our character, its not specific for the walking-behavior only but maybe also for other functionalities / components.</p>
+<p>&#160;</p>
+<p>Next, we need to implement a lot of functionality for our component compared to the previous examples in this guide. But we will do it step by step.</p>
+<p>&#160;</p>
+<p class="SubSubHeading">Only show a single character-frame and not the entire sprite-sheet</p>
+<p>&#160;</p>
+<p>The first thing on our list is that we want to display only a single character-frame of the spritesheet.</p>
+<pre>
+<code class="coffee">
+# A component which allows a character to walk
+class Component_CharacterWalking extends gs.Component
+    # Define component properties, etc. here.
+    constructor: -&gt;
+        super
+        
+    # Initialize the component
+    setup: -&gt;
+        super
+        
+        # Set the srcRect to 32x48 pixel area with 32 pixel offset on x-axis
+        # to show the stand-pose frame.
+        @object.srcRect.set(32, 0, 32, 48)
+        # Set the display size of the character to 32x48. Changing that values
+        # zooms the character.
+        @object.dstRect.width = 32
+        @object.dstRect.height = 48
+        
+    # Disposes the component
+    dispose: -&gt;
+        super
+        
+    # Update the component logic
+    update: -&gt;
+        
+        
+gs.Component_CharacterWalking = Component_CharacterWalking</code>
+</pre>
+<p>If we test our game now, we will see that our characters look a lot better now. What we are doing is here is that in our setup-method, which is only called once, we set the srcRect to the stand-pose frame of the spritesheet and also changing the size of the game object to match the spritesheet frame-size (32x48). Otherwise the character would look zoomed very much.</p>
+<p>&#160;</p>
+<p class="SubSubHeading">Allow the character to watch into 4 different directions by displaying the appropriate character-frame</p>
+<p>&#160;</p>
+<p>In the update-method of our component, which is called once per frame, we will check the direction-property and change the character-frame depending on the value so that the character looks into the right direction. To keep the code more clean, especially because we will add a lot more functionality later, we will create a new method updateDirection.</p>
+<pre>
+<code class="coffee">
+# A component which allows a character to walk
+class Component_CharacterWalking extends gs.Component
+    # Define component properties, etc. here.
+    constructor: -&gt;
+        super
+        
+    # Initialize the component
+    setup: -&gt;
+        super
+        
+        # Set the srcRect to 32x48 pixel area with 32 pixel offset on x-axis
+        # to show the stand-pose frame.
+        @object.srcRect.set(32, 0, 32, 48)
+        # Set the display size of the character to 32x48. Changing that values
+        # zooms the character.
+        @object.dstRect.width = 32
+        @object.dstRect.height = 48
+        
+    # Disposes the component
+    dispose: -&gt;
+        super
+     
+    # Updates the direction the character is looking at depending on the
+    # direction-property.
+    updateDirection: -&gt;
+        # Depending on the direction-property, we let the
+        # character look at the appropriate direction
+        switch @object.direction
+            when 0 # Down
+                # Set y-coordinate of srcRect to 0 because the first row of the
+                # spritesheet shows the look-down frames.
+                @object.srcRect.y = 0
+            when 1 # Left
+                # Set y-coordinate of srcRect to 48 because the second row of the
+                # spritesheet shows the look-down frames.
+                @object.srcRect.y = 48
+            when 2 # Top
+                # Set y-coordinate of srcRect to 144 because the last row of the
+                # spritesheet shows the look-down frames.
+                @object.srcRect.y = 144
+            when 3 # Right
+                # Set y-coordinate of srcRect to 96 because the third row of the
+                # spritesheet shows the look-down frames.
+                @object.srcRect.y = 96
+     
+    # Update the component logic
+    update: -&gt;
+        # Update the character's direction.
+        @updateDirection()
+        
+        
+        
+        
+gs.Component_CharacterWalking = Component_CharacterWalking</code>
+</pre>
+<p>If we test our game now, we will see that our characters will look into the correct direction depending on the direction-property. So if we change that property, our character will now look at a different direction. We can try that out live during game-play by pressing F12 on Windows / Linux or Ctrl+Shift+i on Mac to open the debug tools, there we can select "Console" and then we can type:</p>
+<p>&#160;</p>
+<p><img src="image33.gif" alt="" style=" border:none; width:100%; max-width:446px;" border="0" /></p>
+<p>&#160;</p>
+<p>to change the direction of the character live during game play.</p>
+<p>&#160;</p>
+<p><img src="image34.gif" alt="" style=" border:none; width:100%; max-width:422px;" border="0" /></p>
+<p>&#160;</p>
+<p>That is useful for debugging or to play around. As a quick note: In most changes, those live-changes are only reflected if you click on the game window again after executing the script line on the console. That's because the game pauses whenever the game windows loses focus.</p>
+<p>&#160;</p>
+<p class="SubSubHeading">Allow the character to walk into 4 different directions with a walk-animation</p>
+<p>&#160;</p>
+<p>So far, our character can look into 4 different directions, that's great! &#160;In our next step we will teach the character how to walk.</p>
+<p>&#160;</p>
+<pre>
+<code class="coffee">
+# A component which allows a character to walk
+class Component_CharacterWalking extends gs.Component
+    # Define component properties, etc. here.
+    constructor: -&gt;
+        super
+        
+        # Stores pixels to move in the character's current direction.
+        @pixelsToMove = 0
+        # Indicates if the character is currently walking.
+        @isWalking = no
+        
+    # Initialize the component
+    setup: -&gt;
+        super
+        
+        # Set the srcRect to 32x48 pixel area with 32 pixel offset on x-axis
+        # to show the stand-pose frame.
+        @object.srcRect.set(32, 0, 32, 48)
+        # Set the display size of the character to 32x48. Changing that values
+        # zooms the character.
+        @object.dstRect.width = 32
+        @object.dstRect.height = 48
+        
+    # Disposes the component
+    dispose: -&gt;
+        super
+     
+    # Let's the character walk X steps into it's current direction. One step
+    # is 32 pixels.
+    walk: (steps) -&gt;
+        # Check if the character is not already walking
+        if not @isWalking
+            # Set isWalking to indicate that the character is currently walking.
+            @isWalking = yes
+            # Convert the steps into pixels.
+            @pixelsToMove = steps * 32
+        
+     
+    # Updates the direction the character is looking at depending on the
+    # direction-property.
+    updateDirection: -&gt;
+        switch @object.direction
+            when 0 # Down
+                @object.srcRect.y = 0
+            when 1 # Left
+                @object.srcRect.y = 48
+            when 2 # Top
+                @object.srcRect.y = 144
+            when 3 # Right
+                @object.srcRect.y = 96
+     
+    # Updates the spritesheet walking-animation. We just need to shift
+    # the x-coordinate of our srcRect area.
+    updateWalkingAnimation: -&gt;
+        # Check if our character is currently working. Because only then we
+        # want to play the spritesheet-animation.
+        if @isWalking
+            # Every 15th frame we want to show the next frame of the animation. Change that
+            # very to increase or decrease the animation speed.
+            if Graphics.frameCount % 15 == 0
+                # The width of a frame is 32 pixel so we shift the x-coordinate by
+                # 32 to get the next frame. If we reach 128 we go back to 0 thanks to
+                # the modulo operation.
+                @object.srcRect.x = (@object.srcRect.x + 32) % 128
+               
+        
+    # Updates the actual walking, the actual movement in the correct direction.       
+    updateWalking: -&gt;
+        # Check if our character is currently walking. Because only then we want to
+        # move the character.
+        if @isWalking
+            # Check if the amount of pixels to move is still
+            # greater than 0. Means the movmeent is not finished yet.
+            if @pixelsToMove &gt; 0
+                # Check the character's current direction to move the character
+                # in the right direction.
+                switch @object.direction
+                    when 0 # Down
+                         # Move 1 pixel down
+                         @object.dstRect.y++
+                    when 1 # Left
+                         # Move 1 pixel left
+                         @object.dstRect.x--
+                    when 2 # Up
+                         # Move 1 pixel up
+                         @object.dstRect.y--
+                    when 3 # Right
+                         # Move 1 pixel right
+                         @object.dstRect.x++
+                # Reduce steps left by 1
+                @pixelsToMove--
+                # Check if amount of pixels left is 0. If yes, we have to stop
+                # walking.
+                if @pixelsToMove == 0
+                    # If amount of pixels left is 0, walking is finished
+                    @isWalking = no
+        # Otherwise, if the character is not walking, we will show stand-pose.
+        else
+            # Set the x-coordinate of srcRect to 32 to make sure
+            # the stand-pose frame is displayed after walking is finished.
+            @object.srcRect.x = 32
+            
+    # Update the component logic
+    update: -&gt;
+        # Update the character's direction.
+        @updateDirection()
+        # Update the character's spritesheet animation for walking.
+        @updateWalkingAnimation()
+        # Update the character's walking behavior.
+        @updateWalking()
+        
+gs.Component_CharacterWalking = Component_CharacterWalking</code>
+</pre>
+<p>As we can see above, we added a lot of functionality. Let's go through that step by step. We have added a new method "walk" which takes the amount of steps to walk in the current direction. One step is 32 pixels so the character moves on a virtual grid of 32x32 cells.</p>
+<p>&#160;</p>
+<p>In updateWalkingAnimation and updateWalking(), we used our knowledge from <a href="Animation_Basics.htm">Animation Basics</a> to play the spritesheet animation and move the character in the right direction if the character is currently walking. The walk-method allows us to start a X steps walk. We can start a walk using Debug Console very easily:</p>
+<p>&#160;</p>
+<p><img src="image35.gif" alt="" style=" border:none; width:100%; max-width:491px;" border="0" /></p>
+<p>&#160;</p>
+<p>With that line we let the NPC character walk 10 steps (320 pixel) down. Try to play around with it more and change the direction to let the character walk to the left or right.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">The Player Component</p>
+<p>&#160;</p>
+<p>Our characters are able to look and walk into different directions with animations now. So the most difficult part of our example is done! All what we have to do now is to make a component which let's a character walk over the screen depending on key-presses on the keyboard.</p>
+<p>&#160;</p>
+<p>So let's create a new component in "Components" folder called "Component_CharacterPlayer" with the following code.</p>
+<p>&#160;</p>
+<pre>
+<code class="coffee">
+# A component which allows to move a character via keyboard / gamepad.
+class Component_CharacterPlayer extends gs.Component
+    # Define component properties, etc. here.
+    constructor: -&gt;
+        super
+        
+    # Initialize the component
+    setup: -&gt;
+        super
+        
+    # Disposes the component
+    dispose: -&gt;
+        super
+     
+    # Update the component logic
+    update: -&gt;
+        # Check if DOWN is pressed. If pressed, we move the character 1 step down.
+        if Input.press(Input.DOWN)
+            # Set direction to down (0)
+            @object.direction = 0
+            # Let the character walk 1 step down.
+            @object.walking.walk(1)
+        # Check if LEFT is pressed. If pressed, we move the character 1 step left.
+        if Input.press(Input.LEFT)
+            # Set direction to left (1)
+            @object.direction = 1
+            # Let the character walk 1 step to the left.
+            @object.walking.walk(1)
+        # Check if UP is pressed. If pressed, we move the character 1 step up.
+        if Input.press(Input.UP)
+            # Set direction to up (2)
+            @object.direction = 2
+            # Let the character walk 1 step up.
+            @object.walking.walk(1)
+        # Check if RIGHT is pressed. If pressed, we move the character 1 step right.
+        if Input.press(Input.RIGHT)
+            # Set direction to right (3)
+            @object.direction = 3
+            # Let the character walk 1 step to the right.
+            @object.walking.walk(1)
+        
+gs.Component_CharacterPlayer = Component_CharacterPlayer</code>
+</pre>
+<p>What we do here is that we check if one of the arrow-keys or gamepad buttons is pressed and then we will just call the walk-method to let the character walk in the appropriate direction. That's it! Only thing left is that we have to go to our game object template "Object_PlayerCharacter" and add our new component to it.</p>
+<pre>
+<code class="coffee">
+# Game Object Template for the Player Character
+class Object_PlayerCharacter extends gs.Object_Visual
+    constructor: -&gt;
+        super
+        
+        # Define image-property for the spritesheet
+        @image = null
+        # Define srcRect-property to control which portion of the spritesheet is
+        # displayed on screen.
+        @srcRect = new gs.Rect()
+        # Define direction-property to store where the character is currently looking at.
+        @direction = 0
+        # Define visual-property for quick-access to the visualization component.
+        @visual = new gs.Component_Sprite()
+        # Define walking-property for quick-access to the walking component.
+        @walking = new gs.Component_CharacterWalking()
+        
+        # Add sprite component to the object.
+        @addComponent(@visual)
+        # Add walking component to the object.
+        @addComponent(@walking)
+        # Add player component to the object.
+        @addComponent(new gs.Component_CharacterPlayer())
+        
+gs.Object_PlayerCharacter = Object_PlayerCharacter</code>
+</pre>
+<p>This time, we haven't defined an additional quick-access property for the player-component because we don't need to access it quickly. Feel free to add a property for it if you need it. If we test our game now, we can move our player character, the left character on the screen, using the arrow-keys of our keyboard or a gamepad!</p>
+<p>&#160;</p>
+<p class="Sub_Heading">The NPC Component</p>
+<p>&#160;</p>
+<p>We are very close to the end, next we need to let our NPC character walk on its own and then we are almost done. To do that, we will create a new component for NPC logic called "Component_CharacterNpc" with the following content.</p>
+<pre>
+<code class="coffee">
+# A component which allows to move a character via keyboard / gamepad.
+class Component_CharacterNpc extends gs.Component
+    # Define component properties, etc. here.
+    constructor: -&gt;
+        super
+        
+        # Stores the route the NPC should walk along.
+        @route = []
+        
+        # Stores index of current step of the route
+        @currentStep = 0
+        
+    # Initialize the component
+    setup: -&gt;
+        super
+        
+    # Disposes the component
+    dispose: -&gt;
+        super
+     
+    # Update the component logic
+    update: -&gt;
+        # If a route is set and if the character is not already walking then walk
+        # through the route and let the character walk.
+        if @route.length &gt; 0 and not @object.walking.isWalking
+            # Set the direction defined at the current step of the route.
+            @object.direction = @route[@currentStep]
+            # Let the character walk 1 step
+            @object.walking.walk(1)
+            # Increase the index of the current step so that the next entry
+            # of the route is accessed next time. If we reach the end of the
+            # route, we jump back to the first step so that the route becomes
+            # endless.
+            @currentStep = (@currentStep + 1) % @route.length
+        
+gs.Component_CharacterNpc = Component_CharacterNpc</code>
+</pre>
+<p>&#160;</p>
+<p>As we can see above, we added a property "@route" which is a list containing number where each number-entry describes a single step into a direction. The direction depends on the number. In our update-method, we are going through that list and let the character walk using the walk-method depending on the number. If we reach the end of the route, we are just jump back to the beginning to the list to make the movement of our NPC endless.</p>
+<p>&#160;</p>
+<p>Next we go to our game object template "Object_NpcCharacter" and add our NPC component to it.</p>
+<p>&#160;</p>
+<pre>
+<code class="coffee">
+# Game Object Template for NPC Character
+class Object_NpcCharacter extends gs.Object_Visual
+    constructor: -&gt;
+        super
+        
+        # Define image-property for the spritesheet
+        @image = null
+        # Define srcRect-property to control which portion of the spritesheet is
+        # displayed on screen.
+        @srcRect = new gs.Rect()
+        # Define direction-property to store where the character is currently looking at.
+        @direction = 0
+        # Define visual-property for quick-access to the visualization component.
+        @visual = new gs.Component_Sprite()
+        # Define walking-property for quick-access to the walking component.
+        @walking = new gs.Component_CharacterWalking()
+        # Define npc-property for quick-access to the npc component.
+        @npc = new gs.Component_CharacterNpc()
+        
+        # Add sprite component to the object.
+        @addComponent(@visual)
+        # Add walking component to the object.
+        @addComponent(@walking)
+        # Add npc component to the object.
+        @addComponent(@npc)
+        
+gs.Object_NpcCharacter = Object_NpcCharacter</code>
+</pre>
+<p>After that, we can open Debug Console again and try to set the route-property to a simple route which let's the character walking around in a circle.</p>
+<p>&#160;</p>
+<p><img src="image37.gif" alt="" style=" border:none; width:100%; max-width:660px;" border="0" /></p>
+<p>&#160;</p>
+<p>So we are just accessing the route-property and set the route. After that, the NPC will start to walk around! Instead of hard-coding the route, that route could also come from a graphical level-editor for example. We could also instantiate multiple NPCs and give them different routes and maybe also implement other kind of behaviors besides walking.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Display the player character's current position</p>
+<p>&#160;</p>
+<p>We are not 100% done yet. One last thing we want to implement is an in-game display for the character's current position. We will learn two different approaches here, one approach uses one of the pre-defined game object's and the other approach uses VN Maker's In-Game UI System.</p>
+<p>&#160;</p>
+<p class="SubSubHeading">Display a text using ui.Object_Text</p>
+<p>&#160;</p>
+<p>Luckily, VN Maker already provides an easy-to-use game object for display text on screen: ui.Object_Text. We can just create an instance of that class in our scene and set it's text-property to the current position of our character object.</p>
+<p>&#160;</p>
+<pre>
+<code class="coffee">
+# ===================================================================
+#
+#   Script: Component_TestBedBehavior
+#
+#   Put your name here
+#
+# ===================================================================
+class Component_TestBedBehavior extends gs.Component_SceneBehavior
+    ###*
+    * A test bed scene behavior. Here you can play around with Visual Novel Maker's 
+    * game engine to get a better feeling for everything.
+    ###
+    constructor: -&gt;
+        super
+        
+        # Define resource context property
+        @resourceContext = null
+    
+    ###*
+    * Initializes the scene. 
+    ###
+    initialize: -&gt;
+        super
+        
+        # Create a new resource context
+        @resourceContext = ResourceManager.createContext()
+        
+        # Set current object manager
+        gs.ObjectManager.current = SceneManager
+        
+        # Set it as the current resource context
+        ResourceManager.context = @resourceContext
+        
+    ###*
+    * Disposes the scene.
+    ###  
+    dispose: -&gt;
+        super
+        
+    ###*
+    * Prepares all visual game object for the scene.
+    ###  
+    prepareVisual: -&gt;
+        # Create NPC Character Object
+        @npcObject = new gs.Object_NpcCharacter()
+        # Set image to "Naia" spritesheet.
+        @npcObject.image = "Naia"
+        # Place NPC Character to the right.
+        @npcObject.dstRect.x = Graphics.width - 228
+        @npcObject.dstRect.y = 50
+        # Initialize the NPC character object.
+        @npcObject.setup()
+        
+        # Create Player Character Object
+        @playerObject = new gs.Object_PlayerCharacter()
+        # Set image to "Naia" spritesheet.
+        @playerObject.image = "Naia"
+        # Place Player Character to the left
+        @playerObject.dstRect.x = 100
+        @playerObject.dstRect.y = 50
+        # Initialize the Player character object.
+        @playerObject.setup()
+        
+        # Create a Text Object to display the character's current position on screen.
+        @textObject = new ui.Object_Text()
+        # Enable size-to-fit so that the text object's bounds are automatically adjusted to
+        # fit the text size.
+        @textObject.sizeToFit = yes
+        
+        # Add the NPC Character to the scene
+        @object.addObject(@npcObject)
+        # Add the Player Character to the scene
+        @object.addObject(@playerObject)
+        # Add the Text Object to the scene
+        @object.addObject(@textObject)
+        
+        # We are done with preparing our visual objects. So we can start
+        # the screen transition to fade in our new created objects smoothly.
+        @transition()
+        
+    ###*
+    * Prepares all data for the scene and loads the necessary graphic and audio resources.
+    ### 
+    prepareData: -&gt;
+        # Load the spritesheet image
+        ResourceManager.getBitmap("Graphics/Pictures/Naia")
+        
+    ###*
+    * Update the scene's content.
+    ###         
+    updateContent: -&gt;
+        # Updating the position-display.
+        @textObject.text = "Position: (#{@playerObject.dstRect.x}, #{@playerObject.dstRect.y})"
+        
+gs.Component_LayoutSceneBehavior = Component_TestBedBehavior</code>
+</pre>
+<p>As we can see in prepareVisual method, we are creating a third game object using ui.Object_Text and adding it to the scene. In updateContent we are just updating the text so that it displays the current position of the player character.</p>
+<p>&#160;</p>
+<p class="SubSubHeading">Using the In-Game UI System</p>
+<p>&#160;</p>
+<p>Actually, we already used the In-Game UI System with our first solution. The ui.Object_Text template is part of the In-Game UI System game objects and responsible for displaying text on screen. The only different in this example is that we will use a JSON Layout to make our position display a bit more stunning. You can read more about JSON layouts in <a href="IGUI_Getting_Started.htm">In-Game UI System</a> documentation.</p>
+<p>&#160;</p>
+<p>First we navigate to the "Layouts" folder in script-editor and add a new CoffeeScript file called "Layout_CharacterDisplay" with the following content.</p>
+<pre>
+<code class="json">
+ui.UIManager.layouts.characterDisplay = {
+    "type": "ui.FreeLayout",
+    "frame": [(Graphics.width - 300) / 2, 0, Graphics.width, Graphics.height],
+    "controls": [
+        {
+            "type": "ui.TitledWindow",
+            "params": { "title": "Character Info" }
+            "frame": [0, 0, 300, 100]
+        },
+        {
+            "type": "ui.Text",
+            "style": "regularUIText",
+            "id": "positionDisplay",
+            "updateBehavior": "continuous",
+            "formulas": [$ -&gt; 
+                    x = SceneManager.scene.behavior.playerObject.dstRect.x
+                    y = SceneManager.scene.behavior.playerObject.dstRect.y
+                    o.text = "Position: (#{x}, #{y})"
+            ],
+            "text": "Position: (0, 0)",
+            "frame": [10, 55],
+            "sizeToFit": true
+        }
+    ]
+}</code>
+</pre>
+<p>&#160;</p>
+<p>With the above JSON syntax, we are defining a background UI window with a styled text on top. We added a formulas-property with a formula which sets the text to the current position of the player. The id-property with "positionDisplay" as value allows us to access the text object from script via:</p>
+<p>&#160;</p>
+<p>textObject = gs.ObjectManager.current.objectById("positionDisplay")</p>
+<p>&#160;</p>
+<p>if necessary. It is recommended to use formulas only for very easy data-binding and not for complex code-blocks.</p>
+<p>&#160;</p>
+<p>Next we have to bring that layout on screen. To do that, we need to change our scene a bit:</p>
+<p>&#160;</p>
+<pre>
+<code class="coffee">
+# ===================================================================
+#
+#   Script: Component_TestBedBehavior
+#
+#   Put your name here
+#
+# ===================================================================
+class Component_TestBedBehavior extends gs.Component_SceneBehavior
+    ###*
+    * A test bed scene behavior. Here you can play around with Visual Novel Maker's 
+    * game engine to get a better feeling for everything.
+    ###
+    constructor: -&gt;
+        super
+        
+        # Define resource context property
+        @resourceContext = null
+    
+    ###*
+    * Initializes the scene. 
+    ###
+    initialize: -&gt;
+        super
+        
+        # Create a new resource context
+        @resourceContext = ResourceManager.createContext()
+        
+        # Set current object manager
+        gs.ObjectManager.current = SceneManager
+        
+        # Set it as the current resource context
+        ResourceManager.context = @resourceContext
+        
+    ###*
+    * Disposes the scene.
+    ###  
+    dispose: -&gt;
+        super
+        
+    ###*
+    * Prepares all visual game object for the scene.
+    ###  
+    prepareVisual: -&gt;
+        # Create NPC Character Object
+        @npcObject = new gs.Object_NpcCharacter()
+        # Set image to "Naia" spritesheet.
+        @npcObject.image = "Naia"
+        # Place NPC Character to the right.
+        @npcObject.dstRect.x = Graphics.width - 228
+        @npcObject.dstRect.y = 50
+        # Initialize the NPC character object.
+        @npcObject.setup()
+        
+        # Create Player Character Object
+        @playerObject = new gs.Object_PlayerCharacter()
+        # Set image to "Naia" spritesheet.
+        @playerObject.image = "Naia"
+        # Place Player Character to the left
+        @playerObject.dstRect.x = 100
+        @playerObject.dstRect.y = 50
+        # Initialize the Player character object.
+        @playerObject.setup()
+        
+        # Create a layout game object using our character-display layout.
+        @layout = ui.UIManager.createFromDescriptor(ui.UIManager.layouts.characterDisplay, @object)
+        
+        # Add the NPC Character to the scene
+        @object.addObject(@npcObject)
+        # Add the Player Character to the scene
+        @object.addObject(@playerObject)
+        # Add the Text Object to the scene
+        @object.addObject(@layout)
+        
+        # We are done with preparing our visual objects. So we can start
+        # the screen transition to fade in our new created objects smoothly.
+        @transition()
+        
+    ###*
+    * Prepares all data for the scene and loads the necessary graphic and audio resources.
+    ### 
+    prepareData: -&gt;
+        # Load the spritesheet image
+        ResourceManager.getBitmap("Graphics/Pictures/Naia")
+        
+    ###*
+    * Update the scene's content.
+    ###         
+    updateContent: -&gt;
+        
+gs.Component_LayoutSceneBehavior = Component_TestBedBehavior</code>
+</pre>
+<p>In prepareVisual method, we create a new layout object using ui.UIManager.createFromDescriptor which allows us to create a layout game object easily from a specified JSON layout(also called layout descriptor). We just need to add that layout game object to the scene and done:</p>
+<p>&#160;</p>
+<p><img src="image38.gif" alt="" style=" border:none; width:100%; max-width:797px;" border="0" /></p>
+<p>&#160;</p>
+<p>Now we have a better looking position display. Follow the link to the <a href="IGUI_Getting_Started.htm">In-Game UI System</a> documentation and take a look at the examples there to learn more about it.</p>
+</body>
+</html>

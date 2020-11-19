@@ -1,0 +1,701 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Movie</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.3.1.0_5";
+</script>
+ <meta name="topic-breadcrumbs" content="Exploring the Editor > Scene Editor > Scene Content Commands" />
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+ <p class="Topic_Heading">Movie</p>
+</div>
+<p>&#160;</p>
+<p><span style="font-family: 'Book Antiqua', serif; font-weight: bold; font-size: 18pt;">P</span>lay movies in your game as a cinematic experience or to display as effects that enhance your scene.</p>
+<p>&#160;</p>
+<p class="Sub_Heading"><a name="Play_Movie" id="Play_Movie"></a>Play Movie</p>
+<p class="MsoNormal">Plays a movie file. When movies are played with this command the game will not continue until the movie has finished playing or has been skipped. The movie can be skipped by the player by clicking on the screen while it is playing and video skipping is enabled in game settings. The movie will be resized based on the screen resolution.</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;"><span style="font-weight: bold;">File</span> - <span>The movie file from the Movies folder that is going to be displayed.</span></li>
+<li style="margin-left: -20px;">
+<p><span style="font-weight: bold;">Volume</span> - Controls the max volume the movie will play at.</p>
+</li>
+<li style="margin-left: -20px;">
+<p><span style="font-weight: bold;">Rate -</span> &#160;Change the speed of the movie.</p>
+</li>
+</ul>
+<p>&#160;</p>
+<p class="Sub_Heading"><a name="Show_Movie" id="Show_Movie"></a>Show Movie</p>
+<p class="MsoNormal">Shows a movie on screen similar to a picture and allows the processing of scene commands that come afterwards.</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Number</span> - The movie's index (ID). This determines their layer order.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: bold;">File <span style="font-weight: normal;">- The movie &#160;file from the Movies folder that is going to be displayed.</span></p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: bold;"><span style="font-weight: normal;"><b style="mso-bidi-font-weight: normal;">X</b></span> <span style="font-weight: normal;">- Specify the horizontal positioning of the movie on screen.</span></p>
+</li>
+<li style="margin-left: -20px;">
+<p class="MsoNormal"><b style="mso-bidi-font-weight: normal;">Y</b> - Specify the vertical positioning of the movie on screen.</p>
+</li>
+</ul>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Duration</span> - The duration of the appear-animation in milliseconds.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Continue</span> will make the scene immediately continue.</p>
+</li>
+<li>
+<p style="font-weight: normal; font-family: Arial, sans-serif;"><span style="font-weight: bold;">Wait</span> will make the scene wait until the appear-animation is done.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Effects</span> - These options affect how the movie will appear.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Easing</span> sets the tween movement of the movie. More information can be seen in <a href="Easing_Effects.htm">Easing Effects</a> page.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Animation</span> sets the movement of the movie.</p>
+</li>
+<li style="list-style: none; display: inline;">
+<ul style="list-style: disc;">
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Movement</span> is the origin point of the movie where it will appear from Left/Top/Right/Bottom.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Blending</span> allows you to fade in/fade out the movie.</p>
+</li>
+<li style="font-weight: bold;">
+<p style="font-family: Arial, sans-serif; font-weight: bold;">Masking <span style="font-weight: normal;">allows you to mask the movie to a Masks file.</span></p>
+</li>
+<li style="list-style: none; display: inline;">
+<ul style="list-style: disc;">
+<li style="font-weight: bold;">
+<p style="font-family: Arial, sans-serif; font-weight: bold;">Vague <span style="font-weight: normal;">is the smoothness of the mask edges. Here is a comparison with Vague values 0 (minimum) and 255 (maximum).</span></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p style="font-family: Arial, sans-serif; margin-left: 40px;"><img src="vague0.gif" alt="" style=" border:none; width:100%; max-width:500px;" border="0" /><img src="vague255.gif" alt="" style=" border:none; width:100%; max-width:500px;" border="0" /></p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: bold;">Display <span style="font-weight: normal;">- Allows you to specify the display order and anchor for the movie.</span></p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">Anchor - <span style="font-weight: normal;">Select the location of your anchor point between top-left and center.<br />
+Setting the anchor to center is only important when the zoom and rotation commands will used and will not affect positioning.</span></p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">Z-Order <span style="font-weight: normal;">sets the display order of the movies.</span></p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">Blend Mode <span style="font-weight: normal;">- Determines how the movie is blended to the objects in the screen.</span></p>
+</li>
+<li style="list-style: none; display: inline">
+<ul style="list-style: disc;">
+<li>
+<p style="font-weight: bold; font-family: Arial, sans-serif;">Normal<span style="font-weight: normal;">&#160;is the standard blend mode.</span></p>
+</li>
+<li>
+<p style="font-weight: bold; font-family: Arial, sans-serif;">Additive <span style="font-weight: normal;">results the movie to be applied in a lighter color.</span></p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: bold;"><span style="font-family: Arial, sans-serif; font-weight: bold;">Subtractive</span> <span style="font-family: Arial, sans-serif; font-weight: normal;">results the movie to be applied in a darker color.</span></p>
+</li>
+</ul>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Viewport</span>&#160;- The viewport the movie will be assigned to. The viewport determines if the movie gets affected by camera-movements or screen effects or not.</p>
+</li>
+<li style="list-style: none; display: inline">
+<ul style="list-style: disc;">
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Scene</span> - The movie is assigned to the scene-viewport and behaves like an object which belongs to the scene so it gets affected by camera-movements and screen effects.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">User Interface</span> - The movie is assigned to the ui-viewport and behaves like an object which belongs to the user interface so it doesn't get affected by camera-movements and screen effects.</p>
+</li>
+</ul>
+</li>
+<li style="list-style: none; display: inline;">
+<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p>
+</li>
+</ul>
+<p class="Sub_Heading"><a name="Blend_Movie" id="Blend_Movie"></a>Blend Movie</p>
+<p style="font-family: Arial, sans-serif;">Blends a movie to the specified opacity.</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: bold;">Number <span style="font-weight: normal;">- The movie's index (ID) that you want to manipulate.</span></p>
+</li>
+<li style="margin-left: -20px;">
+<p class="MsoNormal"><span style="mso-bidi-font-weight: normal; font-weight: bold;">Opacity</span> - The opacity.</p>
+</li>
+<li style="margin-left: -20px;">
+<p class="MsoNormal"><span style="font-weight: bold;">Duration</span> <span style="font-family: Arial, sans-serif;">-</span> The duration of the blend-animation.</p>
+</li>
+<li>
+<p style="font-weight: normal; font-family: Arial, sans-serif;"><span style="font-weight: bold;">Continue</span> will make the scene immediately continue.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Wait</span> will make the scene wait until the zoom animation is done.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Easing</span> affects the blend animation. More information can be seen in <a href="Easing_Effects.htm">Easing Effects</a> page.</p>
+</li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Zoom_Movie" id="Zoom_Movie"></a>Zoom Movie</p>
+<p class="MsoNormal">Zooms in/out a movie from the scene.</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Number</span> - The movie's index (ID) t<span style="font-family: Arial, sans-serif; font-weight: normal;">o apply zoom to.</span></p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Zoom X</span> - Affects the horizontal zoom and size of your movie.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Zoom Y</span> - Affects the vertical zoom and size of your movie.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Duration</span> - The duration of the zoom in milliseconds.</p>
+</li>
+<li style="font-family: Arial, sans-serif;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Continue</span> will make the scene immediately continue.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Wait</span> will make the scene wait until the exit animation is done.</p>
+</li>
+<li style="font-family: Arial, sans-serif; margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Effects</span> - These options affect how the Movie will appear.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Easing</span> sets the tween movement of the Movie. More information can be seen in <a href="Easing_Effects.htm">Easing Effects</a> page.</p>
+</li>
+</ul>
+<p>&#160;</p>
+<p class="Sub_Heading"><a name="Move_Movie" id="Move_Movie"></a>Move Movie</p>
+<p style="font-family: Arial, sans-serif;">Manipulate the position of your movie.</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: bold;">Number <span style="font-weight: normal;">- The movie's index (ID) that you want to manipulate.</span></p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><b style="mso-bidi-font-weight: normal;">X</b> - Specify the horizontal positioning of the movie on screen.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><b style="mso-bidi-font-weight: normal;">Y</b> - Specify the vertical positioning of the movie on screen.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Duration</span> - The duration of the move-animation in milliseconds.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">Continue <span style="font-weight: normal;">will make the scene immediately continue.</span></p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Wait</span> will make the scene wait until the move-animation is done.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Easing</span> sets the tween movement of the movie. More information can be seen in <a href="Easing_Effects.htm">Easing Effects</a> page.</p>
+</li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Movie_Motion_Blur" id="Movie_Motion_Blur"></a>Movie Motion Blur</p>
+<p style="font-family: Arial, sans-serif;">Applies motion blur to your Movie. This must be set above the Movie's movement commands such as [Move Movie] or [Move Movie Along Path].</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: bold;">Number <span style="font-weight: normal;">- The movie's index (ID) that you want to manipulate.</span></p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Motion Blur</span> - Set Yes to apply motion blur, No to turn it off.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Spawn Time</span> - The amount of frames after a new copy is created.. By default, the amount is 2.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Dissolve Speed</span> - The rate at which the spawned copies dissipate. Specifically, the opacity of the copies are dropped every frame.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Opacity</span> - The opacity the copied movie starts at the time it is spawned. By default, it is at 100.<br />
+For example, if the dissolve speed is 2, the shadow/ghost/particle is completely invisible/dead after 50 frames.</p>
+</li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Move_Movie_Along_Path" id="Move_Movie_Along_Path"></a>Move Movie Along Path</p>
+<p style="font-family: Arial, sans-serif;">Allows you to create custom path of movement through the use of points and curves to move the Movie.</p>
+<ul style="list-style: disc;">
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Number</span> - The movie's index (ID) that you want to manipulate.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Path</span> - Opens up a path editor that allows you to define the path via curves. You can press right click to delete a motion point.</p>
+</li>
+<li style="list-style: none; display: inline;">
+<ul style="list-style: disc;">
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">The S circle</span> (<img src="circ1.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />) is the start point of the motion.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">The green circle</span> (<img src="circ2.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />) is a point in the motion that allows you to have a more dynamic motion.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">The yellow circle</span> (<img src="circ3.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />) adjusts the motion curve. If you press a green circle (<img src="circ2.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />), you can adjust the motion for that path as well.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">The E circle</span> (<img src="circ4.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />) is the end point of the motion.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><img src="path.jpg" alt="" style=" border:none; width:100%; max-width:883px;" border="0" /></p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<ol style="list-style: disc;">
+<li style="list-style: none; display: inline;">
+<ul style="list-style: disc;">
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Mirror Vertical -</span> &#160;Flips the curve vertically.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Mirror Horizontal</span> - &#160;Flips the curve horizontally.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Rotate 90*</span> - &#160;Rotates the curve at 90 degrees.</p>
+</li>
+<li>
+<p style="font-weight: normal; font-family: Arial, sans-serif;"><span style="font-weight: bold;">Effects</span> - &#160;Allows you to set sound effects at timed intervals while the Movie moves along the path.</p>
+</li>
+</ul>
+</li>
+</ol>
+<ul style="list-style: disc;">
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Loop</span> - Allows you to repeat the path for the extent of its duration.</p>
+</li>
+<li style="list-style: none; display: inline;">
+<ul style="list-style: disc;">
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">None</span> - &#160;Turns the loop off.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Normal</span> - &#160;Loops the path from the end point.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Reversed</span> - &#160;Loops the path in the opposite direction from the end point.</p>
+</li>
+</ul>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Duration</span> - The time the motion has to finish in milliseconds.</p>
+</li>
+<li style="list-style: none; display: inline;">
+<ul style="list-style: disc;">
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Continue</span> will make the scene immediately continue.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Wait</span> will make the scene wait until the motion is done.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>&#160;</p>
+<p class="Sub_Heading"><a name="Rotate_Movie" id="Rotate_Movie"></a>Rotate Movie</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-family: Arial, sans-serif; font-weight: normal;">Rotate your movie at specified speed and direction.</span></p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: bold;">Number <span style="font-weight: normal;">- The movie's index (ID) that you want to manipulate.</span></p>
+</li>
+</ul>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Direction</span> - Set the text to rotate in clockwise or counterclockwise direction.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Speed</span> - The speed of the rotation. The higher the value, the faster it rotates.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Duration</span> - Determines how long the rotation will take place.</p>
+</li>
+<li>
+<p style="font-weight: normal; font-family: Arial, sans-serif;"><span style="font-weight: bold;">Continue</span> will make the scene immediately continue.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Wait</span> will make the scene wait until the exit animation is done.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Easing</span> affects the animation of the rotation. More information can be seen in <a href="Easing_Effects.htm">Easing Effects</a> page.</p>
+</li>
+</ul>
+<p>&#160;</p>
+<p class="Sub_Heading"><a name="Tint_Movie" id="Tint_Movie"></a>Tint Movie</p>
+<p style="font-family: Arial, sans-serif;">Changes the color tone of the currently displayed movie.</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: bold;">Number <span style="font-weight: normal;">- The movie's index (ID) that you want to manipulate.</span></p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Tone Control</span> - Controls the movie color. Adjust the color tone (-255 to 255) for Red, Green, and Blue.<br />
+Use Grey to set the intensity (0 to 255) of the grayscale filter. The higher the value, the greater the overall strength of the color.<br />
+Normal, Dark, Sepia, Morning and Night buttons at the bottom of the dialog box are to quickly apply the standard values for the tones represented by their respective names.<br />
+The Normal button reverts to the original color tone. You can check color tone changes in the preview area on the top side of the dialog box.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Duration</span> - Determines how long the tint effect will take place.</p>
+</li>
+<li>
+<p style="font-weight: normal; font-family: Arial, sans-serif;"><span style="font-weight: bold;">Continue</span> will make the scene immediately continue.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Wait</span> will make the scene wait until the exit animation is done.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Easing</span> affects the animation of the tint. More information can be seen in <a href="Easing_Effects.htm">Easing Effects</a> page.</p>
+</li>
+</ul>
+<p>&#160;</p>
+<p class="Sub_Heading"><a name="Flash_Movie" id="Flash_Movie"></a>Flash Movie</p>
+<p style="font-family: Arial, sans-serif;">Fills the movie with the specified color for an instant, and then gradually reverts to the original color.</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Number</span> - The movie's index (ID) that you want to manipulate.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Color Control</span> - Controls the flash color. Use the Red, Green, and Blue slider bars (0 to 255) to specify the color to flash.<br />
+You can check the color you specified in the preview area on the top side of the dialog box. Use Power to specify the color's opacity (0 to 255).<br />
+Setting Power to "0" makes the color completely transparent, rendering it invisible on screen.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Duration</span> - Determines how long the flash effect will take place.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Continue</span> will make the scene immediately continue.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-family: Arial, sans-serif; font-weight: bold;">Wait</span> <span style="font-family: Arial, sans-serif; font-weight: normal;">will make the scene wait until the flash animation is done.</span></p>
+</li>
+</ul>
+<p>&#160;</p>
+<p class="Sub_Heading"><a name="Crop_Movie" id="Crop_Movie"></a>Crop Movie</p>
+<p style="font-family: Arial, sans-serif;">Redefine the borders of your movie to frame your movie the way you wish to display it without having to edit the original movie file.</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: bold;">Number <span style="font-weight: normal;">- The movie's index (ID) that you want to manipulate.</span></p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><b style="mso-bidi-font-weight: normal;">X</b> - Begins the cropped movie from x pixels from the left or right of the original dimensions of the movie.</p>
+</li>
+<li style="margin-left: -20px;">
+<p class="MsoNormal"><b style="mso-bidi-font-weight: normal;">Y</b> - Begins the cropped movie from x pixels from the top or bottom of the original dimensions of the movie.</p>
+</li>
+<li style="margin-left: -20px;">
+<p class="MsoNormal"><b style="mso-bidi-font-weight: normal;">Width</b> - Sets the new width of your cropped movie starting from the X position you set above.</p>
+</li>
+<li style="margin-left: -20px;">
+<p class="MsoNormal"><b style="mso-bidi-font-weight: normal;">Height</b> - Sets the new height of your cropped movie starting from the new Y position you set above.</p>
+</li>
+</ul>
+<p class="MsoNormal">&#160;</p>
+<p class="Sub_Heading"><a name="Mask_Movie" id="Mask_Movie"></a>Mask Movie</p>
+<p class="MsoNormal" style="font-family: Arial, sans-serif;">Applies a mask to a movie.</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold; font-family: Arial, sans-serif;">Number <span style="font-weight: normal;">- The movie's index (ID) that you want to manipulate.</span></p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-weight: bold; font-family: Arial, sans-serif;">File <span style="font-weight: normal;">- Choose a mask file to apply to your movie(s).</span></p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">File</span> - Choose a mask file to apply to your movie.</p>
+</li>
+<li>
+<p style="font-weight: bold; font-family: Arial, sans-serif;">Movie <span style="font-weight: normal;">allows you to use a movie file ask a mask. Your movie file will need to be imported to the Movies folder in .webm format.<br />
+Even if your movie file contains color information it will automatically take the red color-channel for masking.</span></p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: bold;"><span style="font-family: Arial, sans-serif; font-weight: bold;">Type</span><span style="font-family: Arial, sans-serif; font-weight: normal;">- Select what kind of masking you would like to do.</span></p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Static</span> allows you to overlay a mask movie which is applied with alpha.<br />
+<img src="maskmoviestatic.gif" alt="" style=" border:none; width:100%; max-width:591px;" border="0" /></p>
+</li>
+<li style="list-style: none; display: inline;">
+<ul style="list-style: disc;">
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Offset X</span> moves the mask movie left or right depending on the values set.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Offset Y</span> moves the mask movie top or bottom depending on the values set.</p>
+</li>
+</ul>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Dynamic</span> masking allows you to use mask to display specific parts of a movie.<br />
+<img src="maskmoviedynamic.gif" alt="" style=" border:none; width:100%; max-width:591px;" border="0" /></p>
+</li>
+<li style="list-style: none; display: inline;">
+<ul style="list-style: disc;">
+<li>
+<p style="font-weight: normal; font-family: Arial, sans-serif;"><span style="font-weight: bold;">Value</span> can be any amount from 0 to 255. It controls which pixels from the masked movie will be visible.<br />
+If it's 0, then it will display none of the movie mask. The more values you add, the more of the movie mask is visible.</p>
+</li>
+<li>
+<p style="font-weight: normal; font-family: Arial, sans-serif;"><span style="font-weight: bold;">Vague</span> allows you to apply smoothing on the mask edges. Here is a comparison with Vague values 0 (minimum) and 255 (maximum)</p>
+</li>
+</ul>
+</li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: bold; margin-left: 0px;">&#160;<img src="maskmovie0.gif" alt="" style=" border:none; width:100%; max-width:591px;" border="0" /><img src="maskmovie255.gif" alt="" style=" border:none; width:100%; max-width:591px;" border="0" /></p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: normal; font-family: Arial, sans-serif;"><span style="font-weight: bold;">Duration</span> - Determines how fast the mask effect will take place.</p>
+</li>
+<li>
+<p style="font-weight: normal; font-family: Arial, sans-serif;"><span style="font-weight: bold;">Continue</span> will make the scene immediately continue.</p>
+</li>
+<li>
+<p style="font-weight: normal; font-family: Arial, sans-serif;"><span style="font-weight: bold;">Wait</span> will make the scene wait until the masking effect is done.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-weight: normal; font-family: Arial, sans-serif;"><span style="font-weight: bold;">Effects</span> - These options affect how the movie will appear.</p>
+</li>
+<li>
+<p style="font-weight: normal; font-family: Arial, sans-serif;"><span style="font-weight: bold;">Easing</span> sets the tween movement of the movie. More information can be seen in <a href="Easing_Effects.htm">Easing Effects</a> page.</p>
+</li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Erase_Movie" id="Erase_Movie"></a>Erase Movie</p>
+<p style="font-family: Arial, sans-serif;">Erase a movie displayed on scene.</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: bold;">Number <span style="font-weight: normal;">- The movie's index (ID) that you want to remove from the screen.</span></p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Duration</span> - The time it will take for the movie to disappear from the scene.</p>
+</li>
+<li>
+<p style="font-weight: normal; font-family: Arial, sans-serif;"><span style="font-weight: bold;">Continue</span> will make the scene immediately continue.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Wait</span> will make the scene wait until the exit animation is done.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Easing</span> affects the exit animation. More information can be seen in <a href="Easing_Effects.htm">Easing Effects</a> page.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Animation</span> sets the erase-animation of the movie.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Movement</span> is the origin point of the movie where it will disappear to from Left/Top/Right/Bottom.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Blending</span> allows you to fade out the movie.</p>
+</li>
+<li style="font-weight: bold;">
+<p style="font-family: Arial, sans-serif; font-weight: bold;">Masking <span style="font-weight: normal;">allows you to mask the movie to a Masks file.</span></p>
+</li>
+<li style="list-style: none; display: inline;">
+<ul style="list-style: disc;">
+<li style="font-weight: bold;">
+<p style="font-family: Arial, sans-serif; font-weight: bold;">Vague <span style="font-weight: normal;">is the smoothness of the mask edges. Here is a comparison with Vague values 0 (minimum) and 255 (maximum).</span></p>
+</li>
+</ul>
+</li>
+</ul>
+<p style="font-family: Arial, sans-serif;"><img src="erasemovievague0.gif" alt="" style=" border:none; width:100%; max-width:591px;" border="0" /><img src="erasemovievague255.gif" alt="" style=" border:none; width:100%; max-width:591px;" border="0" /></p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Movie_Effect" id="Movie_Effect"></a>Movie Effect</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-family: Arial, sans-serif;">Applies an effect to a movie..</span></p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Type</span> - The effect that will be applied to the background.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Wobble</span> makes the movie move in irregular and staggering motion. That only works if looping is disabled.</p>
+</li>
+<li>
+<ul style="list-style: disc;">
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Power</span> sets the intensity of the wobble. It makes the wobble effect more visible the higher it is.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Speed</span> <span>sets the speed of the wobble. The higher it is, the faster it is.</span></p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Orientation</span> - Sets the wobble direction.</p>
+</li>
+<li style="list-style: none; display: inline">
+<ul style="list-style: disc;">
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Vertical</span> sets the wobble direction to the vertical direction.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Horizontal</span> sets the wobble direction to the horizontal direction</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Both</span> sets the wobble direction to both directions.</p>
+</li>
+</ul>
+</li>
+<li style="font-weight: bold;">
+<p style="font-family: Arial, sans-serif; font-weight: bold;">Duration <span style="font-weight: normal;">sets how long, in milliseconds, the effect will take place.</span></p>
+</li>
+</ul>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Blur</span> has no effect on movies..</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Pixelate</span> makes the movie appear pixelated/blocky.</p>
+</li>
+<li style="list-style: none; display: inline">
+<ul style="list-style: disc;">
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Width</span> sets the width of a single block/pixel.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Height</span> sets the height of a single block/pixel.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Duration</span> sets how much time, in milliseconds, it takes until the pixelation reaches the specified block/pixel-size. Use this to smoothly pixelate the movie.</p>
+</li>
+</ul>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Easing</span> applies tweening to the effect animation. More information can be seen in <a href="Easing_Effects.htm">Easing Effects</a> page.</p>
+</li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Movie_Defaults" id="Movie_Defaults"></a>Movie Defaults</p>
+<p style="font-family: Arial, sans-serif;">Allows to override default values for movie specific commands.</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: normal; font-family: Arial, sans-serif;"><span style="font-weight: bold;">Appear Duration</span> is the duration of the show-animation in milliseconds.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-family: Arial, sans-serif; font-weight: bold;">Disappear Duration</span> <span style="font-family: Arial, sans-serif; font-weight: normal;">is the duration of the erase-animation in milliseconds.</span></p>
+</li>
+</ul>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Appear Effects</span></p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Appear Duration</span> is the duration of the show-animation in milliseconds.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Disappear Duration</span> is the duration of the erase-animation in milliseconds.</p>
+</li>
+</ul>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Appear Effects</span></p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Easing</span> is the easing settings used for the show-animation.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Animation</span> is the animation settings for the show-animation.</p>
+</li>
+</ul>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Disappear Effects</span></p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Easing</span> is the easing settings used for the erase-animation.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Animation</span> is the animation settings for the erase-animation.</p>
+</li>
+</ul>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Display</span></p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Anchor -</span> Select the location of your anchor point between top-left and center.<br />
+Setting the anchor to center is only important when the zoom and rotation commands will used and will not affect positioning.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">Z-Order <span style="font-weight: normal;">is the Z-Index of a movie.</span></p>
+</li>
+</ul>
+<div>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Motion 
+	 Blur</span> - Set Yes to apply motion blur, No to turn it off.</p></li>
+	<li style="list-style: none; display: inline; margin-left: -20px;"><ul 
+			 style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Spawn Time</span> - The amount of frames 
+		 after a new copy is created. By default, the amount is 2.</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Dissolve Speed</span> - The rate at 
+		 which the spawned copies dissipate. Specifically, the opacity 
+		 of the copies are dropped every frame.</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Opacity</span> - The opacity a copy 
+		 starts at the time it is spawned. By default, it is at 100.<br />
+		For example, if the dissolve speed is 2, the shadow/ghost/particle 
+		 is completely invisible/dead after 50 milliseconds.</p></li>
+	</ul></li>
+</ul>
+<p>&#160;</p>
+</div>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+</body>
+</html>

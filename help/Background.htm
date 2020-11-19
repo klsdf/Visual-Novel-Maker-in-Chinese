@@ -1,0 +1,572 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Background</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.3.1.0_4";
+</script>
+ <meta name="topic-breadcrumbs" content="Exploring the Editor > Scene Editor > Scene Content Commands" />
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+ <p class="Topic_Heading">Background</p>
+</div>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-family: 'Book Antiqua', serif; font-weight: bold; font-size: 18pt;">T</span>he Background commands allows you to bring life to your scenes by applying effects.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Change_Background" id="Change_Background"></a>Change Background</p>
+<p style="font-family: Arial, sans-serif;">Sets the Backgrounds for your scene.</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">File</span> - The image file that is going to be displayed.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Layer</span> - Sets the order of priority that your backgrounds will be. The higher the number the more they will appear above.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Duration</span> - Sets how long the change-animation should take. Setting it at zero (0) ms will make it appear instantly.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Wait/Continue</span> - Setting the command to wait means that the scene will wait for the background to appear before it executes the next command.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Effects</span> - These options affect how the background will appear.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Easing</span> sets the tween movement of the background. More information can be seen in <a href="Easing_Effects.htm">Easing Effects</a> page.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Animation</span> sets the animation of the background.</p>
+</li>
+<li style="list-style: none; display: inline;">
+<ul style="list-style: disc;">
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Movement</span> is the origin point of the background where it will appear from Left/Top/Right/Bottom.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Blending</span> allows you to fade in/fade out the background using blending.</p>
+</li>
+<li style="font-weight: bold;">
+<p style="font-family: Arial, sans-serif; font-weight: bold;">Masking <span style="font-weight: normal;">allows you to fade-in using a mask image from Masks folder.</span></p>
+</li>
+<li style="list-style: none; display: inline;">
+<ul style="list-style: disc;">
+<li style="font-weight: bold;">
+<p style="font-family: Arial, sans-serif; font-weight: bold;">Vague <span style="font-weight: normal;">the smoothness of the mask edges.</span></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Looping</span> - Set Yes for vertical or horizontal looping. Or No to turn off looping.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Display</span> - Allows you to specify the display order and anchor for the background.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Anchor</span> sets the anchor point of your background between top-left and center. Setting the anchor to center is only important when the zoom and rotation commands will used and will not affect positioning.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Z-order</span> sets the display order of the background.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Viewport</span>&#160;- The viewport the background will be assigned to. The viewport determines if the background gets affected by camera-movements or screen effects or not.</p>
+</li>
+<li style="list-style: none; display: inline">
+<ul style="list-style: disc;">
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Scene</span> - The background is assigned to the scene-viewport and behaves like an object which belongs to the scene so it gets affected by camera-movements and screen effects.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">User Interface</span> - The background is assigned to the ui-viewport and behaves like an object which belongs to the user interface so it doesn't get affected by camera-movements and screen effects.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Blend_Background" id="Blend_Background"></a>Blend Background</p>
+<p style="font-family: Arial, sans-serif;">Blends a background to the specified opacity.</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: bold;">Number <span style="font-weight: normal;">-</span> <span style="font-weight: normal;">Set which background image will be affected.</span></p>
+</li>
+<li style="margin-left: -20px;">
+<p class="MsoNormal"><span style="mso-bidi-font-weight: normal; font-weight: bold;">Opacity</span> - The opacity.</p>
+</li>
+<li style="margin-left: -20px;">
+<p class="MsoNormal"><span style="font-weight: bold;">Duration</span> <span style="font-family: Arial, sans-serif;">-</span> The duration of the blend-animation.</p>
+</li>
+<li>
+<p style="font-weight: normal; font-family: Arial, sans-serif;"><span style="font-weight: bold;">Continue</span> will make the scene immediately continue.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Wait</span> will make the scene wait until the blend animation is done.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Easing</span> affects the blend animation. More information can be seen in <a href="Easing_Effects.htm">Easing Effects</a> page.</p>
+</li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Zoom_Background" id="Zoom_Background"></a>Zoom Background</p>
+<p style="font-family: Arial, sans-serif;">Zooms in towards the anchor point of the Background.</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: normal; font-family: Arial, sans-serif;"><span style="font-weight: bold;">Layer</span> - Set which background image will be affected.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Zoom X</span> - Sets the horizontal zoom.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Zoom Y</span> - Sets the vertical zoom.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Duration</span> - Determines how fast the background's zoom effect will take place.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Wait/Continue</span> - Setting the command to wait means that the scene will wait for the command to finish before initiating the next set of commands.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Easing</span> sets the tween movement of the background. More information can be seen in <a href="Easing_Effects.htm">Easing Effects</a> page.</p>
+</li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Rotate_Background" id="Rotate_Background"></a>Rotate Background</p>
+<p style="font-family: Arial, sans-serif;">Rotate your background at specified speed and direction.</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: bold;"><span>Layer</span> <span style="font-weight: normal;">- Set which background image will be affected.</span></p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Direction</span> - Set the direction to rotate in clockwise or counterclockwise direction.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Speed</span> - The speed of the rotation. The higher the value, the faster it rotates.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Duration</span> - Determines how long the rotation effect will take place.</p>
+</li>
+<li>
+<p style="font-weight: normal; font-family: Arial, sans-serif;"><span style="font-weight: bold;">Continue</span> will make the scene immediately continue.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Wait</span> will make the scene wait until the exit animation is done.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Easing</span> affects the animation of the rotation. More information can be seen in <a href="Easing_Effects.htm">Easing Effects</a> page.</p>
+</li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Shake_Background" id="Shake_Background"></a>Shake Background</p>
+<p style="font-family: Arial, sans-serif;">Shakes the background, useful for scenes depicting shock or impact.</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: normal; font-family: Arial, sans-serif;"><span style="font-weight: bold;">Layer</span> - Set which background image will be affected. For example, if you have more than one, you can shake layer two (2) without affecting the background displayed at layer one.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Range X</span> - Set the horizontal movement of the background image. It randomizes between the negative and positive of the value you set.<br />
+For example, if you put 5, it will shake the background from -5 to 5.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Range Y</span> - Set the vertical movement of the background image.&#160;It randomizes between the negative and positive of the value you set.<br />
+For example, if you put 5, it will shake the background from -5 to 5.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Speed</span> - &#160;Will determine the power or intensity of the shaking by setting a pixel offset.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Duration</span> - Determines how long the background will shake.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Wait/Continue</span> - Setting the command to wait means that the scene will wait for the background to stop shaking before it loads the next command.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Easing</span> sets the tween movement of the background. More information can be seen in <a href="Easing_Effects.htm">Easing Effects</a> page.</p>
+</li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Scroll_Background" id="Scroll_Background"></a>Scroll Background</p>
+<p style="font-family: Arial, sans-serif;">Creates a scrolling effect for your background image.</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Layer</span> - Set the background layer affected by this scrolling command.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Speed X</span> - Sets the horizontal scrolling speed.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Speed Y -</span> Sets the vertical scrolling speed.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Duration</span> - The length of time the background will continue to scroll.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Wait/Continue</span> - Setting the command to wait means that the scene will wait for the command to finish before initiating the next set of commands.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Easing</span> sets the tween movement of the background. More information can be seen in <a href="Easing_Effects.htm">Easing Effects</a> page.</p>
+</li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Scroll_Background_To" id="Scroll_Background_To"></a>Scroll Background To</p>
+<p style="font-family: Arial, sans-serif;">Scrolls the background to a specified location.</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: normal; font-family: Arial, sans-serif;"><span style="font-weight: bold;">Layer</span> - Set which background image will be affected.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-weight: normal; font-family: Arial, sans-serif;"><span style="font-weight: bold;">Position</span> - The target-position of the character.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Predefined -</span> Allows to select one of the predefined positions configured in Database &gt; System &gt; Predefined Object Positions.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Direct</span> - Allows you to set the target-position using the graphical editor.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Calculated</span> - Allows to calculate the target-position by variable.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: bold;">Duration <span style="font-weight: normal;">- The length of time the background will need to reach the selected position.</span></p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: bold;">Wait/Continue <span style="font-weight: normal;">- Setting the command to wait means that the scene will wait for the command to finish before initiating the next set of commands.</span></p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: bold;">Easing <span style="font-weight: normal;">sets the tween movement of the background. More information can be seen in <a href="Easing_Effects.htm">Easing Effects</a> page.</span></p>
+</li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Background_Effect" id="Background_Effect"></a>Background Effect</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-family: Arial, sans-serif;">Applies an effect to a character.</span></p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Type</span> - The effect that will be applied to the background.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Wobble</span> makes the background move in irregular and staggering motion. That only works if looping is disabled.</p>
+</li>
+<li>
+<ul style="list-style: disc;">
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Power</span> sets the intensity of the wobble. It makes the wobble effect more visible the higher it is.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Speed</span> <span>sets the speed of the wobble. The higher it is, the faster it is.</span></p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Orientation</span> - Sets the wobble direction.</p>
+</li>
+<li style="list-style: none; display: inline">
+<ul style="list-style: disc;">
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Vertical</span> sets the wobble direction to the vertical direction.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Horizontal</span> sets the wobble direction to the horizontal direction</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Both</span> sets the wobble direction to both directions.</p>
+</li>
+</ul>
+</li>
+<li style="font-weight: bold;">
+<p style="font-family: Arial, sans-serif; font-weight: bold;">Duration <span style="font-weight: normal;">sets how long, in milliseconds, the effect will take place.</span></p>
+</li>
+</ul>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Blur</span> has no effect on backgrounds..</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Pixelate</span> makes the background appear pixelated/blocky.</p>
+</li>
+<li style="list-style: none; display: inline">
+<ul style="list-style: disc;">
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Width</span> sets the width of a single block/pixel.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Height</span> sets the height of a single block/pixel.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Duration</span> sets how much time, in milliseconds, it takes until the pixelation reaches the specified block/pixel-size. Use this to smoothly pixelate the background..</p>
+</li>
+</ul>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Easing</span> applies tweening to the effect animation. More information can be seen in <a href="Easing_Effects.htm">Easing Effects</a> page.</p>
+</li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Mask_Background" id="Mask_Background"></a>Mask Background</p>
+<p style="font-family: Arial, sans-serif;">Applies a static mask or executes a dynamic mask animation on your background.</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: normal; font-family: Arial, sans-serif;"><span style="font-weight: bold;">Layer</span> - Set which background image will be affected.</p>
+</li>
+</ul>
+<div>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">File</span> 
+	 - You can choose what sort of mask to apply here.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Picture</span> allows you to use a Mask 
+	 image file in Graphics/Masks.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Movie</span> allows you to use a movie 
+	 file ask a mask. Your movie file will need to be imported to the Movies 
+	 folder in .webm format.<br />
+	Even if your movie file contains color information, only the red color-channel 
+	 is used.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Type</span>- 
+	 Select what kind of masking you would like to do.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Static</span> allows you to overlay a mask 
+	 image which is applied with alpha.<br />
+	<img src="static_mask.jpg" alt="" style=" border:none; width:100%; max-width:520px;" border="0" /></p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Offset X</span> moves the mask image 
+		 left or right depending on the values set.</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Offset Y</span> moves the mask image 
+		 top or bottom depending on the values set.</p></li>
+	</ul></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Dynamic</span> masking allows you to use 
+	 mask to display specific parts of the image.<br />
+	<img src="dynamicmask.gif" alt="" style=" border:none; width:100%; max-width:453px;" border="0" /></p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Value</span> can be any amount from 
+		 0 to 255. It controls which pixels from the masked image will 
+		 be visible.<br />
+		If it's 0, then it will display none of the image mask. T<span 
+		 style="font-family: Arial, sans-serif; font-weight: normal;">he 
+		 more values you add, the more of the image mask is visible.</span></p></li>
+		<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+											 font-weight: bold;">Vague 
+		 <span style="font-weight: normal;">allows you to apply smoothing 
+		 on the mask edges. Here is a comparison with Vague values 0 (minimum) 
+		 and 255 (maximum).</span></p></li>
+	</ul></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: bold;"><img src="vague0.png" alt="" style=" border:none; width:100%; max-width:538px;" border="0" /><img src="vague255.png" alt="" style=" border:none; width:100%; max-width:538px;" border="0" /></p>
+<p>&#160;</p>
+</div>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Duration</span> - Determines how fast the mask effect will take place.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Continue</span> will make the scene immediately continue.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Wait</span> will make the scene wait until the masking effect is done.</p>
+</li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p>
+<p class="Sub_Heading"><a name="Background_Motion_Blur" id="Background_Motion_Blur"></a>Background Motion Blur</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-family: Arial, sans-serif; font-weight: normal;">Applies motion blur to your background. This must be set above the background’s movement commands such as [Scroll along path] or [Scroll Background to].</span></p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Layer</span> - Set which layer is affected by motion blur.</p>
+</li>
+</ul>
+<div>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Motion 
+	 Blur</span> - Set Yes to apply motion blur, No to turn it off.</p></li>
+	<li style="list-style: none; display: inline; margin-left: -20px;"><ul 
+			 style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Spawn Time</span> - The amount of frames 
+		 after a new copy is created. By default, the amount is 2.</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Dissolve Speed</span> - The rate at 
+		 which the spawned copies dissipate. Specifically, the opacity 
+		 of the copies are dropped every frame.</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Opacity</span> - The opacity a copy 
+		 starts at the time it is spawned. By default, it is at 100.<br />
+		For example, if the dissolve speed is 2, the shadow/ghost/particle 
+		 is completely invisible/dead after 50 milliseconds.</p></li>
+	</ul></li>
+</ul>
+<p>&#160;</p>
+</div>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Scroll_Along_Path" id="Scroll_Along_Path"></a>Scroll Along Path</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-family: Arial, sans-serif; font-weight: normal;">Allows you to create custom path of movement through the use of points and curves to move the background.</span></p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Layer</span> - Sets which background layer will scroll on custom path.</p>
+</li>
+</ul>
+<div>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Path</span> 
+	 - Opens up a path editor that allows you to define the path via curves. 
+	 You can press right click to delete a motion point or click at a free 
+	 area to add a new motion point.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">The S circle</span> (<img src="circ1.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />) 
+	 is the start point of the motion.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">The green circle</span> (<img src="circ2.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />) is a point in the motion 
+	 that allows you to have a more dynamic motion.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">The yellow circle</span> (<img src="circ3.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />) adjusts the motion curve. 
+	 If you press a green circle (<img src="circ2.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />), you can adjust 
+	 the motion for that path as well.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">The E circle</span> (<img src="circ4.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />) 
+	 is the end point of the motion.</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><img src="path.jpg" alt="" style=" border:none; width:100%; max-width:883px;" border="0" /></p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<ul style="list-style: disc;">
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Mirror Vertical -</span> &#160;Flips the 
+	 curve vertically.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Mirror Horizontal</span> - &#160;Flips 
+	 the curve horizontally.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Rotate 90*</span> - &#160;Rotates the curve 
+	 at 90 degrees.</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Effects</span> - &#160;Allows you to set 
+	 sound effects at timed intervals while the background moves along 
+	 the path.</p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Loop</span> 
+	 - Allows you to repeat the path for the extent of its duration.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">None</span> - &#160;Turns the loop off.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Normal</span> - &#160;Loops the path from 
+	 the end point.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Reversed</span> - &#160;Loops the path 
+	 in the opposite direction from the end point.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Duration</span> 
+	 - The time the motion has to finish in milliseconds.</p></li>
+	<li style="font-weight: bold; margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+															 font-weight: normal;"><span 
+	 style="font-weight: bold;">Wait/Continue</span> - Setting the command 
+	 to wait means that the scene will wait for the motion to end before 
+	 it loads the next command.</p></li>
+</ul>
+</div>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Background_Defaults" id="Background_Defaults"></a>Background Defaults</p>
+<p style="font-family: Arial, sans-serif;">Allows to override default values for Background specific commands.</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Duration</span> - The default time for background appear/disappear effects to take effect.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Effects</span> - These options affect how the background will appear.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Easing</span> sets the tween movement of the background. More information can be seen in <a href="Easing_Effects.htm">Easing Effects</a> page.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Animation</span> sets the animation of the background.</p>
+</li>
+<li style="list-style: none; display: inline;">
+<ul style="list-style: disc;">
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Movement</span> is the origin point of the background where it will appear from Left/Top/Right/Bottom.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Blending</span> allows you to fade in/fade out the background.</p>
+</li>
+<li style="font-weight: bold;">
+<p style="font-family: Arial, sans-serif; font-weight: bold;">Masking <span style="font-weight: normal;">allows you to mask the background to a Masks file.</span></p>
+</li>
+<li style="list-style: none; display: inline;">
+<ul style="list-style: disc;">
+<li style="font-weight: bold;">
+<p style="font-family: Arial, sans-serif; font-weight: bold;">Vague <span style="font-weight: normal;">the smoothness of the mask edges.</span></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Looping</span> - Set Yes for vertical or horizontal looping. Or No to turn off looping.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Display</span> - Allows you to specify the display order and anchor for the background.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Anchor</span> sets the anchor point of your background between top-left and center. Setting the anchor to center is only important when the zoom and rotation commands will used and will not affect positioning.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Z-order</span> sets the display order of the backgrounds.</p>
+</li>
+</ul>
+</body>
+</html>

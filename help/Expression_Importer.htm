@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Expression Importer</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.2.0_3";
+</script>
+ <meta name="topic-breadcrumbs" content="Exploring the Editor > Database" />
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+ <p class="Topic_Heading">Expression Importer</p>
+</div>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-family: 'Book Antiqua', serif; font-weight: bold; font-size: 18pt;">E</span>xpression Importer is a utility that allows users to batch import character images and create database entries.</p>
+<p style="font-family: Arial, sans-serif;">You can specify a pattern for the resource name which controls how the expression is created and in which sub-folders.</p>
+<p style="font-family: Arial, sans-serif;">This is especially useful if you have 200 images to create expression database entries for.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">To access the importer, <span style="font-weight: bold;">Tools -&gt; Script Agents -&gt; Default -&gt; Expression Importer</span></p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><img src="expressionimporter.jpg" alt="" style=" border:none; width:100%; max-width:699px;" border="0" /><br /></p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">Idle File Pattern</span> - Set an image-name pattern to convert the images for idle in the Character Expression database.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">Idle Animation Pattern</span> - Define the animation-pattern for idle like 0-1-2-1-0. The animation frames are created in that order then.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-weight: normal; font-family: Arial, sans-serif;"><span style="font-weight: bold;">Trigger Time</span> - Only for Idle Expression. The Idle Expression will play randomly between the milliseconds you set.<br />
+For example, if you set 2000 ms - 4000 ms, it will calculate when to play the idle animation starting from 2000 ms (the shortest) to 4000 ms (the longest).</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-weight: normal; font-family: Arial, sans-serif;"><span style="font-weight: bold;">Talking File Pattern</span> - Set an image-name pattern to convert the images for talking in the Character Expression database.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-weight: normal; font-family: Arial, sans-serif;"><span style="font-weight: bold;">Speed -</span> The speed of the animation. You can only go from 1% - 1000%. The default value is 100.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-weight: normal; font-family: Arial, sans-serif;"><span style="font-weight: bold;">Images</span> - The images you want to import to the character expression database. They must be imported through the <span style="font-weight: bold;"><img src="icon_resource_manager.png" alt="" style=" border:none; max-width:16px; width:100%;" border="0" /></span>Resource Manager first.</p>
+</li>
+</ul>
+<p style="font-weight: normal; font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><span><span style="font-weight: bold; font-size: 18pt; font-family: 'Book Antiqua', serif;">How does it work?</span></span></p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">If you have filename WillowUniform_Angry you can use the pattern <span style="font-style: italic;">{folder-1}{folder-2}_{expression}</span>.</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">What this does is it creates new entries in the database in this format.</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><img src="arrow.png" alt="" style=" border:none; width:100%; max-width:9px;" border="0" /><img src="icon_folder_closed.png" alt="" style=" border:none; width:100%; max-width:16px;" border="0" />Willow</p>
+<p style="font-family: Arial, sans-serif;">-<img src="arrow.png" alt="" style=" border:none; width:100%; max-width:9px;" border="0" /><img src="icon_folder_closed.png" alt="" style=" border:none; width:100%; max-width:16px;" border="0" />Uniform</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span>--<img src="arrow.png" alt="" style=" border:none; width:100%; max-width:9px;" border="0" /><img src="icon_folder_closed.png" alt="" style=" border:none; width:100%; max-width:16px;" border="0" /> Angry</span></p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">Or with animations, if you have:</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">WillowUniform_Angry_Idle_1</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">WillowUniform_Angry_Idle_2</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">WillowUniform_Angry_Idle_3</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">You can use <span style="font-style: italic;">{folder-1}{folder-2}_{expression}_Idle_{frame-num}</span> to automatically create:</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-family: Arial, sans-serif; font-weight: normal;"><img src="arrow.png" alt="" style=" border:none; width:100%; max-width:9px;" border="0" /><img src="icon_folder_closed.png" alt="" style=" border:none; width:100%; max-width:16px;" border="0" />Willow</span></p>
+<p style="font-family: Arial, sans-serif;"><span style="font-family: Arial, sans-serif;">-<img src="arrow.png" alt="" style=" border:none; width:100%; max-width:9px;" border="0" /><img src="icon_folder_closed.png" alt="" style=" border:none; width:100%; max-width:16px;" border="0" />Uniform</span></p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">--<img src="arrow.png" alt="" style=" border:none; width:100%; max-width:9px;" border="0" /><img src="icon_folder_closed.png" alt="" style=" border:none; width:100%; max-width:16px;" border="0" /> Angry -&gt; Containing all 3 idle-frames</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">You can also specify Animation Pattern like 0-1-2-1-0. This will automatically create idle-frame in that order.</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Make sure that Idle File Pattern box, and talking if you have one, is checked</span>. Otherwise the importer will not work.</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">If you don't have any animation frames for the expression</span>, simply erase the text "<span style="font-style: italic;">_{frame-num}</span>" from the pattern.</p>
+<p style="font-weight: normal; font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading">How to Use</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">For the sake of simplicity, we'll use the default one.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;">Name your image filenames based on this pattern: {folder-1}{folder-2}_{expression}_{frame-num}.<br />
+They must be imported through the <span style="font-weight: bold;"><img src="icon_resource_manager.png" alt="" style=" border:none; max-width:16px; width:100%;" border="0" /></span>Resource Manager first.<br />
+<img src="expressionimporter_1.jpg" alt="" style=" border:none; width:100%; max-width:552px;" border="0" /></p>
+</li>
+</ul>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-family: Arial, sans-serif;">To access the importer, <span style="font-weight: bold;">Tools -&gt; Script Agents -&gt; Default -&gt; Expression Importer</span></span></p>
+</li>
+<li style="margin-left: -20px;">
+<p>If it's unchecked, make sure that box for Idle File Pattern is ticked.<br />
+<img src="expressionimporter_2.jpg" alt="" style=" border:none; width:100%; max-width:338px;" border="0" /></p>
+</li>
+<li style="margin-left: -20px;">
+<p>Press the Images Box and select the images you want to be set in Character Expressions database.<br />
+Hold Shift<span style="font-family: Arial, sans-serif;">&#160;(<img src="Keyboard_White_Shift.png" alt="" style=" border:none; width:100%; max-width:39px;" border="0" />) to select multiple images.</span><br />
+<img src="expressionimporter_3.jpg" alt="" style=" border:none; width:100%; max-width:897px;" border="0" /></p>
+</li>
+<li style="margin-left: -20px;">
+<p>Your window should look like this. Then Press OK.<br />
+<img src="expressionimporter_4.jpg" alt="" style=" border:none; width:100%; max-width:702px;" border="0" /></p>
+</li>
+<li style="margin-left: -20px;">Press OK after this image appears.<br />
+<img src="expressionimporter_5.jpg" alt="" style=" border:none; width:100%; max-width:482px;" border="0" /></li>
+<li style="margin-left: -20px;">Open the Database and check the <span style="font-family: Arial, sans-serif; font-weight: bold;"><img src="icon_database_expressions.png" alt="" style=" border:none; width:100%; max-width:16px;" border="0" /></span><span style="font-family: Arial, sans-serif;">Character Expressions. Your character expression is now imported!</span></li>
+</ul>
+<p style="font-family: Arial, sans-serif; margin-left: 0px;"><img src="expressionimporter_6.jpg" alt="" style=" border:none; width:100%; max-width:865px;" border="0" /></p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+</body>
+</html>

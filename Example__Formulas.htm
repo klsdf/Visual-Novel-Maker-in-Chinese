@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Example: Formulas</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "5.3.1.0_7";
+</script>
+ <meta name="topic-breadcrumbs" content="Script and Plugin Reference > In-Game UI Documentation > Getting Started" />
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+ <p class="Topic_Heading"><span style="font-family: 'Book Antiqua', serif; font-size: 24pt;">Example: Formulas</span></p>
+</div>
+<p>&#160;</p>
+<p><span class="Topic_Start">W</span>ith formulas you are getting a lot more control about data compared to regular data-bindings. Basically, formulas are just anonymous functions defined for a control and executed under specific conditions. Let's take a look at Layout_CGGalleryEntry:</p>
+<p>&#160;</p>
+<p><span class="Code">{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"type": "ui.FreeLayout",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"orientation": "vertical",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"preload": {</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"graphics": [</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{ "path": ($ -&gt; [$tempFields.selectedImage]), "image": ($ -&gt; o)},</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{ "path": ["locked"], "image": ($ -&gt; o)}</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;},</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"frame": [0, 0, Graphics.width, Graphics.height],</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"controls": [</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"type": "ui.Image",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"frame": [0, 0],</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span><span class="Code" style="font-weight: bold;">"formulas": [$ -&gt; o.image = $tempFields.selectedImage],</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"action": { "name": "executeFormulas", "params": [$ -&gt; $backButton.visible = !$backButton.visible] }</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"type": "ui.Button",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"id": "backButton",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"params": { "text": { "lcId": "B0FD4BF121D9E44E7589CDD35869F86F2227", "defaultText": "Back" }, "action": { "name": "previousLayout" } },</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"frame": [Graphics.width - 170, Graphics.height - 65, 150, 45],</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"order": 1</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;]</span></p>
+<p><span class="Code">}</span></p>
+<p>&#160;</p>
+<p>As we can see, formulas are defined using the formulas-property, which is an array taking multiple formulas an executes then synchronously one after another. In this example, the formula set the object's image property to $tempFields.selectedImage which contains the name of the image selected in CGGallery to display it full-size. While this case could also be solved with a regular data bindings, more complex cases cannot. Also, formulas a faster then regular data bindings.</p>
+<p>&#160;</p>
+<p>A formula is defined using the $ symbol which is actually nothing more than a shortcut for:</p>
+<p>&#160;</p>
+<p><span class="Code">new ui.Formula( &lt;function&gt; )</span></p>
+<p>&#160;</p>
+<p>However, its recommended using the $-function which is defines as:</p>
+<p>&#160;</p>
+<p>window.$ = (f, data, event) -&gt; new ui.Formula(f, data || null, event || null)</p>
+<p>&#160;</p>
+<p>While f-parameter is the function executed, the other two parameters are optional. Check out the <a href="igui_doc/index.html">In Game UI API Reference</a> for more information. You will also see that formulas can used in other places than the formulas-property.</p>
+<p>&#160;</p>
+<p>However, one question now is why data-bindings still exist if formulas are more powerful and faster? Well, data bindings are easier to understand for a beginner and there are cases which cannot be solved in a comfortable way using formulas. One example is the basic-animation "changeTo" we have used in the animations example. It takes a binding-expression instead of a formula and the animation is able to read and write to that field(check out ui.Component_BindingHandler). If we specify a formula here, it would be necessary to define two formulas: One for reading the value, one for writing the value. With a data-binding, we can just specify a field-name and done, which makes it more easy to use especially for beginners.</p>
+</body>
+</html>

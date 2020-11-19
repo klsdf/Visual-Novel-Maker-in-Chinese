@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Learning about Switches and Variables</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "3.1.0_6";
+</script>
+ <meta name="topic-breadcrumbs" content="Beginner's Guide > The Basic Foundation" />
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+ <p class="Topic_Heading">Learning about Switches and Variables</p>
+</div>
+<p>&#160;</p>
+<p><span class="Topic_Start">I</span>n this page, we'll be teaching you about one of the fundamental commands for game development. Switches and Variables.</p>
+<p>&#160;</p>
+<p style="text-align: center;"><img src="Metisnotes6_en.png" alt="" style=" border:none; width:100%; max-width:465px;" border="0" /></p>
+<p>&#160;</p>
+<p class="Sub_Heading">What is a Switch?</p>
+<p><a href="Basic.htm#Switch">Switches</a> are similar to light switches that we use in the real life. They are basically variables that can only return two values, true (ON) or false (OFF). What happens when a Switch is ON or OFF depends on what you want them to do.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li>It can be used if a player already checked an area or item and give a different response.</li>
+<li>They can be used in parallel and be used to execute commands.</li>
+</ul>
+<p>&#160;</p>
+<p class="Sub_Heading">What are Variables?</p>
+<p>Variables are containers that store values and information. There's no limitation to what kind of information you can store in a Variable unlike Switches. There are two different types: <a href="Basic.htm#Number_Variable">Number</a> and <a href="Basic.htm#Text_Variable">Text</a> variables.</p>
+<p>&#160;</p>
+<p>It's important to remember that Number variables can only store integers, meaning you cannot input double or float digits (ex. 1.05). This also means you cannot input anything that isn't a number. Meanwhile, Text variables stores strings. This means you can put anything to it and it's considered as just plain text.</p>
+<p>&#160;</p>
+<p class="SubSubHeading">What are uses for Number Variables?</p>
+<p>Here are some examples where you can use number variables:</p>
+<ul style="list-style: disc;">
+<li>Currency</li>
+<li>Debugging</li>
+<li>Displaying values on screen like stats.</li>
+<li>Affection Points for each character.</li>
+<li>Passwords that uses numbers only.</li>
+</ul>
+<p>&#160;</p>
+<p class="SubSubHeading">What are uses for Text Variables?</p>
+<p>Here are some examples where you can use text variables:</p>
+<ul style="list-style: disc;">
+<li>Text Passwords</li>
+<li>Returning true/false values for debugging.</li>
+<li>Store and/or Display letters or words based on player input.</li>
+<li>Display the names of the characters talking on screen.</li>
+</ul>
+<p>&#160;</p>
+<p>It is important to note that Switches and Variables can also contain Game Data, like what language is the game currently on, and there are many uses for them.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">What are the differences between Local, Global and Persistent?</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">Visual Novel Maker allows you to control three types of Switches and Variables: <span style="font-weight: bold;"></span>Local, Global and Persistent. <span style="font-weight: bold;"></span></p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<ul style="list-style: disc;">
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Local</span> is also known for another name, "Self." This means that those Variables and Switches only exist for that Scene or Event. You cannot access these variables or switches outside of that.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Global</span> means it can be used in any scene and can be referenced anytime. The values restart every time you start a New Game or in the case of Load Game, whatever is saved at that point in time.</p>
+</li>
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Persistent</span> means that it will hold the data independent from save games. They can be used anywhere.</p>
+</li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">For example, in RPGs we have Treasure Chests. <a href="Learning_about_Conditional_Branches.htm#Example__2:_Creating_a_Treasure_Chest">To create a Treasure chest</a>, what you would want to do is that once the player talks to it, it will activate a switch so when you talk to it again, it will say, "You already opened it!" Now, that chest is going to remain in that state forever. &#160;It would be silly to use a Global Switch for that when you could just use a Local Switch. This way, your Global Switch list won't get clogged up with useless one time only interactions. Global Switches and Variables should only be reserved for important bits of your game like flags or affection points.</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">What about Persistent Variables and Switches? Think of it as a way to store values where if the player unlocks extras like Developer Notes, New Game+ and so on without needing a save file.</p>
+<p>&#160;</p>
+<p>By themselves, they cannot do much except store information. They might seem intimidating at first, <a href="Learning_about_Conditional_Branches.htm">but once you try a few exercises</a>, you will quickly learn that they are your best friends. This is where <a href="Learning_about_Conditional_Branches.htm">Conditions</a> would be useful so make sure to read it!</p>
+</body>
+</html>

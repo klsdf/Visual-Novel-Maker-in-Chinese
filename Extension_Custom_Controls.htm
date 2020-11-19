@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Custom Controls</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "5.2.1.0_5";
+</script>
+ <meta name="topic-breadcrumbs" content="Script and Plugin Reference > Extension Documentation > Getting Started" />
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+ <p class="Topic_Heading"><span>Custom Controls</span></p>
+</div>
+<p><br />
+<span class="Topic_Start">T</span>o create database categories or custom views/windows, Visual Novel Maker already provides a powerful set of standard UI controls like Buttons, Check Boxes, Text Fields, Tables, etc. However, if you are developing a huge or very specific extension you maybe want to make an own UI control to give the user an easier and more efficient way to use your extension.</p>
+<p>&#160;</p>
+<p>In Visual Novel Maker, you can develop custom UI controls using <a href="http://www.cappuccino-project.org/learn/objective-j.html">Objective-J</a> files and the <a href="http://www.cappuccino-project.org">Cappuccino</a> + VN Maker Objective-J APIs. <span style="font-weight: bold; font-size: 18pt; font-family: 'Book Antiqua', serif;"><br /></span></p>
+<p class="Sub_Heading">Example: Slider Control</p>
+<p>To create a new custom UI control, just create a new Objective-J file. The name of the Objective-J file <span style="font-weight: bold;">must</span> match the name of the class definition. You can checkout the EXSliderItemView example in Extension Editor &gt; Scripts &gt; Custom Controls which is shipped out with Visual Novel Maker by default. It is an example how to implement a slider control.</p>
+<p>&#160;</p>
+<p>Don't hesitate to ask for help in our forums!</p>
+</body>
+</html>

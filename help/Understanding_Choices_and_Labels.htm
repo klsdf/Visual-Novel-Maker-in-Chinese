@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Understanding Choices and Labels</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "3.1.0_5";
+</script>
+ <meta name="topic-breadcrumbs" content="Beginner's Guide > The Basic Foundation" />
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+ <p class="Topic_Heading">Understanding Choices and Labels</p>
+</div>
+<p>&#160;</p>
+<p><span class="Topic_Start">I</span>n this page, we will teach you how to use choices and labels in Visual Novel Maker. <span style="font-family: Arial, sans-serif;">The Label is a command that allows you to bookmark a specific part of the scene and 'Jump' to it whenever you want to. Here is a quick demonstration on how to set up.<br />
+<img src="2017-01-30_13-10-13.jpg" alt="" style=" border:none; width:100%; max-width:725px;" border="0" /></span></p>
+<p>As you can see, we added a Label called, 'start' at the very beginning. After the Show Message, we added a Jump to Label command that goes back to 'start'. Because of this, the scene loops infinitely.</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Exercise</p>
+<p>Let's say that you want to keep asking a character loads of questions infinitely, here's how we will do it.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li>Let's add some elements from <a href="Making_your_first_scene.htm">Make your first scene</a>. Here's what we have:<br />
+<img src="2017-01-30_12-46-26.jpg" alt="" style=" border:none; width:100%; max-width:1001px;" border="0" /></li>
+<li>Click the <img src="MsgCmd.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" /><span style="font-weight: bold;"><a href="Message.htm">Message</a></span> Command and use <span style="font-weight: bold;"><a href="Message.htm#Add_Choice">Add Choice</a></span>. We need to keep adding Add Choice for each question we want for the character. By the end we'll add the Show Choices command. This is necessary for the choices to appear on the screen.<br />
+<img src="2017-01-30_12-52-44.jpg" alt="" style=" border:none; width:100%; max-width:1063px;" border="0" /><br />
+Notice how we have On Select it says Jump to -&gt; Label. Basically if the player picked (or selected) a choice it will trigger a Label. For now I named the label based on what kind of questions they are.</li>
+<li>Go back to <img src="BasicCmd.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" /><span style="font-weight: bold;">Basic</span> <span>commands and select Label or type it in the scene content.</span> &#160;Insert the label name's inside and they are case sensitive so be careful. You should have something like this:<br />
+<img src="image66.gif" alt="" style=" border:none; width:100%; max-width:1046px;" border="0" /></li>
+<li>Now let's insert the responses for each questions!</li>
+<li>Let's add a label named start just above all the Show Choices and then let's add <a href="Basic.htm#Jump_to_Label">Jump to Label</a> that redirects to that label at the end of each response. <span style="font-family: Arial, sans-serif;">It is necessary because it will play the rest of the labels and will stop once it reaches the end.</span></li>
+<li>By the end, we will have something like this:<br />
+<img src="2017-01-30_13-04-09.jpg" alt="" style=" border:none; width:100%; max-width:1060px;" border="0" /></li>
+</ul>
+<p>&#160;</p>
+<p>Now we have a simple scene that allows us to talk to Ace forever about himself!</p>
+<p>&#160;</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+</body>
+</html>

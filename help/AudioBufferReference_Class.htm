@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>AudioBufferReference Class</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "";
+</script>
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+ <h2 style="font-family: 'Book Antiqua', serif; margin-bottom: 7pt; font-size: 24pt;">AudioBufferReference Class</h2>
+<hr width="60%" align="left" />
+</div>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-family: 'Book Antiqua', serif; font-weight: bold; font-size: 18pt;">A</span>n audio buffer reference is a reference to an already existing audio buffer. It allows to play the audio buffer independent from other references.</p>
+<p style="font-family: Arial, sans-serif;">This is useful for sound-effects which are played very often and quickly at the same time.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-weight: bold; font-size: 18pt; font-family: 'Book Antiqua', serif;">Item Index</p>
+<hr width="60%" align="left" />
+<table style="border-collapse: separate; border-collapse: separate;" cellspacing="0" width="100%" border="1">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td colspan="2">
+<p style="text-align: center;"><span style="font-weight: bold;">Methods</span></p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; font-weight: bold;">dispose ()</p>
+</td>
+<td><span style="font-family: Arial, sans-serif;">Disposes the audio buffer reference and frees the resources/memory. Should be called if the reference is no longer needed. The associated audio buffer is not disposed.</span></td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; font-weight: bold;">play ()</p>
+</td>
+<td>Plays the audio buffer reference.</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; font-weight: bold;">stop ()</p>
+</td>
+<td>Stops the audio buffer reference.</td>
+</tr>
+</table>
+<p>&#160;</p>
+<table style="border-collapse: separate; border-collapse: separate;" cellspacing="0" width="100%" border="1">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td colspan="2">
+<p style="text-align: center;"><span style="font-weight: bold;">Properties</span></p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; font-family: Arial, sans-serif;"><span style="font-weight: bold;">audioBuffer</span> <span style="font-style: italic; font-size: 8pt;">[gs.AudioBuffer]</span></p>
+</td>
+<td><span style="font-family: Arial, sans-serif;">Reference to the audio-buffer.</span></td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; font-family: Arial, sans-serif;"><span style="font-weight: bold;">context</span> <span style="font-style: italic; font-size: 8pt;">[Object]</span></p>
+</td>
+<td><span style="font-family: Arial, sans-serif;">Reference to the audio-context.</span></td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; font-family: Arial, sans-serif;"><span style="font-weight: bold;">isPlaying</span> <span style="font-style: italic; font-size: 8pt;">[Boolean]</span></p>
+</td>
+<td><span style="font-family: Arial, sans-serif;">Indicates if the audio buffer is currently playing.</span></td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; font-family: Arial, sans-serif;"><span style="font-weight: bold;">playbackRate</span> <span style="font-style: italic; font-size: 8pt;">[Number]</span></p>
+</td>
+<td>
+<p>The play-back rate in percent.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; font-family: Arial, sans-serif;"><span style="font-weight: bold;">useAnalyser</span>&#160;<span style="font-style: italic; font-size: 8pt;">[Boolean]</span></p>
+</td>
+<td>
+<p>Indicates if the sound is analyzed in real-time to get data like the average-volume.</p>
+<p><span style="font-weight: bold;">Default:</span> false</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; font-family: Arial, sans-serif;"><span style="font-weight: bold;">volume</span> <span style="font-style: italic; font-size: 8pt;">[Number]</span></p>
+</td>
+<td>
+<p>The volume. Goes from 0 to 100.</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+</body>
+</html>

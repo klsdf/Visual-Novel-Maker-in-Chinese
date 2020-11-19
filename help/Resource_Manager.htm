@@ -1,0 +1,190 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Resource Manager</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.5_2";
+</script>
+ <meta name="topic-breadcrumbs" content="Exploring the Editor" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">Resource Manager</p>
+</div>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-family: 'Book Antiqua', serif; 
+												 font-weight: bold; font-size: 18pt;">V</span>isual 
+ Novel Maker allows you to import your own resources. Simply press the 
+ Resource Manager (<img src="icon_resource_manager.png" alt="" style=" border:none; width:100%; max-width:16px;" border="0" />) icon in <a href="The_Toolbar.htm">The 
+ Toolbar</a>.</p>
+<p style="font-family: Arial, sans-serif;">All resources must be managed 
+ in the Resource Manager. Resources can be imported (loaded into the project), 
+ exported (written to file), or deleted in this window.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><img src="resourcemanager-win2.jpg" alt="" style=" border:none; width:100%; max-width:836px;" border="0" /></p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="SubSubHeading">(1) Main Folders</p>
+<p>The folders containing all of the game files.</p>
+For more information on what file types are accepted, refer to the <a href="Resource_Standards.htm">Resource 
+ Standards</a>.<br />
+<br />
+
+<table style=" border-collapse:separate; width:100%; max-width:50.579%;" cellspacing="0" border="1">
+	<col style="width: 29.837%;" />
+	<col style="width: 70.163%;" />
+	<tr>
+		<td><span style="font-weight: bold;">Characters</span></td>
+		<td>Files used for Characters..</td>
+	</tr>
+	<tr>
+		<td><span style="font-weight: bold;">Backgrounds</span></td>
+		<td>Files used for Backgrounds..</td>
+	</tr>
+	<tr>
+		<td><span style="font-weight: bold;">Pictures</span></td>
+		<td>Files used for CGs, Animations, System, Picture and UI..</td>
+	</tr>
+	<tr>
+		<td><span style="font-weight: bold;">Icons</span></td>
+		<td>Files used for Icons like for language selection.</td>
+	</tr>
+	<tr>
+		<td><span style="font-weight: bold;">Masks</span></td>
+		<td>Files used for Masks.</td>
+	</tr>
+	<tr>
+		<td><p style="font-weight: bold;">Fonts</p></td>
+		<td>Files used for Fonts.</td>
+	</tr>
+	<tr>
+		<td><p style="font-weight: bold;">Music</p></td>
+		<td>Files used for Music.</td>
+	</tr>
+	<tr>
+		<td><p style="font-weight: bold;">Sounds</p></td>
+		<td>Files used for Sound Effects.</td>
+	</tr>
+	<tr>
+		<td><p style="font-weight: bold;">Live2D</p></td>
+		<td>Files used for Live2D.</td>
+	</tr>
+	<tr>
+		<td><p style="font-weight: bold;">Movies</p></td>
+		<td>Files used for Movie.</td>
+	</tr>
+</table>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="SubSubHeading">(2) Files</p>
+<p>The contents of each folder.</p>
+<p>&#160;</p>
+<p class="SubSubHeading">(3) Import</p>
+<p style="font-family: Arial, sans-serif;">Add a resource to the specified 
+ folder. Importing resources does not require a prefix or suffix.</p>
+<ul style="list-style: disc;">
+	<li><span style="font-family: Arial, sans-serif; font-weight: bold;">Prefix</span> 
+	 <span style="font-family: Arial, sans-serif;">- adds a specified keyword 
+	 at the beginning of the filename of an imported resource.</span></li>
+	<li><span style="font-family: Arial, sans-serif; font-weight: bold;">Suffix</span> 
+	 <span style="font-family: Arial, sans-serif;">- adds a specified keyword 
+	 at the end of the filename&#160;of an imported resource.</span></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="SubSubHeading">(4) Export</p>
+<p>Make a copy of the selected file and save it to another location.</p>
+<p style="font-family: Arial, sans-serif;">You cannot export a folder and 
+ they are ignored by default. You must select files to be exported.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="SubSubHeading">(5) Delete</p>
+<p>Deletes the selected resource..</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="SubSubHeading">(6) DLC</p>
+<p><span style="font-family: Arial, sans-serif; font-weight: normal;">Imports 
+ a resource directly from the DLC folder.</span></p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="SubSubHeading">(7) Check out latest DLCs</p>
+<p>Opens the Steam store page for Visual Novel Maker DLCs.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="SubSubHeading">(8) Preview Window</p>
+<p style="font-family: Arial, sans-serif;">A small preview window to display 
+ the contents of the file selected. You can double-click it to get an original 
+ size preview of the selected image.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Context Menu</p>
+<p style="font-family: Arial, sans-serif;">You can create new logical groups 
+ as well as rename resources via context menu.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="SubSubHeading">New Group</p>
+<p style="font-family: Arial, sans-serif;">Creates a new logical group 
+ with the specified name. A group is only a logical element for organization 
+ purposes, it is not a physical folder on disk which is why you cannot 
+ have two or more resources with the same name even if they are in different 
+ groups.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="SubSubHeading">Delete</p>
+<p>Deletes the selected resource.</p>
+<p>&#160;</p>
+<p class="SubSubHeading">Properties</p>
+<p>Opens the properties of the currently selected resource which allows 
+ you to change the name of the resource.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li><span style="font-weight: bold;">Name</span><span>&#160;- The file 
+	 name of the resource. You can change the name of a resource anytime.</span></li>
+	<li><span style="font-weight: bold;">Rename All References</span><span> 
+	 - If checked, VN Maker will walk through all your scenes and database 
+	 records and tries to automatically find and rename/correct all places 
+	 where the resource has been used to match with the new file name. 
+	 However, there are special cases which are not covered such as text 
+	 variables and scripts. You can check the Debug Console in case of 
+	 errors or unexpected results.</span></li>
+</ul>
+</body>
+</html>

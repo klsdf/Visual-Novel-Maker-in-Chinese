@@ -1,0 +1,1 @@
+gXMLBuffer ="<?xml version=\"1.0\" encoding=\"utf-8\" ?><data  src=\"toc11.js\"  name=\"Non-Linear Stories\"><item name=\"Branching Story Paths\" url=\"Preparing_a_Plot_Outline.htm\" /><item name=\"Conditional Choices\" url=\"Conditional_Choices.htm\" /></data>";

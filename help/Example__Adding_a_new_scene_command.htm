@@ -1,0 +1,202 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Example: Adding a new scene command</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "5.2.1.1.0_2";
+</script>
+ <meta name="topic-breadcrumbs" content="Script and Plugin Reference > Extension Documentation > Getting Started > Examples" />
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+ <p class="Topic_Heading"><span style="font-family: 'Book Antiqua', serif; font-size: 24pt;">Example: Adding a new Scene Command</span></p>
+</div>
+<p>&#160;</p>
+<p><span class="Topic_Start">V</span>isual Novel Maker comes with a lot of useful built-in commands to easily create own visual novels. However, in special situations depending on the complexity of the visual novel the built-in commands are maybe not enough or it is necessary to modify them.</p>
+<p>&#160;</p>
+<p>In this example we want to add a new scene command allowing us to display a card from the"Adding a new database category " example on screen. To do that, lets open the Extension Editor through the menu under View &gt; Extension.</p>
+<p>&#160;</p>
+<p>Next we will make a right-click on the"Scene Commands " folder and select New &gt; Scene Command to create a new scene command. We will call it "Show Card " since we want to show one of our cards on the screen. It already contains some basic JSON which looks like this:</p>
+<p>&#160;</p>
+<p><span class="Code">{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"id": "ext.ShowCard",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"group": "Custom",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"defaultValue": {},</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"quickItems": []</span></p>
+<p><span class="Code">}</span></p>
+<p>&#160;</p>
+<p>Lets go through the JSON step by step:</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">id</p>
+</li>
+</ul>
+<p>The unique identifier for the command. It can be any kind of text as long as it is unique. So you don’t need to follow any kind of format or syntax. However, the default syntax is &lt;module&gt;.&lt;name&gt; like commands which are more specific for visual novels using vn.&lt;name&gt; while more general commands are using gs.&lt;name&gt;. However, you shouldn’t use vn.&lt;name&gt; or gs.&lt;name&gt; to avoid confusion since they are only for built-in commands.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">group</p>
+</li>
+</ul>
+<p>The group/category where the new command should be added to. You can use any of the already existing categories or just define your own like "My Custom Commands ". In our case we are just using"Custom ".</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">defaultValue</p>
+</li>
+</ul>
+<p>The default values for the command if the command is new created like if the users drags a new command from the toolbox to scene content.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">quickItems</p>
+</li>
+</ul>
+<p>Contains a list of items. An item is a UI control which lets the user interact with the command to input number or text values or to select a value from a drop-down menu.</p>
+<p>&#160;</p>
+<p>For a full list of possible fields for scene commands just take a look at the <a href="plugin_doc/index.html">Plugin API Reference</a>.</p>
+<p>&#160;</p>
+<p>Before we can design the UI for our command we have think about what exactly the command should do and which data we need for that. In our example we need two things: The card and the position on screen where the card should be displayed. Lets implement the UI for that next:</p>
+<p>&#160;</p>
+<p><span class="Code">"quickItems": [</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"type": "GSQDataRecordField",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"attribute": "cardId",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"dataSource":"cards",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"label": "Card",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"valueFormula": "return fmtRecord('cards', p.cardId);",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"variableButton": { "dataSource": "numbers" }</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;},</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"type": "GSQStepper",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"attribute": "position.x",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"valueFormula": "return fmtNumVar(p.position.x);",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"label": "X",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"variableButton": { "dataSource": "numbers" },</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"minimum": -GS.CONST.MAX_NUMBER_VALUE,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"maximum": GS.CONST.MAX_NUMBER_VALUE</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;},</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"type": "GSQStepper",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"attribute": "position.y",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"valueFormula": "return fmtNumVar(p.position.y);",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"label": "Y",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"variableButton": { "dataSource": "numbers" },</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"minimum": -GS.CONST.MAX_NUMBER_VALUE,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"maximum": GS.CONST.MAX_NUMBER_VALUE</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;}</span></p>
+<p><span class="Code">]</span></p>
+<p>&#160;</p>
+<p>As we can see we added three items to our command. One popup-control to select the card to display and two number fields to select the position. Lets take a deeper look at the fields of each item. Each item can have a few general fields which are available for each type of item but also some type specific fields. Lets start with the general fields used in that example:</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">type (Required)</p>
+</li>
+</ul>
+<p>Indicates the type of the item like if its a popup-field, a number-field, etc. The type must be present.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">attribute</p>
+</li>
+</ul>
+<p>The backend JavaScript attribute name where the item will store its data. You can access the data later via script using that name. The name should be unique for the command to avoid collisions.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">valueFormula</p>
+</li>
+</ul>
+<p>A JavaScript formula to calculate the displayed text for the control. We are using the fmtXXX functions here which automatically doing the most work for us. Like fmtRecord automatically return the display text for a specified record and fmtNumVar return the display text for a value which can be calculated by variable. For more info check the <a href="plugin_doc/index.html">Plugin API Reference</a>.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">label</p>
+</li>
+</ul>
+<p>The label/description of the field displayed to the user.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">variableButton</p>
+</li>
+</ul>
+<p>Indicates that the value can be calculated by a variable as well. With "dataSource " you can specify which type of variables should be used. Since all our fields storing number values internally we are using"numbers " for number-variables.</p>
+<p>&#160;</p>
+<p>Now lets take a look at the type specific fields used in this example:</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">dataSource</p>
+</li>
+</ul>
+<p>Used in our data-record field to define the data-source to take the data records from. That is the name specified in the data record view’s category/attribute field. So we are using"cards " here to access our cards. Internally our cards are stored as numbers.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">minimum</p>
+</li>
+</ul>
+<p>The minimum value for our number-fields. We are using a global constant GS.CONST.MAX_NUMBER_VALUE here to allow the max negative number value.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">maximum</p>
+</li>
+</ul>
+<p>The maximum value for our number-fields. We are using a global constant GS.CONST.MAX_NUMBER_VALUE here to allow the max number value.</p>
+<p>&#160;</p>
+<p>Lets click on the"Preview " button next to see an interactive preview of our command to check if the UI looks right.</p>
+<p>&#160;</p>
+<p>Thats it! We are done on the editor-side! We just need to save our project and restart Visual Novel Maker to see our changes. If we open a scene and go to the command toolbox we can see a new category"Custom " there containing our new command which is ready to use!</p>
+</body>
+</html>

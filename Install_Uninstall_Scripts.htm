@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Install/Uninstall Scripts</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "5.2.1.0_2";
+</script>
+ <meta name="topic-breadcrumbs" content="Script and Plugin Reference > Extension Documentation > Getting Started" />
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+ <p class="Topic_Heading"><span>Install/Uninstall Scripts</span></p>
+</div>
+<p><br />
+<span class="Topic_Start">T</span>o give you more control about how a plugin is installed or uninstalled, Visual Novel Maker supports install/uninstall scripts.</p>
+<p style="font-weight: bold; font-size: 18pt; font-family: 'Book Antiqua', serif;">&#160;</p>
+<p class="Sub_Heading">Install Scripts</p>
+<p>An install script allows you to modify existing documents during the installation of your extension. This can be useful if you made an update for your extension and need to migrate the already existing data from an older version of your extension.</p>
+<p>&#160;</p>
+<p>To create an install script, just go to Extension Editor and make a right-click on "Scripts" folders. From the context-menu select New &gt; JavaScript File and create a new script. You can also choose "Objective-J File" for more advanced operations. You can select that script then in Extension Composer. The script should be in the following format:</p>
+<p>&#160;</p>
+<p><span class="Code">{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;migrate: function(uid, document, version, extension ) {</span></p>
+<p><span class="Code">&#160;&#160;// Modify "document" if necessary</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;}</span></p>
+<p><span class="Code">}</span></p>
+<p>&#160;</p>
+<p>As we can see here, the install scripts to be define and return an object containing a migrate-function. That function takes 4 arguments:</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">uid - string</p>
+</li>
+</ul>
+<p>The UID of the document currently processed.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">document - Object</p>
+</li>
+</ul>
+<p>The data (items) of the document currently processed.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">version - string</p>
+</li>
+</ul>
+<p>The previous version of your extension which is currently installed. It is &lt;b&gt;null&lt;/b&gt; if there is no previous version of your extension.</p>
+<p style="font-weight: bold;">&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">extension</p>
+</li>
+</ul>
+<p>The data (items) of your extension: { name, id, version, author, website, description, license, installScript(UID), uninstallScript(UID), active }.</p>
+<p>&#160;</p>
+<p>The migrate-function is only executed on documents of type "data_record" and "vn.scene". It must return &lt;b&gt;true&lt;/b&gt; if the document was modified. Otherwise the changes will not be saved.</p>
+<p>&#160;</p>
+<p class="Sub_Heading"><span>Uninstall Scripts</span></p>
+<p>An uninstall script allows you to execute some clean-up code after your extension got uninstalled if necessary. To create an uninstall script, just go to Extension Editor and make a right-click on "Scripts" folders. From the context-menu select New &gt; JavaScript File and create a new script. You can also choose "Objective-J File" for more advanced operations. You can select that script then in Extension Composer. The script should be in the following format:</p>
+<p>&#160;</p>
+<p><span class="Code">{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;cleanUp: function(uid, document, version, extension ) {</span></p>
+<p><span class="Code">&#160;&#160;// Modify "document" if necessary</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;}</span></p>
+<p><span class="Code">}</span></p>
+<p>&#160;</p>
+<p>As we can see here, the uninstall script needs to define and return an object containing a cleanUp-function. That function takes 4 arguments:</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">uid - string</p>
+</li>
+</ul>
+<p>The UID of the document currently processed.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">document - Object</p>
+</li>
+</ul>
+<p>The data (items) of the document currently processed.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">version - string</p>
+</li>
+</ul>
+<p>The current version of your extension which is currently uninstalled.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">extension</p>
+</li>
+</ul>
+<p>The data (items) of your extension: { name, id, version, author, website, description, license, installScript(UID), uninstallScript(UID), active }.</p>
+<p>&#160;</p>
+<p>The cleanUp-function is only executed on documents of type "data_record" and "vn.scene". It must return &lt;b&gt;true&lt;/b&gt; if the document was modified. Otherwise the changes will not be saved.</p>
+<p>&#160;</p>
+<p class="Sub_Heading"><span>Installing Resources</span></p>
+<p>First of all, an extension should only install resources which are really necessary to use the extension without errors. An extension should not be abused as a resource-package or something in that direction. If an extension becomes to large in size because of lots of graphic and audio resources it will not be processed by Extension Manager.</p>
+<p>&#160;</p>
+<p>To install resources with your extension you need to export it first using Extension Composer. An extension is just a zip-folder so you can easily extract it. Next you need to create a new folder called "resources" in the root of your extension. In that folder you can copy all the resources you want to install. You need to put them into the right main-directories like "resources/Graphics/Characters" should contain all the character graphics you like to install. It is not possible to specify a logical sub-folder as install target.</p>
+<p>&#160;</p>
+<p><img src="InstallResources.png" alt="" style=" border:none; width:100%; max-width:399px;" border="0" /></p>
+<p>&#160;</p>
+<p>After you added all the resources to install, just zip the extension-folder again and thats it. If your extension gets uninstalled, all resources installed by your extension are deleted.</p>
+</body>
+</html>

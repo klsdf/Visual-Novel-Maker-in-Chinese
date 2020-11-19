@@ -1,0 +1,1 @@
+gXMLBuffer ="<?xml version=\"1.0\" encoding=\"utf-8\" ?><data  src=\"toc2.js\"  name=\"Homeview Screen\" url=\"Editor.htm\"><item name=\"Getting Started\" url=\"Creating_a_Project.htm\" /><item name=\"The Menu Bar\" url=\"The_Menu_Bar.htm\" /><item name=\"The Toolbar\" url=\"The_Toolbar.htm\" /><item name=\"Context Menu\" url=\"Context_Menu.htm\" /></data>";

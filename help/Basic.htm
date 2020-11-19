@@ -1,0 +1,693 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Basic</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.3.1.0_1";
+</script>
+ <meta name="topic-breadcrumbs" content="Exploring the Editor > Scene Editor > Scene Content Commands" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">Basic Commands</p>
+</div>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-family: 'Book Antiqua', serif; 
+												 font-weight: bold; font-size: 18pt;">T</span>he 
+ Basic commands are technical necessities in order to be flexible with 
+ your game.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Wait" id="Wait"></a>Wait</p>
+<p style="font-family: Arial, sans-serif;">Temporarily halts scene processing. 
+ Parallel running common events excluded.</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Duration</span> 
+	 - the duration before the next command executes. By default, the wait 
+	 time is calculated by milliseconds. (1 sec = 1000 ms)</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p>
+<p class="Sub_Heading"><a name="Wait_for_Input" id="Wait_for_Input"></a>Wait 
+ for Input</p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+	 mso-layout-grid-align: none; text-autospace: none;"><span style="line-height: normal; 
+	 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+	 mso-layout-grid-align: none; text-autospace: none;">Waits until a 
+ key/button is pressed/released.</span></p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">Key -</span> The key/button to wait for.</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">Is</span> - The key/button’s state to wait 
+	 for.</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">- Pressed</span> - Waits until the key/button 
+	 is pressed.</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">- Released</span> - Waits until they key/button 
+	 is released</p></li>
+</ul>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+	 mso-layout-grid-align: none; text-autospace: none;">&#160;</p>
+<p class="Sub_Heading"><a name="Comment" id="Comment"></a>Comment</p>
+<p style="font-family: Arial, sans-serif;">The Comment command is for users 
+ to create notes in their code. It doesn't run in-game and can be safely 
+ used in-between commands.</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">Note:</span> 
+ You can also use Right Arrow (<img src="Keyboard_White_Arrow_Right.png" alt="" style=" border:none; padding-bottom:-5px; width:100%; max-width:35px;" border="0" />) 
+ key to disable commands as long as they're not under commands that requires 
+ sub-commands to be tabbed. (ex. Condition)</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><span style="font-weight: bold; font-size: 18pt; 
+							 font-family: 'Book Antiqua', serif;"><a name="Switch" 
+	 id="Switch"></a>Switch</span></p>
+<p style="font-family: Arial, sans-serif;">A switch &#160;is used to hold 
+ an ON/OFF switch value. It can be a single switch or multiple switches. 
+ There are three scopes, Local, Global and Persistent.</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Target</span> 
+	 - There are two types, Switch or Range.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Switch</span> is for a single switch.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Range</span> is from Switch X <span style="font-style: italic;">to</span> 
+	 Switch Index Y.</p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Scope</span> 
+	 - The scope of the switches to modify.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Local</span> means it's exclusive for that 
+	 scene only.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Global</span> means it can be used in any 
+	 scene.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Persistent</span> means that it will hold 
+	 the data independent from save games. This is not usable if Target 
+	 is set to Range.</p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Value</span> 
+	 - These are functions to specify what kind of calculation will be 
+	 done to the switch(s).</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">OFF</span> - Turns off a switch.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">ON</span> - Turns on a switch.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">ON/OFF Trigger</span>- If the switch is 
+	 ON, it will be turned OFF and vice versa.</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><span style="font-weight: bold; font-size: 18pt; 
+							 font-family: 'Book Antiqua', serif;"><a name="Number_Variable" 
+	 id="Number_Variable"></a>Number Variable</span></p>
+<p style="font-family: Arial, sans-serif;">A number variable is used to 
+ hold a numeric value. It can be a single variable or multiple variables. 
+ There are three scopes, Local, Global and Persistent.</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Target</span> 
+	 - The target to modify. There are three targets.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Variable</span> is to modify a single variable</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Range</span> is to modify variables from 
+	 Variable Index X <span style="font-style: italic;">to</span> Variable 
+	 Index Y.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Reference</span> is also known as Pointers. 
+	 It will use the variable's value that is set in the selected variable 
+	 as the ID for the actual variable to set/get. &#160;</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Scope</span> 
+	 - The visibility/location/scope of the variable(s).</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Local</span> means it's exclusive for that 
+	 scene only.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Global</span> means it can be used in any 
+	 scene.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Persistent</span> means&#160;that it will 
+	 hold the data independent from save games. This is not usable if Target 
+	 is set to Range.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Operation</span> 
+	 - These are options to specify what kind of calculation will be done 
+	 to the variable(s).</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Set</span> - Assigns a numerical value 
+	 to the selected variable(s).</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Add</span> - Adds a numerical value to 
+	 the selected variable(s).</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Sub</span> - Subtracts a numerical value 
+	 to the selected variable(s).</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Mul</span> - Multiply a numerical value 
+	 to the selected variable(s).</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Div</span> - Divides a numerical value 
+	 to the selected variable(s).</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Mod</span> - Assigns the remainder calculated 
+	 by dividing the value of the pre-operation variable by the operand.</p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Source</span>- 
+	 The source value used for the operation.</p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Value</span> - A constant number value 
+	 or variable.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Random</span> - A random value which goes 
+	 From X To Y.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Reference</span> - Also known as Pointers. 
+	 It will use the variable's value that is set in the selected variable 
+	 as the ID for the actual variable to set/get. &#160;<br />
+	For more information, you can read about it in our <a href="Tips_and_Tricks.htm">Tips 
+	 and Tricks</a>.</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">Note:</span> 
+ To use a Variable for Value, press the [...] button.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading" style="font-family: 'Book Antiqua', serif;"><a name="Decimal_Variable" 
+	 id="Decimal_Variable"></a>Decimal Variable</p>
+<p style="font-family: Arial, sans-serif;">A decimal variable is the same 
+ as a number variable. It is used to hold a numeric value. It can be a 
+ single variable or multiple variables. There are three scopes, Local, 
+ Global and Persistent. It is <span style="font-weight: bold;">not</span> 
+ an additional variable type. The <a href="#Number_Variable">Number Variable</a> 
+ and Decimal Variable command operate on the <span style="font-weight: bold;">same</span> 
+ number variables.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">The only difference from <a 
+	 href="#Number_Variable">Number Variable</a> command is that this command 
+ allows you to control how the result is rounded and also allows you to 
+ input decimal/floating-point numbers. By default, the result is not rounded. 
+ With <a href="#Number_Variable">Number Variable</a> command, the result 
+ of a division is always rounded down and also you cannot enter decimal/floating-point 
+ values.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">In short: Decimal Variable command 
+ allows you to deal with decimal/floating-point numbers. It is <span style="font-weight: bold;">recommended</span> 
+ to use <a href="#Number_Variable">Number Variable</a> command if possible.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Target</span> 
+	 - The target to modify. There are three targets.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Variable</span> is to modify a single variable</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Range</span> is to modify variables from 
+	 Variable Index X <span style="font-style: italic;">to</span> Variable 
+	 Index Y.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Reference</span> is also known as Pointers. 
+	 It will use the variable's value that is set in the selected variable 
+	 as the ID for the actual variable to set/get. &#160;</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Scope</span> 
+	 - The visibility/location/scope of the variable(s).</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Local</span> means it's exclusive for that 
+	 scene only.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Global</span> means it can be used in any 
+	 scene.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Persistent</span> means&#160;that it will 
+	 hold the data independent from save games. This is not usable if Target 
+	 is set to Range.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Operation</span> 
+	 - These are options to specify what kind of calculation will be done 
+	 to the variable(s).</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Set</span> - Assigns a numerical value 
+	 to the selected variable(s).</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Add</span> - Adds a numerical value to 
+	 the selected variable(s).</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Sub</span> - Subtracts a numerical value 
+	 to the selected variable(s).</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Mul</span> - Multiply a numerical value 
+	 to the selected variable(s).</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Div</span> - Divides a numerical value 
+	 to the selected variable(s).</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Mod</span> - Assigns the remainder calculated 
+	 by dividing the value of the pre-operation variable by the operand.</p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Source</span>- 
+	 The source value used for the operation.</p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Value</span> - A constant number value 
+	 or variable.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Random</span> - A random value which goes 
+	 From X To Y.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Reference</span> - Also known as Pointers. 
+	 It will use the variable's value that is set in the selected variable 
+	 as the ID for the actual variable to set/get.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Round</span> 
+	 - Determines if and how the result will be rounded.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">No</span> - The result is not rounded.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Commercially</span> - The result is rounded 
+	 commercially.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Round Up</span> - The result is rounded 
+	 up.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Round Down</span> - The result is rounded 
+	 down.<br />
+	</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">Note:</span> 
+ To use a Variable for Value, press the [...] button.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Text_Variable" id="Text_Variable"></a>Text 
+ Variable</p>
+<p style="font-family: Arial, sans-serif;">A text variable is used to hold 
+ texts. It can be a single variable or multiple variables. There are three 
+ scopes, Local, Global and Persistent.</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Target</span> 
+	 - There are two targets, Text or Range.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Text</span> is to modify a single variable</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Range</span> is to modify variables &#160;<span 
+	 style="font-style: italic;">from</span> Variable Index X <span style="font-style: italic;">to</span> 
+	 Variable Index Y.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Text 
+	 or Scope</span> - The Visibility/Location/Scope of the variable(s) 
+	 to modify.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Local</span> means it's exclusive for that 
+	 scene only.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Global</span> means it can be used in any 
+	 scene.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Persistent</span> means&#160;that it will 
+	 hold the data independent from save games. This is not usable if Target 
+	 is set to Range.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Operation</span> 
+	 - These are options to specify what kind of calculation will be done 
+	 to the variable(s).</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Set</span> - Assign a text value to the 
+	 selected variable(s).</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Append</span> - Appends a text value to 
+	 the selected variable(s).</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">To Upper-Case</span> - Turn all text in 
+	 the selected variable(s) into uppercase (ex. VARIABLE).</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">To Lower-Case</span> - Turn all text in 
+	 the selected variable(s) into lowercase (ex. variable).</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">Note:</span> 
+ To use a Variable for Value, press the [...] button.</p>
+<p>&#160;</p>
+<p class="Sub_Heading"><a name="Reset_Variables" id="Reset_Variables"></a>Reset 
+ Variables</p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+	 mso-layout-grid-align: none; text-autospace: none;">Resets local, 
+ global and persistent variables. That is useful if you use a custom event/scene 
+ based In-Game UI and want to reset all variables like if the user starts 
+ a new game. Or if you have a puzzle/mini-game scene and want to reset 
+ all local variables for that scene to restart it.</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">Scope</span> - The variable scope to reset. 
+	 Only variables in that scope are affected.</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">Local</span> - Only the local variables 
+	 of a specified scene are affected.</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">All Locals</span> - All local variables 
+	 of all scenes/common-events are affected.</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">Globals</span> - All global variables are 
+	 affected.</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">Persistent</span> - All persistent variables 
+	 are affected. (You don't need to call Save Persistent Data command 
+	 after)</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">Scene</span> - The scene to reset all local 
+	 variables for. Only if <span style="font-weight: bold;">Local</span> 
+	 is selected as <span style="font-weight: bold;">Scope</span>.</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">Type</span> - The kind of variables to 
+	 reset</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">All</span> - Resets all kind of variables</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">Switch</span> - Resets all switches.</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">Number</span> - Resets all numbers.</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">Text</span> - Resets all texts.</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">List</span> - Resets all lists.</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">Target</span> - Determines if only a specified 
+	 variable id-range should be affected.</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">All</span> - All variables are affected</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">Range</span> - Only the specified range 
+	 of variables is affected.</p></li>
+</ul>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+	 mso-layout-grid-align: none; text-autospace: none;">&#160;</p>
+<p class="Sub_Heading"><span style="font-weight: bold; font-size: 18pt; 
+							 font-family: 'Book Antiqua', serif;"><a name="Label" 
+	 id="Label"></a>Label</span></p>
+<p style="font-family: Arial, sans-serif;">A Label is a marker, whose name 
+ is set by the user, that a scene can jump to. This is commonly used to 
+ call different outcomes in a single scene.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Jump_to_Label" id="Jump_to_Label"></a>Jump 
+ to Label</p>
+<p style="font-family: Arial, sans-serif;">Jump to Label is to move the 
+ scene progression to a label/marker you set.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Condition" id="Condition"></a>Condition</p>
+<p style="font-family: Arial, sans-serif;">This command allows users to 
+ create conditions to meet in order to execute a command.</p>
+<p style="font-family: Arial, sans-serif;">The commands must be set below 
+ the condition command and tabbed like so:</p>
+<p style="font-family: Arial, sans-serif;"><img src="21.jpg" alt="" style=" border:none; width:100%; max-width:808px;" border="0" /></p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">If</span> 
+	 - Set a variable type for the condition to check for execution.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Number</span> is for checking number variables.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Switch</span> is for checking switches.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Text</span> is for checking text variables.</p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Variable</span> 
+	 - The variable that the condition will check.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Is</span> 
+	 - This checks whether the If Variable and the Value are at a certain 
+	 value.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Equal to (=)</span> means that the If Variable 
+	 and the Value variable holds the same content.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Not Equal&#160;to</span> (<span style="font-weight: bold;">!=</span>) 
+	 means that as long as If Variable and Value don't contain the same 
+	 content, the condition will not trigger.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Greater than (&gt;)</span> means that as 
+	 long as the If Variable is greater than the Value, it will trigger 
+	 the condition.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">Greater 
+	 or equal to (&gt;=) <span style="font-weight: normal;">means that 
+	 as long as the If Variable is greater than or equal to the Value's 
+	 content, the condition will trigger.</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">Less 
+	 than (&lt;) <span style="font-weight: normal;">means that as long 
+	 as the If Variable is less than the Value, it will trigger the condition.</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">Less 
+	 or equal to (&gt;=) <span style="font-weight: normal;">means that 
+	 as long as the If Variable is less than or equal to the Value's content, 
+	 the condition will trigger.</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">Value <span 
+	 style="font-weight: normal;">- The trigger for the Condition to fire 
+	 off.</span><br />
+	Note: <span style="font-weight: normal;">To use a Variable for Value, 
+	 press the [...] button.</span></p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">If you want to add commands 
+ under a condition, it can be accomplished in multiple ways:</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<ol style="list-style: decimal;">
+	<li style="font-family: Arial, sans-serif; margin-left: -20px;"><p 
+		 style="font-family: Arial, sans-serif; font-weight: normal;">If 
+	 the Condition command is selected, if you press a new command, it 
+	 will automatically added beneath it as tabbed.</p></li>
+	<li style="font-family: Arial, sans-serif; margin-left: -20px;"><p 
+		 style="font-family: Arial, sans-serif; font-weight: normal;">If 
+	 you drag a command under a condition, it will appear as tabbed.</p></li>
+	<li style="font-family: Arial, sans-serif; margin-left: -20px;"><p 
+		 style="font-family: Arial, sans-serif; font-weight: normal;">You 
+	 can press the Right Arrow (<img src="Keyboard_White_Arrow_Right.png" alt="" style=" border:none; padding-bottom:-5px; width:100%; max-width:35px;" border="0" />) 
+	 key to put a command under a Condition.</p></li>
+</ol>
+<p style="font-family: Arial, sans-serif;">To remove a command from a Condition 
+ without deleting the commands, just press the Left Arrow(<img src="Keyboard_White_Arrow_Left.png" alt="" style=" border:none; padding-bottom:-5px; width:100%; max-width:35px;" border="0" />) key.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">Note:</span> 
+ It is important to note that if a command is not tabbed inside a Condition, 
+ it is considered that the Condition ended and any tabbed commands after 
+ it is treated like a <a href="#Comment">Comment</a>.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Else" id="Else"></a>Else</p>
+<p style="font-family: Arial, sans-serif;">This command allows a condition 
+ to give a different outcome if its initial conditions aren't met.</p>
+<p style="font-family: Arial, sans-serif;">This is useful if you have branching 
+ conditions. Such example scenario is:</p>
+<p style="font-family: Arial, sans-serif;"><img src="22.jpg" alt="" style=" border:none; width:100%; max-width:856px;" border="0" /></p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Else_If" id="Else_If"></a>Else If</p>
+<p style="font-family: Arial, sans-serif;">This command allows the user 
+ to create another set of conditions if the initial requirements aren't 
+ met.</p>
+<p style="font-family: Arial, sans-serif;">This is to avoid the previous 
+ condition to trigger if both conditions are triggered for any reason.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Check_Switch" id="Check_Switch"></a>Check 
+ Switch</p>
+<p style="font-family: Arial, sans-serif;">This command checks if a Switch 
+ is ON/OFF, similar to <a href="#Condition">Condition</a>, then jumps to 
+ a Label.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Check_Number" id="Check_Number"></a>Check 
+ Number</p>
+<p style="font-family: Arial, sans-serif;">This command checks if a Number 
+ Variable is at a certain value, similar to <a href="#Condition">Condition</a>, 
+ then jumps to a Label.</p>
+<p>&#160;</p>
+<p class="Sub_Heading"><a name="Check_Text" id="Check_Text"></a>Check Text</p>
+<p style="font-family: Arial, sans-serif;">This command checks if a Text 
+ Variable is at a certain value, similar to <a href="#Condition">Condition</a>, 
+ then jumps to a Label.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><span style="font-weight: bold; font-size: 18pt; 
+							 font-family: 'Book Antiqua', serif;"><a name="Loop" 
+	 id="Loop"></a>Loop</span></p>
+<p style="font-family: Arial, sans-serif;">The commands set inside a Loop 
+ command run repeatedly. Multiple loops are also possible within loop processing.</p>
+<p style="font-family: Arial, sans-serif;">The commands inside a Loop are 
+ executed infinitely. To disable the loop, you must use the event command 
+ <a href="#Break_Loop">Break Loop</a>.</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">Note:</span> 
+ Here is an example of how you can use a loop.</p>
+<p style="font-family: Arial, sans-serif;"><img src="18.jpg" alt="" style=" border:none; width:100%; max-width:856px;" border="0" /></p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><span style="font-weight: bold; font-size: 18pt; 
+							 font-family: 'Book Antiqua', serif;"><a name="Break_Loop" 
+	 id="Break_Loop"></a>Break Loop</span></p>
+<p style="font-family: Arial, sans-serif;">Stops a loop.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Start_Timer" id="Start_Timer"></a>Start 
+ Timer</p>
+<p>Start timer has no visual effect on screen but allows you to call a 
+ common event or to jump to a label if the timer runs out. All timers are 
+ bound to the current scene. So if you change to another scenes, all your 
+ timers are no longer valid.</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Number</span> 
+	 - This is the Index (ID) of the timer to start. If you have another 
+	 timer with a different ID, it will be a separate timer.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Interval</span> 
+	 - &#160;The interval length of the timer. For Example: If 500ms, the 
+	 timer is triggered every 500ms.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Action</span> 
+	 - This sets what should happen if the timer's interval is over.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Jump To</span> jumps to a label.</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Call</span> calls a Common Event.</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Pause_Timer" id="Pause_Timer"></a>Pause 
+ Timer</p>
+<p>Pauses a timer immediately..</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Number</span> 
+	 - This is the Index (ID) of the timer that you want to pause.</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Resume_Timer" id="Resume_Timer"></a>Resume 
+ Timer</p>
+<p>Resumes a timer immediately..</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Number</span> 
+	 - This is the Index (ID) of the timer that you want to resume.</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Stop_Timer" id="Stop_Timer"></a>Stop Timer</p>
+<p>Stops a timer immediately..</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Number</span> 
+	 - This is the Index (ID) of the timer that you want to stop.</p></li>
+</ul>
+<p>&#160;</p>
+<p class="Sub_Heading"><a name="Idle" id="Idle"></a>Idle</p>
+<p style="font-family: Arial, sans-serif;">Idle pauses the scene or common 
+ event processing, depending where the command is used. This is useful 
+ if you need certain commands to not play out for certain scenes.</p>
+<p style="font-family: Arial, sans-serif;">For more information, you can 
+ read about it in our <a href="Tips_and_Tricks.htm">Tips and Tricks</a>.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Script" id="Script"></a>Script</p>
+<p style="font-family: Arial, sans-serif;">A script is to call a command 
+ line that the user has set inside the command. This is intended for advanced 
+ users.</p>
+</body>
+</html>

@@ -1,0 +1,1 @@
+gXMLBuffer="<?xml version=\"1.0\" encoding=\"UTF-8\"?><cki><ck fm=\"Adding Chapters and Scenes\" to=\"Engine Getting Started\" num=\"49\"/><ck fm=\"Environment Variables\" to=\"Install/Uninstall Scripts\" num=\"43\"/><ck fm=\"Language Configuration\" to=\"System Commands\" num=\"49\"/><ck fm=\"Templates\" to=\"Atmosphere and Effects\" num=\"18\"/></cki>";

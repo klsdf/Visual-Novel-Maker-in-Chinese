@@ -1,0 +1,194 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Resource Management</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<link rel="stylesheet" href="highlight/styles/default.css" type="text/css" />
+<script src="highlight/highlight.pack.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+//<![CDATA[
+hljs.initHighlightingOnLoad();
+//]]>
+</script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "4.1.0_2";
+</script>
+ <meta name="topic-breadcrumbs" content="Scripter's Guide > Basic Engine" />
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<p class="Topic_Heading">Data &amp; Resource Management</p>
+<p>&#160;</p>
+<p><span class="Topic_Start">A</span>ll resources, which are stored in the resources folder of the game, are managed by gs.ResourceManager. The game data, such as scenes, characters, etc. which are stored in the game`s data folder, are managed by gs.DataManager.</p>
+<p>&#160;</p>
+<p>gs.ResourceManager and gs.DataManager provide easy to use functions to load, free and cache resources and game data.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Resource Contexts</p>
+<p>&#160;</p>
+<p>If resources are requested and loaded by gs.ResourceManager, they are automatically bound to the current resource context which is the system context by default. All resources bound to the system context are not freed, means they are taking memory until the game closes.</p>
+<p>&#160;</p>
+<p>It is recommended to create an own resource context for each scene and free all resources at the end of a scene to avoid high memory usage of the game. We skipped that part in our first examples to keep things as simple as possible. However, let`s take our picture example from the <a href="Display_a_Picture.htm">Display a Picture</a> chapter and modify it so that it uses an own resource context instead of the system context.</p>
+<p>&#160;</p>
+<pre>
+<code class="coffee">
+###*
+* A test bed scene behavior. Here you can play around with Visual Novel Maker's 
+* game engine to get a better feeling for everything.
+###
+constructor: -&gt;
+    super
+    # Define instance variable to store resource context.
+    @resourceContext = null
+###*
+* Initializes the scene. 
+###
+initialize: -&gt;
+    super
+    
+    # Create a new resource context
+    @resourceContext = ResourceManager.createContext()
+    
+    # Set it as the current resource context
+    ResourceManager.context = @resourceContext</code>
+</pre>
+<p>&#160;</p>
+<p>That is all we need to do, we only need to change our constructor and initialize method a little bit to create and assign a new resource context. A resource context is represented by gs.ResourceContext class, but it is recommended to use ResourceManager.createContext method instead of creating a gs.ResourceContext object directly.</p>
+<p>&#160;</p>
+<p>Our loaded picture, represented as a gs.Bitmap object, is now bound to our own context and if we move to another scene, the memory taken by our bitmap object is freed.</p>
+<p>&#160;</p>
+<p>That all happens automatically, in regular cases there are no additional steps needed.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Documents</p>
+<p>&#160;</p>
+<p>Documents are all the files stored in the data folder of your game like scenes, characters, etc. They are stored as .json or .json.js files and can be easily loaded and accessed via gs.DataManager class.</p>
+<pre>
+<code class="coffee">
+# ===================================================================
+#
+#   Script: Component_TestBedBehavior
+#
+#   Put your name here
+#
+# ===================================================================
+class Component_TestBedBehavior extends gs.Component_SceneBehavior
+    ###*
+    * A test bed scene behavior. Here you can play around with Visual Novel Maker's 
+    * game engine to get a better feeling for everything.
+    ###
+    constructor: -&gt;
+        super
+        
+        # Define resource context property
+        @resourceContext = null
+    
+    ###*
+    * Initializes the scene. 
+    ###
+    initialize: -&gt;
+        super
+        
+        # Create a new resource context
+        @resourceContext = ResourceManager.createContext()
+        # Set current object manager
+        gs.ObjectManager.current = SceneManager
+        # Set it as the current resource context
+        ResourceManager.context = @resourceContext
+        # Load all scene documents
+        @scenes = DataManager.getDocumentsByType("vn.scene")
+        
+    ###*
+    * Disposes the scene.
+    ###  
+    dispose: -&gt;
+        super
+    
+    ###*
+    * Prepares all visual game object for the scene.
+    ###  
+    prepareVisual: -&gt;
+        # Start Screen Transition
+        @transition()
+        
+    ###*
+    * Prepares all data for the scene and loads the necessary graphic and audio resources.
+    ### 
+    prepareData: -&gt;
+        # Iterate over all scenes and print out name + number of commands.
+        for scene in @scenes
+            # Print out scene name + number of commands
+            console.log("The scene '#{scene.items.name}' contains #{scene.items.commands.length} commands.")
+        
+    ###*
+    * Update the scene's content.
+    ###         
+    updateContent: -&gt;
+        
+gs.Component_LayoutSceneBehavior = Component_TestBedBehavior</code>
+</pre>
+<p>The above example loads all documents of type "vn.scene" and then prints out their names and the number of commands per scene. The overall process is very similar to resources: If the document is not in cache, the getDocumentByUid method returns an unloaded document object. It only contains its UID and summary-fields such as the name. For more info about how VN Maker manages data, read the <a href="Data_Getting_Started.htm">Document Managament System</a> topic.</p>
+<p>&#160;</p>
+<p>If prepareData is called, all requested documents are loaded and our unloaded document object automatically turns into a loaded document object containing all fields. All necessary documents for a scene are usually loaded in the initialize method of the scene-behavior. But If you load additional documents in prepareData then prepareData will be just called again after that documents finished loading.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Summary</p>
+<p>&#160;</p>
+<p>To summarize everything again:</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li>Resources are stored in resources folder and Documents are stored in data folder.</li>
+<li>Resources are managed by gs.ResourceManager and Documents are managed by gs.DataManager</li>
+<li>Documents are usually loaded in initialize method of the scene-behavior. The prepareData method is called when all requested documents are loaded.</li>
+<li>Resources are usually loaded in prepareData method of the scene-behavior. The prepareVisual method is called when all requested resources are loaded.</li>
+<li>Additional documents can be loaded in prepareData, in that case prepareData is called again.</li>
+<li>If a document is not loaded yet, an unloaded document object is returned.</li>
+<li>If a resource is not loaded yet, an unloaded resource object is returned.</li>
+</ul>
+<p>&#160;</p>
+<p>&#160;</p>
+</body>
+</html>

@@ -1,0 +1,4 @@
+(function() {
+var toc =  [{"type":"item","name":"Example: Adding a new database category","url":"Example__Adding_a_new_database_category.htm"},{"type":"item","name":"Example: Adding a new scene command","url":"Example__Adding_a_new_scene_command.htm"},{"type":"item","name":"Example: Implementing a new command on script-side","url":"Example__Implementing_a_new_command_on_script-side.htm"},{"type":"item","name":"Example: Create a Language Bundle","url":"Example_Create_a_Language_Bundle.htm"},{"type":"item","name":"Example: Create an Extension","url":"Example_Create_an_Extension.htm"}];
+window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });
+})();

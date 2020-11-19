@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>In-Game UI</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "4.2.0_4";
+</script>
+ <meta name="topic-breadcrumbs" content="Scripter's Guide > VN Engine" />
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<p class="Topic_Heading">In-Game UI</p>
+<p>&#160;</p>
+<p><span style="font-weight: bold;">NOTE:</span> This topic will not explain how to make your own In-Game UI or how to modify the existing one. If you are looking for a tutorial about that, please check out <a href="IGUI_Getting_Started.htm">IGUI Getting Started</a> guide and also take a look at the <a href="Beginner_s_Guide.htm">Beginner's Guide</a>.</p>
+<p>&#160;</p>
+<p>In this topic we will take a look at how VN Maker's In-Game UI was built from the technical side to give you the necessary information for in-depth modifcations.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">UI Objects</p>
+<p>&#160;</p>
+<p>VN Maker's In-Game UI is a collection of game objects in ui-namespace such as ui.Object_Text to display a text-label, ui.Object_Image to display an image or ui.Object_Frame to display a frame. It also contains a set of layout objects such as ui.Object_StackLayout or ui.Object_GridLayout. Such layout objects are used to make it easier to position UI elements on screen without using direct pixel coordinates.</p>
+<p>&#160;</p>
+<p>The UI game objects are very primitive objects, you will not find a ui.Object_Button object or anything like that. That's because VN Maker's UI system wants you to combine primitive UI elements to create more advanced ones. To make a button, you can just combine an ui.Object_Image with an ui.Object_Text for example. Of course, you can also just create your own custom UI objects and UI components. You can find the default set of UI objects in Objects &gt; UI folder and the components in Components &gt; UI folder.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">JSON Layouts, Templates and Styles</p>
+<p>&#160;</p>
+<p>In VN Maker, the default In-Game UI is created using JSON layouts, styles and templates instead of dealing with the the UI objects directly in code. The JSON based layouts are and additional system built on top of the basic In-Game UI System. The idea behind that is to create your In-Game UI more easy, with just some easy-to-use JSON descriptions. The JSON structure is parsed and processed by the ui.UIManager class to construct all necessary UI objects based on the information from the JSON structure.</p>
+<p>&#160;</p>
+<p>That makes it easier for beginner's to change the In-Game UI because they no longer have to deal with real programming, it feels more like designing a website. In most cases, the entire in-game UI design can be changed without programming. Only if you add additional features or want to change behavior very much, it may be necessary to do a little bit of programming.</p>
+<p>&#160;</p>
+<p>All layouts, templates and styles are stored under the "Layouts" folder in script-editor. The design can be easily changed by editing the Layout_XXX scripts or Template_XXX scripts. Fonts, Colors and Animations can be easily changed by editing the Style_Default script.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">The UIManager class</p>
+<p>&#160;</p>
+<p>The UIManager class is a helper to parse and process JSON layouts, templates and styles. It constructs the necessary UI objects, add the necessary components to them and applies the correct styles. We already saw that in our <a href="Example__Movable_Character.htm">Example: Movable Character</a> example where we first used a ui.Object_Text directly and then later moved to a JSON layout to create the character info display. We used the UIManager.createFromDescriptor method to create our layout from a parsed JSON description.</p>
+<p>&#160;</p>
+<p>There are a lot of different kind of methods in UIManager, but all are documented. Feel free to play around, create your own UI objects or asking questions in our forums. Also, just to mention it again, check out the <a href="IGUI_Getting_Started.htm">In-Game UI Documentation.</a></p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p>&#160;</p>
+</body>
+</html>

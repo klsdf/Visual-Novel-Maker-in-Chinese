@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>External Script Editor</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "5.4.0_3";
+</script>
+ <meta name="topic-breadcrumbs" content="Script and Plugin Reference > Script Documentation" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<p class="Topic_Heading">External Script Editor</p>
+<p>&#160;</p>
+<p>Visual Novel Maker provides an integrated Script Editor based on the 
+ popular ACE Code Editor. However, if you prefer another code editor, VN 
+ Maker allows you to use any editor you want for your own custom scripts.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Prepare your Project</p>
+<p>&#160;</p>
+<p>To use an external script editor, navigate to your project folder and 
+ create a new folder called &quot;scripts&quot;. Now you can just put all 
+ your custom scripts in there as .js files and VN Maker will automatically 
+ recognize those scripts and add them to your game. You can add a number 
+ suffix to a script to control the include order, for example:</p>
+<p>&#160;</p>
+<p>Fruit-0.js</p>
+<p>Apple-1.js</p>
+<p>Banana-2.js</p>
+<p>&#160;</p>
+<p>That is useful in case of inheritance, where it is important that the 
+ base-class script is included before the derived classes are included.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Pick your Programming Language</p>
+<p>&#160;</p>
+<p>VN Maker expects your scripts written in JavaScript programming language. 
+ If JavaScript is not your favorite language, you can pick any language 
+ you want as long as that language can compile to JavaScript such as CoffeeScript, 
+ TypeScript, Ruby, etc.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Edit Default Scripts</p>
+<p>&#160;</p>
+<p>You cannot edit the default scripts in an external script editor since 
+ they are and need to be managed by VN Maker's DMS (Document Management 
+ System). But that isn't a problem at all in regular cases because editing 
+ the default scripts directly is never a good idea because your modification 
+ get lost if an update/migration happens. </p>
+<p>&#160;</p>
+<p>If you want to modify a default script, you create copy of it and overwrite 
+ the methods and behaviors you want so that your modifications are not 
+ overwritten by migration. Then you can also use an external script editor, 
+ just copy a default script into the scripts-folder, do you modifications 
+ on it and that's it.</p>
+<p>&#160;</p>
+<p>However, if you want to export all default scripts as external files, 
+ you can use the Game Script Exporter script agent via Tools &gt; Script 
+ Agents &gt; Default &gt; Game Script Exporter. That exporter allows you 
+ to export all scripts as .js or .coffee files. If you check the &quot;Export 
+ As JavaScript&quot; check box, only the compiled JavaScript or regular 
+ JavaScript will be exported but not the CoffeeScript code.</p>
+<p>&#160;</p>
+<p>&#160;</p>
+</body>
+</html>

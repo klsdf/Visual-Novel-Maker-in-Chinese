@@ -1,0 +1,659 @@
+﻿<html>
+<!-- Sitemap 1.0 -->
+<object type="text/site properties">
+  <param name="FrameName" value="bsscright">
+  <param name="SiteType" value="toc">
+  <param name="Image Width" value="16">
+</object>
+<ul>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Visual Novel Maker">
+    <param name="Local" value="Visual_Novel_Maker.htm">
+  </object>
+  <ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Update History">
+      <param name="Local" value="Update_History.htm">
+    </object>
+    </ul>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Exploring the Editor">
+  </object>
+  <ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Homeview Screen">
+      <param name="Local" value="Editor.htm">
+    </object>
+    <ul>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Getting Started">
+        <param name="Local" value="Creating_a_Project.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="The Menu Bar">
+        <param name="Local" value="The_Menu_Bar.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="The Toolbar">
+        <param name="Local" value="The_Toolbar.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Context Menu">
+        <param name="Local" value="Context_Menu.htm">
+      </object>
+      </ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Database">
+      <param name="Local" value="Database.htm">
+    </object>
+    <ul>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Characters">
+        <param name="Local" value="Characters.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Character Expressions">
+        <param name="Local" value="Character_Expressions.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Expression Importer">
+        <param name="Local" value="Expression_Importer.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="CG Gallery">
+        <param name="Local" value="CG_Gallery.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Animations">
+        <param name="Local" value="Animations.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Common Events">
+        <param name="Local" value="Common_Events.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="System">
+        <param name="Local" value="System.htm">
+      </object>
+      </ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Scene Editor">
+      <param name="Local" value="Scene_Content.htm">
+    </object>
+    <ul>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Scene Properties">
+        <param name="Local" value="Scene_Properties.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Chapter">
+        <param name="Local" value="Chapter.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Scene Content Commands">
+        <param name="Local" value="Scene_Content_Commands.htm">
+      </object>
+      <ul>
+        <li><object type="text/sitemap">
+          <param name="Name" value="Basic">
+          <param name="Local" value="Basic.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="List">
+          <param name="Local" value="List.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="Audio Playback">
+          <param name="Local" value="Audio_Playback.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="Background">
+          <param name="Local" value="Background.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="Movie">
+          <param name="Local" value="Movie.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="Scenes">
+          <param name="Local" value="SceneCommand.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="Character">
+          <param name="Local" value="Character.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="Live2D">
+          <param name="Local" value="Live2D.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="Message">
+          <param name="Local" value="Message.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="Picture">
+          <param name="Local" value="Picture.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="Text">
+          <param name="Local" value="Text.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="Screen">
+          <param name="Local" value="Screen.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="System Command">
+          <param name="Local" value="System_Command.htm">
+        </object>
+        </ul>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Easing Effects">
+        <param name="Local" value="Easing_Effects.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Mass Edit">
+        <param name="Local" value="Mass_Edit.htm">
+      </object>
+      </ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Build &amp; Run">
+      <param name="Local" value="Getting_Started.htm">
+    </object>
+    <ul>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Getting Started">
+        <param name="Local" value="Getting_Started.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Build Configurations">
+        <param name="Local" value="Build_Configurations.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Run Configurations">
+        <param name="Local" value="Run_Configurations.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Environment Variables">
+        <param name="Local" value="Environment_Variables.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Game Test">
+        <param name="Local" value="Game_Test.htm">
+      </object>
+      </ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Testing &amp; Deployment">
+    </object>
+    <ul>
+      <li><object type="text/sitemap">
+        <param name="Name" value="For PC/Mac">
+        <param name="Local" value="For_PC_Mac.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="For iOS">
+        <param name="Local" value="For_iOS.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="For Android">
+        <param name="Local" value="For_Android.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="For Web">
+        <param name="Local" value="For_Web.htm">
+      </object>
+      </ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Language Configuration">
+      <param name="Local" value="Language_Configuration.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Resource Manager">
+      <param name="Local" value="Resource_Manager.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Resource Standards">
+      <param name="Local" value="Resource_Standards.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Create Game Package">
+      <param name="Local" value="Create_Game_Package.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Extension Manager">
+      <param name="Local" value="Extension_Manager.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Application Preferences">
+      <param name="Local" value="Application_Preferences.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Project Preferences">
+      <param name="Local" value="Project_Preferences.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Keyboard Shortcuts">
+      <param name="Local" value="Notes.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Live2D Support">
+      <param name="Local" value="Live2D_Support.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Sharing Content">
+      <param name="Local" value="Domains.htm">
+    </object>
+    </ul>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Beginner's Guide">
+    <param name="Local" value="Beginner_s_Guide.htm">
+  </object>
+  <ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="The Basic Foundation">
+    </object>
+    <ul>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Preparing a Script">
+        <param name="Local" value="Preparing_a_Script.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Narrative Presentation">
+        <param name="Local" value="Narrative_Presentation.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Adding Chapters and Scenes">
+        <param name="Local" value="Adding_Chapters_and_Scenes.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Make your First Scene">
+        <param name="Local" value="Making_your_first_scene.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Understanding Choices and Labels">
+        <param name="Local" value="Understanding_Choices_and_Labels.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Learning about Switches and Variables">
+        <param name="Local" value="Learning_about_Switches.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Learning about Conditions">
+        <param name="Local" value="Learning_about_Conditional_Branches.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Transitions and Change Scene">
+        <param name="Local" value="Transitions_and_Change_Scene.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Atmosphere and Effects">
+        <param name="Local" value="Weather_Effects.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Common Events">
+        <param name="Local" value="Common_Events_Guide.htm">
+      </object>
+      </ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Customizing your Game">
+    </object>
+    <ul>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Importing Resources">
+        <param name="Local" value="Importing_Resources.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Characters">
+      </object>
+      <ul>
+        <li><object type="text/sitemap">
+          <param name="Name" value="Adding Characters and Expressions">
+          <param name="Local" value="Adding_Characters.htm">
+        </object>
+        </ul>
+      <li><object type="text/sitemap">
+        <param name="Name" value="How to Display a Bust Image">
+      </object>
+      <ul>
+        <li><object type="text/sitemap">
+          <param name="Name" value="Understanding Predefined Object Positions">
+          <param name="Local" value="Understanding_Predefined_Position.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="Displaying a Bust Image">
+          <param name="Local" value="Understanding_Predefined_Objects.htm">
+        </object>
+        </ul>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Non-Linear Stories">
+      </object>
+      <ul>
+        <li><object type="text/sitemap">
+          <param name="Name" value="Branching Story Paths">
+          <param name="Local" value="Preparing_a_Plot_Outline.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="Conditional Choices">
+          <param name="Local" value="Conditional_Choices.htm">
+        </object>
+        </ul>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Camera Movement">
+      </object>
+      <ul>
+        <li><object type="text/sitemap">
+          <param name="Name" value="Parallax Scrolling">
+          <param name="Local" value="Parallax_Scrolling.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="Camera Tutorial">
+          <param name="Local" value="Camera_Tutorial.htm">
+        </object>
+        </ul>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Mini Games">
+        <param name="Local" value="Mini_Games.htm">
+      </object>
+      <ul>
+        <li><object type="text/sitemap">
+          <param name="Name" value="Black Jack">
+          <param name="Local" value="Black_Jack.htm">
+        </object>
+        </ul>
+      <li><object type="text/sitemap">
+        <param name="Name" value="UI Series">
+      </object>
+      <ul>
+        <li><object type="text/sitemap">
+          <param name="Name" value="Image Map and Hotspot Tutorial">
+          <param name="Local" value="Imagemap_Tutorial.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="Evented Language Menu Screen">
+          <param name="Local" value="Evented_Language_Menu_Screen.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="Evented Title Screen">
+          <param name="Local" value="Evented_Title_Screen.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="Changing your Game Font">
+          <param name="Local" value="Changing_your_Font.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="Switch to Layout Reference List">
+          <param name="Local" value="Switch_to_Layout_Reference_List.htm">
+        </object>
+        </ul>
+      </ul>
+    </ul>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Scripter's Guide">
+    <param name="Local" value="Scripter_s_Guide.htm">
+  </object>
+  <ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Setup a Test Bed">
+      <param name="Local" value="Setup_your_test_bed.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Basic Engine">
+    </object>
+    <ul>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Display a Picture">
+        <param name="Local" value="Display_a_Picture.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Data &amp; Resource Management">
+        <param name="Local" value="Resource_Management.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Bitmap Basics">
+        <param name="Local" value="Bitmap_Basics.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Sprites">
+        <param name="Local" value="Sprites.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Animation Basics">
+        <param name="Local" value="Animation_Basics.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Videos">
+        <param name="Local" value="Videos.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Tilemaps">
+        <param name="Local" value="Tilemaps.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Viewports">
+        <param name="Local" value="Viewports.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Music &amp; Sounds">
+        <param name="Local" value="Music___Sounds.htm">
+      </object>
+      </ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="VN Engine">
+    </object>
+    <ul>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Object Component System">
+        <param name="Local" value="Object_Component_System.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Animations">
+        <param name="Local" value="Animations_Animator.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Example: Movable Character">
+        <param name="Local" value="Example__Movable_Character.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="In-Game UI">
+        <param name="Local" value="In-Game_UI.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Save System">
+        <param name="Local" value="Save_System.htm">
+      </object>
+      </ul>
+    </ul>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Script and Plugin Reference">
+  </object>
+  <ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Data Formats Documentation">
+    </object>
+    <ul>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Getting Started">
+        <param name="Local" value="Data_Getting_Started.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Reference">
+        <param name="Local" value="data_doc/index.html">
+      </object>
+      </ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Extension Documentation">
+    </object>
+    <ul>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Getting Started">
+        <param name="Local" value="Plugin_Getting_Started.htm">
+      </object>
+      <ul>
+        <li><object type="text/sitemap">
+          <param name="Name" value="Including Sections &amp; Items">
+          <param name="Local" value="Including_Sections___Items.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="Install/Uninstall Scripts">
+          <param name="Local" value="Install_Uninstall_Scripts.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="Section Extensions">
+          <param name="Local" value="Section_Extensions.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="Script Agents">
+          <param name="Local" value="Script_Agents.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="Custom Controls">
+          <param name="Local" value="Extension_Custom_Controls.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="Custom Resource Processors">
+          <param name="Local" value="Custom_Resource_Processor.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="Examples">
+        </object>
+        <ul>
+          <li><object type="text/sitemap">
+            <param name="Name" value="Example: Adding a new database category">
+            <param name="Local" value="Example__Adding_a_new_database_category.htm">
+          </object>
+          <li><object type="text/sitemap">
+            <param name="Name" value="Example: Adding a new scene command">
+            <param name="Local" value="Example__Adding_a_new_scene_command.htm">
+          </object>
+          <li><object type="text/sitemap">
+            <param name="Name" value="Example: Implementing a new command on script-side">
+            <param name="Local" value="Example__Implementing_a_new_command_on_script-side.htm">
+          </object>
+          <li><object type="text/sitemap">
+            <param name="Name" value="Example: Create a Language Bundle">
+            <param name="Local" value="Example_Create_a_Language_Bundle.htm">
+          </object>
+          <li><object type="text/sitemap">
+            <param name="Name" value="Example: Create an Extension">
+            <param name="Local" value="Example_Create_an_Extension.htm">
+          </object>
+          </ul>
+        </ul>
+      <li><object type="text/sitemap">
+        <param name="Name" value="API Reference">
+        <param name="Local" value="plugin_doc/index.html">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Objective-J API">
+        <param name="Local" value="objj_doc/html/index.html">
+      </object>
+      </ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="In-Game UI Documentation">
+    </object>
+    <ul>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Getting Started">
+        <param name="Local" value="IGUI_Getting_Started.htm">
+      </object>
+      <ul>
+        <li><object type="text/sitemap">
+          <param name="Name" value="Example: Custom Title-Screen">
+          <param name="Local" value="Example__Custom_Title-Screen.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="Example: Styles">
+          <param name="Local" value="Example__Styles.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="Example: Animations">
+          <param name="Local" value="Example__Animations.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="Example: Templates">
+          <param name="Local" value="Templates.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="Example: Actions">
+          <param name="Local" value="Example__Actions.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="Example: Data Bindings">
+          <param name="Local" value="Example__Data_Bindings.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="Example: Formulas">
+          <param name="Local" value="Example__Formulas.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="Example: Using Components">
+          <param name="Local" value="Example__Using_Components.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="Example: Custom Layout Behavior">
+          <param name="Local" value="Example__Custom_Layout_Behavior.htm">
+        </object>
+        </ul>
+      <li><object type="text/sitemap">
+        <param name="Name" value="API Reference">
+        <param name="Local" value="igui_doc/index.html">
+      </object>
+      </ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Script Documentation">
+    </object>
+    <ul>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Getting Started">
+        <param name="Local" value="GameScript_Getting_Started.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="API Reference">
+        <param name="Local" value="game_script_doc/index.html">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="External Script Editor">
+        <param name="Local" value="External_Script_Editor.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="External Libraries">
+        <param name="Local" value="External_Libraries.htm">
+      </object>
+      </ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Engine Documentation">
+    </object>
+    <ul>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Getting Started">
+        <param name="Local" value="Engine_Getting_Started.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="API Reference">
+        <param name="Local" value="engine_doc/index.html">
+      </object>
+      </ul>
+    </ul>
+  <li><object type="text/sitemap">
+    <param name="Name" value="License and Credits">
+  </object>
+  <ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="End User License Agreement">
+      <param name="Local" value="End_User_License_Agreement.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="StAR End User License Agreement">
+      <param name="Local" value="StAR_End_User_License_Agreement.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Trademarks &amp; Library Licenses">
+      <param name="Local" value="LibraryLicenses.html">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Credits">
+      <param name="Local" value="Staff_Credits.htm">
+    </object>
+    </ul>
+</ul>
+</html>

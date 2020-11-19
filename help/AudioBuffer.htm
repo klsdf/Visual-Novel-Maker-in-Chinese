@@ -1,0 +1,241 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>AudioBuffer Class</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "";
+</script>
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+ <h2 style="font-family: 'Book Antiqua', serif; margin-bottom: 7pt; font-size: 24pt;">AudioBuffer Class</h2>
+<hr width="60%" align="left" />
+</div>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-family: 'Book Antiqua', serif; font-weight: bold; font-size: 18pt;">A</span>n audio buffer is used to load an audio track from file. The supported audio formats are MP3, M4A, AAC, OGG and WAV but it depends on the platforms.</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-family: Arial, sans-serif;">It is recommended to have at least two versions for each audio file like one file in M4A and the other file in OGG format.</span></p>
+<p style="font-family: Arial, sans-serif;">This is because some platforms can only play OGG files by default while others can only play MP3/M4A.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-weight: bold; font-size: 18pt; font-family: 'Book Antiqua', serif;">Item Index</p>
+<hr width="60%" align="left" />
+<table style="border-collapse: separate; border-collapse: separate;" cellspacing="0" width="100%" border="1">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td colspan="2">
+<p style="text-align: center;"><span style="font-weight: bold;">Methods</span></p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center;"><span style="font-weight: bold;">decode ()</span></p>
+</td>
+<td><span style="font-family: Arial, sans-serif;">Decodes the audio data if necessary.</span> <br /><span style="font-family: Arial, sans-serif;">Needs to be called once before the audio buffer can be played.</span></td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center;"><span style="font-family: Arial, sans-serif; font-weight: bold;">dispose ()</span></p>
+</td>
+<td><span>Disposes the audio buffer and frees the resources/memory.</span> <br /><span>Should be called if the audio buffer is no longer needed.</span></td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center;"><span style="font-family: Arial, sans-serif; font-weight: bold;">play</span></p>
+<p style="text-align: center; font-weight: bold;">([fadeInTime=0], [playTime=null], &#160;[fadeOutTime=0])</p>
+</td>
+<td><span>Plays the audio buffer.</span> <br />&#160;
+<p style="font-weight: bold;">Parameters:</p>
+<ul style="list-style: disc;">
+<li><span style="font-weight: bold;">[fadeInTime=0]</span> <span style="font-family: Arial, sans-serif; font-style: italic; font-size: 8pt;">Number [optional]</span><br />
+The fade-in time in frames.<br /></li>
+<li><span style="font-weight: bold;">[playTime=null]&#160;</span><span style="font-family: Arial, sans-serif; font-style: italic; font-size: 8pt;">Number [optional]</span><br />
+The play-time in frames.<span style="font-weight: bold;"><br /></span></li>
+<li><span style="font-weight: bold;">[fadeOutTime=0]&#160;</span><span style="font-family: Arial, sans-serif; font-style: italic; font-size: 8pt;">Number [optional]</span><br />
+The fade-out time in frames if play-time is over.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center;"><span style="font-family: Arial, sans-serif; font-weight: bold;">resume ([fadeInTime=0])</span></p>
+</td>
+<td><span style="font-family: Arial, sans-serif;">Resumes the audio buffer if paused.</span> <br />&#160;
+<p style="font-family: Arial, sans-serif; font-weight: bold;">Parameters:</p>
+<ul style="list-style: disc;">
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">[fadeInTime=0]&#160;</span><span style="font-style: italic; font-size: 8pt;">Number [optional]</span><br />
+The fade-in time in frames.</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>
+<p style="font-family: Arial, sans-serif; font-weight: bold; text-align: center;">resume ([fadeOutTime=0])</p>
+</td>
+<td><span style="font-family: Arial, sans-serif;">Stops the audio buffer.</span> <br />&#160;
+<p style="font-family: Arial, sans-serif; font-weight: bold;">Parameters:</p>
+<ul style="list-style: disc;">
+<li>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">[fadeOutTime=0]<span style="font-weight: bold;">&#160;</span><span style="font-style: italic; font-size: 8pt;">Number [optional]</span><br />
+The fade-out time in frames.</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>
+<p style="font-family: Arial, sans-serif; font-weight: bold; text-align: center;">update ()</p>
+</td>
+<td>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">Updates the audio-buffer.</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">Needs to be called once per frame.</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+<table style="border-collapse: separate; border-collapse: separate;" cellspacing="0" width="100%" border="1">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td colspan="2">
+<p style="text-align: center;"><span style="font-weight: bold;">Properties</span></p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center;"><span style="font-family: Arial, sans-serif; font-weight: bold;">context</span> <span style="font-family: Arial, sans-serif; font-style: italic; font-size: 8pt;">[Object]</span></p>
+</td>
+<td><span style="font-family: Arial, sans-serif;">Reference to the audio-context.</span></td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; font-family: Arial, sans-serif;"><span style="font-weight: bold;">customData</span>&#160;<span style="font-style: italic; font-size: 8pt;">[Object]</span></p>
+</td>
+<td><span style="font-family: Arial, sans-serif;">An object which allows to store custom data.</span> <br />&#160; <br /><span style="font-weight: bold;">Default:</span> {}</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center;"><span style="font-family: Arial, sans-serif; font-weight: bold;">decoded</span> <span style="font-family: Arial, sans-serif; font-style: italic; font-size: 8pt;">[Boolean]</span></p>
+</td>
+<td><span style="font-family: Arial, sans-serif;">Indicates if the audio-buffer is decoded.</span></td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; font-family: Arial, sans-serif;"><span style="font-weight: bold;">fadeInTime</span> <span style="font-style: italic; font-size: 8pt;">[Number]</span></p>
+</td>
+<td>
+<p>Current fade-in time.</p>
+<p><span style="font-weight: bold;">Default:</span> 0</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; font-family: Arial, sans-serif;"><span style="font-weight: bold;">fadeOutTime</span> <span style="font-style: italic; font-size: 8pt;">[Number]</span></p>
+</td>
+<td>
+<p>Current fade-out time.</p>
+<p><span style="font-weight: bold;">Default:</span> 0</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; font-family: Arial, sans-serif;"><span style="font-weight: bold;">isPlaying</span> <span style="font-style: italic; font-size: 8pt;">[Boolean]</span></p>
+</td>
+<td>
+<p>Indicates if the audio buffer is currently playing.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; font-family: Arial, sans-serif;"><span style="font-weight: bold;">loaded</span> <span style="font-style: italic; font-size: 8pt;">[Boolean]</span></p>
+</td>
+<td>
+<p>Indicates if the audio-buffer is loaded.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; font-family: Arial, sans-serif;"><span style="font-weight: bold;">loop</span> <span style="font-style: italic; font-size: 8pt;">[Boolean]</span></p>
+</td>
+<td>
+<p>Indicates if the audio-buffer repeats after finished.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; font-family: Arial, sans-serif;"><span style="font-weight: bold;">playbackRate</span>&#160;<span style="font-style: italic; font-size: 8pt;">[Number]</span></p>
+</td>
+<td>
+<p>The play-back rate in percent.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; font-family: Arial, sans-serif;"><span style="font-weight: bold;">playTime</span>&#160;<span style="font-style: italic; font-size: 8pt;">[Number]</span></p>
+</td>
+<td>
+<p>Current play-time limit in frames.</p>
+<p><span style="font-weight: bold;">Default:</span> 0</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; font-family: Arial, sans-serif;"><span style="font-weight: bold;">volume</span>&#160;<span style="font-style: italic; font-size: 8pt;">[Number]</span></p>
+</td>
+<td>
+<p>The volume. Goes from 0 to 100.</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+</body>
+</html>

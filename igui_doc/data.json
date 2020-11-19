@@ -1,0 +1,1817 @@
+{
+    "project": {},
+    "files": {
+        "igui_reference.js": {
+            "name": "igui_reference.js",
+            "modules": {},
+            "classes": {
+                "ui.Control": 1,
+                "DraggableDescriptor": 1,
+                "AnimationDescriptor": 1,
+                "PrimitiveAnimationDescriptor": 1,
+                "WaitPrimitiveAnimationDescriptor": 1,
+                "MoveToPrimitiveAnimationDescriptor": 1,
+                "MaskToPrimitiveAnimationDescriptor": 1,
+                "ZoomToPrimitiveAnimationDescriptor": 1,
+                "BlendToPrimitiveAnimationDescriptor": 1,
+                "ChangeToPrimitiveAnimationDescriptor": 1,
+                "PlayAnimationPrimitiveAnimationDescriptor": 1,
+                "ChangeImagesPrimitiveAnimationDescriptor": 1,
+                "SoundPrimitiveAnimationDescriptor": 1,
+                "BindingDescriptor": 1,
+                "BindingRatioConversionDescriptor": 1,
+                "EventDescriptor": 1,
+                "ActionDescriptor": 1,
+                "ConditionDescriptor": 1,
+                "ComponentDescriptor": 1,
+                "ui.Layout": 1,
+                "ui.FreeLayout": 1,
+                "ui.StackLayout": 1,
+                "ui.SpreadLayout": 1,
+                "ui.GridLayout": 1,
+                "ui.Panel": 1,
+                "ui.Video": 1,
+                "ui.ThreePartImage": 1,
+                "ui.Frame": 1,
+                "ui.Message": 1,
+                "ui.Image": 1,
+                "ui.ImageMap": 1,
+                "ImageMapHotspotDescriptor": 1,
+                "ui.ImageButton": 1,
+                "ui.Text": 1,
+                "FontDescriptor": 1,
+                "FontOutlineDescriptor": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {},
+    "classes": {
+        "ui.Control": {
+            "name": "ui.Control",
+            "shortname": "ui.Control",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "igui_reference.js",
+            "line": 1,
+            "description": "An image-control which displays an image on screen."
+        },
+        "DraggableDescriptor": {
+            "name": "DraggableDescriptor",
+            "shortname": "DraggableDescriptor",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "igui_reference.js",
+            "line": 258,
+            "description": "Describes the dragging-behavior of a control's. A draggable control can be used to implement control's like sliders\nor scrollbars.",
+            "see": [
+                "ui.Control.draggable"
+            ]
+        },
+        "AnimationDescriptor": {
+            "name": "AnimationDescriptor",
+            "shortname": "AnimationDescriptor",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "igui_reference.js",
+            "line": 305,
+            "description": "Describes an animation executed on a control using ui.Control.animations property."
+        },
+        "PrimitiveAnimationDescriptor": {
+            "name": "PrimitiveAnimationDescriptor",
+            "shortname": "PrimitiveAnimationDescriptor",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "igui_reference.js",
+            "line": 335,
+            "description": "Describes a primitive animation like a simple movement or a rotation used in AnimationDescriptor.flow to define\nthe actual animation.",
+            "see": [
+                "AnimationDescriptor"
+            ]
+        },
+        "WaitPrimitiveAnimationDescriptor": {
+            "name": "WaitPrimitiveAnimationDescriptor",
+            "shortname": "WaitPrimitiveAnimationDescriptor",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "igui_reference.js",
+            "line": 401,
+            "description": "Pauses the animation-flow for the specified amount of time.",
+            "extends": "PrimitiveAnimationDescriptor",
+            "see": [
+                "AnimationDescriptor"
+            ]
+        },
+        "MoveToPrimitiveAnimationDescriptor": {
+            "name": "MoveToPrimitiveAnimationDescriptor",
+            "shortname": "MoveToPrimitiveAnimationDescriptor",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "igui_reference.js",
+            "line": 416,
+            "description": "Describes a move-to animation which moves the control to the specified location.",
+            "extends": "PrimitiveAnimationDescriptor",
+            "see": [
+                "AnimationDescriptor"
+            ]
+        },
+        "MaskToPrimitiveAnimationDescriptor": {
+            "name": "MaskToPrimitiveAnimationDescriptor",
+            "shortname": "MaskToPrimitiveAnimationDescriptor",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "igui_reference.js",
+            "line": 440,
+            "description": "Describes a masking animation.",
+            "extends": "PrimitiveAnimationDescriptor",
+            "see": [
+                "AnimationDescriptor"
+            ]
+        },
+        "ZoomToPrimitiveAnimationDescriptor": {
+            "name": "ZoomToPrimitiveAnimationDescriptor",
+            "shortname": "ZoomToPrimitiveAnimationDescriptor",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "igui_reference.js",
+            "line": 477,
+            "description": "Describes a zoom-to animation which zooms the control to the specified percentage.",
+            "extends": "PrimitiveAnimationDescriptor",
+            "see": [
+                "AnimationDescriptor"
+            ]
+        },
+        "BlendToPrimitiveAnimationDescriptor": {
+            "name": "BlendToPrimitiveAnimationDescriptor",
+            "shortname": "BlendToPrimitiveAnimationDescriptor",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "igui_reference.js",
+            "line": 499,
+            "description": "Describes a blend-to animation which blends the control to the specified opacity.",
+            "extends": "PrimitiveAnimationDescriptor",
+            "see": [
+                "AnimationDescriptor"
+            ]
+        },
+        "ChangeToPrimitiveAnimationDescriptor": {
+            "name": "ChangeToPrimitiveAnimationDescriptor",
+            "shortname": "ChangeToPrimitiveAnimationDescriptor",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "igui_reference.js",
+            "line": 521,
+            "description": "Describes a change-to animation which changes a control's property to the specified value.",
+            "extends": "PrimitiveAnimationDescriptor",
+            "see": [
+                "AnimationDescriptor"
+            ]
+        },
+        "PlayAnimationPrimitiveAnimationDescriptor": {
+            "name": "PlayAnimationPrimitiveAnimationDescriptor",
+            "shortname": "PlayAnimationPrimitiveAnimationDescriptor",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "igui_reference.js",
+            "line": 548,
+            "description": "Plays an animation from database on the control. The control's image needs to be the same resource used for the animation in database.",
+            "extends": "PrimitiveAnimationDescriptor",
+            "see": [
+                "AnimationDescriptor"
+            ]
+        },
+        "ChangeImagesPrimitiveAnimationDescriptor": {
+            "name": "ChangeImagesPrimitiveAnimationDescriptor",
+            "shortname": "ChangeImagesPrimitiveAnimationDescriptor",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "igui_reference.js",
+            "line": 568,
+            "description": "Plays an animation from database on the control. The control's image needs to be the same resource used for the animation in database.",
+            "extends": "PrimitiveAnimationDescriptor",
+            "see": [
+                "AnimationDescriptor"
+            ]
+        },
+        "SoundPrimitiveAnimationDescriptor": {
+            "name": "SoundPrimitiveAnimationDescriptor",
+            "shortname": "SoundPrimitiveAnimationDescriptor",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "igui_reference.js",
+            "line": 589,
+            "description": "Plays a sound.",
+            "extends": "PrimitiveAnimationDescriptor",
+            "see": [
+                "AnimationDescriptor"
+            ]
+        },
+        "BindingDescriptor": {
+            "name": "BindingDescriptor",
+            "shortname": "BindingDescriptor",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "igui_reference.js",
+            "line": 606,
+            "description": "Describes a binding which can be used in bindings-property of a component. Data-Bindings supporting many advanced features but\nis recommended instead of trying to build complex controls with complicated binding-expressions to just write an own component."
+        },
+        "BindingRatioConversionDescriptor": {
+            "name": "BindingRatioConversionDescriptor",
+            "shortname": "BindingRatioConversionDescriptor",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "igui_reference.js",
+            "line": 707,
+            "description": "<p>Describes ratio-conversion for a data-binding. The ratio-conversion uses the following formula:</p>\n<code> BindingDescriptor.targetField = (target - targetSize) / (BindingDescriptor.sourceField - sourceSize) * (BindingDescriptor.sourceField - valueOffset) + offset</code>\n<p></p>",
+            "see": [
+                "BindingDescriptor"
+            ]
+        },
+        "EventDescriptor": {
+            "name": "EventDescriptor",
+            "shortname": "EventDescriptor",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "igui_reference.js",
+            "line": 759,
+            "description": "<p>Describes an event which can be used in combinations with bindings and animation to only execute them if\nthe specified event happens.</p>\n\n<p>In most cases, the event-descriptor is just a single string and not an object. The following events are supported:</p>\n\n<ul>\n<li>onInitialize - Only fired once after the control has been initialized</li>\n<li>onAlways - This event is just fired every frame.</li>\n<li>onMouseHover - Only fired as long as the mouse-pointer is over the control's area.</li>\n<li>onMouseLeave - Only fired once after the mouse-pointer leaved the control's area</li>\n<li>onMouseEnter - Only fired once after the mouse-pointer entered the control's area</li>\n<li>onMouseDown - Only fired if the mouse-pointer is over the control's area and the left mouse-button is down.</li>\n<li>onChange - This event is defined as an object and not just as a plain string. Only fired if the specified field is changed.</li>\n</ul>\n\n<p>Example 1: Define an even as string</p>\n\n<code>{ .... \"event\": \"onMouseHover\" ....} </code>\n\n<p>Example 2: Define an on-change event</p>\n\n<code>{ .... \"event\": { \"onChange\": \"o.text\" } .... }</code>"
+        },
+        "ActionDescriptor": {
+            "name": "ActionDescriptor",
+            "shortname": "ActionDescriptor",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "igui_reference.js",
+            "line": 793,
+            "description": "Describes an action which can be executed by a component."
+        },
+        "ConditionDescriptor": {
+            "name": "ConditionDescriptor",
+            "shortname": "ConditionDescriptor",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "igui_reference.js",
+            "line": 845,
+            "description": "Describes a condition used for actions and bindings. A condition checks if the value of the specified binding-expression\nmatches the value define by equalTo-, greaterThan-, lessThan- and notEqualTo-property.",
+            "see": [
+                "ActionDescriptor",
+                "BindingDescriptor"
+            ]
+        },
+        "ComponentDescriptor": {
+            "name": "ComponentDescriptor",
+            "shortname": "ComponentDescriptor",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "igui_reference.js",
+            "line": 886,
+            "description": "Describes a component which should be added to a control using ui.Control.components property.",
+            "see": [
+                "ui.Control.components"
+            ]
+        },
+        "ui.Layout": {
+            "name": "ui.Layout",
+            "shortname": "ui.Layout",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "igui_reference.js",
+            "line": 925,
+            "description": "<p>A layout defines how controls are positioned on the screen. The are different types of layouts available which are\nall inherit from this descriptor. Please check the derived layout descriptors for more information.<p>",
+            "extends": "ui.Control"
+        },
+        "ui.FreeLayout": {
+            "name": "ui.FreeLayout",
+            "shortname": "ui.FreeLayout",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "igui_reference.js",
+            "line": 966,
+            "description": "<p>Layouts all controls at their specified positions. So that kind of layout allows each control\nto be freely positioned.<p>\n\n<p>In addition, each control can have different alignment options.</p>",
+            "extends": "ui.Layout"
+        },
+        "ui.StackLayout": {
+            "name": "ui.StackLayout",
+            "shortname": "ui.StackLayout",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "igui_reference.js",
+            "line": 982,
+            "description": "<p>Layouts all controls\nlike a stack vertically or horizontally.<p>\n<p>\nThe controls in a stack-layout can be configured as resizable or\nnon-resizable(fixed-size). For example:</p>\n<p>\nLets say we have a layout-size of 500px in width with three controls.</p>\n<p>\n| 80px | dynamic | 80px | <br>\n</p>\n<p>Two controls have a fixed size of 80px and the middle-control has a\ndynamic-size because it is configured to be resizable. In that case, \nthe size of the resizable control would be 340px because that is the\nfree space left after subtracting the size(160px) of the fixed-size controls.</p>\n<p>\nIn addition, each control can have different alignment options.</p>",
+            "extends": "ui.Control"
+        },
+        "ui.SpreadLayout": {
+            "name": "ui.SpreadLayout",
+            "shortname": "ui.SpreadLayout",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "igui_reference.js",
+            "line": 1013,
+            "description": "<p>Spreads all controls\nevenly over the layout-space vertically or horizontally.</p>",
+            "extends": "ui.Layout"
+        },
+        "ui.GridLayout": {
+            "name": "ui.GridLayout",
+            "shortname": "ui.GridLayout",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "igui_reference.js",
+            "line": 1026,
+            "description": "<p>Layouts all controls in a grid of rows and columns.</p>",
+            "extends": "ui.Layout"
+        },
+        "ui.Panel": {
+            "name": "ui.Panel",
+            "shortname": "ui.Panel",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "igui_reference.js",
+            "line": 1054,
+            "description": "An panel-control can display a colored rectangle on screen or can also just stay invisible. The panel can be\ndefined as <b>modal</b> to block any mouse/touch input for controls behind the panel's area. For Example: If you like to\nshow a message box and don't want that the user can interact with other controls behind the message box, a panel can\nbe used.",
+            "extends": "ui.Control"
+        },
+        "ui.Video": {
+            "name": "ui.Video",
+            "shortname": "ui.Video",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "igui_reference.js",
+            "line": 1076,
+            "description": "A video-control plays a video on screen.",
+            "extends": "ui.Control"
+        },
+        "ui.ThreePartImage": {
+            "name": "ui.ThreePartImage",
+            "shortname": "ui.ThreePartImage",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "igui_reference.js",
+            "line": 1095,
+            "description": "A three-part image displays an image on screen using three\nsub-images: start, middle and end. The start and end will be rendered\nwith fixed size while the middle-part will be stretched in a way like this:<br>\n<br>\n|Start-Part Fixed|<-----------Middle-Part Stretched----------->|End-Part Fixed<br>\n<br>\nIt can be horizontal or vertical.",
+            "extends": "ui.Control"
+        },
+        "ui.Frame": {
+            "name": "ui.Frame",
+            "shortname": "ui.Frame",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "igui_reference.js",
+            "line": 1139,
+            "description": "A frame constructs a graphical frame from its skin-image. The frame can\nrendered by tiling or strechting the four sides of the frame. A frame\nis useful for creating In-Game UI windows and boxes. For more info about \nthe skin-image format, see help-file resource formats.",
+            "extends": "ui.Control"
+        },
+        "ui.Message": {
+            "name": "ui.Message",
+            "shortname": "ui.Message",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "igui_reference.js",
+            "line": 1175,
+            "description": "Displays a game message on screen. This control doesn't have any control-specific properties to set. If used in\ngame-scene it should have the ID \"gameMessage_message\" so that the game-scene interpreter can control the\nmessage.",
+            "extends": "ui.Control"
+        },
+        "ui.Image": {
+            "name": "ui.Image",
+            "shortname": "ui.Image",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "igui_reference.js",
+            "line": 1187,
+            "description": "An image-control which displays an image on screen.",
+            "extends": "ui.Control"
+        },
+        "ui.ImageMap": {
+            "name": "ui.ImageMap",
+            "shortname": "ui.ImageMap",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "igui_reference.js",
+            "line": 1214,
+            "description": "A control to display an interactive image-map on screen.",
+            "extends": "ui.Control"
+        },
+        "ImageMapHotspotDescriptor": {
+            "name": "ImageMapHotspotDescriptor",
+            "shortname": "ImageMapHotspotDescriptor",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "igui_reference.js",
+            "line": 1242,
+            "description": "Describes a single hotspot used by ui.ImageMap."
+        },
+        "ui.ImageButton": {
+            "name": "ui.ImageButton",
+            "shortname": "ui.ImageButton",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "igui_reference.js",
+            "line": 1262,
+            "description": "An image-button control is like a regular ui.Image but has a hotspot-component by default to execute\nactions on click.",
+            "extends": "ui.Image"
+        },
+        "ui.Text": {
+            "name": "ui.Text",
+            "shortname": "ui.Text",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "igui_reference.js",
+            "line": 1271,
+            "description": "An text-control which displays a text on screen.",
+            "extends": "ui.Control"
+        },
+        "FontDescriptor": {
+            "name": "FontDescriptor",
+            "shortname": "FontDescriptor",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "igui_reference.js",
+            "line": 1292,
+            "description": "Defines a font used by controls like a ui.Text control."
+        },
+        "FontOutlineDescriptor": {
+            "name": "FontOutlineDescriptor",
+            "shortname": "FontOutlineDescriptor",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "igui_reference.js",
+            "line": 1335,
+            "description": "Defines an outline for a font."
+        }
+    },
+    "elements": {},
+    "classitems": [
+        {
+            "file": "igui_reference.js",
+            "line": 5,
+            "description": "The type-name of the control. Can be a name of a template or an internal type name. Internal types are:<br><br>\n\n<ul>\n<li>ui.Text</li>\n<li>ui.Image</li>\n<li>ui.ImageButton</li>\n<li>ui.ImageMap</li>\n<li>ui.Video</li>\n<li>ui.FreeLayout</li>\n<li>ui.StackLayout</li>\n<li>ui.SpreadLayout</li>\n<li>ui.GridLayout</li>\n</ul>",
+            "itemtype": "property",
+            "name": "type",
+            "type": "string",
+            "class": "ui.Control"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 23,
+            "description": "Defines the position and size of the control. It is also possible use percentage values and small formulas. For example:<br><br>\n\n[0, 0, \"100%\", \"100% - 50\"]<br>\n[0, 0, \"100%\", \"Math.max(100% - 50, 10)\"]<br>",
+            "itemtype": "property",
+            "name": "frame",
+            "type": "number[]",
+            "class": "ui.Control"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 31,
+            "description": "Defines a space around the control. The parent-layout must support margins. Otherwise that property has no effect. The format is [top, left, bottom, right].",
+            "itemtype": "property",
+            "name": "margin",
+            "type": "number[]",
+            "class": "ui.Control"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 36,
+            "description": "Defines a space around the control's visual content. It allows to shift the visual content without affecting the control's position and size. The format is [top, left, bottom, right]",
+            "itemtype": "property",
+            "name": "padding",
+            "type": "number[]",
+            "class": "ui.Control"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 41,
+            "description": "Defines the anchor-point of the control which is used for rotation and zooming. For Example: If the anchor-point is set to [0.5, 0.5] and a rotation\nis executed it will rotate around its own center. Otherwise with [0, 0] it rotates around its top-left corner. The anchor-point has <b>no\neffect</b> on the position (x/y of dstRect).",
+            "itemtype": "property",
+            "name": "anchor",
+            "default": "[0, 0]",
+            "type": "number[]",
+            "class": "ui.Control"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 49,
+            "description": "The unique identifer of the component. The control can be accessed using $<identifier> in formulas und binding-expressions.",
+            "itemtype": "property",
+            "name": "id",
+            "type": "string",
+            "class": "ui.Control"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 54,
+            "description": "Assigns the control to a group. The effect of depends on the components.",
+            "itemtype": "property",
+            "name": "group",
+            "type": "string",
+            "class": "ui.Control"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 59,
+            "description": "The order-index to control the update-order of controls. The higher the value, the earlier the control is updated in the list of controls.",
+            "itemtype": "property",
+            "name": "order",
+            "type": "number",
+            "class": "ui.Control"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 64,
+            "description": "The z-index controls the overlapping of controls. A control with a higher z-index is drawn above a control with a lower z-index.",
+            "itemtype": "property",
+            "name": "zIndex",
+            "type": "number",
+            "class": "ui.Control"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 69,
+            "description": "Indiciates if the control inherits opacity, zoom, angle, color, tone and anchor-point from its parent layout.",
+            "itemtype": "property",
+            "name": "inheritProperties",
+            "default": "false",
+            "type": "boolean",
+            "class": "ui.Control"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 75,
+            "description": "The control's color.",
+            "itemtype": "property",
+            "name": "color",
+            "type": "number[]",
+            "class": "ui.Control"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 81,
+            "description": "<p>The blend-mode used for blending. The following blend modes are supported:</p>\n\n<ul>\n<li>add - Additive Blending</li>\n<li>sub - Subtractive Blending</li>\n<li>normal - Normal Blending</li>\n</ul>",
+            "itemtype": "property",
+            "name": "blendMode",
+            "type": "string",
+            "class": "ui.Control"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 94,
+            "description": "The control's opacity. Goes from 0=Transparent to 255=Opaque.",
+            "itemtype": "property",
+            "name": "opacity",
+            "default": "255",
+            "type": "number",
+            "see": [
+                "ui.Control.blendMode"
+            ],
+            "class": "ui.Control"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 102,
+            "description": "If <b>true</b>, the control's size will not resize to fit an associated image like for ui.Image control.",
+            "itemtype": "property",
+            "name": "fixedSize",
+            "default": "false",
+            "type": "boolean",
+            "class": "ui.Control"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 109,
+            "description": "Indicates if the control is visible. An invisible control will not be rendered but still takes up space in layouts.",
+            "itemtype": "property",
+            "name": "visible",
+            "default": "true",
+            "type": "boolean",
+            "class": "ui.Control"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 116,
+            "description": "Indicates if the control is enabled. A disable control is rendered different and doesn't respond to user-input. The exact behavior depends\non the control's components.",
+            "itemtype": "property",
+            "name": "enabled",
+            "default": "true",
+            "type": "boolean",
+            "class": "ui.Control"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 126,
+            "description": "Indicates if the control is selectable. Selectable control's may have a different appearance on selected/unselected state but\nthe exact behavior depends on the components. For example: The gs.Component_HotspotBehavior component allows different\ncontrol's images for selected/unselected state and set the game object's selected-property to the current selection-state.",
+            "itemtype": "property",
+            "name": "selectable",
+            "default": "false",
+            "type": "boolean",
+            "class": "ui.Control"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 137,
+            "description": "An object to define custom data. That custom data has not effect by default but can be used with bindings or custom components.",
+            "itemtype": "property",
+            "name": "customFields",
+            "default": "null",
+            "type": "Object",
+            "class": "ui.Control"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 145,
+            "description": "<p>The control's alignment on x-axis. Needs to be supported by the layout. The following alignments are available:</p>\n\n<ul>\n<li>left</li>\n<li>center</li>\n<li>right</li>\n</ul>",
+            "itemtype": "property",
+            "name": "alignmentX",
+            "default": "\"left\"",
+            "type": "string",
+            "class": "ui.Control"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 159,
+            "description": "<p>The control's alignment on y-axis. Needs to be supported by the layout. The following alignments are available:</p>\n\n<ul>\n<li>top</li>\n<li>center</li>\n<li>bottom</li>\n</ul>",
+            "itemtype": "property",
+            "name": "alignmentY",
+            "default": "\"left\"",
+            "type": "string",
+            "class": "ui.Control"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 172,
+            "description": "Makes the object draggable vertically or horizontally. Useful to implement sliders, scroll-bars, etc. See descriptor for more information.",
+            "itemtype": "property",
+            "name": "draggable",
+            "type": "DraggableDescriptor",
+            "class": "ui.Control"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 179,
+            "description": "<p>The control's style name. A style allows to define control-properties on a central place and then re-use it for multiple controls to reduce\nredundant data. A styles needs to be added to the ui.UIManager.styles object which stores key-values pairs with the style-name as\nkey and the style-data as value. For example:</p>\n\n<code>\nui.UIManager.styles.myCustomStyle = { \"font\": { \"name\": \"Tahoma\", \"size\": 40, \"color\": [255, 255, 255, 255] } }\n</code>\n<p> To use that style, the style-property must be used:</p>\n<code>{ \"type\": \"ui.Text\", \"style\": \"myCustomStyle\", \"frame\": [0, 0], \"text\": \"White Text\", \"sizeToFit\": true }</code>",
+            "itemtype": "property",
+            "name": "style",
+            "type": "string",
+            "class": "ui.Control"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 194,
+            "description": "<p>Allows to add multiple styles to a control. See ui.Control.style for more information.</p>",
+            "itemtype": "property",
+            "name": "styles",
+            "type": "string[]",
+            "see": [
+                "ui.Control.style"
+            ],
+            "class": "ui.Control"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 202,
+            "description": "<p>The updateBehavior controls in which cases the control is updated.</p>\n\n<ul>\n<li>normal - Updates the control only if necessary. However, in some cases that is not enough.</li>\n<li>continuous - Updates the control every frame.</li>\n</ul>\n\n<p>Updating a control doesn't mean that only one control is updated. A single update of a control can trigger updates on other controls as well if there\nare dependencies and also the parent-layout is updated.</p>",
+            "itemtype": "property",
+            "name": "updateBehavior",
+            "default": "\"normal\"",
+            "type": "string",
+            "class": "ui.Control"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 218,
+            "description": "<p>Additional components added to the control.</p>",
+            "itemtype": "property",
+            "name": "components",
+            "type": "ComponentDescriptor[]",
+            "class": "ui.Control"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 226,
+            "description": "<p>Defines an action executed by the control. The exact moment when the action is executed depends on the control and it components\nbut in regular the action is fired if the component is clicked.</p>",
+            "itemtype": "property",
+            "name": "action",
+            "type": "ActionDescriptor",
+            "class": "ui.Control"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 234,
+            "description": "<p>Allows to define multiple actions executed by the control. The actions are executed in their definition order. See ui.Control.action property for more information.</p>",
+            "itemtype": "property",
+            "name": "actions",
+            "type": "ActionDescriptor[]",
+            "see": [
+                "ui.Control.action"
+            ],
+            "class": "ui.Control"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 242,
+            "description": "<p>Data-Bindings used by the control. </p>",
+            "itemtype": "property",
+            "name": "bindings",
+            "type": "BindingDescriptor[]",
+            "class": "ui.Control"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 249,
+            "description": "<p>Defines animations for the control. Each animations need to be bound to a different event. </p>",
+            "itemtype": "property",
+            "name": "animations",
+            "type": "AnimationDescriptor[]",
+            "class": "ui.Control"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 266,
+            "description": "<p>The tracking-area, the control' can only be dragged inside that area.</p>",
+            "itemtype": "property",
+            "name": "rect",
+            "type": "number[]",
+            "class": "DraggableDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 273,
+            "description": "<p>Indicates if the control' can be dragged along x-axis.</p>",
+            "itemtype": "property",
+            "name": "axisX",
+            "type": "boolean",
+            "class": "DraggableDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 280,
+            "description": "<p>Indicates if the control' can be dragged along y-axis.</p>",
+            "itemtype": "property",
+            "name": "axisY",
+            "type": "boolean",
+            "class": "DraggableDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 287,
+            "description": "<p>Enables step-wise dragging with the specified number of steps. That is useful for step-wise slider-control like the\nmessage-speed slider in default in-game UI.</p>",
+            "itemtype": "property",
+            "name": "steps",
+            "default": "null",
+            "type": "number",
+            "class": "DraggableDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 296,
+            "description": "<p>Cannot be set but accessed through a binding-expression to access the current step if step-wise dragging is enabled.</p>",
+            "itemtype": "property",
+            "name": "step",
+            "readonly": "",
+            "type": "number",
+            "class": "DraggableDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 311,
+            "description": "<p>The event on which the animation will be executed.</p>",
+            "itemtype": "property",
+            "name": "event",
+            "type": "EventDescriptor",
+            "class": "AnimationDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 318,
+            "description": "<p>Indicates if all running animations are stopped immediately if the event is no longer fired.</p>",
+            "itemtype": "property",
+            "name": "clear",
+            "default": "true",
+            "type": "boolean",
+            "class": "AnimationDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 326,
+            "description": "<p>A list of primitive animations like simple movements, rotations, scalings, etc. to define the actual animation.</p>",
+            "itemtype": "property",
+            "name": "flow",
+            "type": "PrimitiveAnimationDescriptor[]",
+            "class": "AnimationDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 343,
+            "description": "<p>Defines the kind of animation to execute. Supported types are:</p>\n\n<ul>\n<li>changeTo</li>\n<li>moveTo</li>\n<li>blendTo</li>\n<li>zoomTo</li>\n<li>maskTo</li>\n<li>shake</li>\n<li>playAnimation</li>\n<li>changeImages</li>\n<li>sound</li>\n<li>wait</li>\n</ul>\n\nCheck the different primitive animation descriptors to get more information.",
+            "itemtype": "property",
+            "name": "type",
+            "type": "string",
+            "class": "PrimitiveAnimationDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 365,
+            "description": "<p>The easing-type to use. Has no effect on \"sound\", \"wait\" and \"playAnimation\". Possible types are:</p>\n\n<ul>\n<li>linear_in/linear_out/linear_inout - Linear movement without any smoothing</li>\n<li>quad_in/quad_out/quad_inout - Quadratic Easing</li>\n<li>quart_in/quart_out/quart_inout - Quartic Easing</li>\n<li>sine_in/sine_out/sine_inout - Sinusoidal Easing</li>\n<li>cubic_in/cubic_out/cubic_inout - Cubic Easing</li>\n<li>expo_in/expo_out/expo_inout - Exponential Easing</li>\n<li>circ_in/circ_out/circ_inout - Circual Easing</li>\n</ul>",
+            "itemtype": "property",
+            "name": "easing",
+            "default": "\"linear_inout\"",
+            "type": "string",
+            "class": "PrimitiveAnimationDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 383,
+            "description": "<p>Indicates if the animation should be played again with the next run of the animation-flow.</p>",
+            "itemtype": "property",
+            "name": "repeat",
+            "default": "true",
+            "type": "boolean",
+            "class": "PrimitiveAnimationDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 391,
+            "description": "<p>Indicates if the animation-flow wait for the animation to finish before playing the next. If set to <b>false</b> multiple animation can be played in parallel.</p>",
+            "itemtype": "property",
+            "name": "wait",
+            "default": "false",
+            "type": "boolean",
+            "class": "PrimitiveAnimationDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 408,
+            "description": "<p>The duration in frames.</p>",
+            "itemtype": "property",
+            "name": "duration",
+            "type": "number",
+            "class": "WaitPrimitiveAnimationDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 423,
+            "description": "<p>The target position where the control should be moved to.</p>",
+            "itemtype": "property",
+            "name": "position",
+            "type": "number[]",
+            "class": "MoveToPrimitiveAnimationDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 429,
+            "description": "<p>The duration of the movement in frames.</p>",
+            "itemtype": "property",
+            "name": "duration",
+            "type": "number",
+            "class": "MoveToPrimitiveAnimationDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 447,
+            "description": "<p>The smoothness(vague) of the edges. If <b>0</b> edges are sharp which is useful for for retro-like games\nwhile <b>255</b> is very smooth.</p>",
+            "itemtype": "property",
+            "name": "vague",
+            "type": "number",
+            "class": "MaskToPrimitiveAnimationDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 454,
+            "description": "<p>The mask-image to use. That is an grey-scaled image in regular.</p>",
+            "itemtype": "property",
+            "name": "mask",
+            "type": "string",
+            "class": "MaskToPrimitiveAnimationDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 460,
+            "description": "<p>The target-value to reach (0 - 255).</p>",
+            "itemtype": "property",
+            "name": "value",
+            "type": "number",
+            "class": "MaskToPrimitiveAnimationDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 466,
+            "description": "<p>The duration in frames.</p>",
+            "itemtype": "property",
+            "name": "duration",
+            "type": "number",
+            "class": "MaskToPrimitiveAnimationDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 484,
+            "description": "<p>The target percentage where the control should be zoomed to.</p>",
+            "itemtype": "property",
+            "name": "zoom",
+            "type": "number[]",
+            "class": "ZoomToPrimitiveAnimationDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 490,
+            "description": "<p>The duration of the zoom in frames.</p>",
+            "itemtype": "property",
+            "name": "duration",
+            "type": "number",
+            "class": "ZoomToPrimitiveAnimationDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 506,
+            "description": "<p>The target opacity where the control should be blended to.</p>",
+            "itemtype": "property",
+            "name": "opacity",
+            "type": "number",
+            "class": "BlendToPrimitiveAnimationDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 512,
+            "description": "<p>The duration of the blending in frames.</p>",
+            "itemtype": "property",
+            "name": "duration",
+            "type": "number",
+            "class": "BlendToPrimitiveAnimationDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 528,
+            "description": "<p>A binding-expression to describe the control's field to change.</p>",
+            "itemtype": "property",
+            "name": "field",
+            "type": "string",
+            "class": "ChangeToPrimitiveAnimationDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 534,
+            "description": "<p>The value the field should be changed to.</p>",
+            "itemtype": "property",
+            "name": "value",
+            "type": "number",
+            "class": "ChangeToPrimitiveAnimationDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 540,
+            "description": "<p>The duration of the change in frames.</p>",
+            "itemtype": "property",
+            "name": "duration",
+            "type": "number",
+            "class": "ChangeToPrimitiveAnimationDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 555,
+            "description": "<p>The ID of the animation in database to use.</p>",
+            "itemtype": "property",
+            "name": "animationId",
+            "type": "number",
+            "class": "PlayAnimationPrimitiveAnimationDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 561,
+            "description": "<p>The duration of the change in frames.</p>",
+            "itemtype": "property",
+            "name": "duration",
+            "type": "number",
+            "class": "PlayAnimationPrimitiveAnimationDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 575,
+            "description": "<p>The images used for the animation. They display one after another to make an animation.</p>",
+            "itemtype": "property",
+            "name": "images",
+            "type": "string[]",
+            "class": "ChangeImagesPrimitiveAnimationDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 581,
+            "description": "<p>The duration in frames.</p>",
+            "itemtype": "property",
+            "name": "duration",
+            "type": "number",
+            "class": "ChangeImagesPrimitiveAnimationDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 596,
+            "description": "<p>The sound to play. The descriptor is { name, volume, playbackRate }.</p>",
+            "itemtype": "property",
+            "name": "sound",
+            "type": "Object",
+            "class": "SoundPrimitiveAnimationDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 613,
+            "description": "<p>A binding-expression to define the source-value.</p>",
+            "itemtype": "property",
+            "name": "sourceField",
+            "type": "string",
+            "class": "BindingDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 620,
+            "description": "<p>A binding-expression to define the target-field.</p>",
+            "itemtype": "property",
+            "name": "targetField",
+            "type": "string",
+            "class": "BindingDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 627,
+            "description": "<p>Defines a condition which must be <b>true</b> before the binding can be executed.</p>",
+            "itemtype": "property",
+            "name": "condition",
+            "type": "ConditionDescriptor",
+            "class": "BindingDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 634,
+            "description": "<p>Defines conditions which must be <b>true</b> before the binding can be executed.</p>",
+            "itemtype": "property",
+            "name": "conditions",
+            "type": "ConditionDescriptor[]",
+            "class": "BindingDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 641,
+            "description": "<p>The binding can only be executed if the defined events are <b>true</b></p>",
+            "itemtype": "property",
+            "name": "events",
+            "type": "EventDescriptor[]|",
+            "class": "BindingDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 648,
+            "description": "<p>The binding can only be executed if the defined event is <b>true</b></p>",
+            "itemtype": "property",
+            "name": "event",
+            "type": "EventDescriptor",
+            "class": "BindingDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 655,
+            "description": "<p>A binding-expression to define a max-value the source-field is limited to before written into the targetField.</p>",
+            "itemtype": "property",
+            "name": "max",
+            "type": "string|number",
+            "class": "BindingDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 662,
+            "description": "<p>A binding-expression to define a min-value the source-field is limited to before written into the targetField.</p>",
+            "itemtype": "property",
+            "name": "min",
+            "type": "string|number",
+            "class": "BindingDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 669,
+            "description": "<p>If <b>true</b> the source-value will be negated before written into the target-field.</p>",
+            "itemtype": "property",
+            "name": "negateValue",
+            "type": "boolean",
+            "class": "BindingDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 676,
+            "description": "<p>Defines if and how the source-value should be rounded before written into the target-field. Can be \"round\", \"floor\" or \"ceil\".</p>",
+            "itemtype": "property",
+            "name": "roundMethod",
+            "type": "string|number",
+            "class": "BindingDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 683,
+            "description": "Contains one or multiple IDs of controls which will break the binding-chain to avoid an endless circular changing of values. For example,\nif one binding changes a property of control A and then control A trigger a binding to change a property of control B which then will\ntrigger again a change of a property of control A which results in and endless chain.",
+            "itemtype": "property",
+            "name": "breakChain",
+            "type": "string[]",
+            "class": "BindingDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 692,
+            "description": "<p>Defines a ratio-conversion. Sometimes it is necessary to convert a value from one value-space to another. An example could\nbe a volume slider control where the slider-knob moves vertically between 0 - 500 pixels but its value should be stored between 0 and 100. \nIn that case it is necessary to convert the knobs y-coordinate(0 - 500) into the volume value-space (0 to 100) before writing to target-field.</p>\n\n<p>The above example can be done with the following ration-conversion:</p>\n<code>{... \"sourceField\": \"$slider_knob.dstRect.y\", \"targetField\": \"$dataFields.settings.generalMusicVolume\", \"convertRatio\": { \"target\": 100, \"source\": 500 } ... }</code>\n<p>The actual internal formula used for ratio-conversion is:</p>\n<code> targetField = (convertRatio.target - convertRatio.targetSize) / (sourceField - convertRatio.sourceSize) * (source-field - value-offset) + offset</code>\n<p>So there are some other properties available to give more control about the ratio-conversion. Check BindingRatioConversionDescriptor for more information.",
+            "itemtype": "property",
+            "name": "convertRatio",
+            "type": "BindingRatioConversionDescriptor",
+            "class": "BindingDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 716,
+            "description": "<p>A binding-expression to define the source-operand. The source-operand is divided through the target-operand.</p>",
+            "itemtype": "property",
+            "name": "source",
+            "type": "string",
+            "class": "BindingRatioConversionDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 723,
+            "description": "<p>A binding-expression to define the target-operand. The source-operand is divided through the target-operand.</p>",
+            "itemtype": "property",
+            "name": "target",
+            "type": "string",
+            "class": "BindingRatioConversionDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 730,
+            "description": "<p>A binding-expression to define an offset-value.</p>",
+            "itemtype": "property",
+            "name": "offset",
+            "type": "number",
+            "class": "BindingRatioConversionDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 737,
+            "description": "<p>A binding-expression to define an offset subtracted from the value.</p>",
+            "itemtype": "property",
+            "name": "valueOffset",
+            "type": "number",
+            "class": "BindingRatioConversionDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 744,
+            "description": "<p>A binding-expression to define a targetSize operand subtracted from target-value.</p>",
+            "itemtype": "property",
+            "name": "targetSize",
+            "type": "number",
+            "class": "BindingRatioConversionDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 751,
+            "description": "<p>A binding-expression to define a sourceSize operand subtracted from source-value.</p>",
+            "itemtype": "property",
+            "name": "sourceSize",
+            "type": "number",
+            "class": "BindingRatioConversionDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 786,
+            "description": "<p>A binding-expression to define a field which needs to be changed to fire the onChange event.</p>",
+            "itemtype": "property",
+            "name": "onChange",
+            "type": "string",
+            "class": "EventDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 799,
+            "description": "<p>The name of the action to execute. That name must match the name of a action-method in the target-object's class.</p>",
+            "itemtype": "property",
+            "name": "name",
+            "type": "string",
+            "class": "ActionDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 806,
+            "description": "<p>An optional params-object which is passed to the target-object's action-method as second argument.</p>",
+            "itemtype": "property",
+            "name": "params",
+            "type": "Object",
+            "class": "ActionDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 813,
+            "description": "<p>The target-object on which the action should be executed. The target-object's class needs to contain the action-method defined\nin the ActionDescriptor.name property. The default target-object is the current scene-behavior component.</p>\n\n<p>The target-property is first interpreted as a binding-expression. If that expression doesn't return a result it is interpreted as\nan action-target expression which uses the syntax:</p>\n<code>[control-id].[component-id]</code>\n<p>Like in the following example:</p>\n<code>{ .... \"target\": \"myControl.myComponent\" .... }</code>\n<p>If the control or component doesn't exist the current scene-behavior component is used.</p>",
+            "itemtype": "property",
+            "name": "target",
+            "type": "string",
+            "class": "ActionDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 828,
+            "description": "<p>Defines which must be <b>true</b> before the action can be executed. If multiple actions are defined for a control, only the actions\nwhere the conditions are <b>true</b> will be executed.</p>",
+            "itemtype": "property",
+            "name": "conditions",
+            "type": "ConditionDescriptor[]",
+            "class": "ActionDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 837,
+            "description": "<p>Defines a time-delay in frames before the action is executed.</p>",
+            "itemtype": "property",
+            "name": "wait",
+            "type": "number",
+            "class": "ActionDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 854,
+            "description": "<p>A binding-expression to define the value to check.</p>",
+            "itemtype": "property",
+            "name": "field",
+            "type": "string",
+            "class": "ConditionDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 861,
+            "description": "<p>A binding-expression to define the value to check against. Checks if the field-value is equal to this value.</p>",
+            "itemtype": "property",
+            "name": "equalTo",
+            "type": "Object|number|string|boolean",
+            "class": "ConditionDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 867,
+            "description": "<p>A binding-expression to define the value to check against.  Checks if the field-value is greater than this value.</p>",
+            "itemtype": "property",
+            "name": "greaterThan",
+            "type": "Object|number|string|boolean",
+            "class": "ConditionDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 873,
+            "description": "<p>A binding-expression to define the value to check against.  Checks if the field-value is less than this value.</p>",
+            "itemtype": "property",
+            "name": "lessThan",
+            "type": "Object|number|string|boolean",
+            "class": "ConditionDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 879,
+            "description": "<p>A binding-expression to define the value to check against. Checks if the field-value is not equal to this value.</p>",
+            "itemtype": "property",
+            "name": "notEqualTo",
+            "type": "Object|number|string|boolean",
+            "class": "ConditionDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 893,
+            "description": "<p>The class-name of the component without namespace/module prefix.</p>",
+            "itemtype": "property",
+            "name": "type",
+            "type": "string",
+            "class": "ComponentDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 900,
+            "description": "<p>An optional identifier for the component. That ID can be used to set a component as a target for a certain action.</p>",
+            "itemtype": "property",
+            "name": "id",
+            "default": "null",
+            "type": "string",
+            "class": "ComponentDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 908,
+            "description": "<p>An optional params-object which is passed to the constructor of the component</p>",
+            "itemtype": "property",
+            "name": "params",
+            "default": "null",
+            "type": "Object",
+            "class": "ComponentDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 916,
+            "description": "<p>The name of the module the component should be loaded from. The default is the \"gs\" module.</p>",
+            "itemtype": "property",
+            "name": "module",
+            "default": "\"gs\"",
+            "type": "string",
+            "class": "ComponentDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 932,
+            "description": "<p>Associates the layout with a data-source. In that case the layout's controls are generated automatically\ndepending on the amount of the data. Use the template-property to define the appearance of each control. The value is \na binding-expression and should return an array of data or a number-value. If its a number-value it will be\nused as the count of controls to create.</p>\n\n<p>The layout needs to support data-fields. That is only the case for ui.StackLayout and ui.GridLayout.</p>",
+            "itemtype": "property",
+            "name": "dataField",
+            "see": [
+                "ui.Layout.template"
+            ],
+            "type": "string",
+            "class": "ui.Layout"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 944,
+            "description": "<p>Defines the template used to create the control's if a data-field is present. It can be just the name of a template or\ntemplate-definition. To access the data the template should display, the index-property can be used which is part of every\ncontrol displayed in a layout. For Example:</p>\n\n<p>Lets say the data-field is defined as \"$dataFields.database.characters\" to display all characters. The template is defined as a\nsimple ui.Text control. To display the name of each character the following binding can be used:</p>\n<code>{ \"sourceField\": \"$dataFields.database.characters[o.index].name\", \"targetField\": \"o.text\" }</code>",
+            "itemtype": "property",
+            "name": "template",
+            "see": [
+                "ui.Layout.dataField"
+            ],
+            "type": "ui.Control|string",
+            "class": "ui.Layout"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 957,
+            "description": "<p>A condition which is executed on each data-object. The data-object is only processed if the condition returns <b>true</b>.</p>",
+            "itemtype": "property",
+            "name": "dataFilter",
+            "see": [
+                "ui.Layout.dataField"
+            ],
+            "type": "ConditionDescriptor",
+            "class": "ui.Layout"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 974,
+            "description": "If <b>true</b> the layout resizes to fit its content.",
+            "itemtype": "property",
+            "name": "sizeToFit",
+            "type": "boolean",
+            "class": "ui.FreeLayout"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 1002,
+            "description": "If <b>true</b> the layout resizes to fit its content.",
+            "itemtype": "property",
+            "name": "sizeToFit",
+            "type": "boolean",
+            "class": "ui.StackLayout"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 1007,
+            "description": "The layout's orientation which can be \"vertical\" or \"horizontal\".",
+            "itemtype": "property",
+            "name": "orientation",
+            "type": "string",
+            "class": "ui.StackLayout"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 1019,
+            "description": "The layout's orientation which can be \"vertical\" or \"horizontal\".",
+            "itemtype": "property",
+            "name": "orientation",
+            "type": "string",
+            "class": "ui.SpreadLayout"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 1031,
+            "description": "If <b>true</b> the layout resizes to fit its content.",
+            "itemtype": "property",
+            "name": "sizeToFit",
+            "type": "boolean",
+            "class": "ui.GridLayout"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 1036,
+            "description": "Number of rows.",
+            "itemtype": "property",
+            "name": "rows",
+            "type": "number",
+            "class": "ui.GridLayout"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 1041,
+            "description": "Number of columns.",
+            "itemtype": "property",
+            "name": "columns",
+            "type": "number",
+            "class": "ui.GridLayout"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 1046,
+            "description": "Defines a space between cells. Uses the format [left, top, right, bottom].",
+            "itemtype": "property",
+            "name": "cellSpacing",
+            "type": "number[]",
+            "class": "ui.GridLayout"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 1062,
+            "description": "The panel's color.",
+            "itemtype": "property",
+            "name": "color",
+            "type": "number[]",
+            "class": "ui.Panel"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 1067,
+            "description": "Indiciates if the panel is blocking mouse/touch input behind its own area.",
+            "itemtype": "property",
+            "name": "modal",
+            "default": "false",
+            "type": "boolean",
+            "class": "ui.Panel"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 1081,
+            "description": "The name of the video resource to play.",
+            "itemtype": "property",
+            "name": "video",
+            "type": "string",
+            "class": "ui.Video"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 1086,
+            "description": "Indiciates if video is looped and repeats after finish.",
+            "itemtype": "property",
+            "name": "loop",
+            "default": "true",
+            "type": "boolean",
+            "class": "ui.Video"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 1106,
+            "description": "Size of the first/start part in pixels.",
+            "itemtype": "property",
+            "name": "firstPartSize",
+            "default": "16",
+            "type": "number",
+            "class": "ui.ThreePartImage"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 1112,
+            "description": "Size in pixels of the middle part which is stretched.",
+            "itemtype": "property",
+            "name": "middlePartSize",
+            "default": "1",
+            "type": "number",
+            "class": "ui.ThreePartImage"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 1118,
+            "description": "Size of the last/end part in pixels.",
+            "itemtype": "property",
+            "name": "lastPartSize",
+            "default": "16",
+            "type": "number",
+            "class": "ui.ThreePartImage"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 1124,
+            "description": "The name of the graphic resource used to construct the three-part image from. The default folder is Graphics/Pictures.",
+            "itemtype": "property",
+            "name": "image",
+            "type": "string",
+            "class": "ui.ThreePartImage"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 1129,
+            "description": "Names of additional graphic resources used by other added components like gs.Component_HotspotBehavior uses the\nimages to display different states of the three-part image like selected, unselected, etc.",
+            "itemtype": "property",
+            "name": "images",
+            "type": "string[]",
+            "class": "ui.ThreePartImage"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 1148,
+            "description": "Size of the frame borders.",
+            "itemtype": "property",
+            "name": "frameThickness",
+            "default": "16",
+            "type": "number",
+            "class": "ui.Frame"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 1154,
+            "description": "Size of the frame corners.",
+            "itemtype": "property",
+            "name": "frameCornerSize",
+            "default": "16",
+            "type": "number",
+            "class": "ui.Frame"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 1160,
+            "description": "The name of the graphic resource used to construct the frame from. The default folder is Graphics/Pictures.",
+            "itemtype": "property",
+            "name": "image",
+            "type": "string",
+            "class": "ui.Frame"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 1165,
+            "description": "Names of additional graphic resources used by other added components like gs.Component_HotspotBehavior uses the\nimages to display different states of the frame like selected, unselected, etc.",
+            "itemtype": "property",
+            "name": "images",
+            "type": "string[]",
+            "class": "ui.Frame"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 1192,
+            "description": "The name of the graphic resource to display. The default folder is Graphics/Pictures.",
+            "itemtype": "property",
+            "name": "image",
+            "type": "string",
+            "class": "ui.Image"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 1197,
+            "description": "Names of additional graphic resources used by other added components like gs.Component_HotspotBehavior uses the\nimages for its different states.",
+            "itemtype": "property",
+            "name": "images",
+            "type": "string[]",
+            "class": "ui.Image"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 1204,
+            "description": "The image folder to load the image from.",
+            "itemtype": "property",
+            "name": "imageFolder",
+            "default": "Graphics/Pictures",
+            "type": "string",
+            "class": "ui.Image"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 1220,
+            "description": "<p>The images used for the different states of the image-map.</p>\n<ul>\n<li>0 = Ground Image</li>\n<li>1 = Hovered</li>\n<li>2 = Unselected</li>\n<li>3 = Selected</li>\n<li>4 = Selected Hovered</li>\n</ul>",
+            "itemtype": "property",
+            "name": "images",
+            "type": "string[]",
+            "class": "ui.ImageMap"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 1233,
+            "description": "The different hotspots of the image-map. Each hotspot can trigger multiple actions.",
+            "itemtype": "property",
+            "name": "hotspots",
+            "type": "ImageMapHotspotDescriptor[]",
+            "class": "ui.ImageMap"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 1247,
+            "description": "The position and size of the hotspot.",
+            "itemtype": "property",
+            "name": "rect",
+            "type": "number[]",
+            "class": "ImageMapHotspotDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 1252,
+            "description": "Actions which are executed if the hotspot is clicked.",
+            "itemtype": "property",
+            "name": "actions",
+            "type": "ActionDescriptor[]",
+            "class": "ImageMapHotspotDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 1276,
+            "description": "The text to display.",
+            "itemtype": "property",
+            "name": "text",
+            "type": "string",
+            "class": "ui.Text"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 1281,
+            "description": "The font used to display the text.",
+            "itemtype": "property",
+            "name": "font",
+            "type": "FontDescriptor",
+            "class": "ui.Text"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 1296,
+            "description": "The font's name.",
+            "itemtype": "property",
+            "name": "name",
+            "type": "string",
+            "class": "FontDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 1301,
+            "description": "The font's in pixels.",
+            "itemtype": "property",
+            "name": "size",
+            "type": "number",
+            "class": "FontDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 1306,
+            "description": "The font's color.",
+            "itemtype": "property",
+            "name": "color",
+            "type": "ColorDescriptor",
+            "class": "FontDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 1311,
+            "description": "The font's outline.",
+            "itemtype": "property",
+            "name": "outline",
+            "type": "FontOutlineDescriptor",
+            "class": "FontDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 1316,
+            "description": "Indicates if the font-style is italic.",
+            "itemtype": "property",
+            "name": "italic",
+            "type": "boolean",
+            "class": "FontDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 1321,
+            "description": "Indicates if the font-style is bold.",
+            "itemtype": "property",
+            "name": "bold",
+            "type": "boolean",
+            "class": "FontDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 1326,
+            "description": "Indicates if the font-style is small-caps.",
+            "itemtype": "property",
+            "name": "smallCaps",
+            "type": "boolean",
+            "class": "FontDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 1339,
+            "description": "The outline color.",
+            "itemtype": "property",
+            "name": "color",
+            "default": "[0, 0, 0, 255]",
+            "type": "number[]",
+            "class": "FontOutlineDescriptor"
+        },
+        {
+            "file": "igui_reference.js",
+            "line": 1345,
+            "description": "The outline thickness.",
+            "itemtype": "property",
+            "name": "size",
+            "default": "4",
+            "type": "number",
+            "class": "FontOutlineDescriptor"
+        }
+    ],
+    "warnings": []
+}

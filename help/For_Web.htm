@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>For Web</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.5.0_4";
+</script>
+ <meta name="topic-breadcrumbs" content="Exploring the Editor > Testing & Deployment" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<p class="Topic_Heading">For Web</p>
+<p>&#160;</p>
+<p><span class="Topic_Start">T</span>esting &amp; Deployment for Web platform 
+ is very easy. This topic will guide you through the necessary steps.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Testing on Web platform</p>
+<p>&#160;</p>
+<p>Just select Build For &gt; Web from The Menubar for a quick test-build. 
+ After that, just navigate to your project-folder or select Game &gt; Open 
+ Game Folder from The Menubar. There you will find a build folder with 
+ some files and an index.html file inside. You can just open that file 
+ with Firefox to play your game.</p>
+<p>&#160;</p>
+<p>Alternativly you can setup a local web server for more realistic testing 
+ or just upload the build-folder to your web-server.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Audio &amp; Video Assets</p>
+<p>&#160;</p>
+<p>At time of writing, one half of the Web-Browsers only supports .m4a/.mp4/.mp3/.aac/.wav 
+ for Audio and .mp4 for Video while the other half only supports .ogg/.wav 
+ for Audio and .webm for Video. If you plan to support all major browsers 
+ you have to make sure that your game contains all Audio and Video files 
+ in at least two formats. Only exception are .wav files used for simple 
+ sound effects.</p>
+<p>&#160;</p>
+<p>VN Maker allows you to import the same file multiple times with different 
+ formats and then automatically loads the correct file at runtime. </p>
+<p>&#160;</p>
+<p><span style="font-weight: bold;">NOTE:</span><span> Video-Playback might 
+ not work correctly in some mobile web-browsers because of security restrictions.</span></p>
+<p>&#160;</p>
+<p class="Sub_Heading">Web Start Logo</p>
+<p>On some platforms, especially on mobiles, if you load your game with 
+ a mobile webbrowser, your game will show up a web-start screen which requires 
+ the player to tap on it one time to start the actually game. That is necessary 
+ because of the strict security of mobile browsers. </p>
+<p>&#160;</p>
+<p><img src="web-start-screen.png" alt="" style=" border:none; width:100%; max-width:719px;" border="0" /></p>
+<p>&#160;</p>
+<p>You can find and exchange the web-start logo in <a href="Resource_Manager.htm">Resource 
+ Manager</a> if you navigate to Graphics/Pictures folder and look for <span 
+	 style="font-weight: bold;">web-start-screen</span> image file.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Deploy for Web platform</p>
+<p>&#160;</p>
+<p>To deploy your game for Web, you can either choose Build For &gt; Web 
+ from <a href="The_Menu_Bar.htm">The Menubar</a> for a quick test-build 
+ or use the <a href="Create_Game_Package.htm">Create Game Package</a> wizard 
+ to create a ready-to-ship web package. You can now upload that web-package 
+ to your web-server and share it with the world!</p>
+<p>&#160;</p>
+<p>If you want to take more control over how your game will be packaged, 
+ take a look at <a href="Getting_Started.htm">Build &amp; Run</a> documentation.</p>
+<p>&#160;</p>
+</body>
+</html>

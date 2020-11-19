@@ -1,0 +1,344 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Bitmap Class</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "";
+</script>
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+ <h2 style="font-family: 'Book Antiqua', serif; margin-bottom: 7pt; font-size: 24pt;">Bitmap Class</h2>
+<hr width="60%" align="left" />
+</div>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-family: 'Book Antiqua', serif; font-weight: bold; font-size: 18pt;">T</span>he bitmap class allows to load images from files or creating in-memory bitmap. It offers different methods to directly draw to the bitmap or recolor it.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-weight: bold; font-size: 18pt; font-family: 'Book Antiqua', serif;">Item Index</p>
+<hr width="60%" align="left" />
+<table style="border-collapse: separate; border-collapse: separate;" cellspacing="0" width="100%" border="1">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td colspan="2">
+<p style="text-align: center;"><span style="font-weight: bold;">Methods</span></p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; font-weight: bold;">blt (x, &#160;y, srcBitmap, &#160;srcRect-, opacity)</p>
+</td>
+<td>
+<p>Blits/Draws the specified bitmap on this bitmap.</p>
+<p>&#160;</p>
+<p style="font-weight: bold;">Parameters:</p>
+<ul style="list-style: disc;">
+<li style="font-weight: bold;">x <span>&#160;</span><span style="font-style: italic; font-size: 8pt; font-weight: normal;">[Number]</span><br />
+<span style="font-weight: normal;">The x-coordinate of the position.</span><br /></li>
+<li style="font-weight: bold;">y <span style="font-style: italic; font-size: 8pt; font-weight: normal;">[Number]</span><br />
+<span style="font-weight: normal;">The y-coordinate of the position.</span><br /></li>
+<li><span style="font-weight: bold;">srcBitmap</span> <span style="font-style: italic; font-size: 8pt;">[gs.Bitmap]</span><br />
+The bitmap to blit/draw.<br /></li>
+<li style="font-weight: bold;">srcRect- <span style="font-style: italic; font-size: 8pt; font-weight: normal;">[gs.Rect]</span><br />
+<span style="font-weight: normal;">The source-rectangle. Only that area will be blitted/drawn.</span><br /></li>
+<li style="font-weight: bold;">opacity <span style="font-style: italic; font-size: 8pt; font-weight: normal;">[Number]</span><br />
+<span style="font-weight: normal;">The opacity</span></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; font-weight: bold;">changeHue (hue)</p>
+</td>
+<td>Changes the HUE of the bitmap. Once the HUE was changed it cannot changed back by passing 0 for hue or something. The HUE change is always executed on the current bitmap-data. <br />&#160;
+<p style="font-weight: bold;">Parameters:</p>
+<ul style="list-style: disc;">
+<li><span style="font-weight: bold;">hue</span><span>&#160;</span><span style="font-style: italic; font-size: 8pt;">[Number]</span><br />
+The HUE in degrees.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; font-weight: bold;">clear ()</p>
+</td>
+<td>Clears the bitmap.</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; font-weight: bold;">clearRect (x, y, width, height)</p>
+</td>
+<td>Clears the specified rectangle-area. <br />&#160;
+<p style="font-weight: bold;">Parameters:</p>
+<ul style="list-style: disc;">
+<li><span style="font-weight: bold;">x</span> <span style="font-style: italic; font-size: 8pt;">[Number]</span><br />
+The x-coordinate of the rectangle.</li>
+<li><span style="font-weight: bold;">y</span> <span style="font-style: italic; font-size: 8pt;">[Number]</span><br />
+The x-coordinate of the rectangle.</li>
+<li><span style="font-weight: bold;">width</span> <span style="font-style: italic; font-size: 8pt;">[Number]</span><br />
+The width of the rectangle.</li>
+<li><span style="font-weight: bold;">height</span> <span style="font-style: italic; font-size: 8pt;">[Number]</span><br />
+The height of the rectangle.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; font-weight: bold;">dispose ()</p>
+</td>
+<td>Disposes the bitmap and frees the memory. Should be called if the bitmap is no longer needed to free resources which are not handled by the garbage collector.</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; font-weight: bold;">drawText (x, y, w, h, text, [hAlign=gs.Alignment.LEFT], [vAlign=gs.Alignment.TOP])</p>
+</td>
+<td>
+<p>Draws the specified text on the bitmap.</p>
+<p>&#160;</p>
+<p style="font-weight: bold;">Parameters:</p>
+<ul style="list-style: disc;">
+<li><span style="font-weight: bold;">x</span> <span style="font-style: italic; font-size: 8pt;">[Number]</span><br />
+The x-coordinate of the text's position.</li>
+<li><span style="font-weight: bold;">y</span> <span style="font-style: italic; font-size: 8pt;">[Number]</span><br />
+The y-coordinate of the text's position.</li>
+<li><span style="font-weight: bold;">w</span> <span style="font-style: italic; font-size: 8pt;">[Number]</span><br />
+The width of text-box used to align the text.</li>
+<li><span style="font-weight: bold;">h</span> <span style="font-style: italic; font-size: 8pt;">[Number]</span><br />
+The height of text-box used to align the text.</li>
+<li style="font-weight: bold;">text String<br />
+The text to draw.</li>
+<li style="font-weight: bold;">[hAlign=gs.Alignment.LEFT] <span style="font-style: italic; font-size: 8pt; font-weight: normal;">[gs.Alignment]</span> <span style="font-style: italic; font-size: 8pt; font-weight: normal;">[optional]</span></li>
+<li>The horizontal alignment of the text.</li>
+<li><span style="font-weight: bold;">[vAlign=gs.Alignment.TOP]</span> <span style="font-style: italic; font-size: 8pt;">[gs.Alignment] [optional]</span><br />
+The vertical alignment of the text.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; font-weight: bold;">fillRect (x, &#160;y, &#160;width, &#160;height, &#160;color)</p>
+</td>
+<td>
+<p>Fills a rectangle-area with the specified color.</p>
+<p>&#160;</p>
+<p style="font-weight: bold;">&#160;</p>
+<p style="font-weight: bold;"><span style="font-weight: bold;">Parameters:</span></p>
+<ul style="list-style: disc;">
+<li><span style="font-weight: bold;">x</span> <span style="font-style: italic; font-size: 8pt;">[Number]</span><br />
+The x-coordinate of the rectangle.</li>
+<li><span style="font-weight: bold;">y</span> <span style="font-style: italic; font-size: 8pt;">[Number]</span><br />
+The x-coordinate of the rectangle.</li>
+<li><span style="font-weight: bold;">width</span> <span style="font-style: italic; font-size: 8pt;">[Number]</span><br />
+The width of the rectangle.</li>
+<li><span style="font-weight: bold;">height</span> <span style="font-style: italic; font-size: 8pt;">[Number]</span><br />
+The height of the rectangle.</li>
+<li><span style="font-weight: bold;">color</span> <span style="font-style: italic; font-size: 8pt;">[gs.Color]</span><br />
+The fill color.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; font-weight: bold;">getImageData (x, y, width, height) <span style="font-style: italic; font-size: 8pt; font-weight: normal;">[ImageData]</span></p>
+</td>
+<td>Gets the image data of the specified rectangle-area. <br />&#160;
+<p style="font-weight: bold;"><span><span style="font-weight: bold;">Parameters:</span></span></p>
+<ul style="list-style: disc;">
+<li><span style="font-weight: bold;">x</span> <span style="font-style: italic; font-size: 8pt;">[Number]</span><br />
+The x-coordinate of the rectangle.</li>
+<li><span style="font-weight: bold;">y</span> <span style="font-style: italic; font-size: 8pt;">[Number]</span><br />
+The x-coordinate of the rectangle.</li>
+<li><span style="font-weight: bold;">width</span> <span style="font-style: italic; font-size: 8pt;">[Number]</span><br />
+The width of the rectangle.</li>
+<li><span style="font-weight: bold;">height</span> <span style="font-style: italic; font-size: 8pt;">[Number]</span><br />
+The height of the rectangle.</li>
+</ul>
+<p>&#160;</p>
+<p style="font-weight: bold;">Returns:</p>
+<ul style="list-style: disc;">
+<li>
+<p style="font-weight: bold;">ImageData:<br />
+<span style="font-weight: normal;">The image data of the specified rectangle-area.</span></p>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; font-weight: bold;">gradientFillRect (x, y, width, height, color1, color2, vertical)</p>
+</td>
+<td>Fills a rectangle-area with a linear-gradient. <br />&#160;
+<p style="font-weight: bold;"><span><span style="font-weight: bold;">Parameters:</span></span></p>
+<ul style="list-style: disc;">
+<li><span style="font-weight: bold;">x</span> <span style="font-style: italic; font-size: 8pt;">[Number]</span><br />
+The x-coordinate of the rectangle.</li>
+<li><span style="font-weight: bold;">y</span> <span style="font-style: italic; font-size: 8pt;">[Number]</span><br />
+The x-coordinate of the rectangle.</li>
+<li><span style="font-weight: bold;">width</span> <span style="font-style: italic; font-size: 8pt;">[Number]</span><br />
+The width of the rectangle.</li>
+<li><span style="font-weight: bold;">height</span> <span style="font-style: italic; font-size: 8pt;">[Number]</span><br />
+The height of the rectangle.</li>
+<li><span style="font-weight: bold;">color1</span> <span style="font-style: italic; font-size: 8pt;">[gs.Color]</span><br />
+The first gradient color.</li>
+<li><span style="font-weight: bold;">color2</span> <span style="font-style: italic; font-size: 8pt;">[gs.Color]</span><br />
+The second gradient color.</li>
+<li><span style="font-weight: bold;">vertical</span> <span style="font-style: italic; font-size: 8pt;">[Boolean]</span><br />
+If <span style="font-weight: bold;">true</span> the gradient is vertical. Otherwise horizontal.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; font-weight: bold;">scale (factor)</p>
+</td>
+<td>
+<p>Scales the bitmap by the specified factor.</p>
+<p>&#160;</p>
+<p style="font-weight: bold;"><span><span><span style="font-weight: bold;">Parameters:</span></span></span></p>
+<ul style="list-style: disc;">
+<li><span style="font-weight: bold;">factor</span> <span style="font-style: italic; font-size: 8pt;">[Number]</span><br />
+The scale factor</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; font-weight: bold;">setImageData (imageData, x, y)</p>
+</td>
+<td>
+<p>Puts the image data at a specified point.</p>
+<p>&#160;</p>
+<p style="font-weight: bold;">Parameters:</p>
+<ul style="list-style: disc;">
+<li>imageData <span style="font-style: italic; font-size: 8pt;">[ImageData]</span><br />
+The image data to put.</li>
+<li><span style="font-weight: bold;">x</span> <span style="font-style: italic; font-size: 8pt;">[Number]</span><br />
+The x-coordinate of the point.</li>
+<li><span style="font-weight: bold;">y</span> <span style="font-style: italic; font-size: 8pt;">[Number]</span><br />
+The y-coordinate of the point.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; font-weight: bold;">stretchBlt (destRect, srcBitmap, srcRect-, opacity)</p>
+</td>
+<td>Blits/Draws the specified bitmap on this bitmap and stretches it to fit into the specified dest-rect. <br />&#160;
+<p style="font-weight: bold;">Parameters:</p>
+<ul style="list-style: disc;">
+<li><span style="font-weight: bold;">destRect</span> <span style="font-style: italic; font-size: 8pt;">[gs.Rect]</span></li>
+<li>The destination-rectangle for the bitmap to draw. If smaller/larger than the actual bitmap-size then it is automatically scaled.</li>
+<li><span style="font-weight: bold;">srcBitmap</span> <span style="font-style: italic; font-size: 8pt;">[gs.Bitmap]</span><br />
+The bitmap to blit/draw.</li>
+<li><span style="font-weight: bold;">srcRect-</span> <span style="font-style: italic; font-size: 8pt;">[gs.Rect]</span><br />
+The source-rectangle. Only that area will be blitted/drawn.</li>
+<li><span style="font-weight: bold;">opacity</span> <span style="font-style: italic; font-size: 8pt;">[Number]</span><br />
+The opacity</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center;"><span style="font-weight: bold;">textSize (text)</span> <span style="font-style: italic; font-size: 8pt;">[gs.Size]</span></p>
+</td>
+<td>Measures the size of the specified text.<br />
+<br /><span style="font-weight: bold;">Parameters:</span>
+<ul style="list-style: disc;">
+<li><span style="font-weight: bold;">text</span> <span style="font-style: italic; font-size: 8pt;">[String]</span><br />
+The text to measure</li>
+</ul>
+<p>&#160;</p>
+<p style="font-weight: bold;">Returns:</p>
+<ul style="list-style: disc;">
+<li><span style="font-weight: bold;">gs.Size</span>:<br />
+<span style="font-weight: bold;">size</span> - The size of the specified text.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center;">&#160;</p>
+</td>
+<td>&#160;</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center;">&#160;</p>
+</td>
+<td>&#160;</td>
+</tr>
+</table>
+<p>&#160;</p>
+<p>&#160;</p>
+<table style="border-collapse: separate; border-collapse: separate;" cellspacing="0" width="100%" border="1">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td colspan="2">
+<p style="text-align: center;"><span style="font-weight: bold;">Properties</span></p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; font-family: Arial, sans-serif;"><span style="font-weight: bold;">font</span> <span style="font-style: italic; font-size: 8pt;">[gs.Font]</span></p>
+</td>
+<td><span style="font-family: Arial, sans-serif;">The font used to draw text on the bitmap.</span></td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; font-family: Arial, sans-serif;"><span style="font-weight: bold;">loaded</span> <span style="font-style: italic; font-size: 8pt;">[Boolean]</span></p>
+</td>
+<td><span style="font-family: Arial, sans-serif;">Indicates if the bitmap is loaded.</span></td>
+</tr>
+</table>
+<p>&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+</body>
+</html>

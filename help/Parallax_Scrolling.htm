@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Parallax Scrolling</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "3.2.4.0_1";
+</script>
+ <meta name="topic-breadcrumbs" content="Beginner's Guide > Customizing your Game > Camera Movement" />
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+ <p class="Topic_Heading">Parallax Scrolling</p>
+</div>
+<p>&#160;</p>
+<p><span class="Topic_Start">P</span>arallax Scrolling is a visual technique in which layers of images are moving in different speeds to create an illusion of depth.</p>
+<p>&#160;</p>
+<p><img src="ParallaxScrolling-2.gif" alt="" style=" border:none; width:100%; max-width:517px;" border="0" /></p>
+<p>&#160;</p>
+<p class="Sub_Heading">Preparation Work</p>
+<p>First, all the images must be separated into layers and will move at different speeds. This involves the Foreground, Middleground and Background.</p>
+<p><img src="01_Background.png" alt="" style=" border:none; width:100%; max-width:544px;" border="0" /></p>
+<p><span style="font-weight: bold;">The Background</span> would move the slowest.</p>
+<p><img src="02_Middleground.png" alt="" style=" border:none; width:100%; max-width:544px;" border="0" /></p>
+<p><span style="font-weight: bold;">The Middleground</span> will move in-between the Foreground and Background speed.</p>
+<p><img src="02_MiddlegroundB.jpg" alt="" style=" border:none; width:100%; max-width:544px;" border="0" /></p>
+<p>And here's <span style="font-weight: bold;">another Middleground</span> that doesn't move.</p>
+<p><img src="03_Foreground.png" alt="" style=" border:none; width:100%; max-width:544px;" border="0" /></p>
+<p><span style="font-weight: bold;">The Foreground</span> will move the fastest.</p>
+<p>&#160;</p>
+<p>It's important to remember that the images must be created for 'looping'. This means that if you put the image side by side, it will still look seamless.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Implementation</p>
+<p><img src="ParallaxScrolling_Forest.jpg" alt="" style=" border:none; width:100%; max-width:836px;" border="0" /></p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li>First, we need to set all the background layers. Make sure to select Yes to Loop Horizontal.</li>
+<li style="list-style: none; display: inline">
+<ul style="list-style: disc;">
+<li>You have to add a Wait on the last Change Background command. Otherwise, they will scroll immediately before the Loop effect takes place.</li>
+</ul>
+</li>
+<li>Then we will need to add the <a href="Background.htm#Scroll_Background">Scroll Background</a> command.</li>
+<li style="list-style: none; display: inline">
+<ul style="list-style: disc;">
+<li>Notice how the Duration is set to 0ms. This means the background will scroll infinitely.</li>
+<li>Speed X and Speed Y represents how fast they will scroll. You can use decimal values. The higher the number, the faster they will scroll.</li>
+<li>You can use <a href="Easing_Effects.htm">Easing Effects</a> to affect how their scroll animation will move. I used different ones in random and settle with one that I felt just right.</li>
+</ul>
+</li>
+</ul>
+<p>&#160;</p>
+<p>And that's about it! You can create the following visual effect with the very same commands!</p>
+<p><img src="ParallaxScrolling.gif" alt="" style=" border:none; width:100%; max-width:517px;" border="0" /></p>
+<p>&#160;</p>
+<div style="width: 100%; position: relative;" id="footer">
+ <p>The Parallax Images used are by <a href="http://ansimuz.com/site/resources">Luis Zuno</a> and are under Public Domain License.</p>
+</div>
+</body>
+</html>

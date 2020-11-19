@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Example:Create a Language Bundle</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "5.2.1.1.0_4";
+</script>
+ <meta name="topic-breadcrumbs" content="Script and Plugin Reference > Extension Documentation > Getting Started > Examples" />
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+ <p class="Topic_Heading"><span style="font-family: 'Book Antiqua', serif; font-size: 24pt;">Example: Create a Language Bundle</span></p>
+</div>
+<p>&#160;</p>
+<p><span class="Topic_Start">I</span>n this example we will create a language bundle to translate our extension into another language. To do that, we make a right-click on"Language Bundles " and select New &gt; Language Bundle. We will call it, "CardExtension ".</p>
+<p>&#160;</p>
+<p><span class="Code">{ "phrases": { "D63591732C7F724D8D98B6E5B34B914FFFD6": "Sample Text" } }</span></p>
+<p>&#160;</p>
+<p>It contains an example phrase we can just delete. Next we will create another language bundle called"CardExtension.de ". The"CardExtension " bundle contains our phrases in default language. The"default language " is used if there is no translation for the current language available. The second bundle"CardExtension.de " uses the suffix".de " which stands for german language. So that bundle is used if the current language is german.</p>
+<p>&#160;</p>
+<p>Lets take a look at the properties:</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">phrases</p>
+</li>
+</ul>
+<p>Contains key:phrase pairs to define the different phrases of the bundle. So each phrase needs to have a unique key. The key can be any kind of text as long as it is unique enough. By default UIDs are used for each phrase.</p>
+<p>To use a phrase in a UI view you can just use the syntax $$&lt;bundle&gt;.&lt;phrase_uid&gt; like "$$CardExtension.D63591732C7F724D8D98B6E5B34B914FFFD6". That kind of syntax can be used in most places where displayable text can be specified. For Example:</p>
+<p>&#160;</p>
+<p><span class="Code">{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"type": "GSLabel",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"text": "$$CardExtension.D63591732C7F724D8D98B6E5B34B914FFFD6",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"frame": [0, 0] &#160;</span></p>
+<p><span class="Code">}</span></p>
+<p>&#160;</p>
+<p>So this label will show the phase for key "D63591732C7F724D8D98B6E5B34B914FFFD6" if exists. It first looks if the phrase exists for current language and if that is not the case it will use the default language phrase.</p>
+<p>&#160;</p>
+<p>To create new phrases we could just manually add them to our bundle but since that feels a bit uncomfortable after some time, there are two helper-functions doing the most work for us automatically. These two functions are "Insert New String" and "Insert New String (LCS)". We can find these functions in menubar under Tools &gt; Developer Tools or in Extension Editor's toolbar.</p>
+<p>&#160;</p>
+<p>Both functions actually doing the same thing but the formatting of the output is different. Lets check how these functions can make our life a little bit easier:</p>
+<p>&#160;</p>
+<p>First we need to select a text in one of our views/scene-commands/scripts we want to translate. Next we click on "Insert New String" which will ask us then to enter a bundle name. We will enter the name of our bundle "CardExtension" and click "OK". Two things happened now:</p>
+<p>&#160;</p>
+<p>1. Our selected text has been replaced by "$$CardExtension.&lt;uid&gt;" automatically.</p>
+<p>2. The selected text has been added to the default language CardExtension bundle and also the UID has been generated automatically.</p>
+<p>&#160;</p>
+<p>That saves us a lot of time since we no longer need to generate UIDs by ourselves and add pharses to the bundle manually everytime we want to translate something. We can just use one of the helper-functions. The other helper-function "Insert New String (LCS)" is doing the same but the output is:</p>
+<p>&#160;</p>
+<p><span class="Code">lcs('&lt;bundle&gt;.&lt;uid&gt;')</span></p>
+<p>&#160;</p>
+<p>which can be used in scripts and formulas if necessary.</p>
+</body>
+</html>

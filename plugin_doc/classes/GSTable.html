@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>GSTable</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="icon" href="../assets/favicon.ico">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+                <h1><img src="../assets/css/logo.png" title="" width="117" height="52"></h1>
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: </em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+                    <h2 class="off-left">APIs</h2>
+                    <div id="api-tabview" class="tabview">
+                        <ul class="tabs">
+                            <li><a href="#api-classes">Classes</a></li>
+                            <li><a href="#api-modules">Modules</a></li>
+                        </ul>
+                
+                        <div id="api-tabview-filter">
+                            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                        </div>
+                
+                        <div id="api-tabview-panel">
+                            <ul id="api-classes" class="apis classes">
+                                <li><a href="../classes/DataRecordView.html">DataRecordView</a></li>
+                                <li><a href="../classes/DataSourceDescriptor.html">DataSourceDescriptor</a></li>
+                                <li><a href="../classes/DialogDescriptor.html">DialogDescriptor</a></li>
+                                <li><a href="../classes/FormatHelper.html">FormatHelper</a></li>
+                                <li><a href="../classes/GS.GAME.html">GS.GAME</a></li>
+                                <li><a href="../classes/GSButton.html">GSButton</a></li>
+                                <li><a href="../classes/GSCheckBox.html">GSCheckBox</a></li>
+                                <li><a href="../classes/GSCollectionView.html">GSCollectionView</a></li>
+                                <li><a href="../classes/GSColorView.html">GSColorView</a></li>
+                                <li><a href="../classes/GSContainer.html">GSContainer</a></li>
+                                <li><a href="../classes/GSDataRecordField.html">GSDataRecordField</a></li>
+                                <li><a href="../classes/GSDispositionView.html">GSDispositionView</a></li>
+                                <li><a href="../classes/GSDocumentTree.html">GSDocumentTree</a></li>
+                                <li><a href="../classes/GSFilePathBox.html">GSFilePathBox</a></li>
+                                <li><a href="../classes/GSGraphicalPathView.html">GSGraphicalPathView</a></li>
+                                <li><a href="../classes/GSImageView.html">GSImageView</a></li>
+                                <li><a href="../classes/GSLabel.html">GSLabel</a></li>
+                                <li><a href="../classes/GSLive2DView.html">GSLive2DView</a></li>
+                                <li><a href="../classes/GSParameterView.html">GSParameterView</a></li>
+                                <li><a href="../classes/GSPopupField.html">GSPopupField</a></li>
+                                <li><a href="../classes/GSQCheckBox.html">GSQCheckBox</a></li>
+                                <li><a href="../classes/GSQDataRecordField.html">GSQDataRecordField</a></li>
+                                <li><a href="../classes/GSQItem.html">GSQItem</a></li>
+                                <li><a href="../classes/GSQPopupField.html">GSQPopupField</a></li>
+                                <li><a href="../classes/GSQSlider.html">GSQSlider</a></li>
+                                <li><a href="../classes/GSQStepper.html">GSQStepper</a></li>
+                                <li><a href="../classes/GSQTextArea.html">GSQTextArea</a></li>
+                                <li><a href="../classes/GSRadioButton.html">GSRadioButton</a></li>
+                                <li><a href="../classes/GSResourcePopupField.html">GSResourcePopupField</a></li>
+                                <li><a href="../classes/GSSceneContentView.html">GSSceneContentView</a></li>
+                                <li><a href="../classes/GSSceneToolBox.html">GSSceneToolBox</a></li>
+                                <li><a href="../classes/GSSlider.html">GSSlider</a></li>
+                                <li><a href="../classes/GSSpacer.html">GSSpacer</a></li>
+                                <li><a href="../classes/GSSplitView.html">GSSplitView</a></li>
+                                <li><a href="../classes/GSStepper.html">GSStepper</a></li>
+                                <li><a href="../classes/GSTable.html">GSTable</a></li>
+                                <li><a href="../classes/GSTabView.html">GSTabView</a></li>
+                                <li><a href="../classes/GSTextField.html">GSTextField</a></li>
+                                <li><a href="../classes/GSToneView.html">GSToneView</a></li>
+                                <li><a href="../classes/GSViewItem.html">GSViewItem</a></li>
+                                <li><a href="../classes/LanguageBundle.html">LanguageBundle</a></li>
+                                <li><a href="../classes/SceneCommand.html">SceneCommand</a></li>
+                                <li><a href="../classes/View.html">View</a></li>
+                            </ul>
+                
+                
+                            <ul id="api-modules" class="apis modules">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+                    Show:
+                    <label for="api-show-inherited">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected">
+                        <input type="checkbox" id="api-show-protected">
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private">
+                        <input type="checkbox" id="api-show-private">
+                        Private
+                    </label>
+                    <label for="api-show-deprecated">
+                        <input type="checkbox" id="api-show-deprecated">
+                        Deprecated
+                    </label>
+            
+                </div>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+<h1>GSTable Class</h1>
+<div class="box meta">
+
+
+
+
+</div>
+
+
+<div class="box intro">
+    <p>A table-view with one or multiple columns. The user can add/remove items using a context
+menu or double-clicking the last row(if configured).</p>
+
+</div>
+
+
+<div id="classdocs" class="tabview">
+    <ul class="api-class-tabs">
+        <li class="api-class-tab index"><a href="#index">Index</a></li>
+
+            <li class="api-class-tab properties"><a href="#properties">Properties</a></li>
+    </ul>
+
+    <div>
+        <div id="index" class="api-class-tabpanel index">
+            <h2 class="off-left">Item Index</h2>
+
+
+                <div class="index-section properties">
+                    <h3>Properties</h3>
+
+                    <ul class="index-list properties">
+                            <li class="index-item property">
+                                <a href="#property_addItem">addItem</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_addItem:withData:">addItem:withData:</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_addItemAtSelectedIndex:withData:">addItemAtSelectedIndex:withData:</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_addItemUsingDialog">addItemUsingDialog</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_BindingSignal.[attributeName]">BindingSignal.[attributeName]</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_BindingSignal.items">BindingSignal.items</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_BindingSignal.selectedItem">BindingSignal.selectedItem</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_BindingSlot.[attributeName]">BindingSlot.[attributeName]</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_columns">columns</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_columns[column].content">columns[column].content</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_columns[column].hidden">columns[column].hidden</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_columns[column].icon">columns[column].icon</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_columns[column].text">columns[column].text</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_columns[column].width">columns[column].width</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_contextMenu">contextMenu</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_copyItem:">copyItem:</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_cutItem:">cutItem:</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_dataSource">dataSource</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_dataType">dataType</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_deleteItem:">deleteItem:</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_dialog">dialog</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_editItemUsingDialog">editItemUsingDialog</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_emptyItem">emptyItem</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_emptyItemText">emptyItemText</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_headerView">headerView</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_pasteItem:">pasteItem:</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_removeSelectedItem">removeSelectedItem</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_sortFormula">sortFormula</a>
+
+                            </li>
+                    </ul>
+                </div>
+
+
+        </div>
+
+
+            <div id="properties" class="api-class-tabpanel">
+                <h2 class="off-left">Properties</h2>
+
+<div id="property_addItem" class="property item">
+    <h3 class="name"><code>addItem</code></h3>
+    <span class="type">Delegate</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Adds a new item by using the default values of the table-columns.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_addItem:withData:" class="property item">
+    <h3 class="name"><code>addItem:withData:</code></h3>
+    <span class="type">Delegate</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Adds a new item by using the specified data. The data describes the item itself.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_addItemAtSelectedIndex:withData:" class="property item">
+    <h3 class="name"><code>addItemAtSelectedIndex:withData:</code></h3>
+    <span class="type">Delegate</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Adds a new item after the current selected item by using the specified data. The data describes the item itself.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_addItemUsingDialog" class="property item">
+    <h3 class="name"><code>addItemUsingDialog</code></h3>
+    <span class="type">Delegate</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Adds a new item by using the associated dialog-popup.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_BindingSignal.[attributeName]" class="property item">
+    <h3 class="name"><code>BindingSignal.[attributeName]</code></h3>
+    <span class="type">Object</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>All attributes of the current selected item.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_BindingSignal.items" class="property item">
+    <h3 class="name"><code>BindingSignal.items</code></h3>
+    <span class="type">Object</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>All items.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_BindingSignal.selectedItem" class="property item">
+    <h3 class="name"><code>BindingSignal.selectedItem</code></h3>
+    <span class="type">Object</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>The current selected item.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_BindingSlot.[attributeName]" class="property item">
+    <h3 class="name"><code>BindingSlot.[attributeName]</code></h3>
+    <span class="type">Object</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Any attribute of the current selected item can be set.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_columns" class="property item">
+    <h3 class="name"><code>columns</code></h3>
+    <span class="type">Object</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>An array of columns for the table.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_columns[column].content" class="property item">
+    <h3 class="name"><code>columns[column].content</code></h3>
+    <span class="type">Object | String</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>The columns content. It can be just a formula or a key-value map. The formula has
+one parameter &quot;d&quot; which is the current table-item.<br><br></p>
+<p>The key-value map has the format { key: &quot;aKey&quot;, values: { key1: value, key2: value, ... } }.
+The &quot;key&quot; is a attribute-name of the current table-item. The value of that attribute is used
+as a key for the <b>values</b> to get and display the value. For Example:<br><br></p>
+<p>Column Content-Property: { key: &quot;favoriteFruit&quot;, values: { &quot;apple&quot;: &quot;Apple&quot;, &quot;banana&quot;: &quot;Banana&quot; } }<br>
+Item Data: { favoriteFruit: &quot;apple&quot; }<br><br></p>
+<p>That example would return &quot;Apple&quot; for the example item data.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_columns[column].hidden" class="property item">
+    <h3 class="name"><code>columns[column].hidden</code></h3>
+    <span class="type">Boolean</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Indicates if the column is hidden.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_columns[column].icon" class="property item">
+    <h3 class="name"><code>columns[column].icon</code></h3>
+    <span class="type">String</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Name of the icon used for the column.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_columns[column].text" class="property item">
+    <h3 class="name"><code>columns[column].text</code></h3>
+    <span class="type">String</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Header text of the column if table-header is visible.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_columns[column].width" class="property item">
+    <h3 class="name"><code>columns[column].width</code></h3>
+    <span class="type">Number</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>The column's width in pixels.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_contextMenu" class="property item">
+    <h3 class="name"><code>contextMenu</code></h3>
+    <span class="type">ContextMenu</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>The context-menu for the table. Can be used to provide actions like copy, paste, delete, etc.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_copyItem:" class="property item">
+    <h3 class="name"><code>copyItem:</code></h3>
+    <span class="type">Delegate</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Copys the selected item.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_cutItem:" class="property item">
+    <h3 class="name"><code>cutItem:</code></h3>
+    <span class="type">Delegate</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Cuts the selected item.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_dataSource" class="property item">
+    <h3 class="name"><code>dataSource</code></h3>
+    <span class="type"><a href="../classes/DataSourceDescriptor.html" class="crosslink">DataSourceDescriptor</a></span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>The table's data source. That is only for table which are read-only and cannot be modified
+by the user. The data source can be a data-record collection or a predefined array of values.
+See DataSourceDescriptor for more info.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_dataType" class="property item">
+    <h3 class="name"><code>dataType</code></h3>
+    <span class="type">String</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>A mime-type describing the type of data in the table. If not present, the type is novelsharp/<item-identifier>. If <b>identifier</b> is not present, the type is novelsharp/custom-item.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_deleteItem:" class="property item">
+    <h3 class="name"><code>deleteItem:</code></h3>
+    <span class="type">Delegate</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Deletes the selected item.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_dialog" class="property item">
+    <h3 class="name"><code>dialog</code></h3>
+    <span class="type"><a href="../classes/DialogDescriptor.html" class="crosslink">DialogDescriptor</a></span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>The dialog used to add/edit items. If not present no items can be add/edit by the user.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_editItemUsingDialog" class="property item">
+    <h3 class="name"><code>editItemUsingDialog</code></h3>
+    <span class="type">Delegate</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Edits the selected item using the associated dialog-popup.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_emptyItem" class="property item">
+    <h3 class="name"><code>emptyItem</code></h3>
+    <span class="type">Boolean</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Indicates if the table uses an extra row to allow the user adding new items through double-click on that row. The
+text of that row can be controlled using <b>emptyItemText</b> attribute.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_emptyItemText" class="property item">
+    <h3 class="name"><code>emptyItemText</code></h3>
+    <span class="type">String</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>The text for the extra row if <b>emptyItem</b> is set.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_headerView" class="property item">
+    <h3 class="name"><code>headerView</code></h3>
+    <span class="type">Boolean</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Indicates if the table-header is visible.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_pasteItem:" class="property item">
+    <h3 class="name"><code>pasteItem:</code></h3>
+    <span class="type">Delegate</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Paste an item from clipboard.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_removeSelectedItem" class="property item">
+    <h3 class="name"><code>removeSelectedItem</code></h3>
+    <span class="type">Delegate</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Removes the selected item.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_sortFormula" class="property item">
+    <h3 class="name"><code>sortFormula</code></h3>
+    <span class="type">String</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>A formula used to sort the items of the tabel. It takes two parameters &quot;a&quot; and &quot;b&quot; which
+are both table-items.</p>
+
+    </div>
+
+
+
+</div>
+            </div>
+
+
+    </div>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Section Extensions</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "5.2.1.0_3";
+</script>
+ <meta name="topic-breadcrumbs" content="Script and Plugin Reference > Extension Documentation > Getting Started" />
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+ <p class="Topic_Heading"><span>Section Extensions</span></p>
+</div>
+<p>&#160;</p>
+<p><span class="Topic_Start">I</span>n our <a href="Example__Adding_a_new_database_category.htm">Card Extension Example</a> we added a whole new database category. But sometimes it makes more sense to just modify an already existing database category like if we just want to add some new options to &#160;"System" category. We could just edit "System" category but collisions with other extensions are possible. To avoid those collisions, it is possible to create a section-extension.</p>
+<p>&#160;</p>
+<p>A section-extension only adds one or more new sections to an already existing UI view. To create a section-extension, we first have to add a unique identifier using the uid-property to all the sections we want to install through our section-extension. An example section, which we put into "System" database category, could look like this:</p>
+<p>&#160;</p>
+<p><span class="Code">{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"name": "Custom Section",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"uid": "ext.CustomSystemSection",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"items": [</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"type": "GSLabel",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"text": "Custom Field:",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"group": "labels",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"frame": [0, 0]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"type": "GSTextField",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"frame": [1, 0],</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"attribute": "ext.customValue",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;]</span></p>
+<p><span class="Code">}</span></p>
+<p>&#160;</p>
+<p>To create a section-extension which is adding only that section to System category, we open Extension Composer and add "System" data-record view to our extension. Next we make a right-click on "System" data-record view in "Your Extension" tree-view. We select "Properties" and then we can see the following popup window:</p>
+<p>&#160;</p>
+<p><img src="InstallSections.png" alt="" style=" border:none; width:100%; max-width:512px;" border="0" /></p>
+<p>We check "Install Sections only" and then double-click "&lt;new&gt;" and then select "Custom Section" from the drop-down field and click "OK".</p>
+<p>&#160;</p>
+<p><img src="InstallSections2.png" alt="" style=" border:none; width:100%; max-width:512px;" border="0" /></p>
+<p>We can click "OK" now again and done.</p>
+<p>&#160;</p>
+<p>Now if we install our extension, only the sections we selected are installed for "System" category. If we don't check "Install Sections only" the whole "System" category would be exchanged which is the default behavior we don't want in this case.</p>
+<p>&#160;</p>
+<p>As you can see, with section-extensions is it possible that multiple independent extensions modifying the same UI view by adding custom sections to it. It is a good idea to choose unique attribute-names for your controls if you developing section-plugins. Otherwise attribute-name collisions can happen if two or more extension are writing data into the same fields.</p>
+</body>
+</html>

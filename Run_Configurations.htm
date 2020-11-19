@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Run Configurations</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.4.0_3";
+</script>
+ <meta name="topic-breadcrumbs" content="Exploring the Editor > Build & Run" />
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+ <h2 style="font-family: 'Book Antiqua', serif; margin-bottom: 7pt; font-size: 24pt;">Run Configurations</h2>
+<hr width="60%" align="left" />
+</div>
+<p>&#160;</p>
+<p><span class="Topic_Start">T</span>o modify existing run configurations or create new ones, you have to open the <a href="Application_Preferences.htm">Application Preferences</a> through <a href="The_Menu_Bar.htm">The Menu Bar</a> and go to the Run tab.</p>
+<p>&#160;</p>
+<p><img src="RunConfigurations.png" alt="" style=" border:none; width:100%; max-width:500px;" border="0" /></p>
+<p>&#160;</p>
+<p>There you can see all run configurations. With a double-click you can edit the selected run configuration.</p>
+<p>&#160;</p>
+<p><img src="RunConfig.png" alt="" style=" border:none; width:100%; max-width:400px;" border="0" /></p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li><span style="font-weight: bold;">Name</span> - The name of the run configuration. That name is shown in menus and progress windows.</li>
+<li><span style="font-weight: bold;">Run Phases</span> - The list of run phases executed one after another.</li>
+</ul>
+<p>&#160;</p>
+<p>Each run configuration contains a list of phases which are executed one after another.</p>
+<p>&#160;</p>
+<p><img src="RunPhase.png" alt="" style=" border:none; width:100%; max-width:400px;" border="0" /></p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li><span style="font-weight: bold;">Name</span> - The name of the phase. That name is shown in the details section of the progress window.</li>
+<li><span style="font-weight: bold;">Command Line</span> - The command line to execute as a child process of VN Maker. The next phase is triggered after the child process has been terminated. The standard output stream of the child process is redirected to the progress window console.</li>
+<li><span style="font-weight: bold;">Working Directory</span> - The working directory (CWD) for the command line. If empty, the output directory is used.</li>
+</ul>
+<p>&#160;</p>
+<p>Each phase executes a command line to process the game data or booting the game in a specific way. A set of variables, starting with a $ sign like "$(NODE)", is available for use in the Command Line as well as in the Working Directory field. See below for all available variables and their values.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Variables</p>
+<p>&#160;</p>
+<p>The following variables are available for use in Command Line and Working Directory field of a build configuration phase. A variable needs to be in the following format:</p>
+<p>&#160;</p>
+<p style="font-weight: bold;">$(VARIABLE_NAME)</p>
+<p style="font-weight: bold;">&#160;</p>
+<p style="font-weight: bold;"><span style="font-weight: normal;">The following variables are available:</span></p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li><span style="font-weight: bold;">NODE</span> - Path to VN Maker's internal Node.js executable.</li>
+<li><span style="font-weight: bold;">APP_DIR</span> - Path to VN Maker's installation directory.</li>
+<li><span style="font-weight: bold;">PROJECT_DIR</span> - Path to the current project folder.</li>
+<li><span style="font-weight: bold;">OUTPUT_DIR</span> - Path to the output folder.</li>
+<li><span style="font-weight: bold;">PROJECT_NAME</span> - Name of the current project.</li>
+<li><span style="font-weight: bold;">GAME_TITLE</span> - The project's game title.</li>
+</ul>
+</body>
+</html>

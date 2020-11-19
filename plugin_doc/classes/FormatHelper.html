@@ -1,0 +1,1426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>FormatHelper</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="icon" href="../assets/favicon.ico">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+                <h1><img src="../assets/css/logo.png" title="" width="117" height="52"></h1>
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: </em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+                    <h2 class="off-left">APIs</h2>
+                    <div id="api-tabview" class="tabview">
+                        <ul class="tabs">
+                            <li><a href="#api-classes">Classes</a></li>
+                            <li><a href="#api-modules">Modules</a></li>
+                        </ul>
+                
+                        <div id="api-tabview-filter">
+                            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                        </div>
+                
+                        <div id="api-tabview-panel">
+                            <ul id="api-classes" class="apis classes">
+                                <li><a href="../classes/DataRecordView.html">DataRecordView</a></li>
+                                <li><a href="../classes/DataSourceDescriptor.html">DataSourceDescriptor</a></li>
+                                <li><a href="../classes/DialogDescriptor.html">DialogDescriptor</a></li>
+                                <li><a href="../classes/FormatHelper.html">FormatHelper</a></li>
+                                <li><a href="../classes/GS.GAME.html">GS.GAME</a></li>
+                                <li><a href="../classes/GSButton.html">GSButton</a></li>
+                                <li><a href="../classes/GSCheckBox.html">GSCheckBox</a></li>
+                                <li><a href="../classes/GSCollectionView.html">GSCollectionView</a></li>
+                                <li><a href="../classes/GSColorView.html">GSColorView</a></li>
+                                <li><a href="../classes/GSContainer.html">GSContainer</a></li>
+                                <li><a href="../classes/GSDataRecordField.html">GSDataRecordField</a></li>
+                                <li><a href="../classes/GSDispositionView.html">GSDispositionView</a></li>
+                                <li><a href="../classes/GSDocumentTree.html">GSDocumentTree</a></li>
+                                <li><a href="../classes/GSFilePathBox.html">GSFilePathBox</a></li>
+                                <li><a href="../classes/GSGraphicalPathView.html">GSGraphicalPathView</a></li>
+                                <li><a href="../classes/GSImageView.html">GSImageView</a></li>
+                                <li><a href="../classes/GSLabel.html">GSLabel</a></li>
+                                <li><a href="../classes/GSLive2DView.html">GSLive2DView</a></li>
+                                <li><a href="../classes/GSParameterView.html">GSParameterView</a></li>
+                                <li><a href="../classes/GSPopupField.html">GSPopupField</a></li>
+                                <li><a href="../classes/GSQCheckBox.html">GSQCheckBox</a></li>
+                                <li><a href="../classes/GSQDataRecordField.html">GSQDataRecordField</a></li>
+                                <li><a href="../classes/GSQItem.html">GSQItem</a></li>
+                                <li><a href="../classes/GSQPopupField.html">GSQPopupField</a></li>
+                                <li><a href="../classes/GSQSlider.html">GSQSlider</a></li>
+                                <li><a href="../classes/GSQStepper.html">GSQStepper</a></li>
+                                <li><a href="../classes/GSQTextArea.html">GSQTextArea</a></li>
+                                <li><a href="../classes/GSRadioButton.html">GSRadioButton</a></li>
+                                <li><a href="../classes/GSResourcePopupField.html">GSResourcePopupField</a></li>
+                                <li><a href="../classes/GSSceneContentView.html">GSSceneContentView</a></li>
+                                <li><a href="../classes/GSSceneToolBox.html">GSSceneToolBox</a></li>
+                                <li><a href="../classes/GSSlider.html">GSSlider</a></li>
+                                <li><a href="../classes/GSSpacer.html">GSSpacer</a></li>
+                                <li><a href="../classes/GSSplitView.html">GSSplitView</a></li>
+                                <li><a href="../classes/GSStepper.html">GSStepper</a></li>
+                                <li><a href="../classes/GSTable.html">GSTable</a></li>
+                                <li><a href="../classes/GSTabView.html">GSTabView</a></li>
+                                <li><a href="../classes/GSTextField.html">GSTextField</a></li>
+                                <li><a href="../classes/GSToneView.html">GSToneView</a></li>
+                                <li><a href="../classes/GSViewItem.html">GSViewItem</a></li>
+                                <li><a href="../classes/LanguageBundle.html">LanguageBundle</a></li>
+                                <li><a href="../classes/SceneCommand.html">SceneCommand</a></li>
+                                <li><a href="../classes/View.html">View</a></li>
+                            </ul>
+                
+                
+                            <ul id="api-modules" class="apis modules">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+                    Show:
+                    <label for="api-show-inherited">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected">
+                        <input type="checkbox" id="api-show-protected">
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private">
+                        <input type="checkbox" id="api-show-private">
+                        Private
+                    </label>
+                    <label for="api-show-deprecated">
+                        <input type="checkbox" id="api-show-deprecated">
+                        Deprecated
+                    </label>
+            
+                </div>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+<h1>FormatHelper Class</h1>
+<div class="box meta">
+
+
+
+
+</div>
+
+
+<div class="box intro">
+    <p>The format-helper contains a of functions usable inside of scripts or javascript formulas which are in regular used to calculate display text. The functions are technically not bound
+to a FormatHelper class. Example:</p>
+<p><b>WRONG:</b>
+<code>
+{
+........
+&quot;valueFormula&quot;: &quot;return FormatHelper.fmtNumVar(p.variable)&quot;
+}
+</code>
+<b>CORRECT:</b>
+<code>
+{
+........
+&quot;valueFormula&quot;: &quot;return fmtNumVar(p.variable)&quot;
+}
+</code></p>
+
+</div>
+
+
+<div id="classdocs" class="tabview">
+    <ul class="api-class-tabs">
+        <li class="api-class-tab index"><a href="#index">Index</a></li>
+
+            <li class="api-class-tab methods"><a href="#methods">Methods</a></li>
+    </ul>
+
+    <div>
+        <div id="index" class="api-class-tabpanel index">
+            <h2 class="off-left">Item Index</h2>
+
+                <div class="index-section methods">
+                    <h3>Methods</h3>
+
+                    <ul class="index-list methods">
+                            <li class="index-item method">
+                                <a href="#method_fmtBoolVar">fmtBoolVar</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_fmtColor">fmtColor</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_fmtDocument">fmtDocument</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_fmtDuration">fmtDuration</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_fmtListVar">fmtListVar</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_fmtNumVar">fmtNumVar</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_fmtRecord">fmtRecord</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_fmtResource">fmtResource</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_fmtStrVar">fmtStrVar</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_fmtTone">fmtTone</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_fmtVar">fmtVar</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_isVar">isVar</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_lcs">lcs</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_lcsg">lcsg</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_record">record</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_scase">scase</a>
+
+                            </li>
+                    </ul>
+                </div>
+
+
+
+        </div>
+
+            <div id="methods" class="api-class-tabpanel">
+                <h2 class="off-left">Methods</h2>
+
+<div id="method_fmtBoolVar" class="method item">
+    <h3 class="name"><code>fmtBoolVar</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>variableOrValue</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type">String | Boolean</span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Returns the display text for the specified boolean variable (Switch) or value. If the specified variable is actually
+a boolean value the boolean value will be returned without any formatting.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">variableOrValue</code>
+                        <span class="type">Variable | Boolean</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The variable or constant value.</li>
+</ul>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">String | Boolean</span>:
+                    <p>The formatted display text or the constant boolean value.</p>
+
+            </div>
+        </div>
+
+
+</div>
+<div id="method_fmtColor" class="method item">
+    <h3 class="name"><code>fmtColor</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>color</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type">String</span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Returns the display text for the specified color.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">color</code>
+                        <span class="type">Color</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The color to get the display text for.</li>
+</ul>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">String</span>:
+                    <p>The formatted display text.</p>
+
+            </div>
+        </div>
+
+
+</div>
+<div id="method_fmtDocument" class="method item">
+    <h3 class="name"><code>fmtDocument</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>uid</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type">String</span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Returns the display text for the specified document.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">uid</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The UID of the document to get the diplay text for.</li>
+</ul>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">String</span>:
+                    <p>The formatted display text.</p>
+
+            </div>
+        </div>
+
+
+</div>
+<div id="method_fmtDuration" class="method item">
+    <h3 class="name"><code>fmtDuration</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>durationValue</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type">String</span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Returns the display text for a duration value. It converts the duration value, which is stored in frames internally, into
+milliseconds and adds &quot;ms&quot; suffix. So an input value of 60 results in &quot;1000ms&quot; display text. (If GS.CONST.GAME_FRAME_RATE is 60).</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">durationValue</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The duration value to get the display text for.</li>
+</ul>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">String</span>:
+                    <p>The display text.</p>
+
+            </div>
+        </div>
+
+
+</div>
+<div id="method_fmtListVar" class="method item">
+    <h3 class="name"><code>fmtListVar</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>variable</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type">String</span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Returns the display text for the specified list variable.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">variable</code>
+                        <span class="type">Variable</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The list variable</li>
+</ul>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">String</span>:
+                    <p>The formatted display text.</p>
+
+            </div>
+        </div>
+
+
+</div>
+<div id="method_fmtNumVar" class="method item">
+    <h3 class="name"><code>fmtNumVar</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>variableOrValue</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type">String | Number</span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Returns the display text for the specified number variable or value. If the specified variable is actually
+a number value the number value will be returned without any formatting.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">variableOrValue</code>
+                        <span class="type">Variable | Number</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The variable or constant value.</li>
+</ul>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">String | Number</span>:
+                    <p>The formatted display text or the constant number value.</p>
+
+            </div>
+        </div>
+
+
+</div>
+<div id="method_fmtRecord" class="method item">
+    <h3 class="name"><code>fmtRecord</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>category</code>
+                </li>
+                <li class="arg">
+                        <code>index</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type">String</span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Returns the display text for the specified database record.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">category</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The database category name</li>
+</ul>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">index</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The index of the database record to get the display text for. The index starts at 0.</li>
+</ul>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">String</span>:
+                    <p>The formatted display text.</p>
+
+            </div>
+        </div>
+
+
+</div>
+<div id="method_fmtResource" class="method item">
+    <h3 class="name"><code>fmtResource</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>resource</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type">String</span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Returns the display text for a resource. The specified resource can also be a string variable.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">resource</code>
+                        <span class="type">Resource</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The resource to get the display text for.</li>
+</ul>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">String</span>:
+                    <p>The display text.</p>
+
+            </div>
+        </div>
+
+
+</div>
+<div id="method_fmtStrVar" class="method item">
+    <h3 class="name"><code>fmtStrVar</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>variableOrValue</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type">String</span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Returns the display text for the specified string variable or value. If the specified variable is actually
+a string value the string value will be returned without any formatting.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">variableOrValue</code>
+                        <span class="type">Variable | String</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The variable or constant value.</li>
+</ul>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">String</span>:
+                    <p>The formatted display text or the constant string value.</p>
+
+            </div>
+        </div>
+
+
+</div>
+<div id="method_fmtTone" class="method item">
+    <h3 class="name"><code>fmtTone</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>tone</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type">String</span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Returns the display text for the specified tone.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">tone</code>
+                        <span class="type">Tone</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The tone to get the display text for.</li>
+</ul>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">String</span>:
+                    <p>The formatted display text.</p>
+
+            </div>
+        </div>
+
+
+</div>
+<div id="method_fmtVar" class="method item">
+    <h3 class="name"><code>fmtVar</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>variableOrValue</code>
+                </li>
+                <li class="arg">
+                        <code>type</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type">String | Number | String | Boolean</span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Returns the display text for the specified variable or value. If the specified variable is actually
+a constant value the value will be returned without any formatting.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">variableOrValue</code>
+                        <span class="type">Variable | Number | String | Boolean</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The variable or constant value.</li>
+</ul>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">type</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The variable type, can be: &quot;numbers&quot;, &quot;strings&quot;, &quot;booleans&quot; or &quot;lists&quot;.</li>
+</ul>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">String | Number | String | Boolean</span>:
+                    <p>The formatted display text or the constant number value.</p>
+
+            </div>
+        </div>
+
+
+</div>
+<div id="method_isVar" class="method item">
+    <h3 class="name"><code>isVar</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>value</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type">Boolean</span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Indicates if the specified value is actually a variable.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">value</code>
+                        <span class="type">Object</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The value to check.</li>
+</ul>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">Boolean</span>:
+                    <p>If <b>true</b> the value is a variable. Otherwise <b>false</b>.</p>
+
+            </div>
+        </div>
+
+
+</div>
+<div id="method_lcs" class="method item">
+    <h3 class="name"><code>lcs</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>key</code>
+                </li>
+                <li class="arg">
+                        <code>bundleName</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type">String</span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Returns the translated phrase for the specified phrase-key. The name &quot;lcs&quot; originally stand for &quot;Language Configuration String&quot;.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">key</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The phrase's key. It can also be <bundle-name>.<key> to directly specify the bundle.</li>
+</ul>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">bundleName</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The name of the bundle to read the phrase from. Can be omitted if the bundle name is already specified in key-string.</li>
+</ul>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">String</span>:
+                    <p>The translated phrase.</p>
+
+            </div>
+        </div>
+
+
+</div>
+<div id="method_lcsg" class="method item">
+    <h3 class="name"><code>lcsg</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>text</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type">String</span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Returns the text for the specified localizable string. It can be a localized string object like or a constant string.
+The function will check if a text for the <b>lcId</b> of the localized string object exists in the 
+game's language configuration. If not, the <b>defaultText</b> property of the localized string object 
+will be returned. If that property is <b>null</b> or not present the function returns:</p> 
+<p><code>STRING NOT FOUND: <key></code></p>
+<p>If a constant string is specified the function will just return that string. The name "lcsg" originally stand for "Language Configuration String Game". See data-format reference for more
+info about LocalizedString object.</p>
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">text</code>
+                        <span class="type">String | LocalizedString</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The localized string object to get the text for.</li>
+</ul>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">String</span>:
+                    <p>The text for the localized string object.</p>
+
+            </div>
+        </div>
+
+
+</div>
+<div id="method_record" class="method item">
+    <h3 class="name"><code>record</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>category</code>
+                </li>
+                <li class="arg">
+                        <code>index</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type">Object</span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Returns database record at the specified index.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">category</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The database category name</li>
+</ul>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">index</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The index of the database record to get. The index starts at 0.</li>
+</ul>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">Object</span>:
+                    <p>The database record which is <b>not</b> the whole document but only the <b>items.data</b> content.</p>
+
+            </div>
+        </div>
+
+
+</div>
+<div id="method_scase" class="method item">
+    <h3 class="name"><code>scase</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>value</code>
+                </li>
+                <li class="arg">
+                        <code>values</code>
+                </li>
+                <li class="arg">
+                        <code>results</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type">Object</span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Executes a quick switch-case on the specified values. For Example:</p>
+<code>scase(1, [0, 1, 2], ["Apple", "Orange", "Banana"])</code>
+<p>Output:</p>
+<code>Orange</code>
+<p>The name "scase" stands for "switch-case".</p>
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">value</code>
+                        <span class="type">Object</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The value to check.</li>
+</ul>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">values</code>
+                        <span class="type">Object</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The values to check against.</li>
+</ul>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">results</code>
+                        <span class="type">Object</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The result values.</li>
+</ul>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">Object</span>:
+                    <p>The matching value or <b>null</b> if none of the specified values matches.</p>
+
+            </div>
+        </div>
+
+
+</div>
+            </div>
+
+
+
+    </div>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

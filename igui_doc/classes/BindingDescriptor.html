@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>BindingDescriptor</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="icon" href="../assets/favicon.ico">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+                <h1><img src="../assets/css/logo.png" title="" width="117" height="52"></h1>
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: </em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+                    <h2 class="off-left">APIs</h2>
+                    <div id="api-tabview" class="tabview">
+                        <ul class="tabs">
+                            <li><a href="#api-classes">Classes</a></li>
+                            <li><a href="#api-modules">Modules</a></li>
+                        </ul>
+                
+                        <div id="api-tabview-filter">
+                            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                        </div>
+                
+                        <div id="api-tabview-panel">
+                            <ul id="api-classes" class="apis classes">
+                                <li><a href="../classes/ActionDescriptor.html">ActionDescriptor</a></li>
+                                <li><a href="../classes/AnimationDescriptor.html">AnimationDescriptor</a></li>
+                                <li><a href="../classes/BindingDescriptor.html">BindingDescriptor</a></li>
+                                <li><a href="../classes/BindingRatioConversionDescriptor.html">BindingRatioConversionDescriptor</a></li>
+                                <li><a href="../classes/BlendToPrimitiveAnimationDescriptor.html">BlendToPrimitiveAnimationDescriptor</a></li>
+                                <li><a href="../classes/ChangeImagesPrimitiveAnimationDescriptor.html">ChangeImagesPrimitiveAnimationDescriptor</a></li>
+                                <li><a href="../classes/ChangeToPrimitiveAnimationDescriptor.html">ChangeToPrimitiveAnimationDescriptor</a></li>
+                                <li><a href="../classes/ComponentDescriptor.html">ComponentDescriptor</a></li>
+                                <li><a href="../classes/ConditionDescriptor.html">ConditionDescriptor</a></li>
+                                <li><a href="../classes/DraggableDescriptor.html">DraggableDescriptor</a></li>
+                                <li><a href="../classes/EventDescriptor.html">EventDescriptor</a></li>
+                                <li><a href="../classes/FontDescriptor.html">FontDescriptor</a></li>
+                                <li><a href="../classes/FontOutlineDescriptor.html">FontOutlineDescriptor</a></li>
+                                <li><a href="../classes/ImageMapHotspotDescriptor.html">ImageMapHotspotDescriptor</a></li>
+                                <li><a href="../classes/MaskToPrimitiveAnimationDescriptor.html">MaskToPrimitiveAnimationDescriptor</a></li>
+                                <li><a href="../classes/MoveToPrimitiveAnimationDescriptor.html">MoveToPrimitiveAnimationDescriptor</a></li>
+                                <li><a href="../classes/PlayAnimationPrimitiveAnimationDescriptor.html">PlayAnimationPrimitiveAnimationDescriptor</a></li>
+                                <li><a href="../classes/PrimitiveAnimationDescriptor.html">PrimitiveAnimationDescriptor</a></li>
+                                <li><a href="../classes/SoundPrimitiveAnimationDescriptor.html">SoundPrimitiveAnimationDescriptor</a></li>
+                                <li><a href="../classes/ui.Control.html">ui.Control</a></li>
+                                <li><a href="../classes/ui.Frame.html">ui.Frame</a></li>
+                                <li><a href="../classes/ui.FreeLayout.html">ui.FreeLayout</a></li>
+                                <li><a href="../classes/ui.GridLayout.html">ui.GridLayout</a></li>
+                                <li><a href="../classes/ui.Image.html">ui.Image</a></li>
+                                <li><a href="../classes/ui.ImageButton.html">ui.ImageButton</a></li>
+                                <li><a href="../classes/ui.ImageMap.html">ui.ImageMap</a></li>
+                                <li><a href="../classes/ui.Layout.html">ui.Layout</a></li>
+                                <li><a href="../classes/ui.Message.html">ui.Message</a></li>
+                                <li><a href="../classes/ui.Panel.html">ui.Panel</a></li>
+                                <li><a href="../classes/ui.SpreadLayout.html">ui.SpreadLayout</a></li>
+                                <li><a href="../classes/ui.StackLayout.html">ui.StackLayout</a></li>
+                                <li><a href="../classes/ui.Text.html">ui.Text</a></li>
+                                <li><a href="../classes/ui.ThreePartImage.html">ui.ThreePartImage</a></li>
+                                <li><a href="../classes/ui.Video.html">ui.Video</a></li>
+                                <li><a href="../classes/WaitPrimitiveAnimationDescriptor.html">WaitPrimitiveAnimationDescriptor</a></li>
+                                <li><a href="../classes/ZoomToPrimitiveAnimationDescriptor.html">ZoomToPrimitiveAnimationDescriptor</a></li>
+                            </ul>
+                
+                
+                            <ul id="api-modules" class="apis modules">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+                    Show:
+                    <label for="api-show-inherited">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected">
+                        <input type="checkbox" id="api-show-protected">
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private">
+                        <input type="checkbox" id="api-show-private">
+                        Private
+                    </label>
+                    <label for="api-show-deprecated">
+                        <input type="checkbox" id="api-show-deprecated">
+                        Deprecated
+                    </label>
+            
+                </div>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+<h1>BindingDescriptor Class</h1>
+<div class="box meta">
+
+
+
+
+</div>
+
+
+<div class="box intro">
+    <p>Describes a binding which can be used in bindings-property of a component. Data-Bindings supporting many advanced features but
+is recommended instead of trying to build complex controls with complicated binding-expressions to just write an own component.</p>
+
+</div>
+
+
+<div id="classdocs" class="tabview">
+    <ul class="api-class-tabs">
+        <li class="api-class-tab index"><a href="#index">Index</a></li>
+
+            <li class="api-class-tab properties"><a href="#properties">Properties</a></li>
+    </ul>
+
+    <div>
+        <div id="index" class="api-class-tabpanel index">
+            <h2 class="off-left">Item Index</h2>
+
+
+                <div class="index-section properties">
+                    <h3>Properties</h3>
+
+                    <ul class="index-list properties">
+                            <li class="index-item property">
+                                <a href="#property_breakChain">breakChain</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_condition">condition</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_conditions">conditions</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_convertRatio">convertRatio</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_event">event</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_events">events</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_max">max</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_min">min</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_negateValue">negateValue</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_roundMethod">roundMethod</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_sourceField">sourceField</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_targetField">targetField</a>
+
+                            </li>
+                    </ul>
+                </div>
+
+
+        </div>
+
+
+            <div id="properties" class="api-class-tabpanel">
+                <h2 class="off-left">Properties</h2>
+
+<div id="property_breakChain" class="property item">
+    <h3 class="name"><code>breakChain</code></h3>
+    <span class="type">String</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Contains one or multiple IDs of controls which will break the binding-chain to avoid an endless circular changing of values. For example,
+if one binding changes a property of control A and then control A trigger a binding to change a property of control B which then will
+trigger again a change of a property of control A which results in and endless chain.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_condition" class="property item">
+    <h3 class="name"><code>condition</code></h3>
+    <span class="type"><a href="../classes/ConditionDescriptor.html" class="crosslink">ConditionDescriptor</a></span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Defines a condition which must be <b>true</b> before the binding can be executed.</p>
+    </div>
+
+
+
+</div>
+<div id="property_conditions" class="property item">
+    <h3 class="name"><code>conditions</code></h3>
+    <span class="type"><a href="../classes/ConditionDescriptor.html" class="crosslink">ConditionDescriptor[]</a></span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Defines conditions which must be <b>true</b> before the binding can be executed.</p>
+    </div>
+
+
+
+</div>
+<div id="property_convertRatio" class="property item">
+    <h3 class="name"><code>convertRatio</code></h3>
+    <span class="type"><a href="../classes/BindingRatioConversionDescriptor.html" class="crosslink">BindingRatioConversionDescriptor</a></span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Defines a ratio-conversion. Sometimes it is necessary to convert a value from one value-space to another. An example could
+be a volume slider control where the slider-knob moves vertically between 0 - 500 pixels but its value should be stored between 0 and 100. 
+In that case it is necessary to convert the knobs y-coordinate(0 - 500) into the volume value-space (0 to 100) before writing to target-field.</p>
+<p>The above example can be done with the following ration-conversion:</p>
+<code>{... "sourceField": "$slider_knob.dstRect.y", "targetField": "$dataFields.settings.generalMusicVolume", "convertRatio": { "target": 100, "source": 500 } ... }</code>
+<p>The actual internal formula used for ratio-conversion is:</p>
+<code> targetField = (convertRatio.target - convertRatio.targetSize) / (sourceField - convertRatio.sourceSize) * (source-field - value-offset) + offset</code>
+<p>So there are some other properties available to give more control about the ratio-conversion. Check BindingRatioConversionDescriptor for more information.
+    </div>
+
+
+
+</div>
+<div id="property_event" class="property item">
+    <h3 class="name"><code>event</code></h3>
+    <span class="type"><a href="../classes/EventDescriptor.html" class="crosslink">EventDescriptor</a></span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>The binding can only be executed if the defined event is <b>true</b></p>
+    </div>
+
+
+
+</div>
+<div id="property_events" class="property item">
+    <h3 class="name"><code>events</code></h3>
+    <span class="type"><a href="../classes/EventDescriptor.html" class="crosslink">EventDescriptor[]</a> | </span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>The binding can only be executed if the defined events are <b>true</b></p>
+    </div>
+
+
+
+</div>
+<div id="property_max" class="property item">
+    <h3 class="name"><code>max</code></h3>
+    <span class="type">String | Number</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>A binding-expression to define a max-value the source-field is limited to before written into the targetField.</p>
+    </div>
+
+
+
+</div>
+<div id="property_min" class="property item">
+    <h3 class="name"><code>min</code></h3>
+    <span class="type">String | Number</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>A binding-expression to define a min-value the source-field is limited to before written into the targetField.</p>
+    </div>
+
+
+
+</div>
+<div id="property_negateValue" class="property item">
+    <h3 class="name"><code>negateValue</code></h3>
+    <span class="type">Boolean</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>If <b>true</b> the source-value will be negated before written into the target-field.</p>
+    </div>
+
+
+
+</div>
+<div id="property_roundMethod" class="property item">
+    <h3 class="name"><code>roundMethod</code></h3>
+    <span class="type">String | Number</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Defines if and how the source-value should be rounded before written into the target-field. Can be "round", "floor" or "ceil".</p>
+    </div>
+
+
+
+</div>
+<div id="property_sourceField" class="property item">
+    <h3 class="name"><code>sourceField</code></h3>
+    <span class="type">String</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>A binding-expression to define the source-value.</p>
+    </div>
+
+
+
+</div>
+<div id="property_targetField" class="property item">
+    <h3 class="name"><code>targetField</code></h3>
+    <span class="type">String</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>A binding-expression to define the target-field.</p>
+    </div>
+
+
+
+</div>
+            </div>
+
+
+    </div>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

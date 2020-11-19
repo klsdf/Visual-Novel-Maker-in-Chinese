@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Mass Edit</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.3.1_2";
+</script>
+ <meta name="topic-breadcrumbs" content="Exploring the Editor > Scene Editor" />
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+ <p class="Topic_Heading">Mass Edit</p>
+</div><?rh-region_end ?>
+<p style="font-family: 'Book Antiqua', serif; font-weight: bold; font-size: 18pt;"><img src="13.jpg" alt="" style=" border:none; width:100%; max-width:600px;" border="0" /></p>
+<p style="font-family: Arial, sans-serif;"><span class="Topic_Start">M</span>ass Edit is a menu that allows you to mass modify a specific command (or more if you have programming experience) in Chapter or Scene.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading">Commands</p>
+<p style="font-family: Arial, sans-serif; font-weight: bold;"><span style="font-weight: normal;">You can select any Scene Command to modify.</span></p>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p>
+<p class="SubSubHeading">Number Field</p>
+<p style="font-family: Arial, sans-serif;">Modify a command's, for example Wait, number field.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Set to</span> is to replace the contents.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Increase by</span> is to add to the current value.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Decrease by</span> is to subtract to the current value.</p>
+</li>
+</ul>
+<p>&#160;</p>
+<p class="SubSubHeading">Text Field</p>
+<p style="font-family: Arial, sans-serif;">Modify a command's, for example Show Message, text field. It only changes the default language set.</p>
+<p style="font-family: Arial, sans-serif;">Translations are unaffected and can only be edited in the Language Configuration tab.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Set to</span> is to replace the contents.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Append</span> is to add to the end of that command's current content.</p>
+</li>
+<li style="margin-left: -20px;">
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Remove</span> searches for the entered keyword and replaces it with empty text.</p>
+</li>
+</ul>
+<p>&#160;</p>
+<p class="SubSubHeading"><span>Script</span></p>
+<p>Use programming to create an in-depth condition or replacement, for example Regular Expressions, for the selected command. Internally, a JavaScript function is created containing your script code:</p>
+<p>&#160;</p>
+<p style="font-family: 'Courier New', monospace;">function(command) { Your Code is inserted here }</p>
+<p>&#160;</p>
+<p>The function gets the current command as parameter. So you can check and modify the command in your script using local "command" variable. Check Visual Novel Maker's Data Formats documentation to get more info about how a command's data is structured.</p>
+<p>&#160;</p>
+<p class="SubSubHeading">Conditions</p>
+<p>Set conditions for the mass edit.</p>
+<p>&#160;</p>
+</body>
+</html>

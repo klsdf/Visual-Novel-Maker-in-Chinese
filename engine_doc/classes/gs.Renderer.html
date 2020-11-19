@@ -1,0 +1,1488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>gs.Renderer</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="icon" href="../assets/favicon.ico">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+                <h1><img src="../assets/css/logo.png" title="" width="117" height="52"></h1>
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: </em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+                    <h2 class="off-left">APIs</h2>
+                    <div id="api-tabview" class="tabview">
+                        <ul class="tabs">
+                            <li><a href="#api-classes">Classes</a></li>
+                            <li><a href="#api-modules">Modules</a></li>
+                        </ul>
+                
+                        <div id="api-tabview-filter">
+                            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                        </div>
+                
+                        <div id="api-tabview-panel">
+                            <ul id="api-classes" class="apis classes">
+                                <li><a href="../classes/gs.Application.html">gs.Application</a></li>
+                                <li><a href="../classes/gs.Audio.html">gs.Audio</a></li>
+                                <li><a href="../classes/gs.AudioBuffer.html">gs.AudioBuffer</a></li>
+                                <li><a href="../classes/gs.AudioBufferReference.html">gs.AudioBufferReference</a></li>
+                                <li><a href="../classes/gs.Bitmap.html">gs.Bitmap</a></li>
+                                <li><a href="../classes/gs.BlendMode.html">gs.BlendMode</a></li>
+                                <li><a href="../classes/gs.BlurEffect.html">gs.BlurEffect</a></li>
+                                <li><a href="../classes/gs.Color.html">gs.Color</a></li>
+                                <li><a href="../classes/gs.Data.html">gs.Data</a></li>
+                                <li><a href="../classes/gs.Effect.html">gs.Effect</a></li>
+                                <li><a href="../classes/gs.EffectCollection.html">gs.EffectCollection</a></li>
+                                <li><a href="../classes/gs.EffectInfo.html">gs.EffectInfo</a></li>
+                                <li><a href="../classes/gs.Font.html">gs.Font</a></li>
+                                <li><a href="../classes/gs.Frame.html">gs.Frame</a></li>
+                                <li><a href="../classes/gs.GameStorage.html">gs.GameStorage</a></li>
+                                <li><a href="../classes/gs.GameStorageLocations.html">gs.GameStorageLocations</a></li>
+                                <li><a href="../classes/gs.GraphicEffect.html">gs.GraphicEffect</a></li>
+                                <li><a href="../classes/gs.GraphicEffectType.html">gs.GraphicEffectType</a></li>
+                                <li><a href="../classes/gs.GraphicObject.html">gs.GraphicObject</a></li>
+                                <li><a href="../classes/gs.Graphics.html">gs.Graphics</a></li>
+                                <li><a href="../classes/gs.Input.html">gs.Input</a></li>
+                                <li><a href="../classes/gs.Live2DModel.html">gs.Live2DModel</a></li>
+                                <li><a href="../classes/gs.Live2DMotionManager.html">gs.Live2DMotionManager</a></li>
+                                <li><a href="../classes/gs.Live2DMotionPlayTypes.html">gs.Live2DMotionPlayTypes</a></li>
+                                <li><a href="../classes/gs.Live2DObject.html">gs.Live2DObject</a></li>
+                                <li><a href="../classes/gs.Mask.html">gs.Mask</a></li>
+                                <li><a href="../classes/gs.MaskingType.html">gs.MaskingType</a></li>
+                                <li><a href="../classes/gs.MotionBlur.html">gs.MotionBlur</a></li>
+                                <li><a href="../classes/gs.MouseInput.html">gs.MouseInput</a></li>
+                                <li><a href="../classes/gs.PixelateEffect.html">gs.PixelateEffect</a></li>
+                                <li><a href="../classes/gs.Point.html">gs.Point</a></li>
+                                <li><a href="../classes/gs.Quad.html">gs.Quad</a></li>
+                                <li><a href="../classes/gs.Rect.html">gs.Rect</a></li>
+                                <li><a href="../classes/gs.Renderer.html">gs.Renderer</a></li>
+                                <li><a href="../classes/gs.RenderTask.html">gs.RenderTask</a></li>
+                                <li><a href="../classes/gs.Sprite.html">gs.Sprite</a></li>
+                                <li><a href="../classes/gs.Texture2D.html">gs.Texture2D</a></li>
+                                <li><a href="../classes/gs.TextureFilter.html">gs.TextureFilter</a></li>
+                                <li><a href="../classes/gs.ThreePartImage.html">gs.ThreePartImage</a></li>
+                                <li><a href="../classes/gs.Tilemap.html">gs.Tilemap</a></li>
+                                <li><a href="../classes/gs.TilemapLayer.html">gs.TilemapLayer</a></li>
+                                <li><a href="../classes/gs.TilemapRenderInfo.html">gs.TilemapRenderInfo</a></li>
+                                <li><a href="../classes/gs.TilesetConfiguration.html">gs.TilesetConfiguration</a></li>
+                                <li><a href="../classes/gs.TilingSprite.html">gs.TilingSprite</a></li>
+                                <li><a href="../classes/gs.Tone.html">gs.Tone</a></li>
+                                <li><a href="../classes/gs.Video.html">gs.Video</a></li>
+                                <li><a href="../classes/gs.Viewport.html">gs.Viewport</a></li>
+                                <li><a href="../classes/gs.WobbleEffect.html">gs.WobbleEffect</a></li>
+                            </ul>
+                
+                
+                            <ul id="api-modules" class="apis modules">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+                    Show:
+                    <label for="api-show-inherited">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected">
+                        <input type="checkbox" id="api-show-protected">
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private">
+                        <input type="checkbox" id="api-show-private">
+                        Private
+                    </label>
+                    <label for="api-show-deprecated">
+                        <input type="checkbox" id="api-show-deprecated">
+                        Deprecated
+                    </label>
+            
+                </div>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+<h1>gs.Renderer Class</h1>
+<div class="box meta">
+
+
+
+
+</div>
+
+
+<div class="box intro">
+    <p>The renderer is used to render graphical object on screen like images, colored rectangles, etc. It behaves
+like a state-machine. So first step is to set origin, rotation-angle, color, etc. and then render
+graphical objects with that settings.</p>
+
+</div>
+
+    <div class="constructor">
+        <h2>Constructor</h2>
+<div id="method_gs.Renderer" class="method item">
+    <h3 class="name"><code>gs.Renderer</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>context</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">context</code>
+                        <span class="type">Object</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The graphics context.</li>
+</ul>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+    </div>
+
+<div id="classdocs" class="tabview">
+    <ul class="api-class-tabs">
+        <li class="api-class-tab index"><a href="#index">Index</a></li>
+
+            <li class="api-class-tab methods"><a href="#methods">Methods</a></li>
+            <li class="api-class-tab properties"><a href="#properties">Properties</a></li>
+    </ul>
+
+    <div>
+        <div id="index" class="api-class-tabpanel index">
+            <h2 class="off-left">Item Index</h2>
+
+                <div class="index-section methods">
+                    <h3>Methods</h3>
+
+                    <ul class="index-list methods">
+                            <li class="index-item method">
+                                <a href="#method_changeTone">changeTone</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_clipRect">clipRect</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_clipTo">clipTo</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_dispose">dispose</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_drawBitmap">drawBitmap</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_drawBitmapSimple">drawBitmapSimple</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_drawLive2D">drawLive2D</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_drawQuad">drawQuad</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_setBitmap">setBitmap</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_setSourceRectangle">setSourceRectangle</a>
+
+                            </li>
+                    </ul>
+                </div>
+
+                <div class="index-section properties">
+                    <h3>Properties</h3>
+
+                    <ul class="index-list properties">
+                            <li class="index-item property">
+                                <a href="#property_anchor">anchor</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_angle">angle</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_blendType">blendType</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_clip">clip</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_color">color</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_context">context</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_effects">effects</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_mirror">mirror</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_opacity">opacity</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_ox">ox</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_oy">oy</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_tone">tone</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_zoom">zoom</a>
+
+                            </li>
+                    </ul>
+                </div>
+
+
+        </div>
+
+            <div id="methods" class="api-class-tabpanel">
+                <h2 class="off-left">Methods</h2>
+
+<div id="method_changeTone" class="method item">
+    <h3 class="name"><code>changeTone</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>rect</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Changes the color tone of the specified area. Needs to be called once per
+frame to keep it up.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">rect</code>
+                        <span class="type"><a href="../classes/gs.Rect.html" class="crosslink">gs.Rect</a></span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The area to tint.</li>
+</ul>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_clipRect" class="method item">
+    <h3 class="name"><code>clipRect</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>rect</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Sets the current clip-rect. All render-calls outside of the clip-area are clipped.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">rect</code>
+                        <span class="type"><a href="../classes/gs.Rect.html" class="crosslink">gs.Rect</a></span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The clipping area.</li>
+</ul>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_clipTo" class="method item">
+    <h3 class="name"><code>clipTo</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>x</code>
+                </li>
+                <li class="arg">
+                        <code>y</code>
+                </li>
+                <li class="arg">
+                        <code>width</code>
+                </li>
+                <li class="arg">
+                        <code>height</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Sets the current clip-rect. All render-calls outside of the clip-area are clipped. It is
+equivalent to clipRect but takes direct coordinates instead of a gs.Rect.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">x</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The x coordinate of the clipping area.</li>
+</ul>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">y</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The y coordinate of the clipping area.</li>
+</ul>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">width</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The width of the clipping area.</li>
+</ul>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">height</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The height of the clipping area.</li>
+</ul>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_dispose" class="method item">
+    <h3 class="name"><code>dispose</code></h3>
+
+        <span class="paren">()</span>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Disposes the renderer and frees all allocated resources/memory.</p>
+
+    </div>
+
+
+
+
+</div>
+<div id="method_drawBitmap" class="method item">
+    <h3 class="name"><code>drawBitmap</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>bitmap</code>
+                </li>
+                <li class="arg">
+                        <code>x</code>
+                </li>
+                <li class="arg">
+                        <code>y</code>
+                </li>
+                <li class="arg">
+                        <code>srcRect</code>
+                </li>
+                <li class="arg">
+                        <code class="optional">[ox=0]</code>
+                </li>
+                <li class="arg">
+                        <code class="optional">[oy=0]</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Draws a specified bitmap on screen.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">bitmap</code>
+                        <span class="type"><a href="../classes/gs.Bitmap.html" class="crosslink">gs.Bitmap</a></span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The bitmap to draw.</li>
+</ul>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">x</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The x-coordinate of the bitmap's position.</li>
+</ul>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">y</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The y-coordinate of the bitmap's position.</li>
+</ul>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">srcRect</code>
+                        <span class="type"><a href="../classes/gs.Rect.html" class="crosslink">gs.Rect</a></span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The area of the bitmap to draw.</li>
+</ul>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name optional">[ox=0]</code>
+                        <span class="type">Number</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The x-coordinate of the origin.</li>
+</ul>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name optional">[oy=0]</code>
+                        <span class="type">Number</span>
+                        <span class="flag optional" title="This parameter is optional.">optional</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The xycoordinate of the origin.</li>
+</ul>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_drawBitmapSimple" class="method item">
+    <h3 class="name"><code>drawBitmapSimple</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>bitmap</code>
+                </li>
+                <li class="arg">
+                        <code>x</code>
+                </li>
+                <li class="arg">
+                        <code>y</code>
+                </li>
+                <li class="arg">
+                        <code>w</code>
+                </li>
+                <li class="arg">
+                        <code>h</code>
+                </li>
+                <li class="arg">
+                        <code>sx</code>
+                </li>
+                <li class="arg">
+                        <code>sy</code>
+                </li>
+                <li class="arg">
+                        <code>sw</code>
+                </li>
+                <li class="arg">
+                        <code>sh</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Draws a bitmap &quot;simple&quot; without any visual effects like rotation, tinting, alpha-blending, etc. Its faster
+than regular gs.Renderer.drawBitmap.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">bitmap</code>
+                        <span class="type"><a href="../classes/gs.Bitmap.html" class="crosslink">gs.Bitmap</a></span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The bitmap to draw.</li>
+</ul>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">x</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The x-coordinate of the bitmap's position.</li>
+</ul>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">y</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The y-coordinate of the bitmap's position.</li>
+</ul>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">w</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The width of the bitmap.</li>
+</ul>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">h</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The height of the bitmap.</li>
+</ul>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">sx</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The x-coordinate of the bitmap's area to draw.</li>
+</ul>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">sy</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The y-coordinate of the bitmap's area to draw.</li>
+</ul>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">sw</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The width of the bitmap's area to draw.</li>
+</ul>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">sh</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The height of the bitmap's area to draw.</li>
+</ul>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_drawLive2D" class="method item">
+    <h3 class="name"><code>drawLive2D</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>object</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Draws a Live2D object.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">object</code>
+                        <span class="type"><a href="../classes/gs.Live2DObject.html" class="crosslink">gs.Live2DObject</a></span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The Live2D object to draw.</li>
+</ul>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_drawQuad" class="method item">
+    <h3 class="name"><code>drawQuad</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>position</code>
+                </li>
+                <li class="arg">
+                        <code>size</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Draws a quad. The quad can be textured, rotated, tinted, etc. depending on the
+renderer settings.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">position</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The position as number-array.</li>
+</ul>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">size</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The size as number-array.</li>
+</ul>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_setBitmap" class="method item">
+    <h3 class="name"><code>setBitmap</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>bitmap</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Sets the current bitmap to render.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">bitmap</code>
+                        <span class="type"><a href="../classes/gs.Bitmap.html" class="crosslink">gs.Bitmap</a></span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The bitmap to render.</li>
+</ul>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_setSourceRectangle" class="method item">
+    <h3 class="name"><code>setSourceRectangle</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>sx</code>
+                </li>
+                <li class="arg">
+                        <code>sy</code>
+                </li>
+                <li class="arg">
+                        <code>sw</code>
+                </li>
+                <li class="arg">
+                        <code>sh</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Sets the current source-rectangle to render.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">sx</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The x-coordinate of the area to draw.</li>
+</ul>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">sy</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The y-coordinate of the area to draw.</li>
+</ul>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">sw</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The width of the area to draw.</li>
+</ul>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">sh</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                        <ul>
+<li>The height of the area to draw.</li>
+</ul>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+            </div>
+
+            <div id="properties" class="api-class-tabpanel">
+                <h2 class="off-left">Properties</h2>
+
+<div id="property_anchor" class="property item">
+    <h3 class="name"><code>anchor</code></h3>
+    <span class="type">gs.Vector2</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>The anchor-point.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_angle" class="property item">
+    <h3 class="name"><code>angle</code></h3>
+    <span class="type">Number</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>The rotation angle.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_blendType" class="property item">
+    <h3 class="name"><code>blendType</code></h3>
+    <span class="type"><a href="../classes/gs.BlendMode.html" class="crosslink">gs.BlendMode</a></span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>The blend mode.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_clip" class="property item">
+    <h3 class="name"><code>clip</code></h3>
+    <span class="type"><a href="../classes/gs.Rect.html" class="crosslink">gs.Rect</a></span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>The current clip-rect</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_color" class="property item">
+    <h3 class="name"><code>color</code></h3>
+    <span class="type"><a href="../classes/gs.Color.html" class="crosslink">gs.Color</a></span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>The color.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_context" class="property item">
+    <h3 class="name"><code>context</code></h3>
+    <span class="type">Object</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>The graphics context.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_effects" class="property item">
+    <h3 class="name"><code>effects</code></h3>
+    <span class="type">Object</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>The effect settings for different kind of visual effect like wobble, etc.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_mirror" class="property item">
+    <h3 class="name"><code>mirror</code></h3>
+    <span class="type">Boolean</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Indicates if rendered images are mirrored/flipped horizontally.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_opacity" class="property item">
+    <h3 class="name"><code>opacity</code></h3>
+    <span class="type">Number</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>The opacity. Goes from 0 to 255.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_ox" class="property item">
+    <h3 class="name"><code>ox</code></h3>
+    <span class="type">Number</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>The x-coordinate of the origin.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_oy" class="property item">
+    <h3 class="name"><code>oy</code></h3>
+    <span class="type">Number</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>The y-coordinate of the origin.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_tone" class="property item">
+    <h3 class="name"><code>tone</code></h3>
+    <span class="type"><a href="../classes/gs.Tone.html" class="crosslink">gs.Tone</a></span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>The tone.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_zoom" class="property item">
+    <h3 class="name"><code>zoom</code></h3>
+    <span class="type">gs.Vector2</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>The zoom.</p>
+
+    </div>
+
+
+
+</div>
+            </div>
+
+
+    </div>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

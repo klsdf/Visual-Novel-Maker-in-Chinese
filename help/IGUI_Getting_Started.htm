@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>IGUI Getting Started</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "5.3.1";
+</script>
+ <meta name="topic-breadcrumbs" content="Script and Plugin Reference > In-Game UI Documentation" />
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+ <p class="Topic_Heading" style="font-family: 'Book Antiqua', serif;">Getting Started: In-Game User Interface</p>
+</div>
+<p>&#160;</p>
+<p>Visual Novel Maker comes with a powerful In-Game UI System allowing you to create amazing UIs without real programming using JSON (JavaScript Object Notation) definitions. The following step-by-step guide gives you a rough overview plus a few examples about what is possible with the In-Game UI System.</p>
+<p>&#160;</p>
+<p>But because of complexity this guide cannot cover all features. So please check the <a href="igui_doc/index.html">In-Game UI API Reference</a> for details and don't hesitate to ask for help in the Visual Novel Maker forums.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Layouts</p>
+<p>In-Game UIs are defined using layouts. You can find all default layouts for your Game in Script Editor &gt; Layouts folder.</p>
+<p>&#160;</p>
+<p><img src="image5.gif" alt="" style=" border:none; width:100%; max-width:193px;" border="0" /></p>
+<p>&#160;</p>
+<p>A layout contains a set of controls, like images, buttons, texts, etc. and manages the position and size of each depending on the layout-type. For example: A grid-layout shows its items in a grid of rows and columns:</p>
+<p>&#160;</p>
+<p><img src="image6.gif" alt="" style=" border:none; width:100%; max-width:369px;" border="0" /></p>
+<p>(Grid Layout Example)</p>
+<p>A layout can contain other layouts as well to build more complex layouts.</p>
+<p>&#160;</p>
+<p class="Sub_Heading"><span>Controls</span></p>
+<p>A control covers a piece of UI logic like displaying an image, a button, a text, etc. &#160;Technically, there is not much difference between a control and a layout. But a control cannot contain other controls in regular.</p>
+<p>&#160;</p>
+<p><img src="image8.gif" alt="" style=" border:none; width:100%; max-width:156px;" border="0" /></p>
+<p>(Control Example)</p>
+<p>&#160;</p>
+<p class="Sub_Heading"><span style="font-weight: bold; font-size: 18pt; font-family: 'Book Antiqua', serif;">Case Examples</span></p>
+<p>Please check our In Game UI Examples to learn more about how to modify or make your own User Interface (In-Game UI)!</p>
+<p>&#160;</p>
+<p class="SubSubHeading"><a href="Example__Custom_Title-Screen.htm">Example 1: Custom Title-Screen</a></p>
+<p>In this example, we will make our own title-screen using Visual Novel Maker’s In-Game UI-System!</p>
+<p>&#160;</p>
+<p class="SubSubHeading"><a href="Example__Styles.htm">Example 2: Styles</a></p>
+<p>In this example, we will be teaching how to use styles to avoid redundant code and make it easier to modify your layout.</p>
+<p>&#160;</p>
+<p class="SubSubHeading"><a href="Example__Animations.htm">Example 3: Animations</a></p>
+<p>In this example, we will be teaching how to add animations to your UI!</p>
+<p>&#160;</p>
+<p class="SubSubHeading"><a href="Templates.htm">Example 4: Templates</a></p>
+<p>We learned how styles can help us to avoid redundant data in our layouts. But since styles are limited, we are teaching you how to make and use Templates to overcome them!</p>
+<p>&#160;</p>
+<p class="SubSubHeading"><a href="Example__Actions.htm">Example 5: Actions</a></p>
+<p>In this example, we will be teaching you how to use actions for cases such as switching scenes or layouts!</p>
+<p>&#160;</p>
+<p class="SubSubHeading"><a href="Example__Data_Bindings.htm">Example 6: Data Bindings</a></p>
+<p>Now that you know the basics, we will now teach you about this complex function. Data Binding allows us to display or change background-data (ex. In-Game settings)</p>
+<p>&#160;</p>
+<p class="SubSubHeading"><a href="Example__Formulas.htm">Example 7: Formulas</a></p>
+<p>In this example, we'll teach you another complex function called, Formulas. They are defined functions under a control and is executed under specific conditions.</p>
+<p>&#160;</p>
+<p class="SubSubHeading"><a href="Example__Using_Components.htm">Example 8: Using Components</a></p>
+<p>In this example, we'll teach you another complex function called, Components. This allows you to specify a specific condition to a control.</p>
+<p>&#160;</p>
+<p class="SubSubHeading">Useful Tips</p>
+<p>Don't make layouts more complex then actually needed. Think twice if maybe just a few simple images can solve a case more efficient instead of building up a huge complex layout structure. The more complex a layout is, the more performance it will cost. That is especially the case if you plan to publish your game on weaker mobile devices.</p>
+</body>
+</html>

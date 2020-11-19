@@ -1,0 +1,365 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Save System</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<link rel="stylesheet" href="highlight/styles/default.css" type="text/css" />
+<script src="highlight/highlight.pack.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+//<![CDATA[
+hljs.initHighlightingOnLoad();
+//]]>
+</script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "4.2.0_5";
+</script>
+ <meta name="topic-breadcrumbs" content="Scripter's Guide > VN Engine" />
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<p class="Topic_Heading">Save System</p>
+<p>&#160;</p>
+<p><span class="Topic_Start">V</span>isual Novel Maker's Save System uses object serialization / deserialization to save and load game data.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Save a Game</p>
+<p>&#160;</p>
+<p>To save the current game, we have to call two methods: GameManager.prepareSave and GameManager.save. The prepareSave method creates the actual snapshot of the current game state and optionally a screenshot of the current game scene. After prepareSave was called, the snapshot can be accessed via GameManager.saveGame property. The save method then just writes that game snapshot to a file on disk.</p>
+<p>&#160;</p>
+<p>Let's try that out live by just starting a sample scene and the open the Debug Tools(F12 on Windows/Linux, Ctrl+Shift+i on OS X). To make that work, since we have our test-bed scene in script-editor, just right-click the scene you want to use for this example and Right-Click &gt; Set as Intro Scene. Then start the game.</p>
+<p>&#160;</p>
+<p><img src="SaveGame_ScriptGuide.png" alt="" style=" border:none; width:100%; max-width:613px;" border="0" /></p>
+<p>&#160;</p>
+<p>If we call GameManager.prepareSaveGame a snapshot of the current game state is created an returned but also stored in GameManager.saveGame property. We are passing <span style="font-weight: bold;">true</span> as parameter to say that we also want a screenshot of the current scene for use in save/load game menu. The next thing we have to do is to write the snapshot to a file on disk.</p>
+<p>&#160;</p>
+<p><img src="SaveGameFile_ScriptGuide.PNG" alt="" style=" border:none; width:100%; max-width:565px;" border="0" /></p>
+<p>&#160;</p>
+<p>With GameManager.save we are writing our game snapshot to disk to store it permanently. So we can load it again in the next step. We passing the number 5 as parameter to say that we want to store in save-slot 6 (counting starts with 0).</p>
+<p>&#160;</p>
+<p>To get your test-bed scene back, just go to Database &gt; System and uncheck the Intro Scene checkbox. Then start the game and you are back in your test-bed scene.</p>
+<p>&#160;</p>
+<p><img src="image40.gif" alt="" style=" border:none; width:100%; max-width:269px;" border="0" /></p>
+<p>&#160;</p>
+<p class="Sub_Heading">Load a Game</p>
+<p>&#160;</p>
+<p>To load our saved game, we just have to call GameManager.load method as we can see in the following example:</p>
+<p>&#160;</p>
+<p><img src="LoadGame_ScriptGuide.png" alt="" style=" border:none; width:100%; max-width:478px;" border="0" /></p>
+<p>&#160;</p>
+<p>That only works of course if we have a saved game in the specified slot. After that call, if we are going back to the game, it will fade-out and load the saved game.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">The Saving Process</p>
+<p>&#160;</p>
+<p>In this example we will learn more about the actual saving-process and try to save our custom test-bed scene instead of a regular VN scene. The saving process is done in four steps.</p>
+<p>&#160;</p>
+<ol style="list-style: decimal;">
+<li>Collecting the data which needs to be saved</li>
+<li>Encode the collected data so that it can be serialized into a JSON string.</li>
+<li>Serialize the data into a JSON string using JSON.stringify built-in function.</li>
+<li>Write the JSON string to a file on disk</li>
+</ol>
+<p>&#160;</p>
+<p>Let's go through this four steps.</p>
+<p>&#160;</p>
+<p class="SubSubHeading">Collecting the data which needs to to be saved</p>
+<p>&#160;</p>
+<p>In the first step we have to collect all the data we want to serialize. Let's add a new method "saveGame" to our scene where we will do the saving of our scene.</p>
+<pre>
+<code class="coffee">
+# Saves our game   
+saveGame: () -&gt;
+    # Collect the data to save. We only need to save
+    # our NPC and player character object.
+    gameData = {
+        npcObject: @npcObject
+        playerObject: @playerObject
+    }
+    
+    # Let's create a screenshot of the current scene
+    # Get current (old) screenshot object.
+    snapshot = ResourceManager.getCustomBitmap("$snapshot")
+    # If exists, free memory of old screenshot object.
+    snapshot?.dispose()
+    # Create a new snapshot and store it as a custom bitmap object under "$snapshot" ID.
+    ResourceManager.setCustomBitmap("$snapshot", Graphics.snapshot())</code>
+</pre>
+<p>As we can see here, first we collect all necessary data and game objects needed to reconstruct our entire scene. Which are only the NPC and Player character since our scene is very simple. Next we are creating a snapshot from the screen we can use later as preview-image in save/load menu. The setCustomBitmap method allows us to store a bitmap object under a specified name for later access. We are putting our snapshot bitmap under "$snapshot".</p>
+<p>&#160;</p>
+<p class="SubSubHeading">Encode the collected data so that it can be serialized into JSON</p>
+<p>&#160;</p>
+<p>In the next step we need to encode our collected to data so that it can be serialized into a JSON string. The encoding is necessary because the JSON format does not support certain features such as:</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li>References</li>
+<li>Cyclic References</li>
+<li>Class Information</li>
+<li>Functions / Methods / Callbacks</li>
+</ul>
+<p>&#160;</p>
+<p>So we cannot just serialize our game objects using JSON.stringify method because that would result into a serialization error or an incomplete, non restorable JSON output.</p>
+<p>&#160;</p>
+<p>That's why VN Maker provides and own encoding mechanism via gs.ObjectCodec and gs.ObjectCodecContext classes. The term "codec" stands for "Encoder &amp; Decoder", so that classes allow you to encode and decode data.</p>
+<p>&#160;</p>
+<p>Let's try that out next by extending our saveGame method.</p>
+<pre>
+<code class="coffee">
+# Saves our game   
+saveGame: () -&gt;
+    # Collect the data to save. We only need to save
+    # our NPC and player character object.
+    gameData = {
+        npcObject: @npcObject
+        playerObject: @playerObject
+    }
+    
+    # Let's create a screenshot of the current scene
+    # Get current (old) screenshot object.
+    snapshot = ResourceManager.getCustomBitmap("$snapshot")
+    # If exists, free memory of old screenshot object.
+    snapshot?.dispose()
+    # Create a new snapshot and store it as a custom bitmap object under "$snapshot" ID.
+    ResourceManager.setCustomBitmap("$snapshot", Graphics.snapshot())
+    
+    # Create a codec context to encode the game data
+    context = new gs.ObjectCodecContext()
+    # Add the root viewport to the context
+    context.decodedObjectStore.push(Graphics.viewport)
+    # Add the scene object to the context
+    context.decodedObjectStore.push(@object)
+    # Add the test-bed behavior component to the context
+    context.decodedObjectStore.push(this)
+    # Create save game object
+    saveGame = {}
+    # Encode the game data so that it can be serialized to a JSON string later.
+    saveGame.data = gs.ObjectCodec.encode(gameData, context)
+    # Add property to store all encoded objects by reference ID.
+    saveGame.encodedObjectStore = context.encodedObjectStore</code>
+</pre>
+<p>As we can see, we first creating a new instance object gs.ObjectCodecContext which reflects the current state of the encoding process. The actual encoding is done later using gs.ObjectCodec.encode method. So gs.ObjectCodec is a static class and it takes a gs.ObjectCodecContext object to work on the right data.</p>
+<p>&#160;</p>
+<p>The decodedObjectStore is a list of all encoded object's so far. The encoder uses that list to keep track of what objects are already encoded. The encoder walks recursive through the data and whenever it stumbles about an object, it will put it into the decodedObjectStore list and replace it with a "$vnm_ref_&lt;index&gt;" string in the output structure.</p>
+<p>&#160;</p>
+<p>So lets say we would have the following strucure:</p>
+<pre>
+<code class="coffee">
+peter = { name: "Peter", job: "CEO" }
+mike = { name: "Mike", job: "Developer" }
+james = { name: "James", job: "Lead Developer", superior: peter, subordinate: mike }</code>
+</pre>
+<p>If we then encode james the encoded output would look like this:</p>
+<p>&#160;</p>
+<p>$$vnm_obj_ref 0</p>
+<p>&#160;</p>
+<p>It is a reference telling that the object can be found at index 0 of the encodedObjectStore of the context. So if we print out: context.encodedObjectStore[0] we get:</p>
+<p>&#160;</p>
+<p><img src="image41.gif" alt="" style=" border:none; width:100%; max-width:233px;" border="0" /></p>
+<p>&#160;</p>
+<p>So we can see that all objects were replaced with so called "vnm object references". The number at the end describes where the object can be found in the encodedObjectStore of the context. That way of encoding the data is necessary to support references as well as cyclic references to allow a flawlessly reconstruction of the game state. What we also can see here is "$class" and "$ns" storing the class- and namespace information of the object so that it can be reconstructed properly.</p>
+<p>&#160;</p>
+<p>In our saveGame method, we are manually adding 3 objects to the decodedObjectStore: The root-viewport, the scene-object and our test-bed behavior component. We are doing to let the encoder think that those objects were already encoded even if they are actually not. &#160;Because that objects are a special case: We want the encoder to put references to them into the encoded output structure but actually don't want to encode them and also not serializing them to JSON later.</p>
+<p>&#160;</p>
+<p>That is necessary because those objects should not be stored in the save-game file but are referenced in our game objects. So if we load and reconstruct the game, we need to set the references in our game objects to the correct objects at runtime. We will see that later if we try to load our game.</p>
+<p>&#160;</p>
+<p>However, at the end of our current saveGame method, we creating a saveGame object which stores two things.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li>The encoded data, the result of gs.ObjectCodec.encode</li>
+<li>The encodedDataStore which is a list containing the actually encoded objects since the encode-method only returns a reference-id.</li>
+</ul>
+<p>&#160;</p>
+<p>After that our saveGame object contains all the data we need to reconstruct our scene. So it's read to serialize it into a JSON string next.</p>
+<p>&#160;</p>
+<p class="SubSubHeading">Serialize the data into a JSON string using JSON.stringify &#160;built-in function.</p>
+&#160; <br />Since our collected data is properly encoded now, we can easily serialize &#160;it into a JSON string using JSON.stringify function.
+<pre>
+<code class="coffee">
+# Saves our game   
+saveGame: () -&gt;
+    # Collect the data to save. We only need to save
+    # our NPC and player character object.
+    gameData = {
+        npcObject: @npcObject
+        playerObject: @playerObject
+    }
+    # Let's create a screenshot of the current scene
+    # Get current (old) screenshot object.
+    snapshot = ResourceManager.getCustomBitmap("$snapshot")
+    # If exists, free memory of old screenshot object.
+    snapshot?.dispose()
+    # Create a new snapshot and store it as a custom bitmap object under "$snapshot" ID.
+    ResourceManager.setCustomBitmap("$snapshot", Graphics.snapshot())
+    
+    # Create a codec context to encode the game data
+    context = new gs.ObjectCodecContext()
+    # Add the root viewport to the context
+    context.decodedObjectStore.push(Graphics.viewport)
+    # Add the scene object to the context
+    context.decodedObjectStore.push(@object)
+    # Add the test-bed behavior component to the context
+    context.decodedObjectStore.push(this)
+    # Create save game object
+    saveGame = {}
+    # Encode the game data so that it can be serialized to a JSON string later.
+    saveGame.data = gs.ObjectCodec.encode(gameData, context)
+    # Add property to store all encoded objects by reference ID.
+    saveGame.encodedObjectStore = context.encodedObjectStore
+    # Serialize the save game data into a JSON string
+    jsonOutput = JSON.stringify(saveGame)</code>
+</pre>
+The jsonOutput variable contains our save game data as a JSON string ready to store it on disk. <br />&#160;
+<p class="SubSubHeading">Write the JSON string to a file on disk</p>
+&#160; <br />The last thing we have to do is to write the JSON string to a file on &#160;disk. Since VN Maker uses NW.js to run the game for PC/Mac, we could just &#160;using it's API to write the JSON string to a file on disk.
+<pre>
+<code class="coffee">
+# Store the data in "saveGame.dat" file on disk.
+require("fs").writeFileSync("./saveGame.dat", jsonOutput, "utf-8")</code>
+</pre>
+However, that example is not platform-independent. A VN Maker game can run &#160;on various platforms such as smartphones, tablets and even in a webbrowser. &#160;The NW.js API is only available on PC/Mac, so we are better not using it directly if we want to stay platform-independent. Instead, we can use gs.GameStorage &#160;class which provides us a platform-independent way to store our data.
+<pre>
+<code class="coffee">
+# Saves our game   
+saveGame: () -&gt;
+    # Collect the data to save. We only need to save
+    # our NPC and player character object.
+    gameData = {
+        npcObject: @npcObject
+        playerObject: @playerObject
+    }
+    # Let's create a screenshot of the current scene
+    # Get current (old) screenshot object.
+    snapshot = ResourceManager.getCustomBitmap("$snapshot")
+    # If exists, free memory of old screenshot object.
+    snapshot?.dispose()
+    # Create a new snapshot and store it as a custom bitmap object under "$snapshot" ID.
+    ResourceManager.setCustomBitmap("$snapshot", Graphics.snapshot())
+    
+    # Create a codec context to encode the game data
+    context = new gs.ObjectCodecContext()
+    # Add the root viewport to the context
+    context.decodedObjectStore.push(Graphics.viewport)
+    # Add the scene object to the context
+    context.decodedObjectStore.push(@object)
+    # Add the test-bed behavior component to the context
+    context.decodedObjectStore.push(this)
+    # Create save game object
+    saveGame = {}
+    # Encode the game data so that it can be serialized to a JSON string later.
+    saveGame.data = gs.ObjectCodec.encode(gameData, context)
+    # Add property to store all encoded objects by reference ID.
+    saveGame.encodedObjectStore = context.encodedObjectStore
+    # Serialize the save game data into a JSON string
+    jsonOutput = JSON.stringify(saveGame)
+    # Store the save game data permanently.
+    gs.GameStorage.setData("CustomSaveGame", jsonOutput)</code>
+</pre>
+That's it, now we can save our game using Debug Console by just calling our saveGame method. <br />&#160; <br /><img src="image42.gif" alt="" style=" border:none; width:100%; max-width:602px;" border="0" /> <br />&#160;
+<p class="Sub_Heading">The Loading Process</p>
+&#160; <br />After we successfully saved our custom scene, we will try to restore &#160;it next. The loading process is very similar to the saving process.<br />
+<br />
+<ol style="list-style: decimal;">
+<li>Load the JSON string from disk (gs.GameStorage)</li>
+<li>Deserialize the JSON string into an object which represents our encoded game data.</li>
+<li>Decode the game data</li>
+<li>Restore the scene</li>
+</ol>
+&#160; <br />Let's create a new method "loadGame" to do the loading.
+<pre>
+<code class="coffee">
+# Loads our game    
+loadGame: -&gt;
+    # Get the save game data from storage
+    saveGame = gs.GameStorage.getData("CustomSaveGame")
+    # If no saveGame exists we will abort here
+    if not saveGame then return
+    # Parse the save game data JSON text
+    saveGame = JSON.parse(saveGame)
+    
+    # Clean Up the current scene and dispose our characters.
+    @npcObject.dispose()
+    @playerObject.dispose()
+    
+    # Create a codec context to decode the data properly
+    context = new gs.ObjectCodecContext()
+    # Add the root-viewport, scene-object and test-bed behavior to the list
+    # of already decoded objects
+    context.decodedObjectStore = [Graphics.viewport, @object, this]
+    # Assign the list of encoded objects from the save-game data.
+    context.encodedObjectStore = saveGame.encodedObjectStore
+    # Decode the save game data
+    saveGame.data = gs.ObjectCodec.decode(saveGame.data, context)
+    # Fire restore-event to all decoded game objects.
+    gs.ObjectCodec.onRestore(saveGame.data, context)
+    
+    # Reconstruct the Player and NPC
+    @playerObject = saveGame.data.playerObject
+    @npcObject = saveGame.data.npcObject
+    
+    # Add the reconstructed Player and NPC to the scene
+    @object.addObject(@playerObject)
+    @object.addObject(@npcObject)</code>
+</pre>
+As we can see, it is pretty similar to the saving process. After we read and parsed the save game data, we are destroying our current game objects to avoid to double them because we will reconstruct them from the save game data next. Then we create a codec-context and will the deocdedObjectStore with our 3 objects: The root-viewport, the scene-object and the test-bed behavior component. <br />&#160; <br />If we remember how we saved our data, we put references to these 3 objects in our save game data put didn't encoded and saved that 3 objects themselves. So these 3 objects are references with: "$$vnm_obj_ref 0", "$$vnm_obj_ref 1" and "$$vnm_obj_ref 2" in our save game data. So the decoder expects these 3 objects at in 0, 1 and 2 in decodedObjectStore. That's why we are filling that store with these three object so that the decoder does not decodes them but reconstruct the references to them correctly. <br />&#160; <br />Next we decode the data with the decode-method and then firing a restore-event to all reconstructed game objects to give them the chance to execute some specific code if necessary. For Example: Many UI related game objects reconstruct their global event manager registrations after restore because those registrations are not encoded and stored in save-game data. <br />&#160; <br />In our last step we are assigning the reconstructed game objects to the appropriate instance-variables and adding them to out scene. That's it. We can load our saved game now with: <br /><img src="image43.gif" alt="" style=" border:none; width:100%; max-width:611px;" border="0" /> <br />&#160; <br />After that call our scene is loaded. <br />&#160;
+<p class="Sub_Heading">The default saving process</p>
+&#160; <br />In this topic we already learned a lot about VN Maker's saving system and even successfully saved and loaded our own custom scene. However, the default saving and loading process is a bit more complex. But with the knowledge from this topic you should be able to get into it. The following description gives you some hints to make it easier for your to understand it. <br />&#160;
+<p class="SubSubHeading">Saving Process</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li>If you hit the save-button in the message-box menu, exactly in that moment a snapshot is created using GameManager.prepareSaveGame</li>
+<li>That snapshot will contain all backgrounds, characters, pictures as well as some other related data like variables, settings, etc.</li>
+<li>If you click on a save-game slot in the save menu, GameManager.save is called with the slot you selected to store the snapshot stored in GameManager.saveGame property.</li>
+</ul>
+<p>&#160;</p>
+<p class="SubSubHeading">Loading Process</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li>If you click on a save-slot, GameManager.load is called and the data is loaded from GameStorage and parsed, but not immediately decoded.</li>
+<li>GameManager.load will create a new gs.Object_Scene and switches the scene to a new game-scene</li>
+<li>In gs.Component_GameSceneBehavior, it checks if there is a GameManager.loadedSaveGame set and only then the decoding and reconstruction of game objects happens</li>
+</ul>
+</body>
+</html>

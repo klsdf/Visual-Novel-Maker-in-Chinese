@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Topic Fixer</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "";
+</script>
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+ <p class="Topic_Heading">The Context Menu</p>
+</div>
+<p><span class="Topic_Start">C</span>onditions is one of the most useful commands you will be using. They are used to establish objectives and/or rules to trigger events. You can also think of them as 'If something does this then this will happen. Else this will happen instead.' In Scene Content format, it looks like this:</p>
+<p>&#160;</p>
+<p><img src="2017-01-30_16-54-04.jpg" alt="" style=" border:none; width:100%; max-width:816px;" border="0" /><br />
+<br />
+If you are still confused, that is OK! We highly recommend to read about flowcharts to understand how they are structured. Here are some tutorial links:</p>
+<ul style="list-style: disc;">
+<li><a href="http://creately.com/blog/diagrams/flowchart-guide-flowchart-tutorial/">Ultimate Flowchart Guide</a></li>
+<li><a href="https://www.programiz.com/article/flowchart-programming">Flowchart in Programming</a></li>
+</ul>
+<p>&#160;</p>
+<p>The previous lessons are necessary to understand Conditions. Please make sure to read it!</p>
+<p>&#160;</p>
+<p style="text-align: center;"><img src="Metisnotes7_en.png" alt="" style=" border:none; width:100%; max-width:465px;" border="0" /></p>
+<p>&#160;</p>
+<p class="Sub_Heading">Example #1: A Simple Counter</p>
+<p>For this tutorial, we'll make a fairly simple example of how to use the Condition command. For this tutorial, we'll be using a <a href="Basic.htm#Number_Variable">Number Variable</a>. First, let's take a look into this flowchart:</p>
+<p><img src="2017-01-30_14-20-32.jpg" alt="" style=" border:none; width:100%; max-width:475px;" border="0" /></p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p>As to how this reads, the flowchart goes with the logic, if Counter is equal to 6, the process will end. Else add +1 to the Counter and check again.</p>
+<p>&#160;</p>
+<p>So what we will need to do to translate it in VNMaker is as follows:</p>
+<ul style="list-style: disc;">
+<li>Let's add <span style="font-weight: bold;">Message Box Visibility</span> command and set the Visible to Yes. This is so we can use a Show Message command to show the value of the variable we're using.</li>
+<li>Create a <span style="font-weight: bold;">Label</span> called 'start'.</li>
+<li>Add &#160;<img src="BasicCmd.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" /><span style="font-weight: bold;">Basic</span> -&gt; <span style="font-weight: bold;">Condition</span> <span>command</span><span style="font-weight: bold;">.</span> <span>Click the Variable command and change the Scope to Local. Let's name it Counter. Change the Value to 6 afterwards.</span></li>
+<li><span>Afterwards, let's add <img src="BasicCmd.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" /></span><span style="font-weight: bold;">Basic</span> <span style="font-weight: bold;">-&gt; <a href="Basic.htm#Idle">Idle</a></span> <span>command. This will pause the scene indicating the condition has been achieved. Assuming that the command isn't tabbed for any reason, y</span><span style="font-family: Arial, sans-serif;">ou can press the Right Arrow (<img src="Keyboard_White_Arrow_Right.png" alt="" style=" border:none; padding-bottom:-5px; width:100%; max-width:35px;" border="0" />) key to put a command under the Condition. If you accidentally tabbed too much, just press the Left Arrow(<img src="Keyboard_White_Arrow_Left.png" alt="" style=" border:none; padding-bottom:-5px; width:100%; max-width:35px;" border="0" />) key.</span></li>
+<li><span>Let's add <img src="BasicCmd.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" /></span><span style="font-weight: bold;">Basic</span> <span style="font-weight: bold;">-&gt; <a href="Basic.htm#Else">Else</a></span> <span>command. This will allow us to put another condition if the first condition hasn't been met yet.</span></li>
+<li><span>Next, we'll use a</span> <span style="font-weight: bold;">Show Message</span> <span>and use a <a href="Message.htm#Text_Codes">text code</a>, {LN:1}. This means that whatever is the value in Local Number Variable #1 will be shown in the Show Message command.</span></li>
+<li><span>After that, we'll use a</span> <span style="font-weight: bold;"><a href="Basic.htm#Number_Variable" style="font-weight: bold;">Number Variable</a></span> <span>and set the Variable Scope to Local Number #1. Set the Operation to Add and Source to Value. Finally set the Value to 1.</span><br />
+<img src="2017-01-30_16-14-35.jpg" alt="" style=" border:none; width:100%; max-width:978px;" border="0" /></li>
+<li><span>At the end of the command, add a</span> <span style="font-weight: bold;">Jump to Label</span> <span>to start and make sure it's not tabbed.</span></li>
+</ul>
+<p>&#160;</p>
+<p>If you did everything correctly, it should look like this.</p>
+<p><img src="2017-01-30_14-33-57.jpg" alt="" style=" border:none; width:100%; max-width:904px;" border="0" /></p>
+<p>&#160;</p>
+<p>If you use Play Test, you will see the number ticking up to five. We made a simple counter!</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Example #2: Opening a Treasure Chest</p>
+<p>For our next example, we are going to make a small text prompt that asks if we want to open a treasure chest. It will give a different response if you already opened the chest. For this tutorial, we'll be using a <a href="Basic.htm#Switch">Switch</a>. Here's a quick flowchart that explains how this will work:</p>
+<p><img src="2017-01-30_13-58-33.jpg" alt="" style=" border:none; width:100%; max-width:686px;" border="0" /></p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li>As usual, let's add <span style="font-weight: bold;">Message Box Visibility</span> command and set the Visible to Yes.</li>
+<li>Since this is an item that is exclusive for this one scene, we can safely use a <a href="Basic.htm#Switch" style="font-weight: bold;">Local Switch</a>. This means that switch is only usable on that specific Scene. So let's click the Switch section and change the Scope to Local.<br />
+<img src="2017-01-30_8-39-36.jpg" alt="" style=" border:none; width:100%; max-width:1024px;" border="0" /></li>
+<li>Then name the switch to something like 'Hookshot' and press OK.</li>
+<li>Create a <span style="font-weight: bold;">Label</span> called 'start'.</li>
+<li>Then let's add a <span style="font-weight: bold;">Show Message</span> command that says, "There's a treasure chest here. Should we open it?"</li>
+<li>Now let's add two <a href="Message.htm#Add_Choice" style="font-weight: bold;">Add Choices</a> that says Yes and No respectively. Don't forget to add a Show Choices at the end.</li>
+<li>For the <span style="font-weight: bold;">Yes Choice, we'll use the Label ItemGet</span>. For the <span style="font-weight: bold;">No Choice, we'll use the Label Ignored.</span></li>
+<li>Now, we should add a <span style="font-weight: bold;">Label named ItemGet</span><span>. P</span>ut a Condition command under it.</li>
+<li>Make sure that the <span style="font-weight: bold;">Condition</span>'s If is set to Switch, Variable Local Switch #1 and is Equal to ON.<br />
+<img src="2017-01-30_16-25-40.jpg" alt="" style=" border:none; width:100%; max-width:960px;" border="0" /></li>
+<li>Let's add a <span style="font-weight: bold;">Show Message</span> that says, "We already got the hookshot."</li>
+<li>After that we will add an <span style="font-weight: bold;">Else</span> command.</li>
+<li><span>Since we made a Switch earlier, let's drag the Switch under the Else command.</span></li>
+<li><span>L</span>et's add a <span style="font-weight: bold;">Show Message</span> that says, "We got a hookshot!"</li>
+<li>Then we will add a <span style="font-weight: bold;">Jump to Label</span> named Start.</li>
+<li>By the end of it, our scene content should look something like this:<br />
+<img src="2017-01-30_13-21-36.jpg" alt="" style=" border:none; width:100%; max-width:968px;" border="0" /></li>
+</ul>
+<p>&#160;</p>
+<p>&#160;</p>
+<p style="text-align: center;">&#160;</p>
+<p>&#160;</p>
+</body>
+</html>

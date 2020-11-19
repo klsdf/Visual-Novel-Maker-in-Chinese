@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Display a Picture</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<link rel="stylesheet" href="highlight/styles/default.css" type="text/css" />
+<script src="highlight/highlight.pack.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+//<![CDATA[
+hljs.initHighlightingOnLoad();
+//]]>
+</script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "4.1.0_1";
+</script>
+ <meta name="topic-breadcrumbs" content="Scripter's Guide > Basic Engine" />
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<p class="Topic_Heading">Display a Picture</p>
+<p>&#160;</p>
+<p><span class="Topic_Start">I</span>n this chapter we will load and display a picture on screen, which will be as easy as displaying a red square. There is only one additional step: We need to load the image resource from disk before we can display it on screen.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Loading the image resource</p>
+<pre>
+<code class="coffee">
+###*
+* Prepares all data for the scene and loads the necessary graphic and audio resources.
+### 
+prepareData: -&gt;
+    # Loading the image
+    @bitmap = ResourceManager.getBitmap("Graphics/Pictures/bg-generic")</code>
+</pre>
+<p>An image resource is represented by a gs.Bitmap object. It is recommended to use ResourceManager.getBitmap to load an image resource as bitmap. The loading is done asynchronously which means that you cannot use or access the bitmap`s data until it is fully loaded. Once a bitmap has been loaded, it is cached so that it is not loaded again. The bitmap object returned from the getBitmap method is only an empty wrapper object if the bitmap is not fully loaded.</p>
+<p>&#160;</p>
+<p>We will learn more about <a href="Resource_Management.htm">Resource Management</a> in a later chapter.</p>
+<p>&#160;</p>
+<p>A bitmap object allows you to get common info like the width or height of the image as well as modifying the pixel data. It is also possible to create a new "empty" &#160;bitmap from scratch, we will see that in a later chapter where we will learn how to display a text on screen.</p>
+<p>&#160;</p>
+<p>In our example above, we receive an unloaded gs.Bitmap object. We don´t need to care about the loading process because the prepareVisual method of our scene is called automatically once all requested image resources are loaded.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Display the image on screen</p>
+<pre>
+<code class="coffee">
+###*
+* Prepares all visual game object for the scene.
+###  
+prepareVisual: -&gt;
+    # Create a new sprite object to show our image on screen.
+    @sprite = new gs.Sprite(Graphics.viewport)
+    
+    # Assign our image to the sprite to display it on screen
+    @sprite.bitmap = @bitmap
+    
+    # Setup the position on screen. We make it centered.
+    @sprite.x = (Graphics.width - @bitmap.width) / 2
+    @sprite.y = (Graphics.height - @bitmap.height) / 2
+    
+    # Define the portion of the image we want to display on screen.
+    @sprite.srcRect = new gs.Rect(0, 0, @bitmap.width, @bitmap.height)
+    
+    # We are done with preparing our visual objects. So we can start
+    # the screen transition to fade in our new created objects smoothly.
+    @transition()</code>
+</pre>
+<p>A bitmap object itself cannot be directly displayed on screen, it is more like an object holding the image data without any knowledge about how to display that data. We need a gs.Sprite object to display it. A sprite object is used to display a bitmap object on screen. We just need to assign our bitmap object to the bitmap-property of the sprite and it does the rest for us. So we can display the same bitmap multiple times on the screen by just creating multiple sprite objects and assigning the same bitmap object to each one.</p>
+<p>&#160;</p>
+<p>The srcRect-property is not set by default, it defines the portion of the bitmap we want to display on screen. &#160;So it is necessary to set this property otherwise we would see nothing. We set it to the full size of the image since we want to see the whole image. You can imagine this like a cropping feature if you upload a picture to a social media platform but maybe want to cut off some parts.</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p>&#160;</p>
+</body>
+</html>

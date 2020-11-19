@@ -1,0 +1,1 @@
+gXMLBuffer ="<?xml version=\"1.0\" encoding=\"utf-8\" ?><data  src=\"toc.js\"  name=\"Visual Novel Maker\" url=\"Visual_Novel_Maker.htm\"><item name=\"Update History\" url=\"Update_History.htm\" /></data>";

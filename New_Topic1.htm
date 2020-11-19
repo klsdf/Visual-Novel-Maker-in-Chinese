@@ -1,0 +1,246 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>New Topic1</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "";
+</script>
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<p class="Sub_Heading">Tilemaps</p>
+<p>&#160;</p>
+<p><span class="Topic_Start">A</span> Tilemap is a common element seen in Adventure, Side-Scrolling or Strategy like games. It is used to display the environment of the current level, for example:</p>
+<p>&#160;</p>
+<p><img src="TilemapExample.png" alt="" style=" border:none; width:100%; max-width:836px;" border="0" /></p>
+<p>&#160;</p>
+<p>The above tilemap is Top Down point of view mostly seen in retro RPGs. But you can also use other variants such as isometric or sideview.</p>
+<p>&#160;</p>
+<p>Tilemaps are represented by the gs.Tilemap class. They are also counted as graphics objects so they can be rotated, zoomed, etc. A tilemap cannot be directly tinted but if you tint the viewport the tilemap is affected as well.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Tilesets</p>
+<p>&#160;</p>
+<p>A tilemap is constructed from a tileset (also known as Tilesheet). The tileset is a single image file which contains the graphics, also called "Tiles", needed to construct the tilemap / level of the game. It is very similar to a spritesheet.</p>
+<p>&#160;</p>
+<p><img src="image45.gif" alt="" style=" border:none; width:100%; max-width:256px;" border="0" /></p>
+<p>&#160;</p>
+<p>As you can see, the yellow marked graphic is called a "Tile". All tiles have the same size of 32x32 pixels and are quadratic in this example. If we place these tiles on a 32x32 pixel grid on screen we can construct a level.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Setup a simple Tilemap</p>
+<p>&#160;</p>
+<p>Let's start with a very simple tilemap. We are going to use the following tileset to construct the tilemap:</p>
+<p>&#160;</p>
+<p><img src="WoodsTileset.png" alt="" style=" border:none; width:100%; max-width:256px;" border="0" /></p>
+<p>&#160;</p>
+<p>Import that tileset image into your project's Graphics/Pictures folder and rename it to "WoodsTileset". Then use the following code for your test-bed scene.</p>
+<pre>
+<code class="coffee">
+# ===================================================================
+#
+#   Script: Component_TestBedBehavior
+#
+#   Put your name here
+#
+# ===================================================================
+class Component_TestBedBehavior extends gs.Component_SceneBehavior
+    ###*
+    * A test bed scene behavior. Here you can play around with Visual Novel Maker's 
+    * game engine to get a better feeling for everything.
+    ###
+    constructor: -&gt;
+        super
+        
+        # Define resource context property
+        @resourceContext = null
+    
+    ###*
+    * Initializes the scene. 
+    ###
+    initialize: -&gt;
+        super
+        
+        # Create a new resource context
+        @resourceContext = ResourceManager.createContext()
+        
+        # Set current object manager
+        gs.ObjectManager.current = SceneManager
+        
+        # Set it as the current resource context
+        ResourceManager.context = @resourceContext
+        
+    ###*
+    * Disposes the scene.
+    ###  
+    dispose: -&gt;
+        super
+    
+    ###*
+    * Prepares all visual game object for the scene.
+    ###  
+    prepareVisual: -&gt;
+        # Create tilemap
+        @tilemap = new gs.Tilemap(Graphics.viewport)
+        # Assign tileset bitmap
+        @tilemap.tileset = ResourceManager.getBitmap("Graphics/Pictures/WoodsTileset")
+        # Set the width of the tilemap in tiles
+        @tilemap.width = 100
+        # Set the height of the tilemap in tiles
+        @tilemap.height = 100
+        # Set the size of a single tile to 32x32. Only quadratic tiles are supported.
+        @tilemap.tileSize = 32
+        # Initialize the map data array
+        @tilemap.mapData = []
+        # Initialize the z-order array
+        @tilemap.priorities = []
+        # Fill in the map data. The tile number 0 refers to the upper-left tile of the tileset.
+        for i in [0...(@tilemap.width * @tilemap.height)]
+            # Set tile number 0
+            @tilemap.mapData[i] = 0
+        # Initialize the tilemap
+        @tilemap.setup()
+        # Update the tilemap before transition so that it fades-in smoothly.
+        @tilemap.update()
+        
+        # We are done with preparing our visual objects. So we can start
+        # the screen transition to fade in our new created objects smoothly.
+        @transition()
+        
+    ###*
+    * Prepares all data for the scene and loads the necessary graphic and audio resources.
+    ### 
+    prepareData: -&gt;
+        # Load the tileset image
+        ResourceManager.getBitmap("Graphics/Pictures/WoodsTileset")
+        
+    ###*
+    * Update the scene's content.
+    ###         
+    updateContent: -&gt;
+        # Update the tilemap
+        @tilemap.update()
+        
+gs.Component_LayoutSceneBehavior = Component_TestBedBehavior</code>
+</pre>
+<p>If we test our game now, we will see a tilemap showing us a huge grassland.</p>
+<p>&#160;</p>
+<p>Let's take look at the code from above. First we are creating an instance of gs.Tilemap and assigning our tileset bitmap to it. Next we set the size of our map to 100x100 tiles so our tilemap will display a 100x100 tiles grid with 32x32 pixels per cell on screen. Since a single tile is 32x32 pixels in size by default, the map size in pixels is 100 * 32 = 3200x3200 pixels.</p>
+<p>&#160;</p>
+<p>Next we have to setup the map's data. The map-data controls which kind of tiles from the tilesets are displayed at which cell of the grid on screen. So the map-data itself is an array with the size of the map and stores a number for each cell and that number, also called tile-id, refers to a tile on the tileset. We are setting each cell to 0 which refers to the upper-left grass-tile on our tileset.</p>
+<p>&#160;</p>
+<p>After we set the map data we have to call the setup-method to initialize the tilemap. We are also calling the update-method directly after that to make sure that the tilemap is already rendered before we start with the transition to make sure we get a smooth transition from black to the tilemap. Just remove that line to see what happens then.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Animated Tiles</p>
+<p>&#160;</p>
+<p>In the last example, we displayed a simple tilemap using a regular tileset. But what if we want to use animated tiles for fields such as an ocean, sea or river? That's why gs.Tilemap supports animated tiles as well.</p>
+<p>&#160;</p>
+<p>To use animated tiles, we have to tell gs.Tilemap where the animated tiles are located on our tileset and how they should be animated.</p>
+<p>&#160;</p>
+<p><img src="ExpandedTileset.png" alt="" style=" border:none; width:100%; max-width:684px;" border="0" /></p>
+<p>&#160;</p>
+<p>Everything to right of the bold red line is treated as an animated tile. By default, that red-line is set to 8 tiles. So the more you move that red line to the right, the more space for regular tiles you get. But in exchange for that, you get less animation-frames for animated tiles because the animation-frames are put from left to right.</p>
+<p>&#160;</p>
+<p>So the above example has space for 64 different animated tiles(from top to bottom) with up to 56 animation-frames(from left to right) per animated tile. That sounds a bit too much space but if you start to use auto-tiles and animated auto-tiles, as we will learn later in this lesson, you will see that this space is necessary sometimes.</p>
+<p>&#160;</p>
+<p>If you don't need animated or special tiles at all, you can just move the red-line completely to the right. Then all tiles on you tileset are seen as regular tiles. Check out gs.TilesetConfiguration class to learn more about how to configure the tileset and animated tiles.</p>
+<p>&#160;</p>
+<p>By default, you don't need to configure anything if your tileset fits into the 8xN tiles formats which means: 8 tiles per row. A tileset can have endless rows of tiles but of course, the more rows the larger the image and the more graphics memory is needed. Keep in mind that for many average mobile devices, the max. image size is 2048x2048.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Auto-Linking Tilesets</p>
+<p>&#160;</p>
+<p>In the first example we displayed a simple tilemap on screen using a regular tileset. But there is an additional kind of tileset called an "Auto-Linking Tilesets" or in short-form "Autotile" and sometimes also called "Terrain Tilesets". An autotile is a very small tileset where it only features a single tile-type but allows to construct different kind of patterns.</p>
+<p>&#160;</p>
+<p><img src="Inq_XP_MT_-_Dirt.png" alt="" style=" border:none; width:100%; max-width:96px;" border="0" /></p>
+<p>&#160;</p>
+<p>The above example shows the dirt autotile used to map the areas of dirt as seen below:</p>
+<p><img src="image69.gif" alt="" style=" border:none; width:100%; max-width:426px;" border="0" /></p>
+<p>&#160;</p>
+<p>If you&#160;try to map more natural-looking dirt like above using regular tiles only, you will need a lot of different dirt-tiles on your tileset. In addition, you also need to place them manually in your map-editor one by one. That can become very exhausting after some time. To solve that problem, Autotiles come into play.</p>
+<p>&#160;</p>
+<p>How does this work? At runtime, the autotile is "expanded" and would output at least 48 different kinds of pattern. This allows you to create natural looking patches of dirt. An expanded autotile looks like this:</p>
+<p>&#160;</p>
+<p><img src="image46.gif" alt="" style=" border:none; width:100%; max-width:256px;" border="0" /></p>
+<p>&#160;</p>
+<p>A map-editor with auto-tile or terrain-tile support makes it very easy to map terrains like dirt, grass, river, etc. You only have to choose the dirt autotile and "draw" on your map and the shape of the dirt is automatically calculated. The editor automatically picks the right tiles for you!</p>
+<p>&#160;</p>
+<p>So autotiles are a quality of life (QoL) feature that make mapping easier. You no longer need to manually pick the right tile so it's a feature you can only feel at design/mapping-time in your map-editor. That means if we generate our tilemap data hardcoded like we did in our first example, we are not able too feel the true advantage of it. Because of the engine they are just normal tiles, the magic happens on the map-editor side. The best is if you just try that out yourself in a map-editor like <a href="http://www.mapeditor.org/">Tiled Map Editor</a>.</p>
+<p>&#160;</p>
+<p>VN Maker's Basic Engine comes with gs.AutotileExpander class which allows you to easily expand autotiles in the above format. It also possible to animate auto-tiles by placing their expanded version from left to right in the animated-tiles area of the tileset. You can then just configure a larger animation offset value to animate them. Check out gs.TilesetConfiguration class for more info.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Limitations</p>
+<p>&#160;</p>
+<p>Displaying a tilemap on screen with auto- and animated tiles as well as other features can be time-consuming depending on the rendering-technique as well as on the device/hardware used.</p>
+<p>&#160;</p>
+<p>A modern PC/Mac, in most cases, has no problems to display a tilemap no matter what kind of rendering technique is used. But for mobile platforms such as smartphones it makes a big different because, at the time of writing, most average smartphones have good GPUs but a very low bandwidth which means that the amount of data which can be transferred to the GPU in one game-frame is very low.</p>
+<p>&#160;</p>
+<p>That's why VN Maker's tilemap rendering is highly optimized for devices with low bandwidth. Unfortunately, with that optimization some small limitations exist:</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li>Only one tileset per tilemap layer can be used.</li>
+<li>The map-size is limited to the maximum texture size of the GPU (2048x2048 tiles for average mobile GPUs)</li>
+<li>The tileset-size is limited to the maximum texture size of the GPU (2048x2048 pixels for average mobile GPUs)</li>
+<li>The amount of autotiles and animated tiles is limited and depends on tileset-size and settings.</li>
+<li>Only one kind of auto/animated/special tile can be used per tileset.</li>
+<li>Changing map-data in real-time is supported, but can become more time-consuming the larger the map is depending on GPU.</li>
+</ul>
+<p>&#160;</p>
+<p>For optimal usage, the tilemap can be configured to fit your needs. The following parameters can be changed:</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li>Tile Size (Default is 32x32)</li>
+<li>Amount of layers (Default is 3)</li>
+<li>Amount of regular tiles</li>
+<li>Amount of autotiles / animated tiles</li>
+<li>Amount of animation frames per animated tile.</li>
+<li>Animation offset (To animate autotiles)</li>
+<li>Animation speed of animated tiles</li>
+</ul>
+<p>&#160;</p>
+<p>&#160;</p>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Evented Title Screen</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "3.2.6.0_3";
+</script>
+ <meta name="topic-breadcrumbs" content="Beginner's Guide > Customizing your Game > UI Series" />
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+ <p class="Topic_Heading">Evented Title Screen</p>
+</div>
+<p>&#160;</p>
+<p><span class="Topic_Start">N</span>ow that you have come this far, it's time for us to create our very own custom title screen! Visual Novel Maker provides tools to allow you to event your own UI just in case the <a href="In-Game_UI.htm">JSON</a> format intimidates you. For this tutorial, we're going to use an <a href="Picture.htm#Show_Image_Map">Image Map</a>. Make sure to read the <a href="Imagemap_Tutorial.htm">Image Map and Hotspot Tutoria</a>l first! This specific tutorial only shows you how to create an Evented Title Screen and supports default options. <span style="font-weight: bold;">If you want to event all the other UIs, there is a sample project that you can access.</span></p>
+<p>&#160;</p>
+<p class="Sub_Heading">Preparing your Graphics</p>
+<p>We need to prepare two instances of our Title Screen. As usual, it's important to remember that both versions must be at the same size. Here is an example image:</p>
+<p><img src="title_selected.jpg" alt="" style=" border:none; width:100%; max-width:640px;" border="0" /></p>
+<p>&#160;</p>
+<p>After we're done, <a href="Importing_Resources.htm">let's import the images into our game!</a> I highly recommend adding a suffix at your filenames like filename_ground and filename_hover.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Setting up the Scene</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li><a href="Imagemap_Tutorial.htm#Setting_up_the_Hotspots">First, we must create Hotspots for each option.</a></li>
+<li>After that, we must add a <img src="SystemCmd.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" /><span style="font-weight: bold;">System -&gt; UI Access</span> <span>and set Save Menu, Menu and Backlog to No.</span><br />
+<img src="2017-02-01_22-12-57.jpg" alt="" style=" border:none; width:100%; max-width:762px;" border="0" /><br />
+The purpose of this is so the other menu options won't appear at the title screen.</li>
+<li><span>We will create a bunch of</span> <img src="BasicCmd.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" /><span style="font-weight: bold;">Basic -&gt; Label</span> <span>named after the commands and put a</span> <img src="BasicCmd.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" /><span style="font-weight: bold;">Basic -&gt; Idle</span> <span>at the end of each one. It is necessary so when you select an option, it won't play the other labels. It would look something like this:</span><br />
+<img src="2017-02-01_22-15-17.jpg" alt="" style=" border:none; width:100%; max-width:737px;" border="0" /></li>
+</ul>
+<p>&#160;</p>
+<p class="Sub_Heading">Setting up New Game or Start</p>
+<p>In this section, we are going to teach how to set up the 'New Game' of the game.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li>First, we need to use at least two &#160;<img src="SystemCmd.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" /><span style="font-weight: bold;">System -&gt; Reset Variables.</span> <span>We will set it to All Locals and Global Type All and Target All.</span> <span style="font-weight: bold;"></span><span>This is so when a user restarts and returns to Title Screen, and since this is evented, it is necessary that we restart all data should they hit New Game.</span></li>
+<li>We need to another instance of <span style="font-weight: bold;">UI Access</span> that resets <span>Save Menu, Menu and Backlog to Yes.</span></li>
+<li><span>Add a</span> <span style="font-weight: bold;"><img src="SceneCmd.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />Scene -&gt; Change Scene</span> <span>to the Scene you want the game to start. Make sure to set Erase Picture, Erase Text and Erase Videos to Yes, if you are using any of that. Once you are done, the label will look something like this:</span><br />
+<img src="2017-02-01_22-21-17.jpg" alt="" style=" border:none; width:100%; max-width:864px;" border="0" /></li>
+</ul>
+<p>&#160;</p>
+<p class="Sub_Heading">Setting up Load Screen, Settings Menu, CG Gallery and Quit</p>
+<p>There are different ways for us to set up the load screen. Is your Load Screen a Scene? Then just use Change Scene and direct it to the scene. However, if you want to use the default menus, we will have to use <span style="font-weight: bold;"><a href="SceneCommand.htm#Switch_Layout">Switch to Layout</a>.</span> For a reference of all usable names, refer to <a href="Switch_to_Layout_Reference_List.htm">Switch to Layout Reference List</a>. Here's a step-by-step guide on how to do it:</p>
+<ul style="list-style: disc;">
+<li><span>Add a</span> <span style="font-weight: bold;"><img src="SceneCmd.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />Scene -&gt; <a href="SceneCommand.htm#Switch_Layout">Switch to Layout</a></span> <span>and type in</span> <span style="font-weight: bold;">loadMenuLayout</span>.</li>
+<li>Make sure that <span style="font-weight: bold;">Save Previous</span> is set to Yes. If done right, it should look like this:<br />
+<img src="2017-02-01_22-44-11.jpg" alt="" style=" border:none; width:100%; max-width:720px;" border="0" /></li>
+</ul>
+<p>&#160;</p>
+<p>The procedure is the same as Load Screen. There is only one difference when typing inside Switch to Layout:</p>
+<ul style="list-style: disc;">
+<li><span>For</span> <span style="font-weight: bold;">Settings Menu</span><span>, type in</span> <span style="font-weight: bold;">settingsMenuLayout</span>.</li>
+<li>For <span style="font-weight: bold;">CG Gallery Menu</span>, type in <span style="font-weight: bold;">cgGalleryLayout</span>.</li>
+</ul>
+<p>Finally, for the Quit option, simply add <span style="font-weight: bold;"><img src="SceneCmd.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />Scene -&gt; Change Scene</span> <span>to None.</span></p>
+<p>&#160;</p>
+<p>The final product should look like this:</p>
+<p><img src="2017-02-01_22-53-24.jpg" alt="" style=" border:none; width:100%; max-width:845px;" border="0" /></p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li>For the final step, simply set the <span>Scene to</span> <span style="font-weight: bold;">Set as Intro Scene</span>. This will skip the language selection and title screen completely.</li>
+</ul>
+<p>&#160;</p>
+<p>Congratulations! You made an Evented Title Screen!</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<div style="width: 100%; position: relative;" id="footer">
+ <p>&#160;</p>
+</div>
+</body>
+</html>

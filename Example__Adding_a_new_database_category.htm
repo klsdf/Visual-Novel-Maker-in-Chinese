@@ -1,0 +1,262 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Example: Adding a new database category</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "5.2.1.1.0_1";
+</script>
+ <meta name="topic-breadcrumbs" content="Script and Plugin Reference > Extension Documentation > Getting Started > Examples" />
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+ <p class="Topic_Heading">Example: Adding a new Database Category</p>
+</div>
+<p><br />
+<span class="Topic_Start">I</span>n the following example we want to add a new category to the editor’s database. To do that, we will first open the Extension Editor through the Menu under View &gt; Extension.</p>
+<p>&#160;</p>
+<p>Next we will make a right-click on the"Data Record Views " folder and select New &gt; Data Record View to create a new view for our new category. We will call it"Cards " since we want to create cards for a simple card game in our VN. It already contains some basic JSON which looks like this:</p>
+<p>&#160;</p>
+<p><span class="Code">{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"category": "cards",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"descriptor": {</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"name": "Cards",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"attribute": "cards",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"sections": []</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;}</span></p>
+<p><span class="Code">}</span></p>
+<p>&#160;</p>
+<p>Lets go through the different fields step by step.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">category</p>
+</li>
+</ul>
+<p>The backend field name of the category. It should be a unique name in camel-case notation.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">descriptor</p>
+</li>
+</ul>
+<p>Contains the details about the view used for each single record of the category.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">descriptor.name</p>
+</li>
+</ul>
+<p>The name displayed in the category list in database.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">descriptor.attribute</p>
+</li>
+</ul>
+<p>The backend attribute name used to store the records. That name is used to access the data records through script. The name should be a unique name in camel-case. In most cases it is the same like category-field.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">descriptor.sections</p>
+</li>
+</ul>
+<p>Contains all the sections used for the UI.</p>
+<p>&#160;</p>
+<p>Lets first think about what kind of data we need to store to describe a card in our game. We will keep it simple so a card has a name, a description and an image and that's it. Now lets design the UI for that.</p>
+<p>&#160;</p>
+<p>We will create two sections. One for the general data like the name and the description and one section for the image. So our JSON will look like this now:</p>
+<p>&#160;</p>
+<p><span class="Code">{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"category": "cards",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"descriptor": {</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"name": "Cards",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"attribute": "cards",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"sections": [</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"name": "General",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"items": [</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"name": "Graphic",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"items": [</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;}</span></p>
+<p><span class="Code">}</span></p>
+<p>&#160;</p>
+<p>As we can see here, we added the two sections described above. Each section has a name which is displayed to the user and a list of items to let the user interact with the view.</p>
+<p>&#160;</p>
+<p>Lets start with the first section"General ". In our example we just need to add one text field for the card name and one multiline text-area for the card’s description plus two labels to describe that fields for the user. So our section will look like this now:</p>
+<p>&#160;</p>
+<p><span class="Code">{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"name": "General",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"items": [</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"type": "GSLabel",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"text": "Name:",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"group": "labels",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"frame": [0, 0]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"type": "GSTextField",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"attribute": "name",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"frame": [1, 0]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"type": "GSLabel",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"text": "Description:",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"frame": [0, 1]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"type": "GSTextField",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"multiline": true,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"attribute": "description",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"defaultValue": "Enter description here...",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"frame": [0, 2, -1, 100]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;]</span></p>
+<p><span class="Code">}</span></p>
+<p>&#160;</p>
+<p>We added 4 items to our section. Lets take a deeper look to the fields of each item. Each item can have a few general fields which are available for each type of item but also some type specific fields. Lets start with the general fields used in that example:</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">type (Required)</p>
+</li>
+</ul>
+<p>Indicates the type of the item like if its a label, a text field, a check box, etc. The type must be present.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">attribute</p>
+</li>
+</ul>
+<p>The backend JavaScript attribute name where the item will store its data. You can access the data via script using that name. The name should be unique for the view to avoid collisions.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">frame (Required)</p>
+</li>
+</ul>
+<p>The first two values are the position and the other two are the size of the item. For most items, the size is calculated automatically but for some items it is necessary to specify at least the height like for multiline text-fields, tables, etc. You can also use -1 for size-values to indicate that the value should be calculated automatically. The frame must be present for each item and must have at least and x and y value.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">defaultValue</p>
+</li>
+</ul>
+<p>You can define a default value here used if a new record is created and there is no existing data to read from.</p>
+<p>Now lets take a look at item specific fields used in that example.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">group</p>
+</li>
+</ul>
+<p>Assigns the label to a label group which automatically resizes the label to fit correctly depending on its text and the text of other labels in the same group. Like if you have multiple labels below each other like this:</p>
+<p>&#160;</p>
+<p><span class="Code">Label 1: &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;Text-Field&gt;</span></p>
+<p><span class="Code">Other Label 2: &#160;&#160;&lt;Text-Field&gt;</span></p>
+<p><span class="Code">Another Label 3: &lt;Text-Field&gt;</span></p>
+<p>&#160;</p>
+<p>You probably want that the labels all have the same width depending on the label with the highest width value to avoid that your layout looks like this:</p>
+<p>&#160;</p>
+<p><span class="Code">Label 1: &lt;Text-Field&gt;</span></p>
+<p><span class="Code">Other Label 2: &lt;Text-Field&gt;</span></p>
+<p><span class="Code">Another Label 3: &lt;Text-Field&gt;</span></p>
+<p>&#160;</p>
+<p>However, that can also be solved using different types of layouts but that is not covered by this tutorial. Take a look at the <a href="plugin_doc/index.html">Plugin API Reference</a> to learn more about different types of layouts.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">multiline</p>
+</li>
+</ul>
+<p>Indicates that we want to have a multiline text-field. In that case we have to specify a height value for our text-field. We made it 100px in height in our example. After we are done setting up our first section we can click on the"Preview " button to see an interactive preview of our view so we can check if our elements look right. To close the preview for DataRecordViews, we just click on the"Preview " button again.</p>
+<p>&#160;</p>
+<p>Ok, lets move forward and implement the section for the card’s image.</p>
+<p>&#160;</p>
+<p><span class="Code">{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"name": "Graphic",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;"items": [</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"type": "GSImageView",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"attribute": "graphic",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"folder": "Graphics/Pictures",</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"frame": [0, 0, 300, 450]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;]</span></p>
+<p><span class="Code">}</span></p>
+<p>&#160;</p>
+<p>We are using a"GSImageView " which allows the user to select a graphic and shows a preview at the same time. We are using a size of 300x450 since our card images have exactly that size. Lets take look at the fields:</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li style="margin-left: -20px;">
+<p style="font-weight: bold;">folder</p>
+</li>
+</ul>
+<p>The folder to select an image from. In our case we will use the picture folder"Graphics/Pictures ".</p>
+<p>&#160;</p>
+<p>That’s it! We are done! Lets now save our project and restart Visual Novel Maker to see our changes. If we go now to database we will see our new category"Cards " there. We can now use that category to create different types of cards for our game.</p>
+<p>&#160;</p>
+<p style="font-weight: bold; font-size: 18pt; font-family: 'Book Antiqua', serif;"><span>Accessing Data via Script</span></p>
+<hr width="60%" align="left" />
+<p>In script we can use RecordManager class to access the database. The RecordManager automatically has a property with the name we specified for category/attribute field of our Data Record View. To access our cards in way like this:</p>
+<p>&#160;</p>
+<p><span class="Code">cards = RecordManager.cards</span></p>
+<p><span class="Code">for card in cards</span></p>
+<p><span class="Code">&#160;&#160;if card?</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;console.log("Name: #{card.name}")</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;console.log("Description: #{card.description}")</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;console.log("Image: #{card.graphic?.name}")</span></p>
+</body>
+</html>

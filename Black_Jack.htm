@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Black Jack</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "3.2.5.0_1";
+</script>
+ <meta name="topic-breadcrumbs" content="Beginner's Guide > Customizing your Game > Mini Games" />
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<p class="Topic_Heading">Black Jack</p>
+<p>&#160;</p>
+<p><span class="Topic_Start">T</span>his is an example for a very simple version of the card game "Black Jack".</p>
+<p>&#160;</p>
+<p><img src="BlackJack.png" alt="" style=" border:none; width:100%; max-width:853px;" border="0" /></p>
+<p>&#160;</p>
+<p>You can find the Black Jack example if you create a new project in VN Maker and select "Black Jack Example" as template.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Rules</p>
+<p>&#160;</p>
+<p>The rules are much more simple than the original Black Jack rules to keep the implementation as simple as possible. The card game runs through 4 game-phases before it starts again:</p>
+<p style="margin-left: 40px;">&#160;</p>
+<ol style="list-style: decimal;">
+<li>The game preparation phase</li>
+<li>The player's phase</li>
+<li>The dealer's phase</li>
+<li>The game result phase</li>
+</ol>
+<p>&#160;</p>
+<p>Let's go through that phases step by step.</p>
+<p>&#160;</p>
+<p class="SubSubHeading">The preparation phase</p>
+<p>&#160;</p>
+<p>The game background is created, the point counters are reset to 0 and both players, you and the dealer, draw one card each.</p>
+<p>&#160;</p>
+<p class="SubSubHeading">The player's phase</p>
+<p>&#160;</p>
+<p>You have two choices: You can draw another card or you can stay. There are 52 different cards and 312 cards in total in the game. Each card gives you a certain amount of points depending on what kind of card it is. For Example: A "Hearth 3" will give 3 points and a "Hearth Ace" will give 11 points. &#160;You have to try to get closer to 21 points than the dealer. But if you get above, you will immediately lose the game.</p>
+<p>&#160;</p>
+<p>If you are satisfied with your points you can select "Stay", then the Dealer will start drawing cards.</p>
+<p>&#160;</p>
+<p class="SubSubHeading">The dealer's phase</p>
+<p>&#160;</p>
+<p>The dealer will now start drawing cards until he reaches 16 or more points.</p>
+<p>&#160;</p>
+<p class="SubSubHeading">The game result phase</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li>If the dealer has more than 21 points, you win.</li>
+<li>If you have more than 21 points, you lose.</li>
+<li>If you are closer to 21 points than the dealer, you win</li>
+<li>If you have the same amount of points as the dealer, its a tie.</li>
+</ul>
+<p>&#160;</p>
+<p>After choosing the winner, the game will restart and jumps back to the first game phase.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Implementation</p>
+<p>&#160;</p>
+<p>Before trying to understand the implementation of the Black Jack game, make sure that you read and mastered all the other topics of the Beginner's Guide. Each Scene and each Common Event has comments to explain you what is going on. So try to go through each Scene and each Common Event step by step and try understand the game logic.</p>
+<p>&#160;</p>
+<p>If you have problems with understanding, even after reading the entire Beginner's Guide, please don't hesitate and check out our Forums!</p>
+</body>
+</html>

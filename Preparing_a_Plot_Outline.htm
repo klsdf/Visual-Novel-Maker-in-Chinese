@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Branching Story Paths</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "3.2.3.0_1";
+</script>
+ <meta name="topic-breadcrumbs" content="Beginner's Guide > Customizing your Game > Non-Linear Stories" />
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+ <p class="Topic_Heading"><span>Branching Story Paths</span></p>
+</div>
+<p>&#160;</p>
+<p>So, you want to write a story that has multiple paths? What would be your biggest obstacle is the scope itself. Before we proceed, here are some useful links that will help you out to understand how you could plan the structure and the amount of work it will involve:</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li><a href="https://www.choiceofgames.com/2010/03/5-rules-for-writing-interesting-choices-in-multiple-choice-games/">Five Rules for Writing Interesting Choices in Multiple-Choice Games</a></li>
+<li><a href="http://samizdat.cc/cyoa/">Analysis of structure in old Choose Your Own Adventure (CYOA) games</a></li>
+<li><a href="https://emshort.blog/2016/11/05/small-scale-structures-in-cyoa/">Small scale structures in CYOA</a></li>
+<li><a href="https://www.choiceofgames.com/2011/07/by-the-numbers-how-to-write-a-long-interactive-novel-that-doesnt-suck/">Stat-based CYOA games</a></li>
+<li><a href="http://loveconquersallgam.es/post/156298497423/by-the-way-i-recently-did-a-talk-about-narrative">Christine Love's VN Conference Talk for Ladykiller in a Bind</a> (Warning: Only for Mature Readers)</li>
+</ul>
+<p>&#160;</p>
+<p>It is important to understand that ultimately, it depends on you as a developer on how to structure and organize your CYOA game. This guide is merely a stepping stone to give you an idea how to implement them in a game.</p>
+<p>&#160;</p>
+<p>As usual, we will use a simple flowchart to give us a clear direction of our story.</p>
+<p><img src="BranchingStoryPath.jpg" alt="" style=" border:none; width:100%; max-width:533px;" border="0" /></p>
+<p>&#160;</p>
+<p>As you may have noticed, this branching story is very simple.&#160;We do not need variables to determine stats or affection points. But it still shows a considerable amount of length and scenarios! The more requirements for a branching path or ending, the longer the flowchart will be. Which in turn means a larger scope and workload for your VN. For the sake of this tutorial, we won't be covering those. If you really want to add stats or affection points, you will only need to learn about <a href="Learning_about_Switches.htm">Number Variables</a> and/or use the <a href="Characters.htm#Parameters">Character's Parameters</a>. And for the execution itself, just use <a href="Learning_about_Conditional_Branches.htm">Conditions</a>.</p>
+<p>&#160;</p>
+<p>But as you may have noticed, this entire scenario occurs in 'one area' and the flow of events would have to be seamless. Instead of using Change Scene, we'll be using <a href="SceneCommand.htm#Call_Scene">Call Scene</a>. What it does is to avoid having to recreate the Change Background, Join Scene, etc. commands and instead, 'copy and paste' that called scene's commands over to the current scene. This will make the flow of the story seamless. Here are a few examples to implement the scene, the flavor texts are not included for the sake of clarity.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Implementation #1</p>
+<p>Because of the nature of this narrative, the Scene Content would be harder to debug with the amount of commands and choices. We will have to change how we do our scenes. In this case, the narrative can be separated into three sections:</p>
+<p><img src="BranchingStoryPath-Breakdown.jpg" alt="" style=" border:none; width:100%; max-width:533px;" border="0" /></p>
+<p>&#160;</p>
+<p>The purpose of this layout is to make it easy to edit and debug. To implement in Visual Novel Maker, We would need to create three scenes, like this:</p>
+<p><img src="2017-02-20_8-19-55.jpg" alt="" style=" border:none; width:100%; max-width:308px;" border="0" /></p>
+<p style="font-weight: bold;">&#160;</p>
+<p style="font-weight: bold;">The First Scene, Ask Emma, <span style="font-weight: normal;">contains the beginning portion of our story. This is where the groundwork, such as backgrounds music and so on, are set.</span></p>
+<p><img src="BranchingStoryPath-1.jpg" alt="" style=" border:none; width:100%; max-width:1270px;" border="0" /></p>
+<p>&#160;</p>
+<p><span style="font-weight: bold;">The Second Scene, Ask Her Out // Goodbye</span>, contains the first set of choices; one of which leads to Bad Ending #1.</p>
+<p><img src="BranchingStoryPath-2.jpg" alt="" style=" border:none; width:100%; max-width:1275px;" border="0" /></p>
+<p>&#160;</p>
+<p>And finally the <span style="font-weight: bold;">Third Scene, Arcade or Park</span>, is another set of choices leading to a conclusion.</p>
+<p><img src="BranchingStoryPath-3.jpg" alt="" style=" border:none; width:100%; max-width:1271px;" border="0" /></p>
+<p>&#160;</p>
+<p>As you can see, if they were in a single scene, it would be confusing to keep track of all these labels. But this might be too 'dirty' for you. There is another way to execute this. <span style="font-weight: bold;"></span></p>
+<p>&#160;</p>
+<p class="Sub_Heading"><span style="font-weight: bold;">Implementation #2</span></p>
+<p><span style="font-weight: bold;">Show Choices has its own Call Scene trigger.</span> So dividing the scene will have a slight change:</p>
+<p><img src="BranchingStoryPath-Breakdown2.jpg" alt="" style=" border:none; width:100%; max-width:533px;" border="0" /></p>
+<p>&#160;</p>
+<p>Instead of making three scenes with the choices in them, <span style="font-style: italic;">each Scene is a result of a selected choice.</span> So it would look like this:</p>
+<p>&#160;</p>
+<p style="font-weight: bold;">Scene 1: Ask Emma</p>
+<p><img src="BranchingStoryPath-4.jpg" alt="" style=" border:none; width:100%; max-width:1168px;" border="0" /></p>
+<p>&#160;</p>
+<p style="font-weight: bold;">Scene 2: Ask Her</p>
+<p><img src="BranchingStoryPath-5.jpg" alt="" style=" border:none; width:100%; max-width:1165px;" border="0" /></p>
+<p>&#160;</p>
+<p style="font-weight: bold;">Scene 3: Say Goodbye</p>
+<p><img src="BranchingStoryPath-6.jpg" alt="" style=" border:none; width:100%; max-width:1164px;" border="0" /></p>
+<p>&#160;</p>
+<p>And so on. It would require more scenes but it will be easier to track of them as long as they're organized properly.</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p>Either way works and there are more ways to implement it. It will come down to your preference as a developer. Hopefully, this has given you a solid idea on how Call Scene works!</p>
+</body>
+</html>

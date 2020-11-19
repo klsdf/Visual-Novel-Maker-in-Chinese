@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Learning about Conditions</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "3.1.0_7";
+</script>
+ <meta name="topic-breadcrumbs" content="Beginner's Guide > The Basic Foundation" />
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+ <p class="Topic_Heading">Learning about Conditions</p>
+</div>
+<p>&#160;</p>
+<p><span class="Topic_Start">C</span>onditions is one of the most useful commands you will be using. They are used to establish objectives and/or rules to trigger events. In Scene Content format, it looks like this:</p>
+<p>&#160;</p>
+<p><img src="2017-01-30_16-54-04.jpg" alt="" style=" border:none; width:100%; max-width:816px;" border="0" /><br />
+<br />
+If you are still confused, that is OK! We highly recommend to read about flowcharts to understand how they are structured. Here are some tutorial links:</p>
+<ul style="list-style: disc;">
+<li><a href="http://creately.com/blog/diagrams/flowchart-guide-flowchart-tutorial/">Ultimate Flowchart Guide</a></li>
+<li><a href="https://www.programiz.com/article/flowchart-programming">Flowchart in Programming</a></li>
+</ul>
+<p>&#160;</p>
+<p>If you want to create your own flowcharts, here are some free sotwares that you can use!</p>
+<ul style="list-style: disc;">
+<li><a href="https://www.draw.io">Draw.io</a></li>
+<li><a href="https://www.lucidchart.com/">LucidChart</a></li>
+<li><a href="http://dia-installer.de/">Dia</a></li>
+<li><a href="http://pencil.evolus.vn/">Pencil Project</a></li>
+<li><a href="http://www.yworks.com/products/yed">yEd</a></li>
+<li><a href="http://raptor.martincarlisle.com/">Raptor</a></li>
+<li><a href="http://freemind.sourceforge.net/wiki/index.php/Main_Page">FreeMind</a></li>
+<li><a href="http://www.xmind.net/">XMind</a></li>
+</ul>
+<p>&#160;</p>
+<p>The <a href="Let_s_Make_a_Dating_Sim!.htm">previous lessons</a> are necessary to understand <a href="Basic.htm#Condition">Conditions</a>. Please make sure to read it!</p>
+<p>&#160;</p>
+<p style="text-align: center;"><img src="Metisnotes7_en.png" alt="" style=" border:none; width:100%; max-width:465px;" border="0" /></p>
+<p>&#160;</p>
+<p class="Sub_Heading">Example #1: A Simple Counter</p>
+<p>For this tutorial, we'll make a fairly simple example of how to use the Condition command. First, let's take a look into this flowchart:</p>
+<p><img src="2017-01-30_14-20-32.jpg" alt="" style=" border:none; width:100%; max-width:475px;" border="0" /></p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p>As to how this reads, the flowchart goes with the logic, if Counter is equal to 6, the process will end. Else it will add +1 to the Counter and check again. If we convert it to Visual Novel Maker Format, it will look like this:</p>
+<p>&#160;</p>
+<p><img src="2017-01-30_14-33-57.jpg" alt="" style=" border:none; width:100%; max-width:904px;" border="0" /></p>
+<p>&#160;</p>
+<p>So here's a quick breakdown:</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li>I used a <span style="font-weight: bold;"><a href="Basic.htm#Number_Variable">Local Number Variable</a></span> for this particular example. This is because the variable will not be used anywhere else in the game. It is only unique to this Scene.</li>
+<li>We added <span style="font-weight: bold;">Message Box Visibility</span> command and set the Visible to Yes. This is so we can use a <span style="font-weight: bold;">Show Message</span> command to show the value of the variable we're using with the help of a<span>&#160;<a href="Message.htm#Text_Codes">text code</a>, {LN:1}</span>. Which you can see under the <span style="font-weight: bold;"><a href="Basic.htm#Else">Else</a></span> <span>command</span>.</li>
+<li>We created a <span style="font-weight: bold;">Label</span> called 'start' since we want the condition to return here after adding a value to the variable.</li>
+<li><a href="Basic.htm#Comment" style="font-weight: bold;">Comment</a> is a command that is ignored by the engine and only serves as reminders to the developer. Don't be afraid to use them!</li>
+</ul>
+<p>&#160;</p>
+<p>If you use Play Test, you will see the number ticking up to five. We made a simple counter!</p>
+<p>&#160;</p>
+<p class="Sub_Heading"><a name="Example__2:_Creating_a_Treasure_Chest" id="Example__2:_Creating_a_Treasure_Chest"></a>Example #2: Creating a Treasure Chest</p>
+<p>For our next example, we are going to make a small text prompt that asks if we want to open a treasure chest. It will give a different response if you already opened the chest. Here's a quick flowchart that explains how this will work:</p>
+<p><img src="2017-01-30_13-58-33.jpg" alt="" style=" border:none; width:100%; max-width:686px;" border="0" /></p>
+<p>&#160;</p>
+<p>It looks a bit more complicated but it's really the same as our first example! The only difference is that we now have a 'branching point' because we're using choices to deliver a different outcome. If we convert it to Visual Novel Maker Format, it will look like this:</p>
+<p><br />
+<img src="2017-01-30_13-21-36.jpg" alt="" style=" border:none; width:100%; max-width:968px;" border="0" /></p>
+<p>&#160;</p>
+<p>So here's a quick breakdown:</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li>I used a <span style="font-weight: bold;"><a href="Basic.htm#Switch">Local Switch</a></span> for this particular example. This is because the switch will not be used anywhere else in the game. It is only unique to this Scene.</li>
+<li><span>The</span> <span style="font-weight: bold;">Label ItemGet</span> shows the outcome if you decide to check out the treasure chest. You can see this is where the condition rests and this is where we turn on the switch if the player has not obtained the hookshot yet.</li>
+<li>
+<p>The <span style="font-weight: bold;">Label Ignored</span> is if the player decided to say No to checking out the chest.</p>
+</li>
+</ul>
+<p>&#160;</p>
+<p>As you can see from these examples, Conditions has so many uses that we cannot cover them all. However, we do have a bonus tutorial, <a href="Conditional_Choices.htm">Conditional Choices</a>, over Expanding Further Knowledge. Give it a try once you are comfortable with Conditions!</p>
+<p>&#160;</p>
+</body>
+</html>

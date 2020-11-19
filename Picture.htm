@@ -1,0 +1,1322 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Picture</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.3.1.0_10";
+</script>
+ <meta name="topic-breadcrumbs" content="Exploring the Editor > Scene Editor > Scene Content Commands" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">Picture</p>
+</div>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-family: 'Book Antiqua', serif; 
+												 font-weight: bold; font-size: 18pt;">T</span>he 
+ Picture commands allows you to set up images, image maps, animations and 
+ various other effects to create dynamic and immersive scenes.</p>
+<p>&#160;</p>
+<p class="Sub_Heading"><a name="Show_Picture" id="Show_Picture"></a>Show 
+ Picture</p>
+<p style="font-family: Arial, sans-serif;">Adds a picture to the scene.</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Number</span> 
+	 - The picture's index (ID). This determines their layer order.<br />
+	You can also use a variable by clicking on the [...] next to the number 
+	 input box.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">File <span 
+	 style="font-weight: normal;">- The image file from the Pictures folder 
+	 that is going to be displayed.</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">Anchor - <span 
+	 style="font-weight: normal;">Select the location of your anchor point 
+	 between top-left and center.</span><span style="font-weight: normal;"><br />
+	Setting the anchor to center is only important when the zoom and rotation 
+	 commands will used and will not affect positioning.</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Position</span> 
+	 - Choose between Direct and Calculated positioning to place your image 
+	 into the scene.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Predefined</span> allows to select one 
+	 of the predefined positions configured in Database &gt; System &gt; 
+	 Predefined Object Positions.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Direct</span> allows you to set the position 
+	 using the graphical editor. You can also set the background image 
+	 for higher accuracy.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Calculated</span> allows you to position 
+	 the picture by inputting the X and Y coordinates or through setting 
+	 variables.</p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Duration</span> 
+	 - The duration of the join-animation in milliseconds.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Continue</span> will make the scene immediately 
+	 continue.</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Wait</span> will make the scene wait until 
+	 the join animation is done.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Effects</span> 
+	 - These options affect how the picture will appear.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Easing</span> sets the tween movement of 
+	 the picture. More information can be seen in <a href="Easing_Effects.htm">Easing 
+	 Effects</a> page.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Animation</span> sets the movement of the 
+	 picture.</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Movement</span> is the origin point 
+		 of the picture where it will appear from Left/Top/Right/Bottom.</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Blending</span> allows you to fade 
+		 in/fade out the picture.</p></li>
+		<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+											 font-weight: bold;">Masking 
+		 <span style="font-weight: normal;">allows you to mask the picture 
+		 to a Masks file.</span></p></li>
+		<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+			<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+												 font-weight: bold;">Vague 
+			 <span style="font-weight: normal;">is the smoothness of the 
+			 mask edges. Here is a comparison with Vague values 0 (minimum) 
+			 and 255 (maximum).</span></p></li>
+		</ul></li>
+	</ul></li>
+</ul>
+<p style="font-family: Arial, sans-serif; margin-left: 40px;"><img src="showpicturemask.gif" alt="" style=" border:none; width:100%; max-width:470px;" border="0" /></p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 margin-left: 0px;"><span style="font-weight: bold;">Display</span> 
+	 - Allows you to specify the display order and anchor for the picture.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Z-order</span> - Sets the display order 
+	 of the pictures. You can also use a variable by clicking on the [...] 
+	 next to the number input box.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Blend Mode</span> - Determines what kind 
+	 of blending used when the pictures is displayed on screen</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Normal</span>&#160;is the standard 
+		 blend mode. It will simply just display the picture on the screen 
+		 without mixing colors.</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Additive</span> results the picture 
+		 to be applied in a lighter color.</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Subtractive</span> results the picture 
+		 to be applied in a darker color.</p></li>
+	</ul></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Visual Type</span> - Determines what kind 
+	 of display-logic is used to display the picture on screen</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Image</span> - The selected image <span>file</span> 
+		 is displayed on screen as a normal single image.</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Tiling Image</span> - The selected 
+		 image file is tiled to fill up the space defined for <span style="font-weight: bold;">Size</span>.</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Frame</span> - The selected image file 
+		 is used to construct a frame useful for in-game windows, etc. 
+		 with the defined <span style="font-weight: bold;">Size</span>. 
+		 Check out <a href="Resource_Standards.htm">Resource Standards</a> 
+		 for more info about frames.</p></li>
+		<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+			<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+			 style="font-weight: bold;">Thickness</span> - The frame-thickness 
+			 in pixel.</p></li>
+			<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+			 style="font-weight: bold;">Corner Size</span> <span>- The 
+			 corner-size of the frame in pixel.</span></p></li>
+		</ul></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Three-Part Image</span> - The selected 
+		 image file used to construct a three-part image useful for buttons, 
+		 etc. with the defined <span style="font-weight: bold;">Size</span>. 
+		 Check out <a href="Resource_Standards.htm">Resource Standards</a> 
+		 for more info about three-part images.</p></li>
+		<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+			<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+			 style="font-weight: bold;">Orientation</span> - The orientation 
+			 of the three-part image.. Can be <span style="font-weight: bold;">Vertical</span> 
+			 or <span style="font-weight: bold;">Horizontal</span>.</p></li>
+		</ul></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Quad</span> - The selected image file 
+		 is ignored. Instead, a square with the selected <span style="font-weight: bold;">Color</span> 
+		 and <span style="font-weight: bold;">Size</span> is displayed 
+		 which is useful for message backgrounds, etc. The advantage over 
+		 an image is that the graphics memory consumption is extremely 
+		 low.</p></li>
+		<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+			<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+			 style="font-weight: bold;">Color</span> <span>- The color 
+			 of the square.</span></p></li>
+		</ul></li>
+	</ul></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Size</span> - Determines the size of the 
+	 picture. That only affects pictures with a <span style="font-weight: bold;">Visual 
+	 Type</span> other than <span style="font-weight: bold;">Image.</span></p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Auto</span> - The size of the picture 
+		 is calculated automatically to match the size of the selected 
+		 image file.</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Set</span>&#160;- The size of the picture 
+		 is set to the defined size.</p></li>
+		<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+			<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+			 style="font-weight: bold;">Width</span> - The picture's width.</p></li>
+			<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+			 style="font-weight: bold;">Height</span> - The picture's height.</p></li>
+		</ul></li>
+	</ul></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Viewport</span>&#160;- The viewport the 
+	 picture will be assigned to. The viewport determines if the picture 
+	 gets affected by camera-movements or screen effects or not.</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Scene</span> - The picture is assigned 
+		 to the scene-viewport and behaves like an object which belongs 
+		 to the scene so it gets affected by camera-movements and screen 
+		 effects.</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">User Interface</span> <span>- The picture 
+		 is assigned to the ui-viewport and behaves like an object which 
+		 belongs to the user interface so it doesn't get affected by camera-movements 
+		 and screen effects.</span></p></li>
+	</ul></li>
+	<li style="list-style: none; display: inline;"><p style="font-family: Arial, sans-serif; 
+														 font-weight: bold;">&#160;</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Move_Picture" id="Move_Picture"></a>Move 
+ Picture</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-family: Arial, sans-serif; 
+												 font-weight: normal;">Moves 
+ a picture to a specified position on screen.</span></p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">Number <span 
+	 style="font-weight: normal;">- The picture's index (ID) that you want 
+	 to move.</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Position</span> 
+	 - Choose between Direct and Calculated positioning to set the destination 
+	 of your image.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Predefined</span> allows to select one 
+	 of the predefined positions configured in Database &gt; System &gt; 
+	 Predefined Object Positions.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Direct</span> - Allows the user to set 
+	 the target-position using the graphical editor.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Calculated</span> - Allows the user to 
+	 manipulate the target-position by variable.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Duration</span> 
+	 - The duration of the move-animation in milliseconds.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">Continue 
+	 <span style="font-weight: normal;">will make the scene immediately 
+	 continue.</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Wait</span> will make the scene wait until 
+	 the move-animation is done.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Easing</span> 
+	 sets the tween movement of the picture. More information can be seen 
+	 in <a href="Easing_Effects.htm">Easing Effects</a> page.</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Tint_Picture" id="Tint_Picture"></a>Tint 
+ Picture</p>
+<p style="font-family: Arial, sans-serif;">Changes the color tone of the 
+ currently displayed picture.</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">Number <span 
+	 style="font-weight: normal;">- The picture's index (ID) that you want 
+	 to manipulate.</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Tone 
+	 Control</span> - Controls the picture color. Adjust the color tone 
+	 (-255 to 255) for Red, Green, and Blue.<br />
+	Use Grey to set the intensity (0 to 255) of the grayscale filter. The 
+	 higher the value, the greater the overall strength of the color.<br />
+	Normal, Dark, Sepia, Morning and Night buttons at the bottom of the 
+	 dialog box are to quickly apply the standard values for the tones 
+	 represented by their respective names.<br />
+	The Normal button reverts to the original color tone. You can check 
+	 color tone changes in the preview area on the top side of the dialog 
+	 box.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Duration</span> 
+	 - Determines how long the tint effect will take place.</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Continue</span> will make the scene immediately 
+	 continue.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Wait</span> will make the scene wait until 
+	 the exit animation is done.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Easing</span> 
+	 affects the animation of the tint. More information can be seen in 
+	 <a href="Easing_Effects.htm">Easing Effects</a> page.</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><span style="font-weight: bold; font-size: 18pt; 
+							 font-family: 'Book Antiqua', serif;"><a name="Flash_Picture" 
+	 id="Flash_Picture"></a>Flash Picture</span></p>
+<p style="font-family: Arial, sans-serif;">Fills the picture with the specified 
+ color for an instant, and then gradually reverts to the original color.</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Color 
+	 Control</span> - Controls the flash color. Use the Red, Green, and 
+	 Blue slider bars (0 to 255) to specify the color to flash.<br />
+	You can check the color you specified in the preview area on the top 
+	 side of the dialog box. Use Power to specify the color's opacity (0 
+	 to 255).<br />
+	Setting Power to &quot;0&quot; makes the color completely transparent, 
+	 rendering it invisible on screen.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Duration</span> 
+	 - Determines how long the flash effect will take place.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Continue</span> will make the scene immediately 
+	 continue.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-family: Arial, sans-serif; font-weight: bold;">Wait</span> 
+	 <span style="font-family: Arial, sans-serif; font-weight: normal;">will 
+	 make the scene wait until the flash animation is done.</span></p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Rotate_Picture" id="Rotate_Picture"></a>Rotate 
+ Picture</p>
+<p style="font-family: Arial, sans-serif;">Rotate your picture at specified 
+ speed and direction.</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">Number <span 
+	 style="font-weight: normal;">- The picture's index (ID) that you want 
+	 to manipulate.</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Direction</span> 
+	 - Set the picture to rotate in clockwise or counterclockwise direction.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Speed</span> 
+	 - The speed of the rotation. The higher the value, the faster it rotates.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Duration</span> 
+	 - Determines how long the rotation effect will take place.</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Continue</span> will make the scene immediately 
+	 continue.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Wait</span> will make the scene wait until 
+	 the exit animation is done.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Easing</span> 
+	 affects the animation of the rotation. More information can be seen 
+	 in <a href="Easing_Effects.htm">Easing Effects</a> page.</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Erase_Picture" id="Erase_Picture"></a>Erase 
+ Picture</p>
+<p style="font-family: Arial, sans-serif;">Erase an image already displayed 
+ on scene.</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">Number <span 
+	 style="font-weight: normal;">- The picture's index (ID) that you want 
+	 to remove from the screen.</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Duration</span> 
+	 - The time it will take for the image to disappear from the scene.</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Continue</span> will make the scene immediately 
+	 continue.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Wait</span> will make the scene wait until 
+	 the erase animation is done.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Easing</span> 
+	 affects the erase animation. More information can be seen in <a href="Easing_Effects.htm">Easing 
+	 Effects</a> page.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Animation</span> 
+	 sets the movement of the picture.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Movement</span> is the origin point of 
+	 the picture where it will disappear to Left/Top/Right/Bottom.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Blending</span> allows you to fade out 
+	 the picture.</p></li>
+	<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">Masking <span 
+	 style="font-weight: normal;">allows you to mask the picture to a Masks 
+	 file.</span></p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+											 font-weight: bold;">Vague 
+		 <span style="font-weight: normal;">is the smoothness of the mask 
+		 edges. Here is a comparison with Vague values 0 (minimum) and 
+		 255 (maximum).</span></p></li>
+	</ul></li>
+</ul>
+<p style="font-family: Arial, sans-serif; margin-left: 0px;"><img src="pictureerase.gif" alt="" style=" border:none; width:100%; max-width:470px;" border="0" /></p>
+<p style="font-family: Arial, sans-serif; margin-left: 0px;">&#160;</p>
+<p class="Sub_Heading"><a name="Crop_Picture" id="Crop_Picture"></a>Crop 
+ Picture</p>
+<p style="font-family: Arial, sans-serif;">Redefine the borders of your 
+ picture to frame your image the way you wish to display it without having 
+ to edit the original image file.</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">Number <span 
+	 style="font-weight: normal;">- The picture's index (ID) that you want 
+	 to manipulate.</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><b style="mso-bidi-font-weight: normal;">X</b> 
+	 - Begins the cropped image from x pixels from the left or right of 
+	 the original dimensions of the picture.</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><b style="mso-bidi-font-weight: normal;">Y</b> 
+	 - Begins the cropped image from x pixels from the top or bottom of 
+	 the original dimensions of the picture.</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><b style="mso-bidi-font-weight: normal;">Width</b> 
+	 - Sets the new width of your cropped image starting from the X position 
+	 you set above.</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><b style="mso-bidi-font-weight: normal;">Height</b> 
+	 - Sets the new height of your cropped image starting from the new 
+	 Y position you set above.</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; margin-left: 0px;"><img src="croppic.jpg" alt="" style=" border:none; width:100%; max-width:469px;" border="0" /></p>
+<p style="font-family: Arial, sans-serif; margin-left: 0px;">&#160;</p>
+<p class="Sub_Heading"><a name="Blend_Picture" id="Blend_Picture"></a>Blend 
+ Picture</p>
+<p style="font-family: Arial, sans-serif;">Blends a picture to the specified 
+ opacity.</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">Number <span 
+	 style="font-weight: normal;">- The picture's index (ID) that you want 
+	 to manipulate.</span></p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><span style="mso-bidi-font-weight: normal; 
+	 font-weight: bold;">Opacity</span> - The opacity.</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><span style="font-weight: bold;">Duration</span> 
+	 <span style="font-family: Arial, sans-serif;">-</span> The duration 
+	 of the blend-animation.</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Continue</span> will make the scene immediately 
+	 continue.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Wait</span> will make the scene wait until 
+	 the blend animation is done.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Easing</span> 
+	 affects the blend animation. More information can be seen in <a href="Easing_Effects.htm">Easing 
+	 Effects</a> page.</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Zoom_Picture" id="Zoom_Picture"></a>Zoom 
+ Picture</p>
+<p style="font-family: Arial, sans-serif;">Zooms pictures.</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">Number <span 
+	 style="font-weight: normal;">- The picture's index (ID) that you want 
+	 to manipulate.</span></p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><b style="mso-bidi-font-weight: normal;">Zoom 
+	 X</b> - Affects horizontal zoom of the picture.</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><b style="mso-bidi-font-weight: normal;">Zoom 
+	 Y</b> - Affects vertical zoom of the picture.</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><span style="font-weight: bold;">Duration</span> 
+	 <span style="font-family: Arial, sans-serif;">-</span> The rate at 
+	 which the image will alter its zoom percentage.</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Continue</span> will make the scene immediately 
+	 continue.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Wait</span> will make the scene wait until 
+	 the zoom animation is done.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Easing</span> 
+	 affects the zoom animation. More information can be seen in <a href="Easing_Effects.htm">Easing 
+	 Effects</a> page.</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Mask_Picture" id="Mask_Picture"></a>Mask 
+ Picture</p>
+<p style="font-family: Arial, sans-serif;">Applies a mask to a picture.</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold; font-family: Arial, sans-serif;">Number 
+	 <span style="font-weight: normal;">- The picture's index (ID) that 
+	 you want to manipulate.</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-weight: bold; font-family: Arial, sans-serif;">File 
+	 <span style="font-weight: normal;">- Choose a mask file to apply to 
+	 your picture(s).</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-weight: bold; font-family: Arial, sans-serif;">Picture 
+	 <span style="font-weight: normal;">allows you to use a Mask image 
+	 file in Graphics/Masks.</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-weight: bold; font-family: Arial, sans-serif;">Movie 
+	 <span style="font-weight: normal;">allows you to use a movie file 
+	 ask a mask. Your movie file will need to be imported to the Movies 
+	 folder in .webm format.<br />
+	Even if your movie file contains color information it will use the 
+	 red color-channel for masking.</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;"><span style="font-family: Arial, sans-serif; 
+	 font-weight: bold;">Type</span> <span style="font-family: Arial, sans-serif; 
+											 font-weight: normal;">Select 
+	 what kind of masking you would like to do.</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Static</span> 
+	 allows you to overlay a mask image which is applied with alpha.<br />
+	<img src="characterstaticmask.jpg" alt="" style=" border:none; width:100%; max-width:391px;" border="0" /></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Offset X</span> moves the mask image left 
+	 or right depending on the values set.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Offset Y</span> moves the mask image top 
+	 or bottom depending on the values set.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Dynamic</span> 
+	 masking allows you to use mask to display specific parts of a picture 
+	 image.<br />
+	<img src="characterdynamicmask.gif" alt="" style=" border:none; width:100%; max-width:388px;" border="0" /></p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Value</span> can be any amount from 0 to 
+	 255. It controls which pixels from the masked image will be visible.<br />
+	If it's 0, then it will display none of the image mask. The more values 
+	 you add, the more of the image mask is visible.</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Vague</span> allows you to apply smoothing 
+	 on the mask edges. Here is a comparison with Vague values 0 (minimum) 
+	 and 255 (maximum)</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: bold; margin-left: 0px;"><img src="charactervague0.png" alt="" style=" border:none; width:100%; max-width:540px;" border="0" /> 
+ <img src="charactervague255.png" alt="" style=" border:none; width:100%; max-width:540px;" border="0" /></p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Duration</span> - Determines how fast the 
+	 mask effect will take place.</p></li>
+	<li style="margin-left: -20px;"><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Continue</span> will make the scene immediately 
+	 continue.</p></li>
+	<li style="margin-left: -20px;"><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Wait</span> will make the scene wait until 
+	 the masking effect is done.</p></li>
+	<li style="margin-left: -20px;"><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Effects</span> - These options affect how 
+	 the picture will appear.</p></li>
+	<li style="margin-left: -20px;"><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Easing</span> sets the tween movement of 
+	 the picture. More information can be seen in <a href="Easing_Effects.htm">Easing 
+	 Effects</a> page.</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Show_Image_Map" id="Show_Image_Map"></a>Show 
+ Image Map</p>
+<p class="MsoNormal">Create an image map and define its states and regions 
+ the user can interact with. Image-Maps share the same number/id space 
+ with pictures. That means that all picture commands will work for image-maps 
+ as well except <a href="#Rotate_Picture">Rotate Picture</a> and <a href="#Zoom_Picture">Zoom 
+ Picture.</a></p>
+<p class="MsoNormal"><img src="imagemap.gif" alt="" style=" border:none; width:100%; max-width:470px;" border="0" /></p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p class="MsoNormal"><span style="font-weight: bold;">Number 
+	 - </span>The image-map's number (ID). Necessary to distinguish between 
+	 multiple image-maps.</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal">P<span style="font-family: Arial, sans-serif; 
+	 font-weight: bold;">osition</span><span style="font-family: Arial, sans-serif;"> 
+	 - Choose between Direct and Calculated positioning to place your image-map 
+	 into the scene.</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Predefined</span> allows to select one 
+	 of the predefined positions configured in Database &gt; System &gt; 
+	 Predefined Object Positions.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Direct</span> allows you to set the position 
+	 using the graphical editor. You can also set the background image 
+	 for higher accuracy.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Calculated</span> allows you to position 
+	 the image-map by inputting the X and Y coordinates or through setting 
+	 variables.</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><b style="mso-bidi-font-weight: normal;">Ground</b> 
+	 - Base image of your map.</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><b style="mso-bidi-font-weight: normal;">Hover</b> 
+	 - Allows you to set an image to display while the mouse is hovering 
+	 over a hotspot region. Take into account that the image must be the 
+	 same dimension as the ground image.</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><b style="mso-bidi-font-weight: normal;">Hotspots</b> 
+	 - Define regions that will detect cursor/user interaction. You can 
+	 add, remove and move hotspots.</p></li>
+</ul>
+<p class="MsoNormal"><img src="imagemap-a.jpg" alt="" style=" border:none; width:100%; max-width:930px;" border="0" /></p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p class="MsoNormal"><span style="font-weight: bold;">(1) 
+	 Add Hotspot</span> - Adds a hotspot in the image map.</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><span style="font-weight: bold;">(2) 
+	 Hotspot</span> - Adds an interactive region that will display a part 
+	 of the hover/selected/unselected image on it depending on its state. 
+	 You can change the size and set properties to it when double clicked.</p></li>
+	<li><p class="MsoNormal"><span style="font-weight: bold;">Hotspot Properties</span> 
+	 - Allows you to set properties for an &#160;image map's hotspot. This 
+	 can be accessed by double clicking a hotspot.<br />
+	.<img src="HotspotProps.png" alt="" style=" border:none; width:100%; max-width:600px;" border="0" /></p></li>
+	<li><p class="MsoNormal" style="margin-left: 0px;"><span style="font-weight: bold;">Position 
+	 and Size</span> - Adjust the hotspot's coordinates and size through 
+	 values.</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p class="MsoNormal" style="margin-left: 0px;"><span style="font-weight: bold;">X</span> 
+		 adjusts the position of the hotspot to left or right.</p></li>
+		<li><p class="MsoNormal" style="margin-left: 0px;"><span style="font-weight: bold;">Y</span> 
+		 adjusts the position of the hotspot to top or bottom.</p></li>
+		<li><p class="MsoNormal" style="margin-left: 0px;"><span style="font-weight: bold;">Width</span> 
+		 adjusts the hotspot's width.</p></li>
+		<li><p class="MsoNormal" style="margin-left: 0px;"><span style="font-weight: bold;">Height</span> 
+		 adjusts the hotspot's height.</p></li>
+	</ul></li>
+	<li><p class="MsoNormal" style="margin-left: 0px;"><span style="font-weight: bold;">Settings</span> 
+	 -Gives a hotspot a property. This activates when a hotspot is clicked.</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p class="MsoNormal" style="margin-left: 0px;"><span style="font-weight: bold;">Jump 
+		 to</span> calls a label.</p></li>
+		<li><p class="MsoNormal" style="margin-left: 0px;"><span style="font-weight: bold;">Call 
+		 Common Event</span> calls a common event.</p></li>
+		<li><p class="MsoNormal" style="margin-left: 0px;"><span style="font-weight: bold;">Bind 
+		 to Switch</span> stores the selection-state of the hotspot in 
+		 the selected switch.</p></li>
+		<li><p class="MsoNormal" style="margin-left: 0px;"><span style="font-weight: bold;">Bind 
+		 Enabled-State</span> stores the enabled-state of the hotspot in 
+		 the selected switch.</p></li>
+		<li><p class="MsoNormal" style="margin-left: 0px;"><span style="font-weight: bold;">Bind 
+		 Value </span><span>stores a custom number-value into the specified 
+		 number-variable if the hotspot gets clicked.</span></p></li>
+	</ul>
+	<ul style="list-style: disc;">
+		<li><p class="MsoNormal" style="margin-left: 0px;"><span style="font-weight: bold;">Finish 
+		 Image Map</span> stops the Image Map command and initiates the 
+		 next set of commands.<br />
+		You have to call &quot;Erase Image Map&quot; manually to remove 
+		 it from the screen.</p></li>
+	</ul></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><span style="font-weight: bold;">(3) 
+	 Remove Hotspot</span> - Removes a hotspot from the image map.</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><b style="mso-bidi-font-weight: normal;">Duration</b> 
+	 - The length of time it will take for the image map to appear.</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><b style="mso-bidi-font-weight: normal;">States</b> 
+	 - This section is for setting desired graphics for Unselected, Selected, 
+	 and Selected Hover states.</p></li>
+</ul>
+<p class="MsoNormal"><img src="states.png" alt="" style=" border:none; width:100%; max-width:521px;" border="0" /></p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p class="MsoNormal"><b style="mso-bidi-font-weight: normal;">Unselected</b> 
+	 - The hotspot's image when it is enabled. <span style="font-weight: bold;">The 
+	 ground image is not visible until its disabled.</span></p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><b style="mso-bidi-font-weight: normal;"><span 
+	 style="mso-tab-count: 1;">S</span>elected</b>: Sets the image for 
+	 how the region will appear once the region has been selected. This 
+	 only works if Bind To Switch is set.</p></li>
+	<li style="margin-left: -20px;"><span style="font-size: 11.0pt; line-height: 115%; 
+											 font-family: Arial, sans-serif; 
+											 mso-fareast-font-family: Arial; 
+											 mso-ansi-language: EN-US; 
+											 mso-fareast-language: JA; 
+											 mso-bidi-language: AR-SA;"><b 
+	 style="mso-bidi-font-weight: normal;">Selected Hover</b>: It allows 
+	 you to set another image state for hovering over a region that’s already 
+	 been selected.</span> This only works if Bind To Switch is set..</li>
+	<li style="margin-left: -20px;"><span style="font-weight: bold;">Effects</span> 
+	 <span style="font-family: Arial, sans-serif;">- These options affect 
+	 how the image map will appear.</span></li>
+	<li style="margin-left: -20px;"><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Easing</span> sets the tween movement of 
+	 the image-map. More information can be seen in <a href="Easing_Effects.htm">Easing 
+	 Effects</a> page.</p></li>
+	<li style="margin-left: -20px;"><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Animation</span> sets the movement of the 
+	 image-map.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Movement</span> is the origin point of 
+	 the image-map where it will disappear to from Left/Top/Right/Bottom.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Blending</span> allows you to fade out 
+	 the image-map.</p></li>
+	<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">Masking <span 
+	 style="font-weight: normal;">allows you to mask the image-map to a 
+	 Masks file.</span></p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+											 font-weight: bold;">Vague 
+		 <span style="font-weight: normal;">is the smoothness of the mask 
+		 edges.</span></p></li>
+	</ul></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p>
+<p class="Sub_Heading"><a name="Erase_Image_Map" id="Erase_Image_Map"></a>Erase 
+ Image Map</p>
+<p class="MsoNormal">Removes an image map.</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Number - </span>The number (ID) of the 
+	 image-map to erase. Necessary to distinguish between multiple image-maps.</p></li>
+	<li style="margin-left: -20px;"><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Duration</span> - The amount of time it 
+	 will take for the image map to disappear.</p></li>
+	<li style="margin-left: -20px;"><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Continue</span> will make the scene immediately 
+	 continue.</p></li>
+	<li style="margin-left: -20px;"><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Wait</span> will make the scene wait until 
+	 the exit animation is done.</p></li>
+	<li style="margin-left: -20px;"><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Easing</span> sets the tween movement of 
+	 the picture. More information can be seen in <a href="Easing_Effects.htm">Easing 
+	 Effects</a> page.</p></li>
+	<li style="margin-left: -20px;"><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Animation</span> sets the movement of the 
+	 picture.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Movement</span> 
+	 is the origin point of the picture where it will disappear to the 
+	 Left/Top/Right/Bottom.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Blending</span> 
+	 allows you to fade out the image-map.</p></li>
+	<li style="font-weight: bold; margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+															 font-weight: bold;">Masking 
+	 <span style="font-weight: normal;">allows you to mask the image-map 
+	 to a Masks file.</span></p></li>
+	<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">Vague <span 
+	 style="font-weight: normal;">is the smoothness of the mask edges.</span></p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p>
+<p class="Sub_Heading"><a name="Move_Picture_Along_Path" id="Move_Picture_Along_Path"></a>Move 
+ Picture Along Path</p>
+<p class="MsoNormal" style="font-family: Arial, sans-serif;"><span style="font-family: Arial, sans-serif; 
+	 font-weight: normal;">Allows you to create custom path of movement 
+ through the use of points and curves to move the picture.</span></p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Number</span> 
+	 - The index (ID) of the picture to move.</p></li>
+</ul>
+<div>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Path</span> 
+	 - Opens up a path editor that allows you to define the path via curves. 
+	 You can press right click to delete a motion point or click at a free 
+	 area to add a new motion point.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">The S circle</span> (<img src="circ1.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />) 
+	 is the start point of the motion.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">The green circle</span> (<img src="circ2.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />) is a point in the motion 
+	 that allows you to have a more dynamic motion.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">The yellow circle</span> (<img src="circ3.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />) adjusts the motion curve. 
+	 If you press a green circle (<img src="circ2.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />), you can adjust 
+	 the motion for that path as well.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">The E circle</span> (<img src="circ4.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />) 
+	 is the end point of the motion.</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><img src="path.jpg" alt="" style=" border:none; width:100%; max-width:883px;" border="0" /></p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<ul style="list-style: disc;">
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Mirror Vertical -</span> &#160;Flips the 
+	 curve vertically.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Mirror Horizontal</span> - &#160;Flips 
+	 the curve horizontally.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Rotate 90*</span> - &#160;Rotates the curve 
+	 at 90 degrees.</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Effects</span> - &#160;Allows you to set 
+	 sound effects at timed intervals while the background moves along 
+	 the path.</p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Loop</span> 
+	 - Allows you to repeat the path for the extent of its duration.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">None</span> - &#160;Turns the loop off.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Normal</span> - &#160;Loops the path from 
+	 the end point.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Reversed</span> - &#160;Loops the path 
+	 in the opposite direction from the end point.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Duration</span> 
+	 - The time the motion has to finish in milliseconds.</p></li>
+	<li style="font-weight: bold; margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+															 font-weight: normal;"><span 
+	 style="font-weight: bold;">Wait/Continue</span> - Setting the command 
+	 to wait means that the scene will wait for the motion to end before 
+	 it loads the next command.</p></li>
+</ul>
+</div>
+<p class="MsoNormal">&#160;</p>
+<p class="Sub_Heading"><a name="Show_Animation" id="Show_Animation"></a>Show 
+ Animation</p>
+<p class="MsoNormal" style="font-family: Arial, sans-serif;">Displays an 
+ animation on the screen. Animations share the same number/id space with 
+ pictures so all Picture commands will work with animations too.</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold; font-family: Arial, sans-serif;">Number 
+	 <span style="font-weight: normal;">- The picture's index (ID) that 
+	 you want to use to play the animation.</span></p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Animation</span> 
+	 - The animation you want to use from the database.</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Anchor</span> 
+	 - Select the location of your anchor point between top-left and center.<br />
+	Setting the anchor to center is only important when the zoom and rotation 
+	 commands will be used and will not affect positioning.</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Position</span> 
+	 - Choose betweeen Predefined, Direct and Calculated positioning to 
+	 place your animation into the scene.</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Predefined 
+	 </span>allows to select one of the predefined positions configured 
+	 in Database &gt; System &gt; Predefined Object Positions.</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Direct 
+	 </span>allows you to set the position using the graphical editor. 
+	 You can also set the background image for higher accuracy.</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Calculated 
+	 </span>allows you to position the animation by inputting the X and 
+	 Y coordinates or through setting variables.</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Duration</span> 
+	 - The duration of the appear-animation in milliseconds.</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Continue 
+	 </span>will make the scene immediately continue.</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Wait</span><span> 
+	 will make the scene wait until the appear-animation is done</span><span>.</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Effects</span> - These options affect how 
+	 the picture will appear.</p></li>
+	<li><p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">Easing</span> 
+	 sets the tween movement of the picture. More information can be seen 
+	 in <a href="Easing_Effects.htm">Easing Effects</a> page.</p></li>
+	<li><p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">Animation</span> 
+	 sets the movement of the picture.</p></li>
+	<ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">Movement 
+		 </span>is the origin point of the animation where it will appear 
+		 from Left/Top/Right/Bottom.</p></li>
+		<li><p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">Blending 
+		 </span>allows you to fade in/fade out the animation.</p></li>
+		<li><p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">Masking</span> 
+		 allows you to mask the animation to a Masks file.</p></li>
+		<ul style="list-style: disc;">
+			<li><p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">Vague 
+			 </span>is the smoothness of the mask edges. Here is a comparison 
+			 with Vague values 0 (minimum) and 255 &#160;(maximum)<br />
+			<img src="showpicturemask.gif" alt="" style=" border:none; width:100%; max-width:470px;" border="0" /></p></li>
+		</ul>
+	</ul>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 margin-left: 0px;"><span style="font-weight: bold;">Display</span> 
+	 - Allows you to specify the display order and anchor for the picture.</p></li>
+	<li><p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">Z-Order</span> 
+	 - Sets the display order of the pictures. You can also use a variable 
+	 by clicking on the [...] next to the number input box.</p></li>
+	<li><p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">Blend 
+	 Mode</span> - Determines what kind of blending used when the pictures 
+	 is displayed on screen</p></li>
+	<ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">Normal</span>&#160;is 
+		 the standard blend mode. It will simply just display the picture 
+		 on the screen without mixing colors.</p></li>
+		<li><p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">Additive</span> 
+		 results the picture to be applied in a lighter color.</p></li>
+		<li><p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">Subtractive</span> 
+		 results the picture to be applied in a darker color.</p></li>
+	</ul>
+</ul>
+<p class="MsoNormal" style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Shake_Picture" id="Shake_Picture"></a>Shake 
+ Picture</p>
+<p class="MsoNormal" style="font-family: Arial, sans-serif;">Vigorously 
+ move your picture for a dramatic effect.</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold; font-family: Arial, sans-serif;">Number 
+	 <span style="font-weight: normal;">- The picture's index (ID) that 
+	 you want to manipulate.</span></p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Range 
+	 X</span> - Set the horizontal movement of the picture. It randomizes 
+	 between the negative and positive of the value you set.<br />
+	For example, if you put 5, it will shake the picture from -5 to 5.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Range 
+	 Y</span> - Set the vertical movement of the&#160;picture.&#160;It 
+	 randomizes between the negative and positive of the value you set.<br />
+	For example, if you put 5, it will shake the picture from -5 to 5.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Speed</span> 
+	 - &#160;Will determine the power or intensity of the shaking by setting 
+	 a pixel offset.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Duration</span> 
+	 - The duration of the zoom in milliseconds.</p></li>
+	<li style="font-family: Arial, sans-serif; margin-left: -20px;"><p 
+		 style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Continue</span> will make the scene immediately 
+	 continue.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Wait</span> 
+	 will make the scene wait until the exit animation is done.</p></li>
+	<li style="font-family: Arial, sans-serif; margin-left: -20px;"><p 
+		 style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Effects</span> - These options affect how 
+	 the picture will appear.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Easing</span> 
+	 sets the tween movement of the picture. More information can be seen 
+	 in <a href="Easing_Effects.htm">Easing Effects</a> page.</p></li>
+</ul>
+<p class="MsoNormal" style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Picture_Effect" id="Picture_Effect"></a>Picture 
+ Effect</p>
+<p class="MsoNormal" style="font-family: Arial, sans-serif;">Applies an 
+ effect to a picture..</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Type</span> 
+	 - The effect that will be applied to the picture.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Wobble</span> makes the movie move in irregular 
+	 and staggering motion. That only works if looping is disabled.</p></li>
+	<li><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Power</span> sets the intensity of 
+		 the wobble. It makes the wobble effect more visible the higher 
+		 it is.</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Speed</span> <span>sets the speed of 
+		 the wobble. The higher it is, the faster it is.</span></p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Orientation</span> - Sets the wobble 
+		 direction.</p></li>
+		<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+			<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+			 style="font-weight: bold;">Vertical</span> sets the wobble 
+			 direction to the vertical direction.</p></li>
+			<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+			 style="font-weight: bold;">Horizontal</span> sets the wobble 
+			 direction to the horizontal direction</p></li>
+			<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+			 style="font-weight: bold;">Both</span> sets the wobble direction 
+			 to both directions.</p></li>
+		</ul></li>
+		<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+											 font-weight: bold;">Duration 
+		 <span style="font-weight: normal;">sets how long, in milliseconds, 
+		 the effect will take place.</span></p></li>
+	</ul></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Blur</span> has no effect on pictures.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Pixelate</span> makes the picture appear 
+	 pixelated/blocky.</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Width</span> sets the width of a single 
+		 block/pixel.</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Height</span> sets the height of a 
+		 single block/pixel.</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Duration</span> sets how much time, 
+		 in milliseconds, it takes until the pixelation reaches the specified 
+		 block/pixel-size. Use this to smoothly pixelate the picture.</p></li>
+	</ul></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Easing</span> 
+	 applies tweening to the effect animation. More information can be 
+	 seen in <a href="Easing_Effects.htm">Easing Effects</a> page.</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Picture_Motion_Blur" id="Picture_Motion_Blur"></a>Picture 
+ Motion Blur</p>
+<p style="font-family: Arial, sans-serif;">Applies motion blur to your 
+ picture. This must be set above the picture's movement commands such as 
+ [Move Picture] or [Move Picture Along Path].</p>
+<div>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Motion 
+	 Blur</span> - Set Yes to apply motion blur, No to turn it off.</p></li>
+	<li style="list-style: none; display: inline; margin-left: -20px;"><ul 
+			 style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Spawn Time</span> - The amount of frames 
+		 after a new copy is created. By default, the amount is 2.</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Dissolve Speed</span> - The rate at 
+		 which the spawned copies dissipate. Specifically, the opacity 
+		 of the copies are dropped every frame.</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Opacity</span> - The opacity a copy 
+		 starts at the time it is spawned. By default, it is at 100.<br />
+		For example, if the dissolve speed is 2, the shadow/ghost/particle 
+		 is completely invisible/dead after 50 milliseconds.</p></li>
+	</ul></li>
+</ul>
+<p>&#160;</p>
+</div>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Add_Hotspot" id="Add_Hotspot"></a>Add Hotspot</p>
+<p style="font-family: Arial, sans-serif;">Adds clickable and/or drag-able 
+ regions to the screen. If you click on a hotspot, the state becomes &quot;selected.&quot; 
+ It stays that way until you click the hotspot again.</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Number</span> 
+	 - The hotspot's index (ID) that you want to manipulate.</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Position</span> 
+	 - Choose between Direct and Calculated positioning to set the destination 
+	 of your hotspot.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Direct</span> - Allows the user to set 
+	 the target-position using the graphical editor.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Calculated</span> - Allows the user to 
+	 manipulate the target-position by variable.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Picture Number</span> - Transform one of 
+	 the currently displayed image(s) to a hotspot.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Hotspot 
+	 Properties</span>&#160;- Allows you to set properties of a hotspot. 
+	 This can be accessed by Double Clicking or Right-Click -&gt; Properties 
+	 a hotspot.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Position and Size</span> - Adjust the hotspot's 
+	 coordinates and size through values.</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p class="MsoNormal" style="margin-left: 0px;"><span style="font-weight: bold;">X</span> 
+		 adjusts the position of the hotspot to left or right.</p></li>
+		<li><p class="MsoNormal" style="margin-left: 0px;"><span style="font-weight: bold;">Y</span> 
+		 adjusts the position of the hotspot to top or bottom.</p></li>
+		<li><p class="MsoNormal" style="margin-left: 0px;"><span style="font-weight: bold;">Width</span> 
+		 adjusts the hotspot's width.</p></li>
+		<li><p class="MsoNormal" style="margin-left: 0px;"><span style="font-weight: bold;">Height</span> 
+		 adjusts the hotspot's height.</p></li>
+		<li><p class="MsoNormal" style="margin-left: 0px;"><span style="font-weight: bold;">Flip 
+		 Horizontally / Flipped</span> flips the hotspot.</p></li>
+	</ul></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-left: 0px;"><span 
+	 style="font-weight: bold;">On Click</span> - When the user clicks, 
+	 it will trigger a command.</p></li>
+	<li><p class="MsoNormal" style="margin-left: 0px;"><span style="font-weight: bold;">Jump 
+	 to</span> <span style="font-family: Arial, sans-serif;">jumps to a 
+	 label.</span></p></li>
+	<li><p class="MsoNormal" style="margin-left: 0px;"><span style="font-weight: bold;">Call 
+	 Common Event</span> calls a common event.</p></li>
+	<li><p class="MsoNormal" style="margin-left: 0px;"><span style="font-weight: bold;">Bind 
+	 to Switch</span> stores the selection-state of the hotspot in a switch.</p></li>
+	<li><p class="MsoNormal" style="margin-left: 0px;"><span style="font-weight: bold;">Call 
+	 Scene</span> calls a scene same way as <a href="SceneCommand.htm#Call_Scene">Call 
+	 Scene</a> command does.</p></li>
+	<li><p class="MsoNormal" style="margin-left: 0px;"><span style="font-weight: bold;">Bind 
+	 Value</span> will put the defined number-value into the specified 
+	 number-variable and then jumps to a label. This is useful to figure 
+	 out which hotspot has been triggered if the same label has been used 
+	 for multiple hotspots.</p></li>
+	<ul style="list-style: disc;">
+		<li><p class="MsoNormal" style="margin-left: 0px;"><span style="font-weight: bold;">To 
+		 </span>is the variable to store the number-value in.</p></li>
+		<li><p class="MsoNormal" style="margin-left: 0px;"><span style="font-weight: bold;">Jump 
+		 To Label</span><span> specifies the label to jump to.</span></p></li>
+	</ul>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-left: 0px;"><span 
+	 style="font-weight: bold;">Images</span> - Affects the appearance 
+	 of the hotspot based on certain conditions.</p></li>
+</ul>
+<p class="MsoNormal" style="margin-left: 0px;"><img src="buttons.png" alt="" style=" border:none; width:100%; max-width:873px;" border="0" /></p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-left: 0px;"><span 
+	 style="mso-bidi-font-weight: normal; font-weight: bold;">Base</span> 
+	 - The hotspot's base image. This is only visible if Unselected is 
+	 empty and/or the hotspot is disabled.</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><b style="mso-bidi-font-weight: normal;">Hover</b> 
+	 - The hotspot's image when the mouse is hovering above it.</p></li>
+	<li style="font-weight: bold; margin-left: -20px;"><p class="MsoNormal">Selected 
+	 <span style="font-weight: normal;">- This image appears if the hotspot 
+	 is selected.</span></p></li>
+	<li style="font-weight: bold; margin-left: -20px;"><p class="MsoNormal" 
+															 style="font-weight: bold;">Selected 
+	 Hover <span style="font-weight: normal;">-</span> <span style="font-weight: normal;">This 
+	 image appears if the hotspot is selected and the mouse is hovering 
+	 above it.</span></p></li>
+	<li style="font-weight: bold; margin-left: -20px;"><p class="MsoNormal" 
+															 style="font-weight: bold;">Unselected 
+	 <span style="font-weight: normal;">-</span> <span style="font-weight: normal;">The 
+	 hotspot's image when it is enabled and hasn't been selected yet. You 
+	 cannot see the base image if you set one unless the hotspot is disabled.</span></p></li>
+	<li style="font-weight: bold; margin-left: -20px;"><p class="MsoNormal" 
+															 style="font-weight: bold;">Dragging 
+	 <span style="font-weight: normal;">- Drag properties of a hotspot.</span></p></li>
+	<li style="font-weight: bold; margin-left: -20px;"><p class="MsoNormal" 
+															 style="font-weight: bold;">Draggable 
+	 <span style="font-weight: normal;">- If the option is set to Yes, 
+	 it means the hotspot can be dragged.</span></p></li>
+	<li style="font-weight: bold; margin-left: -20px;"><p class="MsoNormal" 
+															 style="font-weight: bold;">Horizontal 
+	 - <span style="font-weight: normal;">If the option is set to Yes, 
+	 it means the hotspot can be dragged left and right.</span></p></li>
+	<li style="font-weight: bold; margin-left: -20px;"><p class="MsoNormal" 
+															 style="font-weight: bold;">Vertical 
+	 - <span style="font-weight: normal;">If the option is set to Yes, 
+	 it means the hotspot can be dragged up and down.</span></p></li>
+	<li style="font-weight: bold; margin-left: -20px;"><p class="MsoNormal" 
+															 style="font-weight: bold;">Track 
+	 Rect <span style="font-weight: normal;">- The range of the hotspot's 
+	 dragging area.</span></p></li>
+	<li style="font-weight: bold; margin-left: -20px;"><p class="MsoNormal" 
+															 style="font-weight: bold;">Store 
+	 In - <span style="font-weight: normal;">Stores the hotspot's current 
+	 position by percentage to a variable. If Horizontal and Vertical are 
+	 both enabled, the percentage stored is from the Horizontal movement. 
+	 This only wor</span></p></li>
+	<li style="font-weight: bold; margin-left: -20px;"><p class="MsoNormal" 
+															 style="margin-left: 0px;">Actions 
+	 <span style="font-weight: normal;">- When the hotspot is visible, 
+	 pressed or deselected it will perform actions.</span></p></li>
+	<li style="font-weight: bold; margin-left: -20px;"><p class="MsoNormal" 
+															 style="font-weight: bold;">On 
+	 Enter <span style="font-weight: normal;">- When the mouse enters the 
+	 hotspot's area,&#160;it will perform one of the following actions.</span></p></li>
+	<li style="font-weight: bold; margin-left: -20px;"><p class="MsoNormal" 
+															 style="margin-left: 0px;">On 
+	 Select <span style="font-weight: normal;">- When the hotspot is selected, 
+	 it will perform one of the following actions.</span></p></li>
+	<li style="font-weight: bold; margin-left: -20px;"><p class="MsoNormal" 
+															 style="margin-left: 0px; 
+															 font-weight: normal;"><span 
+	 style="font-weight: bold;">On Deselect</span> - When the hotspot is 
+	 selected and pressed again to deselect it, it will perform one of 
+	 the following actions.</p></li>
+	<li style="font-weight: bold; margin-left: -20px;"><p class="MsoNormal" 
+															 style="margin-left: 0px; 
+															 font-weight: normal;"><span 
+	 style="font-weight: bold;">On Leave</span> - When the mouse leaves 
+	 the hotspot area,&#160;it will perform one of the following actions.</p></li>
+	<li style="font-weight: bold; margin-left: -20px;"><p class="MsoNormal" 
+															 style="margin-left: 0px; 
+															 font-weight: normal;"><span 
+	 style="font-weight: bold;">On Enter, On Select, On Deselect, On Leave, 
+	 On Drag</span><span> all have the following settings.</span></p></li>
+	<li style="font-weight: bold;"><p class="MsoNormal" style="margin-left: 0px;">J<span 
+	 style="font-family: Arial, sans-serif;">ump to</span> <span style="font-family: Arial, sans-serif; 
+	 font-weight: normal;">jumps to a label.</span></p></li>
+	<li style="font-weight: bold;"><p class="MsoNormal" style="margin-left: 0px;">Call 
+	 Common Event <span style="font-weight: normal;">calls a common event.</span></p></li>
+	<li style="font-weight: bold;"><p class="MsoNormal" style="margin-left: 0px;">Call 
+	 Scene <span style="font-weight: normal;">calls a scene the same way 
+	 as <a href="SceneCommand.htm#Call_Scene">Call Scene</a> command does.</span></p></li>
+	<li style="font-weight: bold;"><p class="MsoNormal" style="margin-left: 0px;">Bind 
+	 Value<span style="font-weight: normal;"> puts a number-value into 
+	 the specified number-variable when the event has been triggered and 
+	 jumps to the specified label.</span></p></li>
+	<ul style="list-style: disc;">
+		<li style="font-weight: bold;"><p class="MsoNormal" style="margin-left: 0px;">To<span 
+		 style="font-weight: normal;"> is the number-value to put into 
+		 the number-variable</span><span style="font-weight: normal;">.</span></p></li>
+		<li style="font-weight: bold;"><p class="MsoNormal" style="margin-left: 0px;"><span>Jump 
+		 To Label</span><span style="font-weight: normal;"> specifies the 
+		 label to jump to.</span></p></li>
+	</ul>
+	<li style="font-weight: bold;"><p class="MsoNormal" style="margin-left: 0px;">Bind 
+	 to Switch <span style="font-weight: normal;">Stores the state of the 
+	 even in a switch.</span></p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li style="font-weight: bold;"><p class="MsoNormal" style="margin-left: 0px;">On 
+		 Enter <span style="font-weight: normal;">- Sets the switch to 
+		 ON if the mouse enters the hotspot's area.</span></p></li>
+		<li style="font-weight: bold;"><p class="MsoNormal" style="margin-left: 0px;">On 
+		 Select <span style="font-weight: normal;">- Sets the switch to 
+		 ON if the hotspot is selected.</span></p></li>
+		<li style="font-weight: bold;"><p class="MsoNormal" style="margin-left: 0px;">On 
+		 Deselect <span style="font-weight: normal;">- Sets the switch 
+		 to OFF if the hotspot is deselected.</span></p></li>
+		<li style="font-weight: bold;"><p class="MsoNormal" style="margin-left: 0px;">On 
+		 Leave <span style="font-weight: normal;">- Sets the switch to 
+		 OFF if the mouse leaves the hotspot's area.</span></p></li>
+	</ul></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Change_Hotspot_State" id="Change_Hotspot_State"></a>Change 
+ Hotspot State</p>
+<p style="font-family: Arial, sans-serif;">Changes a hotspot's state.</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Number</span> 
+	 - The hotspot's index (ID) that you want to manipulate.</p></li>
+	<li style="margin-left: -20px;"><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Selected</span> - Toggles the hotspot's 
+	 'selected' state to On/Off.</p></li>
+	<li style="margin-left: -20px;"><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Enabled</span> - Enables or Disables the 
+	 hotspot.</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p>
+<p class="Sub_Heading"><span style="font-weight: bold; font-size: 18pt; 
+							 font-family: 'Book Antiqua', serif;"><a name="Erase_Hotspot" 
+	 id="Erase_Hotspot"></a>Erase Hotspot</span></p>
+<p style="font-family: Arial, sans-serif;">Erases a hotspot from the screen.</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Number</span> 
+	 - The picture's index (ID) that you want to manipulate.</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Picture_Defaults" id="Picture_Defaults"></a>Picture 
+ Defaults</p>
+<p style="font-family: Arial, sans-serif;">Allows to override default values 
+ for picture specific commands.</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Appear 
+	 Duration</span> is the duration of the show-animation in milliseconds.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Disappear 
+	 Duration</span> is the duration of the erase-animation in milliseconds.</p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">Appear Effects</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Easing</span> is the easing settings used 
+	 for the show-animation.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Animation</span> is the animation settings 
+	 for the show-animation.</p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Disappear 
+	 Effects</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Easing</span> is the easing settings used 
+	 for the erase-animation.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Animation</span> is the animation settings 
+	 for the erase-animation.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Display</span><span 
+	 style="font-family: Arial, sans-serif; font-weight: normal;">.</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Anchor -</span> Select the location of 
+	 your anchor point between top-left and center.<br />
+	Setting the anchor to center is only important when the zoom and rotation 
+	 commands will used and will not affect positioning.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;"><span 
+	 style="font-family: Arial, sans-serif; font-weight: bold;">Z-Order</span> 
+	 <span style="font-weight: normal; font-family: Arial, sans-serif;">is 
+	 the Z-Index of a picture.</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-family: Arial, sans-serif; font-weight: bold;">Motion 
+	 Blur</span> <span style="font-family: Arial, sans-serif; font-weight: normal;">- 
+	 Set Yes to apply motion blur, No to turn it off.</span></p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Spawn Time</span> - The amount of frames 
+		 after a new copy is created. By default, the amount is 2.</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Dissolve Speed</span> - The rate at 
+		 which the spawned copies dissipate. Specifically, the opacity 
+		 of the copies are dropped every frame.</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Opacity</span> - The opacity the copied 
+		 image starts at the time it is spawned. By default, it is at 100.<br />
+		For example, if the dissolve speed is 2, the shadow/ghost/particle 
+		 is completely invisible/dead after 50 frames.</p></li>
+	</ul></li>
+</ul>
+</body>
+</html>

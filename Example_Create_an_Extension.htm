@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Example Create an Extension</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "5.2.1.1.0_5";
+</script>
+ <meta name="topic-breadcrumbs" content="Script and Plugin Reference > Extension Documentation > Getting Started > Examples" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading"><span>Example: Create an Extension</span></p>
+</div>
+<p>&#160;</p>
+<p><span class="Topic_Start">N</span>ow we can finally create our card 
+ extension using Extension Composer and share it with other people. To 
+ create an extension, we just open Extension Composer through the Menu 
+ under <span style="font-weight: bold;">Tools &gt; Developer Tools &gt; 
+ Create Extension</span>.</p>
+<p><img src="ExtensionComposer.png" alt="" style=" border:none; width:100%; max-width:798px;" border="0" /></p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">Documents</p></li>
+</ul>
+<p>Shows your all the documents which can be modified through extensions. 
+ That are all documents from Extension Editor as well as all game scripts, 
+ scenes, database records and resources. You can select the documents you 
+ created or modified here and add them to your extension by clicking on 
+ the&quot;Add &quot; button.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">Your 
+	 Extension</p></li>
+</ul>
+<p>Shows the content of your extension. You can easily add documents to 
+ your extension by selecting them in&quot;Documents &quot; view and click 
+ the&quot;Add &quot; button. To remove documents from your extension, just 
+ select the documents or folder and click the&quot;Remove &quot; button.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><span style="font-weight: bold;">ID</span></li>
+</ul>
+<p>The unique identifier of your extension. Use something unique like your 
+ company or website domain like: com.example.ExampleExtension. In our case 
+ we will use&quot;com.degica.ExampleCardExtension &quot;.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><span style="font-weight: bold;">Organization</span></li>
+</ul>
+<p>The name of your company or organization.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><span style="font-weight: bold;">Name</span></li>
+</ul>
+<p>The name of the extension. We will call it&quot;Card Extension &quot;.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">Version</p></li>
+</ul>
+<p>The version of the extension. We will use version&quot;1.0.0.0 &quot; 
+ here.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><span style="font-weight: bold;">Author</span></li>
+</ul>
+<p>The author/developer of the extension. We will use&quot;DEGICA &quot; 
+ here.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">Website</p></li>
+</ul>
+<p>The author’s/developer’s website. Put a link to your website in here 
+ where the user can find more information about your extension. In our 
+ case we will put&quot;www.degica.com &quot; in.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">Install 
+	 Script</p></li>
+</ul>
+<p>You can use an optional install script for your extension. An install 
+ script is useful if you need to migrate data records or scene commands 
+ created with an older version of your extension. For more info, see extension-system 
+ reference. We will leave it blank in our case.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">Uninstall 
+	 Script</p></li>
+</ul>
+<p>You can use an optional uninstall script for your extension to clean 
+ up things if necessary. For more info, see extension-system reference. 
+ We will leave it blank in our case.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><span style="font-weight: bold;">Description</span></li>
+</ul>
+<p>Contains a more detailed description about what the extension is doing, 
+ what kind of features it adds to the editor and/or game engine, etc. In 
+ our case we will add&quot;An extension which allows the user to create 
+ simple cards in database useful for a small card mini-game. It also offer 
+ a simple scene command&quot;Show Card &quot; to show a card on screen 
+ &quot;.</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">License</p></li>
+</ul>
+<p>You can put your license text / terms &amp; conditions here. The user 
+ needs to accept them before the extension can be installed. We will leave 
+ it blank in our case.</p>
+<p>&#160;</p>
+<p>Ok, lets add the documents we created to our extension. We created 3 
+ documents: The Data Record View&quot;Cards &quot;, the new scene command&quot;Show 
+ Card &quot; and our game script&quot;Component_CommandInterpreterCardExtension 
+ &quot; to extend the interpreter. Just select them and click the&quot;Add 
+ &quot; button to add them to our extension. Our extension content should 
+ look like this now:</p>
+<p><img src="CardExtensionStructure.png" alt="" style=" border:none; width:100%; max-width:263px;" border="0" /></p>
+<p>Now we can click on the&quot;Create &quot; button and select the location 
+ where our extension should be created and thats it!</p>
+<p>&#160;</p>
+<p>The Extension Composer creates a .zip archive with the extension name 
+ at the selected location. We can share that zip archive with other users 
+ to let them easily install our extension through the Extension Manager!</p>
+</body>
+</html>

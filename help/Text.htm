@@ -1,0 +1,672 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Text</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.3.1.0_11";
+</script>
+ <meta name="topic-breadcrumbs" content="Exploring the Editor > Scene Editor > Scene Content Commands" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">Text</p>
+</div>
+<p>&#160;</p>
+<p><span style="font-family: 'Book Antiqua', serif; font-weight: bold; 
+		 font-size: 18pt;">I</span>nclude highly customizable text displays 
+ in your scenes to make them pop out even more!</p>
+<p>&#160;</p>
+<p class="Sub_Heading"><a name="Show_Text" id="Show_Text"></a>Show Text</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">Place a 
+ text into your scene.</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Number</span> 
+	 - The text's index (ID). This determines their layer order.<br />
+	You can also use a variable by clicking on the [...] next to the number 
+	 input box.</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><span style="font-weight: bold;">Position</span> 
+	 <span style="font-family: Arial, sans-serif;">- Choose between Predefined 
+	 and Calculated positioning to place your text into the scene.</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Predefined</span> allows to select one 
+	 of the predefined positions configured in Database &gt; System &gt; 
+	 Predefined Object Positions.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Calculated</span> allows you to position 
+	 the text by inputting the X and Y coordinates or through setting variables.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Duration</span> 
+	 - The duration of the show-animation in milliseconds.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Continue</span> will make the scene immediately 
+	 continue.</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Wait</span> will make the scene wait until 
+	 the show-animation is done.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Effects</span> 
+	 - These options affect how the text will appear.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Easing</span> sets the tween movement of 
+	 the text. More information can be seen in <a href="Easing_Effects.htm">Easing 
+	 Effects</a> page.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Animation</span> sets the movement of the 
+	 text.</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Movement</span> is the origin point 
+		 of the text where it will appear from Left/Top/Right/Bottom.</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Blending</span> allows you to fade 
+		 in the text.</p></li>
+		<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+											 font-weight: bold;">Masking 
+		 <span style="font-weight: normal;">allows you to mask the text 
+		 to a Masks file.</span></p></li>
+	</ul></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">Display <span 
+	 style="font-weight: normal;">- Allows you to specify the display order 
+	 and anchor for the text.</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">Anchor 
+	 - <span style="font-weight: normal;">Select the location of your anchor 
+	 point between top-left and center.<br />
+	Setting the anchor to center is only important when the zoom and rotation 
+	 commands will used and will not affect positioning.</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;"><span>Position 
+	 Anchor</span><span style="font-weight: normal;"> - Select the location 
+	 of the position anchor-point. Setting the position anchor-point only 
+	 affects the positioning but not the rotation or zoom anchor-point</span><span 
+	 style="font-weight: normal;">.</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">Z-Order 
+	 <span style="font-weight: normal;">- Sets the display order of the 
+	 texts. You can also use a variable by clicking on the [...] next to 
+	 the number input box.</span></p></li>
+	<li><p style="font-weight: bold; font-family: Arial, sans-serif;">Blend 
+	 Mode <span style="font-weight: normal;">- Determines how text are 
+	 blended to the objects on the screen.</span></p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-weight: bold; font-family: Arial, sans-serif;">Normal<span 
+		 style="font-weight: normal;">&#160;is the standard blend mode.</span></p></li>
+		<li><p style="font-weight: bold; font-family: Arial, sans-serif;">Additive 
+		 <span style="font-weight: normal;">results the text to be applied 
+		 in a lighter color.</span></p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: bold;">Subtractive 
+		 <span style="font-weight: normal;">results the text to be applied 
+		 in a darker color.</span></p></li>
+	</ul></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">Viewport<span 
+	 style="font-weight: normal;">&#160;- The viewport the text will be 
+	 assigned to. The viewport determines if the text gets affected by 
+	 camera-movements or screen effects or not.</span></p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Scene</span> - The text is assigned 
+		 to the scene-viewport and behaves like an object which belongs 
+		 to the scene so it gets affected by camera-movements and screen 
+		 effects.</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">User Interface</span> - The text is 
+		 assigned to the ui-viewport and behaves like an object which belongs 
+		 to the user interface so it doesn't get affected by camera-movements 
+		 and screen effects.</p></li>
+	</ul></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p>
+<p class="Sub_Heading"><a name="Blend_Text" id="Blend_Text"></a>Blend Text</p>
+<p style="font-family: Arial, sans-serif;">Blends a textto the specified 
+ opacity.</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">Number <span 
+	 style="font-weight: normal;">- The text's index (ID) that you want 
+	 to manipulate.</span></p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><span style="mso-bidi-font-weight: normal; 
+	 font-weight: bold;">Opacity</span> - The opacity.</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><span style="font-weight: bold;">Duration</span> 
+	 <span style="font-family: Arial, sans-serif;">-</span> The duration 
+	 of the blend-animation.</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Continue</span> will make the scene immediately 
+	 continue.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Wait</span> will make the scene wait until 
+	 the zoom animation is done.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Easing</span> 
+	 affects the blend animation. More information can be seen in <a href="Easing_Effects.htm">Easing 
+	 Effects</a> page.</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Move_Text" id="Move_Text"></a>Move Text</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">Manipulate 
+ the position of your text.</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">Number <span 
+	 style="font-weight: normal;">- The text's index (ID) that you want 
+	 to manipulate..</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Position</span> 
+	 - Choose between Predefined and Calculated positioning to set the 
+	 destination of your text.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Predefined</span> allows to select one 
+	 of the predefined positions configured in Database &gt; System &gt; 
+	 Predefined Object Positions.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Calculated</span> allows you to position 
+	 the text by inputting the X and Y coordinates or through setting variables.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Duration</span> 
+	 - The duration of the move-animation in milliseconds.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">Continue 
+	 <span style="font-weight: normal;">will make the scene immediately 
+	 continue.</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Wait</span> will make the scene wait until 
+	 the move-animation is done.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Easing</span> 
+	 sets the tween movement of the text. More information can be seen 
+	 in <a href="Easing_Effects.htm">Easing Effects</a> page.</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Rotate_Text" id="Rotate_Text"></a>Rotate 
+ Text</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">Rotate 
+ your text at specified speed and direction.</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">Number <span 
+	 style="font-weight: normal;">- The</span> <span style="font-weight: normal;">text</span><span 
+	 style="font-weight: normal;">'s index (ID) that you want to manipulate.</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Direction</span> 
+	 - Set the text to rotate in clockwise or counterclockwise direction.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Speed</span> 
+	 - The speed of the rotation. The higher the value, the faster it rotates.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Duration</span> 
+	 - Determines how long the rotation will take place.</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Continue</span> will make the scene immediately 
+	 continue.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Wait</span> will make the scene wait until 
+	 the exit animation is done.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Easing</span> 
+	 affects the animation of the rotation. More information can be seen 
+	 in <a href="Easing_Effects.htm">Easing Effects</a> page.</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Zoom_Text" id="Zoom_Text"></a>Zoom Text</p>
+<p class="MsoNormal">Zoom in or out of your text.</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p class="MsoNormal"><span style="font-weight: bold;">Number</span> 
+	 - The text's index (ID) that you want to manipulate.</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><span style="font-weight: bold;">Zoom 
+	 X</span> - Affects the horizontal zoom of the text. Changes the horizontal 
+	 height of the text visually without changing its set font size.</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><span style="font-weight: bold;">Zoom 
+	 Y</span> - Affects the vertical zoom of the text. Changes the vertical 
+	 height of the text visually without changing its set font size.</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><span style="font-weight: bold;">Duration</span> 
+	 <span style="font-family: Arial, sans-serif;">-</span> The rate at 
+	 which the image will alter its zoom percentage.</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Continue</span> will make the scene immediately 
+	 continue.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Wait</span> will make the scene wait until 
+	 the zoom animation is done.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Easing</span> 
+	 affects the zoom animation. More information can be seen in <a href="Easing_Effects.htm">Easing 
+	 Effects</a> page.</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Color_Text" id="Color_Text"></a>Color Text</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">Manipulate 
+ the color of your selected text. This doesn't change the true text-color 
+ but just fills it with a color in a similar way like [Flash Picture]. 
+ So if your text has an outline, that outline is colored as well.</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">Number <span 
+	 style="font-weight: normal;">- The text's index (ID) that you want 
+	 to manipulate.</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">Color Control 
+	 <span style="font-weight: normal;">- Controls the text color. Use 
+	 the Red, Green, and Blue slider bars (0 to 255) to specify the color.<br />
+	You can check the color you specified in the preview area on the top 
+	 side of the dialog box. Use Power to specify the color's opacity (0 
+	 to 255).<br />
+	Setting Power to &quot;0&quot; makes the color completely transparent, 
+	 rendering it invisible on screen.</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Duration</span> 
+	 - Determines how long the color-animation will take place.</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Continue</span> will make the scene immediately 
+	 continue.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Wait</span> will make the scene wait until 
+	 the animation is done.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Easing</span> 
+	 affects the animation of the color. More information can be seen in 
+	 <a href="Easing_Effects.htm">Easing Effects</a> page.</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Erase_Text" id="Erase_Text"></a>Erase Text</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">Remove 
+ text from the scene.</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold; font-family: Arial, sans-serif;">Number 
+	 <span style="font-weight: normal;">- The text's index (ID) that you 
+	 want to remove from the screen.</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">Duration - 
+	 <span style="font-weight: normal;">The amount of time it will take 
+	 for the text to disappear completely.</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Continue</span> will make the scene immediately 
+	 continue.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Wait</span> will make the scene wait until 
+	 the exit animation is done.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Animation</span> 
+	 sets the movement of the text.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Movement</span> is the origin point of 
+	 the text where it will disappear to the Left/Top/Right/Bottom.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Blending</span> allows you to fade out 
+	 the text.</p></li>
+	<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">Masking <span 
+	 style="font-weight: normal;">allows you to mask the text to a Masks 
+	 file.</span></p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p>
+<p class="Sub_Heading"><a name="Text_Settings" id="Text_Settings"></a>Text 
+ Settings</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">Change 
+ text font type, size, and/or style.</p>
+<ul style="list-style: disc;">
+	<li style="font-family: Arial, sans-serif; margin-left: -20px;"><p 
+		 style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Number</span> - The text's index (ID) that 
+	 you want to remove from the screen.</p></li>
+	<li style="font-family: Arial, sans-serif; margin-left: -20px;"><p 
+		 style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Font</span> - Input the font you wish to 
+	 apply to the text.</p></li>
+	<li style="font-family: Arial, sans-serif; margin-left: -20px;"><p 
+		 style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Size</span> - Font size in pixels.</p></li>
+	<li style="font-family: Arial, sans-serif; margin-left: -20px;"><p 
+		 style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Style</span> - Set an outline and shadow 
+	 to your text. Only one o- f them can be activated at a time.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Color </span>- The color of the text.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Bold</span> - Makes the text bolder.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Italic </span>- Makes the text oblique.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Small Caps</span>&#160;- Makes lower-case 
+	 letters appear as small upper-case/capitalized letters.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Underline</span> - Draws a horizontal line 
+	 under the text to make it look underlined.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Strikethrough</span> - Draws a horizontal 
+	 centered line over the text to make it look strike-through.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Line Spacing</span> - Spacing between text-lines 
+	 in pixels.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Outline 
+	 - </span><span>Add an outline to the text.</span></p></li>
+	<li style="font-family: Arial, sans-serif;"><p style="font-family: Arial, sans-serif; 
+													 font-weight: normal;"><span 
+	 style="font-weight: bold;">Outline</span> - Add an outline to the 
+	 text. Set Yes for an outline, and No to leave it turned off.</p></li>
+	<li style="font-family: Arial, sans-serif; margin-left: -20px;"><ul 
+			 style="list-style: disc;">
+		<li style="font-family: Arial, sans-serif; margin-left: -20px;"><p 
+			 style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Color</span> - Controls the outline 
+		 color. Use the Red, Green, and Blue slider bars (0 to 255) to 
+		 specify the color.<br />
+		You can check the color you specified in the preview area on the 
+		 top side of the dialog box. Use Power to specify the color's opacity 
+		 (0 to 255).<br />
+		Setting Power to &quot;0&quot; makes the color completely transparent, 
+		 rendering it invisible on screen.</p></li>
+		<li style="font-family: Arial, sans-serif; margin-left: -20px;"><p 
+			 style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Size </span>- The thickness of the 
+		 outline in pixels.</p></li>
+	</ul></li>
+	<li style="font-family: Arial, sans-serif; margin-left: -20px;"><p 
+		 style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Shadow</span> - Add a shadow to the text.</p></li>
+	<li style="font-family: Arial, sans-serif;"><p style="font-family: Arial, sans-serif; 
+													 font-weight: normal;"><span 
+	 style="font-weight: bold;">Shadow</span> - Set Yes to turn shadows 
+	 on, No to leave it turned off.</p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li style="font-family: Arial, sans-serif;"><p style="font-family: Arial, sans-serif; 
+													 font-weight: bold;">Color 
+	 - <span style="font-weight: normal;">Controls the shadow color. Use 
+	 the Red, Green, and Blue slider bars (0 to 255) to specify the color.<br />
+	You can check the color you specified in the preview area on the top 
+	 side of the dialog box. Use Power to specify the color's opacity (0 
+	 to 255).<br />
+	Setting Power to &quot;0&quot; makes the color completely transparent, 
+	 rendering it invisible on screen.</span></p></li>
+	<li style="font-family: Arial, sans-serif;"><p style="font-family: Arial, sans-serif; 
+													 font-weight: bold;">Offset-X 
+	 <span style="font-weight: normal;">- The horizontal offset of the 
+	 shadow in pixels. The higher the value, the more the shadow is moved 
+	 to the right.</span></p></li>
+	<li style="font-family: Arial, sans-serif;"><p style="font-family: Arial, sans-serif; 
+													 font-weight: bold;">Offset-Y 
+	 <span style="font-weight: normal;">- The vertical offset of the shadow 
+	 in pixels. The higher the value, the more the shadow is moved to the 
+	 bottom.</span></p></li>
+	<li style="font-family: Arial, sans-serif; margin-left: -20px;"><p 
+		 style="font-family: Arial, sans-serif; font-weight: bold;">Padding<span 
+	 style="font-weight: normal;"> - Add padding to your text. That is 
+	 useful whenever you have larger shadows or outlines or any special 
+	 style which makes the shadow, outline or text cut-off.</span></p></li>
+	<li style="font-family: Arial, sans-serif;"><p style="font-family: Arial, sans-serif; 
+													 font-weight: bold;">Left 
+	 <span style="font-weight: normal;">- The left-side padding in pixels.</span></p></li>
+	<li style="font-family: Arial, sans-serif;"><p style="font-family: Arial, sans-serif; 
+													 font-weight: bold;">Top<span 
+	 style="font-weight: normal;"> - The top-side padding in pixels.</span></p></li>
+	<li style="font-family: Arial, sans-serif;"><p style="font-family: Arial, sans-serif; 
+													 font-weight: bold;">Right 
+	 <span style="font-weight: normal;">- The right-side padding in pixels.</span></p></li>
+	<li style="font-family: Arial, sans-serif;"><p style="font-family: Arial, sans-serif; 
+													 font-weight: bold;"><span>Bottom 
+	 </span><span style="font-weight: normal;">- The bottom-size padding 
+	 in pixels.</span></p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p>
+<ol style="list-style: disc;">
+	<li style="list-style: none; display: inline; margin-left: -20px;"><p 
+		 style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p>
+	<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p></li>
+</ol>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Move_Text_Along_Path" id="Move_Text_Along_Path"></a>Move 
+ Text Along Path</p>
+<p class="MsoNormal" style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-family: Arial, sans-serif; font-weight: normal;">Allows 
+ you to create custom path of movement through the use of points and curves 
+ to move the text.</span></p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Number</span> 
+	 - The text's index (ID) that you want to move.</p></li>
+</ul>
+<div>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Path</span> 
+	 - Opens up a path editor that allows you to define the path via curves. 
+	 You can press right click to delete a motion point or click at a free 
+	 area to add a new motion point.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">The S circle</span> (<img src="circ1.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />) 
+	 is the start point of the motion.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">The green circle</span> (<img src="circ2.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />) is a point in the motion 
+	 that allows you to have a more dynamic motion.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">The yellow circle</span> (<img src="circ3.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />) adjusts the motion curve. 
+	 If you press a green circle (<img src="circ2.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />), you can adjust 
+	 the motion for that path as well.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">The E circle</span> (<img src="circ4.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />) 
+	 is the end point of the motion.</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><img src="path.jpg" alt="" style=" border:none; width:100%; max-width:883px;" border="0" /></p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<ul style="list-style: disc;">
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Mirror Vertical -</span> &#160;Flips the 
+	 curve vertically.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Mirror Horizontal</span> - &#160;Flips 
+	 the curve horizontally.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Rotate 90*</span> - &#160;Rotates the curve 
+	 at 90 degrees.</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Effects</span> - &#160;Allows you to set 
+	 sound effects at timed intervals while the background moves along 
+	 the path.</p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Loop</span> 
+	 - Allows you to repeat the path for the extent of its duration.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">None</span> - &#160;Turns the loop off.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Normal</span> - &#160;Loops the path from 
+	 the end point.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Reversed</span> - &#160;Loops the path 
+	 in the opposite direction from the end point.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Duration</span> 
+	 - The time the motion has to finish in milliseconds.</p></li>
+	<li style="font-weight: bold; margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+															 font-weight: normal;"><span 
+	 style="font-weight: bold;">Wait/Continue</span> - Setting the command 
+	 to wait means that the scene will wait for the motion to end before 
+	 it loads the next command.</p></li>
+</ul>
+</div>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Refresh_Text" id="Refresh_Text"></a>Refresh 
+ Text</p>
+<p class="MsoNormal" style="font-family: Arial, sans-serif; font-weight: normal;">Updates 
+ a text displayed on the screen. For Example: If your text displays a value 
+ of a variable using a text-code, you need to call this</p>
+<p class="MsoNormal" style="font-family: Arial, sans-serif; font-weight: normal;">command 
+ when ever the variable has been changed to recalculate the text. This 
+ command can be time-consuming if over-used since it is re-rendering the 
+ entire text. That's especially the case on mobile devices / smartphones.</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Number</span> 
+	 - The text's index (ID) that you want to refresh.</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Text_Effect" id="Text_Effect"></a>Text 
+ Effect</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-family: Arial, sans-serif;">Applies 
+ an effect to a text..</span></p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Type</span> 
+	 - The effect that will be applied to the text.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Wobble</span> makes the movie move in irregular 
+	 and staggering motion. That only works if looping is disabled.</p></li>
+	<li><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Power</span> sets the intensity of 
+		 the wobble. It makes the wobble effect more visible the higher 
+		 it is.</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Speed</span> <span>sets the speed of 
+		 the wobble. The higher it is, the faster it is.</span></p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Orientation</span> - Sets the wobble 
+		 direction.</p></li>
+		<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+			<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+			 style="font-weight: bold;">Vertical</span> sets the wobble 
+			 direction to the vertical direction.</p></li>
+			<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+			 style="font-weight: bold;">Horizontal</span> sets the wobble 
+			 direction to the horizontal direction</p></li>
+			<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+			 style="font-weight: bold;">Both</span> sets the wobble direction 
+			 to both directions.</p></li>
+		</ul></li>
+		<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+											 font-weight: bold;">Duration 
+		 <span style="font-weight: normal;">sets how long, in milliseconds, 
+		 the effect will take place.</span></p></li>
+	</ul></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Blur</span> has no effect on texts.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Pixelate</span> makes the text appear pixelated/blocky.</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Width</span> sets the width of a single 
+		 block/pixel.</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Height</span> sets the height of a 
+		 single block/pixel.</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Duration</span> sets how much time, 
+		 in milliseconds, it takes until the pixelation reaches the specified 
+		 block/pixel-size. Use this to smoothly pixelate the text.</p></li>
+	</ul></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Easing</span> 
+	 applies tweening to the effect animation. More information can be 
+	 seen in <a href="Easing_Effects.htm">Easing Effects</a> page.</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Text_Defaults" id="Text_Defaults"></a>Text 
+ Defaults</p>
+<p class="MsoNormal" style="font-family: Arial, sans-serif; font-weight: normal;">Allows 
+ to override default values for text specific commands.</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Appear 
+	 Duration</span> is the duration of the show-animation in milliseconds.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Disappear 
+	 Duration</span> is the duration of the erase-animation in milliseconds.</p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">Appear Effects</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Easing</span> is the easing settings used 
+	 for the show-animation.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Animation</span> is the animation settings 
+	 for the show-animation.</p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Disappear 
+	 Effects</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Easing</span> is the easing settings used 
+	 for the erase-animation.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Animation</span> is the animation settings 
+	 for the erase-animation.</p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Display</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;"><span 
+	 style="font-family: Arial, sans-serif; font-weight: bold;">Z-Order</span> 
+	 <span style="font-weight: normal; font-family: Arial, sans-serif;">is 
+	 the display-order of a text.</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-family: Arial, sans-serif; font-weight: bold;">Motion 
+	 Blur</span> <span style="font-family: Arial, sans-serif; font-weight: normal;">- 
+	 Set Yes to apply motion blur, No to turn it off.</span></p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Spawn Time</span> - The amount of copies 
+		 created every two milliseconds. By default, the amount is 2.</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Dissolve Speed</span> - The rate at 
+		 which the spawned copies dissipate. Specifically, the opacity 
+		 of the copies are dropped every frame.</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Opacity</span> - The opacity the copied 
+		 image starts at the time it is spawned. By default, it is at 100.<br />
+		For example, if the dissolve speed is 2, the shadow/ghost/particle 
+		 is completely invisible/dead after 50 milliseconds.</p></li>
+	</ul></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+</body>
+</html>

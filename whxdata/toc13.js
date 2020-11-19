@@ -1,0 +1,1 @@
+gXMLBuffer ="<?xml version=\"1.0\" encoding=\"utf-8\" ?><data  src=\"toc11.js\"  name=\"How to Display a Bust Image\"><item name=\"Understanding Predefined Object Positions\" url=\"Understanding_Predefined_Position.htm\" /><item name=\"Displaying a Bust Image\" url=\"Understanding_Predefined_Objects.htm\" /></data>";

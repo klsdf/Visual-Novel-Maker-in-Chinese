@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Engine Getting Started</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "5.5.0_1";
+</script>
+ <meta name="topic-breadcrumbs" content="Script and Plugin Reference > Engine Documentation" />
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+ <p class="Topic_Heading"><span style="font-family: 'Book Antiqua', serif; font-size: 24pt;">Getting Started: Basic Engine</span></p>
+</div>
+<p>&#160;</p>
+<p><span class="Topic_Start">T</span>his topic is about Visual Novel Maker's Basic-Engine, not be confused with <a href="GameScript_Getting_Started.htm">Script Documentation</a> which is about the actual Visual Novel engine running on top of the Basic Engine.</p>
+<p>&#160;</p>
+<p>The Basic Engine or just called "Engine" provides all necessary functions for basic 2D graphic, video, audio and input processing.</p>
+<p style="font-weight: bold; font-size: 18pt; font-family: 'Book Antiqua', serif;">&#160;</p>
+<p class="Sub_Heading">Important Notes</p>
+<p>The implementation of the Basic Engine may be different depending on the platform or because of future updates and fixes. At time of writing, there is only one HTML5 implementation of the Basic Engine. However, there is no guarantee, maybe for future platforms we plan to support, another implementation of the Basic Engine will be implemented and used which just provides the same API.</p>
+<p>&#160;</p>
+<p>That is the main reason why the Basic Engine should not be edited and it is <span style="font-weight: bold;">not recommended</span> to patch, hack or replace/override certain classes or methods of it and also not to access any non-documented or private/protected attributes/methods/classes. Otherwise update-compatibility and cross-platform support may be lost in future. But it is up to you of course.</p>
+<p>&#160;</p>
+<p class="Sub_Heading"><span>Can I access DOM, jQuery, HTML5 APIs etc. in Scripts?</span></p>
+<p>First of all, it is up to you. But keep in mind that accessing DOM or jQuery are things only available if your game runs in an HTML5 environment, which is maybe not the case for certain platforms. However, at time of writing, DOM/jQuery/HTML5 is available on all platforms we support and we will try to stick with HTML5.</p>
+<p>&#160;</p>
+<p class="Sub_Heading"><span>Can I access OpenGL context and/or write my own Shaders?</span></p>
+<p>Yes you can, but there is no guarantee that OpenGL is used for rendering on each platform. However, at time of writing, OpenGL/WebGL is used on all supported platforms so you can access OpenGL context using gs.Graphics.context and you can write own shaders using GLSL. Check out the <span style="font-weight: bold;">Effects &gt; CircularDistortionEffect</span> example in <a href="GameScript_Getting_Started.htm">Script Editor</a> to learn more about how to implement your own GLSL shader effects.</p>
+<p>&#160;</p>
+<p>But just keep in mind, your game will maybe not run on platforms with no OpenGL or Shader support.</p>
+</body>
+</html>

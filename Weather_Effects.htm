@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Atmosphere and Effects</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "3.1.0_9";
+</script>
+ <meta name="topic-breadcrumbs" content="Beginner's Guide > The Basic Foundation" />
+</head>
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+ <p class="Topic_Heading">Atmosphere and Effects</p>
+</div>
+<p>&#160;</p>
+<p><span class="Topic_Start">F</span>or this tutorial, we're going to explore some commands that will help us establish atmosphere for our Visual Novel. Visual Novel Maker utilize videos and sometimes with alpha transparency to display effects such as weather. It primarily uses the <a href="Movie.htm#Show_Movie">Show Movie</a> command. You can find the following effects under your game's Movie folder.</p>
+<p>&#160;</p>
+<table style=" left:0px; top:126px; border-collapse:separate; width:100%; max-width:563px;" cellspacing="0" border="1">
+<col style="width: 50%;" />
+<col style="width: 50%;" />
+<tr>
+<td>
+<p style="text-align: center; font-weight: bold;">Type of Effect</p>
+</td>
+<td>
+<p style="text-align: center; font-weight: bold;">Filename</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; font-weight: normal;">Light Rain</p>
+</td>
+<td>
+<p style="text-align: center; font-weight: normal;">lrain.webmhd</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center;">Medium Rain</p>
+</td>
+<td>
+<p style="text-align: center;">rain1<span>.webmhd</span></p>
+<p style="text-align: center;">rain1-white<span>.webmhd</span></p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center;">Strong Rain</p>
+</td>
+<td>
+<p style="text-align: center;">rain2<span>.webmhd</span></p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center;">Snow</p>
+</td>
+<td>
+<p style="text-align: center;">snow<span>.webmhd</span></p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center;">Blizzard</p>
+</td>
+<td>
+<p style="text-align: center;">blizzard<span>.webmhd</span></p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center;">Sun Ray</p>
+</td>
+<td>
+<p style="text-align: center;">rays.webmhd</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center;">Fog</p>
+</td>
+<td>
+<p style="text-align: center;">fog.webmhd</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center;">Otome Sparkles</p>
+</td>
+<td>
+<p style="text-align: center;">Sparkles</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+<p class="Sub_Heading">Example #1: Making a Rainstorm</p>
+<p><script>
+	if(supports_mp4_video()) 
+		document.write("<video  controls=\"controls\"    style=\"border: none;; max-width: 100%\"><source src=\"bandicam_2017-02-14_23-48-33-331.mp4\" type=\"video/mp4\" />");
+</script><object type="video/quicktime" data="bandicam_2017-02-14_23-48-33-331.mp4" style="border: none;" height="300px" width="400px"><param name="autoplay" value="false" /><param name="autostart" value="false" /><param name="ShowControls" value="1" /><param name="controller" value="true" /></object><script>
+if(supports_mp4_video()) document.write("</video>");</script></p>
+<p style="text-align: center;">&#160;</p>
+<p>Here's how it was implemented:</p>
+<p><img src="weather-rainstorm.jpg" alt="" style=" border:none; width:100%; max-width:955px;" border="0" /></p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li>Add a <a href="Movie.htm#Show_Movie">Show Movie</a> commands. For more details on what each separate parts does, please see the link.</li>
+<li>Since this is a Rainstorm, we will use the Strong Rain (rain2) movie clip. I added a fog just for dramatic effect. It is not necessary.</li>
+<li>If the video files are the same size as your screen resolution, just leaving the position to Predefined -&gt; Top Left should be fine.</li>
+<li>The movie files have the addition (add) blend mode so they will blend in with the current scene. This is used especially when a movie file has a black background.</li>
+<li><a href="Audio_Playback.htm#Play_Music">Play Music</a> command is for the ambient music. I lowered the Volume to 51% just so it wouldn't be too overbearing.</li>
+<li><a href="Audio_Playback.htm#Play_Sound">Play Sound</a> is for the thunder sound effect. Unfortunately, I cannot find a sound effect that is free to use that is just the thunder alone. So it needed a bit of delay.</li>
+<li><a href="Basic.htm#Wait">Wait</a> and <a href="Screen.htm#Flash_Screen">Flash Screen</a> is to time the thunderclap.</li>
+</ul>
+<p>&#160;</p>
+<p>If you want a thunderclap to happen once every few seconds, you can use a <a href="Common_Events_Guide.htm">Common Event</a>.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Example #2: Sparkling Senpai</p>
+<p>Here's the scenario, Emma just saw Ace for the first time and it was love at first sight! What would be the natural reaction? In true <a href="https://en.wikipedia.org/wiki/ShÅjo_manga">Shoujo</a> fashion, sparkles of course! <span style="font-size: 8pt;">Flowers sold separately.</span></p>
+<p><script>
+	if(supports_mp4_video()) 
+		document.write("<video  controls=\"controls\"    style=\"border: none;; max-width: 100%\"><source src=\"SparklingSenpaiMute.mp4\" type=\"video/mp4\" />");
+</script><object type="video/quicktime" data="SparklingSenpaiMute.mp4" style="border: none;" height="300px" width="400px"><param name="autoplay" value="false" /><param name="autostart" value="false" /><param name="ShowControls" value="1" /><param name="controller" value="true" /></object><script>
+if(supports_mp4_video()) document.write("</video>");</script></p>
+<p>&#160;</p>
+<p>Here's how it was implemented:</p>
+<p><img src="atmosphere-sparkle.jpg" alt="" style=" border:none; width:100%; max-width:956px;" border="0" /></p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+<li>Add a <a href="Movie.htm#Show_Movie">Show Movie</a> commands. For more details on what each separate parts does, please see the link. The same as the first example's situation, Blend Mode to addition (add) since the movie file has a black background.</li>
+<li>I used a <a href="Movie.htm#Zoom_Movie">Zoom Movie</a> command since the video is smaller than my screen resolution. The position can be left at Predefined Top Left position thanks to this.</li>
+<li>I added <a href="Background.htm#Shake_Background">Shake Background</a> and <a href="Background.htm#Background_Effect">Background Effect</a> to show element of surprise and dizziness on Emma's part.</li>
+</ul>
+<p>&#160;</p>
+<div style="width: 100%; position: relative;" id="footer">
+ <p><a href="http://99sounds.org/free-sound-effects/">The Sound Effects and Music used are by 99Sounds</a>. They are under Royalty Free license and can be downloaded for free on their website.</p>
+</div>
+</body>
+</html>

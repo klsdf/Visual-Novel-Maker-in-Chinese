@@ -1,0 +1,865 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Message</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.3.1.0_9";
+</script>
+ <meta name="topic-breadcrumbs" content="Exploring the Editor > Scene Editor > Scene Content Commands" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">Message</p>
+</div>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-family: 'Book Antiqua', serif; 
+												 font-weight: bold; font-size: 18pt;">T</span>he 
+ Message commands allows you to input dialogue-related events to Scenes.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Message_Box_Visibility" id="Message_Box_Visibility"></a>Message 
+ Box Visibility</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">The Message 
+ box is where all dialogue from a message box is displayed. However, the 
+ message box is independent from the message text. So even if the message 
+ box is hidden, the message text will be still visible. Use [Message Visibility] 
+ command to show/hide the actual message text.</p>
+<ul style="list-style: disc;">
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">ID</span> - The ID of the message box UI 
+	 object to show. By default this is &quot;messageBox&quot; unless you 
+	 define additional message boxes in Layouts &gt; Layout_Game in <a 
+	 href="GameScript_Getting_Started.htm">Script Editor.</a></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Visible</span> - Changes the visibility 
+	 of the message box. If yes, it will be visible. If no, it will be 
+	 hidden.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Duration</span> - The duration of the message 
+	 box visibility in milliseconds.</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Continue</span> will make the scene 
+		 immediately continue.</p></li>
+		<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+		 style="font-weight: bold;">Wait</span> will make the scene wait 
+		 until the message box visibility animation is done.</p></li>
+	</ul></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Effects</span> - These options affect how 
+	 the Message Box will appear.</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: bold;">Easing 
+		 <span style="font-weight: normal;">sets the tween movement of 
+		 the message box. More information can be seen in <a href="Easing_Effects.htm">Easing 
+		 Effects</a> page.</span></p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Animation</span> sets the movement 
+		 of the message box.</p></li>
+		<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+			<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+			 style="font-weight: bold;">Movement</span> is the origin point 
+			 of the message box where it will appear from Left/Top/Right/Bottom.</p></li>
+			<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+			 style="font-weight: bold;">Blending</span> allows you to fade 
+			 in/fade out the message box. &#160;This has <span style="font-weight: bold;">no 
+			 effect</span> for the default implementation of the message 
+			 box.</p></li>
+			<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+												 font-weight: bold;">Masking 
+			 <span style="font-weight: normal;">allows you to mask the 
+			 message box to a Masks file. This has</span> no effect <span 
+			 style="font-weight: normal;">for the default implementation 
+			 of the message box.</span></p></li>
+			<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+				<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+													 font-weight: bold;">Vague 
+				 <span style="font-weight: normal;">the smoothness of the 
+				 mask edges.</span></p></li>
+			</ul>
+			<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p></li>
+		</ul></li>
+	</ul></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Message_Visibility" id="Message_Visibility"></a>Message 
+ Visibility</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">Controls 
+ visibility of the actual message/dialogue. However, the message text independent 
+ from the message box. So even if the message text is hidden, the message 
+ box will be still visible. Use [Message Box Visibility] command to show/hide 
+ the message box.</p>
+<ul style="list-style: disc;">
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Visible</span> - Changes the visibility 
+	 of the message text. If yes, it will be visible. If no, it will be 
+	 hidden.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Duration</span> - The duration of the message 
+	 text visibility in milliseconds.</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Continue</span> will make the scene 
+		 immediately continue.</p></li>
+		<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+		 style="font-weight: bold;">Wait</span> will make the scene wait 
+		 until the message text visibility animation is done.</p></li>
+	</ul></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Effects</span> - These options affect how 
+	 the Message Text will appear.</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: bold;">Easing 
+		 <span style="font-weight: normal;">sets the tween movement of 
+		 the message text. More information can be seen in <a href="Easing_Effects.htm">Easing 
+		 Effects</a> page.</span></p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Animation</span> sets the movement 
+		 of the message text.</p></li>
+		<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+			<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+			 style="font-weight: bold;">Movement</span> is the origin point 
+			 of the message text where it will appear from Left/Top/Right/Bottom.</p></li>
+			<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+			 style="font-weight: bold;">Blending</span> allows you to fade 
+			 in/fade out the message text.</p></li>
+			<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+												 font-weight: bold;">Masking 
+			 <span style="font-weight: normal;">allows you to mask the 
+			 message text to a Masks file.</span></p></li>
+			<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+				<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+													 font-weight: bold;">Vague 
+				 <span style="font-weight: normal;">the smoothness of the 
+				 mask edges.</span></p></li>
+			</ul>
+			<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p></li>
+		</ul></li>
+	</ul></li>
+</ul>
+<p class="Sub_Heading"><a name="Message_Fading" id="Message_Fading"></a>Message 
+ Fading</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">This command 
+ affects how fast messages are erased. <span style="font-family: Arial, sans-serif; 
+											 font-weight: normal;">This 
+ doesn't work if Auto Erase in [Message Settings] is turned off.</span></p>
+<ul style="list-style: disc;">
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Duration</span> - The speed of the message 
+	 end in milliseconds.</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Effects</span> - These options affect how 
+	 the Message will fade out.</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Easing</span> sets the tween movement 
+		 of the message box. More information can be seen in <a href="Easing_Effects.htm">Easing 
+		 Effects</a> page.</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Animation</span> sets the movement 
+		 of the message box.</p></li>
+		<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+			<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+			 style="font-weight: bold;">Movement</span> is the origin point 
+			 of the message box where it will appear from Left/Top/Right/Bottom.</p></li>
+			<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+			 style="font-weight: bold;">Blending</span> allows you to fade 
+			 in/fade out the message box.</p></li>
+			<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+												 font-weight: bold;">Masking 
+			 <span style="font-weight: normal;">allows you to mask the 
+			 message box to a Masks file.</span></p></li>
+			<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+				<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+													 font-weight: bold;">Vague 
+				 <span style="font-weight: normal;">the smoothness of the 
+				 mask edges.</span></p></li>
+			</ul></li>
+		</ul></li>
+	</ul></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p>
+<p class="Sub_Heading"><a name="Message_Settings" id="Message_Settings"></a>Message 
+ Settings</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">This command 
+ changes the default options of the Message Box display.</p>
+<ul style="list-style: disc;">
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Auto Erase</span> - By default, it is turned 
+	 ON. If it is turned off, the text from the previous message box will 
+	 not be cleared out. But you can use [Clear Message] command to clear 
+	 the current message text manually.<br />
+	<img src="autoerase.jpg" alt="" style=" border:none; width:100%; max-width:756px;" border="0" /></p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Wait at End</span> - By default it is ON. 
+	 It waits for user input before displaying the next set of messages.<br />
+	If it's turned off, will ignore input and display the next set.</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Backlog</span> - Indicates if messages 
+	 are added to the backlog.</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Font</span> - Change the font displayed. 
+	 The font must be in .WOFF format or a system-installed font.</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Size</span> - The size of the font.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Style</span> - Sets the message text style.</p></li>
+	<ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Color </span>- The color of the text.</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Bold</span> - Makes the text bolder.</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Italic </span>- Makes the text oblique.</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Small Caps</span>&#160;- Makes lower-case 
+		 letters appear as small upper-case/capitalized letters.</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Underline</span> - Draws a horizontal 
+		 line under the text to make it look underlined.</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Strikethrough</span> - Draws a horizontal 
+		 centered line over the text to make it look strike-through.</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Line Height </span>&#160;- The minimum 
+		 height of a single message text line in pixels. You can specify 
+		 0 to use the automatically calculated height of the text.</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Line Spacing</span> - The spacing between 
+		 message text lines in pixels.</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Line Padding</span>&#160;- The left 
+		 and right padding of a single message text line in pixels.</p></li>
+	</ul>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Outline</span> - Add an outline to the 
+	 message text.</p></li>
+	<ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Outline </span>- Add an outline to 
+		 the font. Set Yes for an outline, and No to leave it turned off.</p></li>
+	</ul>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li style="font-family: Arial, sans-serif;"><p style="font-family: Arial, sans-serif; 
+														 font-weight: normal;"><span 
+		 style="font-weight: bold;">Color</span> - Controls the outline 
+		 color. Use the Red, Green, and Blue slider bars (0 to 255) to 
+		 specify the color to flash.<br />
+		You can check the color you specified in the preview area on the 
+		 top side of the dialog box. Use Power to specify the color's opacity 
+		 (0 to 255).Setting Power to &quot;0&quot; makes the color completely 
+		 transparent, rendering it invisible on screen.</p></li>
+		<li style="font-family: Arial, sans-serif;"><p style="font-family: Arial, sans-serif; 
+														 font-weight: normal;"><span 
+		 style="font-weight: bold;">Size</span><span> - The thickness of 
+		 the outline in pixels.</span></p></li>
+	</ul></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Shadow</span><span> - Add a shadow to the 
+	 message text.</span></p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li style="font-family: Arial, sans-serif;"><p style="font-family: Arial, sans-serif; 
+														 font-weight: normal;"><span 
+		 style="font-weight: bold;">Shadow</span> - Set Yes to turn shadows 
+		 on, No to leave it turned off.</p></li>
+		<li style="list-style: none; display: inline; margin-left: -20px;"><ul 
+				 style="list-style: disc;">
+			<li style="font-family: Arial, sans-serif;"><p style="font-family: Arial, sans-serif; 
+															 font-weight: bold;">Color 
+			 - <span style="font-weight: normal;">Controls the shadow color. 
+			 Use the Red, Green, and Blue slider bars (0 to 255) to specify 
+			 the color to flash.<br />
+			You can check the color you specified in the preview area on 
+			 the top side of the dialog box. Use Power to specify the color's 
+			 opacity (0 to 255).<br />
+			Setting Power to &quot;0&quot; makes the color completely transparent, 
+			 rendering it invisible on screen.</span></p></li>
+			<li style="font-family: Arial, sans-serif;"><p style="font-family: Arial, sans-serif; 
+															 font-weight: bold;">Offset-X 
+			 <span style="font-weight: normal;">- The horizontal offset 
+			 of the shadow in pixels. The higher the value, the more the 
+			 shadow is moved to the right.</span></p></li>
+			<li style="font-family: Arial, sans-serif;"><p style="font-family: Arial, sans-serif; 
+															 font-weight: bold;"><span>Offset-Y</span><span 
+			 style="font-weight: normal;"> - The vertical offset of the 
+			 shadow in pixels. The higher the value, the more the shadow 
+			 is moved to the bottom.</span></p></li>
+		</ul>
+		<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p>
+		<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p></li>
+	</ul></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p>
+<p class="Sub_Heading"><a name="Show_Message" id="Show_Message"></a>Show 
+ Message</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">This command 
+ displays text in Adventure (ADV) game style. If the arrow (<img src="command-expander-arrow.png" alt="" style=" border:none; width:100%; max-width:13px;" border="0" />) is down, you can view 
+ and input the text to display.</p>
+<ul style="list-style: disc;">
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Character</span> - The character you want 
+	 to be speaking in the scene.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Voice</span>&#160;- The voice file to be 
+	 played for the message.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Partial</span> - If enabled, it will allow 
+	 other Scene commands to be activated while the message is being displayed.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Expression Change</span> - The character's 
+	 expression for the message.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">Duration 
+	 <span style="font-weight: normal;">- The duration of the expression-change 
+	 in milliseconds.</span></p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p>
+<p class="Sub_Heading"><a name="Add_Choice" id="Add_Choice"></a>Add Choice</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">This command 
+ adds a choice option to the scene.</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">All added 
+ choices are not displayed on screen until [Show Choices] command is called. 
+ So it can be combined with the [<a href="Basic.htm#Condition">Condition</a>] 
+ command to create a dynamic choice selection.</p>
+<ul style="list-style: disc;">
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Description</span> - The content of the 
+	 choice.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">On Select</span> - Defined what should 
+	 happen if the choice is selected/clicked by the user.</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Jump To</span> - When selected, go 
+		 to the Label that is specified.</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Call Common Even</span>t - When selected, 
+		 call the specified common event.</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Bind To</span> - When selected, sets 
+		 the specified switch to ON.</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Call Scene</span> - When selected, 
+		 calls the specified (sub)-scene. See [Call Scene] command.</p></li>
+	</ul></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Position</span> - The position of the choice.</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;">Auto 
+		 is the default option for choice position. It is always displayed 
+		 centered and from top to bottom.</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;">Direct 
+		 allows the user to position it freely in the screen.</p></li>
+	</ul></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Default</span> - If [Choice Timer] is active 
+	 or the game is in skip-mode, the choice that will be selected is the 
+	 one with this command enabled.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Enabled</span> - Indicates if the choice 
+	 is enabled. A disabled choice is still displayed but cannot be selected 
+	 by the user.</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Show_Choices" id="Show_Choices"></a>Show 
+ Choices</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">This command 
+ displays all the choices you set.</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading">.<a name="ShowNVLMessage" id="ShowNVLMessage"></a><span 
+	 style="font-family: 'Book Antiqua', serif; font-size: 18pt; font-weight: bold;">Show 
+ NVL Message</span></p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">This command 
+ displays text in Novel (NVL) game style. If the arrow (<img src="command-expander-arrow.png" alt="" style=" border:none; width:100%; max-width:13px;" border="0" />) 
+ is down, you can view and input the text to display.</p>
+<ul style="list-style: disc;">
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Character</span> - The character you want 
+	 to be speaking in the scene.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Voice</span>&#160;- The voice file to be 
+	 played for the message.</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Close_NVL_Page" id="Close_NVL_Page"></a>Close 
+ NVL Page</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">Closes 
+ the NVL Message display.</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Clear_Message" id="Clear_Message"></a>Clear 
+ Message</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">This command 
+ clears all messaged displayed. This affects both ADV and NVL mode.</p>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p>
+<p class="Sub_Heading"><a name="Input_Number" id="Input_Number"></a>Input 
+ Number</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">Displays 
+ a window for entering a value. It then assigns the value that the player 
+ entered to a variable.</p>
+<ul style="list-style: disc;">
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Digits</span> - The amount of digits to 
+	 be displayed and/or inputted by the player. The maximum is 8 digits.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Store in Variable</span> - Stores the player 
+	 defined input to a number variable.</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Input_Text" id="Input_Text"></a>Input Text</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">Displays 
+ a window for entering a value. It then assigns the value that the player 
+ entered to a variable. You can change the available letters in Database 
+ &gt; System &gt; Text-Input Letter-Set.</p>
+<ul style="list-style: disc;">
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Letters</span> - The amount of letters 
+	 to be displayed and/or inputted by the player. The maximum is 12 letters.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Store in Variable</span> - Stores the player 
+	 defined input to a text variable.</p></li>
+</ul>
+<p style="font-weight: bold; font-size: 18pt; font-family: 'Book Antiqua', serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Create_Message_Area" id="Create_Message_Area"></a>Create 
+ Message Area</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">Creates 
+ additional area(s) where messages can be displayed. If more than one message 
+ box is needed to be displayed at the same time, this command can be used 
+ to do so. Such examples are comic book bubbles.</p>
+<ul style="list-style: disc;">
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Number</span> - The message area's index 
+	 (ID). This allows you to determine which area to manipulate.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Position</span> - The message area's position 
+	 &amp; size on screen.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Template</span> - The UI template used 
+	 for this area. The default is <span style="font-weight: bold;">ui.CustomGameMessage</span> 
+	 which can be found in Layouts/Templates/Template_MessageBox in Script 
+	 Editor.</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">See [<a 
+	 href="#Set_Message_Area">Set Message Target</a>] to check how to display 
+ messages in the message area.</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Set_Message_Area" id="Set_Message_Area"></a>Set 
+ Message Area</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">Changes 
+ the position and size of a message area.</p>
+<ul style="list-style: disc;">
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Number</span>- The message area's index 
+	 (ID). This allows you to determine which area to manipulate.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Position</span> - The message area's position 
+	 &amp; size on screen.</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Set_Message_Target" id="Set_Message_Target"></a>Set 
+ Message Target</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">This allows 
+ you to set the target area for the message commands (ex. <a href="#Show_Message">Show 
+ Message</a>) that follow it. &#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">You can 
+ display the contents through an area made with <span style="font-family: Arial, sans-serif; 
+														 font-weight: normal;">[<a 
+	 href="#Create_Message_Area">Create Message Area</a>] command or a 
+ layout-based message area that can be found in the In-Game UI System.</span></p>
+<ul style="list-style: disc;">
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Type</span> - The target type.</p></li>
+	<li><p style="font-family: Arial, sans-serif; margin-left: 40px;"><span 
+	 style="font-weight: bold;">Area</span> - Display the text in an area 
+	 made with the [<a href="#Create_Message_Area">Create Message Area</a>] 
+	 command.</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; margin-left: 40px;"><span 
+		 style="font-weight: bold;">Number</span> - The message area's 
+		 index (ID) that you want to manipulate.</p></li>
+	</ul></li>
+	<li><p style="margin-left: 40px; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">Layout-Based</span> - A message area configured 
+	 through the In-Game UI System.</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; margin-left: 40px;"><span 
+		 style="font-family: Arial, sans-serif; font-weight: bold;">ID</span> 
+		 <span style="font-family: Arial, sans-serif; font-weight: normal;">- 
+		 The ID of an</span> <span style="font-family: Arial, sans-serif; 
+									 font-weight: bold;">ui.Message</span> 
+		 <span style="font-family: Arial, sans-serif; font-weight: normal;">object 
+		 configured through the In Game UI System.</span></p></li>
+	</ul></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Clear</span>- Indicates if the new target 
+	 message area should be cleared.</p></li>
+</ul>
+<ol style="list-style: disc;">
+	<li style="list-style: none; display: inline;">&#160;</li>
+</ol>
+<p class="Sub_Heading"><a name="Erase_Message_Area" id="Erase_Message_Area"></a>Erase 
+ Message Area</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">Erase a 
+ message area. After that the message area can no longer be used an all 
+ message commands pointing to that area are automatically forwarded to 
+ the default message area.</p>
+<ul style="list-style: disc;">
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Number</span>- The index (ID) of the message 
+	 area you want to erase.</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Choice_Timer" id="Choice_Timer"></a>Choice 
+ Timer</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">Put a time 
+ limit on player choices. The choice with the Default as yes will be automatically 
+ picked if the player runs out of time.</p>
+<ul style="list-style: disc;">
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Min</span> means minutes.</p></li>
+	<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Sec</span> 
+	 means seconds.</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Backlog_Visibility" id="Backlog_Visibility"></a>Backlog 
+ Visibility</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">This command 
+ calls and affects the log window.</p>
+<ul style="list-style: disc;">
+	<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Visible</span> 
+	 - If enabled, it will display the Log Window.</p></li>
+	<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Background 
+	 Visible</span> - If disabled, it will hide the Log Window background 
+	 image. So you can use a custom background image.</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><span style="font-weight: bold; font-size: 18pt; 
+							 font-family: 'Book Antiqua', serif;"><a name="Message_Box_Defaults" 
+	 id="Message_Box_Defaults"></a>Message Box Defaults</span></p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">This command 
+ changes how the default movement of the Message Box works</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Appear 
+	 Duration</span> is the duration of the join-animation in milliseconds.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Disappear 
+	 Duration</span> is the duration of the exit-animation in milliseconds.</p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Appear 
+	 Effects</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Appear Effects - Easing</span> is the easing 
+	 settings used for the show-animation.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Appear Effects - Animation</span> is the 
+	 animation settings for the show-animation.</p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Disappear 
+	 Effects</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Disappear Effects - Easing</span> is the 
+	 easing settings used for the hide-animation.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Disappear Effects - Animation</span> is 
+	 the animation settings for the hide-animation.</p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Easing</span> 
+	 sets the tween movement of the message box. More information can be 
+	 seen in <a href="Easing_Effects.htm">Easing Effects</a> page.</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">Animation</span> 
+	 sets the movement of the message box.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Movement</span> is the origin point of 
+	 the message box where it will appear from Left/Top/Right/Bottom.</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">Blending</span> allows you to fade in/fade 
+	 out the message box.</p></li>
+	<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">Masking <span 
+	 style="font-weight: normal;">allows you to mask the message box to 
+	 a Masks file.</span></p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+											 font-weight: bold;">Vague 
+		 <span style="font-weight: normal;">the smoothness of the mask 
+		 edges.</span></p></li>
+	</ul></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p>
+<p class="Sub_Heading"><a name="Text_Codes" id="Text_Codes"></a>Text Codes</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">Text codes 
+ are message commands that applies a function during the message text processing 
+ like changing the style of the text or showing the content of a variable 
+ in the message. Elements in &lt;name&gt; are optional.</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<table style=" border-collapse:separate; width:100%; max-width:62.219%;" cellspacing="0" border="1">
+	<col style="width: 37.992%;" />
+	<col style="width: 62.008%;" />
+	<tr>
+		<td><p style="text-align: center;"><span style="font-weight: bold;">Text 
+		 Code</span></p></td>
+		<td><p style="text-align: center;"><span style="font-weight: bold;">Function</span></p></td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{N:index}</p></td>
+		<td>Displays the Character Name.</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{C:index}</p></td>
+		<td>Displays the text based on the Color code specified.</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{SP:index}</p></td>
+		<td>Plays a Sound effect during message.</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{SZ:size}</p></td>
+		<td>Changes text size.</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{Y:I}</p></td>
+		<td>Applies Italic style to text.</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{Y:B}</p></td>
+		<td>Applies Bold style to text.</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{Y:C}</p></td>
+		<td>Applies small-caps &#160;to text.</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{Y:U}</p></td>
+		<td>Applies underline style to text</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{Y:S}</p></td>
+		<td>Applies strike-through style to text</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{Y:N}</p></td>
+		<td>Erase all styles applied in the message.</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{GN:&lt;group&gt;.index/name}</p></td>
+		<td>Displays the value of Global Number Variable.</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{GT:&lt;group&gt;.index/name}</p></td>
+		<td>Displays the value of Global Text Variable.</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{GS:&lt;group&gt;.index/name}</p></td>
+		<td>Displays the value of Global Switch.</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{GL:&lt;group&gt;.index/name,elm}</p></td>
+		<td>Displays the value of Global List. 
+		<br />For example, {GL:1,0} &lt;- Global List Variable 
+		 1, Element at Index 0.</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{LN:index}</p></td>
+		<td>Displays the value of Local Number Variable.</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{LT:index}</p></td>
+		<td>Displays the value of Local Text Variable.</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{LS:index}</p></td>
+		<td>Displays the value of Local Switch.</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{LL:index,elm}</p></td>
+		<td>Displays the value of Local List. 
+		<br />For example, {LL:1,0} &lt;- Local List Variable 
+		 1, Element at Index 0.</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{PN:&lt;group&gt;.index/name}</p></td>
+		<td>Displays the value of Persistent Number Variable.</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{PT:&lt;group&gt;.index/name}</p></td>
+		<td>Displays the value of Persistent Text Variable.</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{PS:&lt;group&gt;.index/name}</p></td>
+		<td>Displays the value of Persistent Switch.</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{PL:&lt;group&gt;.index/name,elm}</p></td>
+		<td>Displays the value of Persistent List. 
+		<br />For example, {PL:1,0} &lt;- Persistent List Variable 
+		 1, Element at Index 0.</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{S:speed}</p></td>
+		<td>Adjust the message speed based on the value set. By default, 
+		 you can put the following values: 
+		<br />0 - Slowest 
+		<br />1 - Slow 
+		<br />2 - Normal 
+		<br />3 - Fast 
+		<br />4 - Fastest 
+		<br />5 - Instant 
+		<br />&#160; 
+		<br />You can also use negative values to make the 
+		 text even more slow.</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{W:ms}</p></td>
+		<td>Wait for a few milliseconds before the rest of the message 
+		 continues.</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{WE:Y}</p></td>
+		<td>Wait at End YES.</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{WE:N}</p></td>
+		<td>Wait at End NO.</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{W:A}</p></td>
+		<td>Wait for input like a key or button press.</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{DI:Y/N}</p></td>
+		<td>Displays a text immediately.<br />
+		Y = Draw Immediately, N = Stop Draw Immediately.</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{A:index}</p></td>
+		<td>Display an animation inside the message box.</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{LK:index}</p></td>
+		<td>Displays the text as a clickable link and calls the common 
+		 event with the specified index or name.</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{LK:E}</p></td>
+		<td>Ends clickable link formatting.</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{E:index/name}</p></td>
+		<td>Change the expression of the character based on the Show Message's 
+		 set character.</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{M:name}</p></td>
+		<td>Executes the user defined command in <a href="System.htm#Text_Macro">Text 
+		 Macro</a>.</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{RT:rb/rt/id}</p></td>
+		<td>Displays a ruby-text. 
+		<br />&#160;&#160; 
+		<br />The &quot;rb&quot; value is the ruby-base text. 
+		 
+		<br />The &quot;rt&quot; is the ruby-text placed above 
+		 the ruby-base text. 
+		<br />The &quot;id&quot; is optional and specifies 
+		 the index of the style to use for the ruby-text. By default, the 
+		 style &quot;rubyText&quot; defined in script &quot;Style_Default&quot; 
+		 is used. If the id is set to a value, that value is added as a 
+		 suffix to the style-name like &quot;rubyText-2&quot; if the id 
+		 is 2.</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{SLK:index/name,id}</p></td>
+		<td>Displays the text as a styleable clickable link and calls the 
+		 common event with the specified index or name. Unlink LK, it allows 
+		 you to apply a custom style to the link defined in a script. 
+		<br />&#160;&#160; 
+		<br />The id is optional and specifies the index of 
+		 the style to use. By default, the style &quot;hyperlink&quot; 
+		 defined in script &quot;Style_Default&quot; is used. If the id 
+		 is set to a value, that value is added as suffix to the style-name 
+		 like &quot;hyperlink-2&quot; if the id is 2. 
+		<br />&#160;&#160; 
+		<br />However, a styleable link costs more performance 
+		 than a regular link. Also, it is not possible to add any other 
+		 style text-codes to a styleable link since the style comes from 
+		 a style-definition in script.</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{SLK:E}</p></td>
+		<td>Ends styleable link formatting.</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{CR:name}</p></td>
+		<td>Changes the current speaking character.</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{P}</p></td>
+		<td>Erases the current message if Auto Erase is ON &#160;and starts 
+		 a new paragraph.</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{CP}</p></td>
+		<td>Erases the current message independent from Auto Erase and 
+		 starts a new message. This is useful in NVL mode.</td>
+	</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>For iOS</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.5.0_2";
+</script>
+ <meta name="topic-breadcrumbs" content="Exploring the Editor > Testing & Deployment" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<p class="Topic_Heading">For iOS</p>
+<p>&#160;</p>
+<p><span class="Topic_Start">T</span>esting &amp; Deployment for iOS requires 
+ a few preparation steps to work properly due to the much higher security 
+ standards of the iOS platform. This topic will guide you through the necessary 
+ steps and tries to make everything as easy as possible for you. If you 
+ get stuck or have any question, please take a look at our support forums.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Requirements</p>
+<p>&#160;</p>
+<p>To test and/or deploy your game on iOS, you have to meet the following 
+ requirements:</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li>An Apple Developer Account + iOS Developer Membership.</li>
+	<li>A computer with macOS.</li>
+	<li>An iOS Device such as an iPhone or iPad</li>
+	<li>Xcode Development Tools</li>
+	<li>Node.js</li>
+	<li>Cordova</li>
+</ul>
+<p>&#160;</p>
+<p>Let's go through them step-by-step.</p>
+<p>&#160;</p>
+<p class="SubSubHeading">Become an Apple Developer for iOS</p>
+<p>&#160;</p>
+<p>Becoming an Apple Developer for iOS is very easy. All what you have 
+ todo is to visit the Apple Developer website, which is <a href="http://developer.apple.com">http://developer.apple.com</a> 
+ and register an account or just use your already existing Apple ID.</p>
+<p>&#160;</p>
+<p>After you logged in, follow the website and join the iOS Developer Program 
+ which will cost you 99 USD per year. Within the next step, you have to 
+ create a provisioning profile, register your device as a developer device 
+ and download &amp; install the provisioning profile on your computer. 
+ Just follow the guidelines on the developer website to set everything 
+ up.</p>
+<p>&#160;</p>
+<p class="SubSubHeading">Install Xcode Development Tools</p>
+<p>&#160;</p>
+<p>You need the Xcode Development Tools to build and deploy your game for 
+ iOS. Just login into the Apple Developer Portal and check out the downloads 
+ section which usually is: <a href="https://developer.apple.com/download/more">https://developer.apple.com/download/more/</a></p>
+<p>&#160;</p>
+<p class="SubSubHeading">Install Node.js</p>
+<p>&#160;</p>
+<p>You need Node.js to run Cordova which is needed to package your game 
+ correctly for iOS deployment. You can download Node.js from <a href="http://nodejs.org">http://nodejs.org</a></p>
+<p>&#160;</p>
+<p class="SubSubHeading">Install Cordova</p>
+<p>&#160;</p>
+<p>You need Cordova to package your game correctly for iOS deployment. 
+ To install Cordova, just open a Terminal. If you never worked with a Terminal 
+ on macOS before, don't worry, you can easily find it if you just type 
+ &quot;Terminal&quot; in spot-light search or launch-pad.</p>
+<p>&#160;</p>
+<p>Once the terminal has been opened, you will see a black window with 
+ a blinking cursor where you can type in some text (commands). Just type 
+ the following command:</p>
+<p>&#160;</p>
+<p style="font-style: italic;">npm install -g cordova</p>
+<p>&#160;</p>
+<p>and press the return-key. After that, a lot of text will be displayed 
+ on terminal window. Just wait until everything is done. Then type:</p>
+<p>&#160;</p>
+<p style="font-style: italic;">cordova --version</p>
+<p>&#160;</p>
+<p>and press return-key. If you see the cordova version number, the installation 
+ was successful. If you get an error, something went wrong. In that case, 
+ take a look at the text/message on the terminal window and take a look 
+ in our forums for help.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Prepare your VN Maker Project for iOS Deployment</p>
+<p>&#160;</p>
+<p>Since everything has been setup now, you can start to build your game 
+ for iOS! Make sure your project has a <span style="font-weight: bold;">game 
+ title</span> in Database &gt; System.</p>
+<p>&#160;</p>
+<p class="SubSubHeading">Audio &amp; Video Assets</p>
+<p>&#160;</p>
+<p>At the time of writing, iOS only supports the .m4a/.mp4/.mp3/.aac/.wav 
+ audio formats and .mp4 video formats. If you have used another format 
+ such as .ogg or .webm, make sure that you convert all your audio and video 
+ files into the necessary format. VN Maker allows you to import the same 
+ file multiple times with a different format and then automatically chooses 
+ the right format at runtime which is useful for HTML5 Webbrowser Games. 
+ However, if you plan to ship your game offline over the App Store, you 
+ should delete any .ogg or .webm files to reduce file size.</p>
+<p>&#160;</p>
+<p>For video files, due to technical restrictions the video-playback is 
+ only supported for iOS 10+.</p>
+<p>&#160;</p>
+<p class="SubSubHeading">Project Preferences</p>
+<p>&#160;</p>
+<p>The last step &#160;you need to do is to open the <a href="Project_Preferences.htm">Project 
+ Preferences</a> and navigate to the iOS Deployment tab.</p>
+<p><img src="iOSDeploy.png" alt="" style=" border:none; width:100%; max-width:512px;" border="0" /></p>
+<p>(The displayed provisioning profile and development team are not real 
+ and random just to give you an idea what kind of data you have to input 
+ here)</p>
+<p>&#160;</p>
+<p>To get the provisioning profile, the easiest way is to open your downloaded 
+ provisioning profile file (.mobileprovision) with a text editor such as 
+ TextEdit and then look for UUID and a long hex-number such as displayed 
+ on the screenshot aboive.</p>
+<p>&#160;</p>
+<p>You can find the Development Team Identifier in the provisioning profile 
+ file as well. Just look for com.apple.developer.team-identifier. Also, 
+ make sure to enter a unique <span style="font-weight: bold;">Game ID</span> 
+ on <span style="font-weight: bold;">General</span> tab.</p>
+<p>&#160;</p>
+<p>Once you have entered all the necessary information, click the Close 
+ button and save your project.</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Testing on iOS</p>
+<p>&#160;</p>
+<p>If you want to do a quick play-test on iOS, just connect your device 
+ to your computer and make sure it stays unlocked/active. </p>
+<p>&#160;</p>
+<p>Next choose Build For &gt; iOS (Cordova) from The Menubar to build your 
+ game for iOS. The build-process will take a few minutes. After the build-process 
+ is done, open the Debug Console via Tools &gt; Debug Console and check 
+ for any errors. Look for status message such as &quot;**ARCHIVE_SUCCEEDED**&quot; 
+ or &quot;**EXPORT_SUCCEEDED**&quot; to make sure the build-process went 
+ through without any errors.</p>
+<p>&#160;</p>
+<p>You can find the <span style="font-weight: bold;">.ipa</span> file inside 
+ the build-folder of your project: </p>
+<p>&#160;</p>
+<p><span style="font-style: italic;">&lt;project-folder&gt;/build/&lt;project-name&gt;/&lt;project-name&gt;/platforms/ios/build/device/&lt;project-name&gt;.ipa</span> 
+ </p>
+<p>&#160;</p>
+<p>if you want to install it manually.</p>
+<p>&#160;</p>
+<p>Now you can play your game on your connected device by choosing Play 
+ On &gt; iOS (Cordova) from The Menubar. You game-build will be transfered 
+ and installed to your connected device and then start automatically. Check 
+ Debug Console for any errors.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Deploy for iOS</p>
+<p>&#160;</p>
+<p>You can deploy your game for iOS using the <a href="Create_Game_Package.htm">Create 
+ Game Package</a> wizard. Just select &quot;iOS (Cordova)&quot; from the 
+ list of platforms. Open the Debug Console to check for errors. The package 
+ creation may take a while. You can find the .ipa file at: </p>
+<p>&#160;</p>
+<p style="font-style: italic;">&lt;output-location&gt;/&lt;project-name&gt;/&lt;project-name&gt;/platforms/ios/build/device/&lt;project-name&gt;.ipa.</p>
+<p>&#160;</p>
+<p>For more information about how to submit your app to the App Store, 
+ just follow the guides on the Apple Developer Website.</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Troubleshooting</p>
+<p>&#160;</p>
+<p>If you went through all the above steps without any errors then congratulations! 
+ But that is not the regular case, especially not if your doing this the 
+ first time. So don't worry if you get stuck or get any error messages 
+ since those are related to wrong configuration in most cases and can be 
+ solved easily. </p>
+<p>&#160;</p>
+<p>The first thing you should try to do is to figure out the error message 
+ by checking the error logs. Sometimes the error messages are understandable 
+ even my non-programmers. Common errors are:</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li>Your device is not registered for the provisioning profile</li>
+	<li>Your device is not connected or on lock-screen</li>
+	<li>The provisioning profile and the team identifier doesn't match</li>
+	<li>The provisioning profile and/or the team identifier are wrong</li>
+	<li>The provisioning profile has been expired</li>
+	<li>The code sign identity is wrong</li>
+	<li>Cordova has not been installed</li>
+	<li>Xcode Command Line Tools are not installed</li>
+	<li>Audio and/or Video files have the wrong format</li>
+</ul>
+<p>&#160;</p>
+<p>If you get stuck with any error and if you cannot fix them yourself, 
+ just take a look at our support forums.</p>
+<p>&#160;</p>
+<h1>&#160;</h1>
+<p>&#160;</p>
+</body>
+</html>

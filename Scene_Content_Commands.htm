@@ -1,0 +1,696 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Scene Content Commands</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.3.1";
+</script>
+ <meta name="topic-breadcrumbs" content="Exploring the Editor > Scene Editor" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">Scene Content Commands</p>
+</div>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-family: 'Book Antiqua', serif; 
+	 font-weight: bold; font-size: 18pt;">T</span>he following commands 
+ are available for use in the Scene Content field. You can single click 
+ or drag and drop commands in the Scene Content. See <a href="Scene_Editor.htm">Scene 
+ Editor</a> for more information.</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading">List of Commands</p>
+<p style="font-family: Arial, sans-serif; text-align: center; font-weight: bold;"><a 
+	 href="Basic.htm">Basic</a></p>
+<table style=" border-collapse:separate; width:100%; max-width:40.656%;" cellspacing="0" align="center" border="1">
+	<col style="width: 50.128%;" />
+	<col style="width: 49.872%;" />
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Basic.htm#Wait">Wait</a></p></td>
+		<td><p style="text-align: center;"><a href="Basic.htm#Comment">Comment</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Basic.htm#Switch">Switch</a></p></td>
+		<td><p style="text-align: center;"><a href="Basic.htm#Number_Variable">Number 
+		 Variable</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Basic.htm#Text_Variable">Text 
+		 Variable</a></p></td>
+		<td><p style="text-align: center;"><a href="Basic.htm#Label">Label</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Basic.htm#Jump_to_Label">Jump 
+		 to Label</a></p></td>
+		<td><p style="text-align: center;"><a href="Basic.htm#Condition">Condition</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Basic.htm#Else">Else</a></p></td>
+		<td><p style="text-align: center;"><a href="Basic.htm#Else_If">Else 
+		 If</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Basic.htm#Check_Switch">Check 
+		 Switch</a></p></td>
+		<td><p style="text-align: center;"><a href="Basic.htm#Check_Number">Check 
+		 Number</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Basic.htm#Check_Text">Check 
+		 Text</a></p></td>
+		<td><p style="text-align: center;"><a href="Basic.htm#Start_Timer">Start 
+		 Timer</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Basic.htm#Stop_Timer">Stop 
+		 Timer</a></p></td>
+		<td><p style="text-align: center;"><a href="Basic.htm#Loop">Loop</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Basic.htm#Break_Loop">Break 
+		 Loop</a></p></td>
+		<td><p style="text-align: center;"><a href="Basic.htm#Idle">Idle</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Basic.htm#Script">Script</a></p></td>
+		<td><p style="text-align: center;"><a href="Basic.htm#Decimal_Variable">Decimal 
+		 Variable</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Basic.htm#Pause_Timer">Pause 
+		 Timer</a></p></td>
+		<td><p style="text-align: center;"><a href="Basic.htm#Resume_Timer">Resume 
+		 Timer</a></p></td>
+	</tr>
+</table>
+<p style="font-family: Arial, sans-serif; text-align: center; font-weight: bold;">&#160;</p>
+<p style="font-family: Arial, sans-serif; text-align: center; font-weight: bold;"><a 
+	 href="List.htm">List</a></p>
+<table style=" border-collapse:separate; width:100%; max-width:40.656%;" cellspacing="0" align="center" border="1">
+	<col style="width: 50.128%;" />
+	<col style="width: 49.872%;" />
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="List.htm#Insert_into_List">Insert 
+		 into List</a></p></td>
+		<td><p style="text-align: center;"><a href="List.htm#Find_in_List">Find 
+		 in List</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="List.htm#Set_in_List">Set 
+		 in List</a></p></td>
+		<td><p style="text-align: center;"><a href="List.htm#Shuffle_List">Shuffle 
+		 List</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="List.htm#Sort_List">Sort 
+		 List</a></p></td>
+		<td><p style="text-align: center;"><a href="List.htm#Length_of_List">Length 
+		 of List</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="List.htm#Copy_List">Copy 
+		 List</a></p></td>
+		<td><p style="text-align: center;"><a href="List.htm#Add_to_List">Add 
+		 to List</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="List.htm#Pop_from_List">Pop 
+		 from List</a></p></td>
+		<td><p style="text-align: center;"><a href="List.htm#Shift_from_List">Shift 
+		 from List</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="List.htm#Get_from_List">Get 
+		 from List</a></p></td>
+		<td><p style="text-align: center;"><a href="List.htm#Remove_from_List">Remove 
+		 from List</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="List.htm#Clear_List">Clear 
+		 List</a></p></td>
+		<td><p style="text-align: center;"><a href="List.htm#Join_List">Join 
+		 List</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="List.htm#Text_to_List">Text 
+		 to List</a></p></td>
+		<td><p style="text-align: center;">&#160;</p></td>
+	</tr>
+</table>
+&#160;&#160; 
+<p style="text-align: center; font-weight: bold;"><a href="Audio_Playback.htm">Audio 
+ Playback</a></p>
+<table style=" border-collapse:separate; width:100%; max-width:40.656%;" cellspacing="0" align="center" border="1">
+	<col style="width: 50.128%;" />
+	<col style="width: 49.872%;" />
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Audio_Playback.htm#Play_Music">Play 
+		 Music</a></p></td>
+		<td><p style="text-align: center;"><a href="Audio_Playback.htm#Stop_Music">Stop 
+		 Music</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Audio_Playback.htm#Play_Sound">Play 
+		 Sound</a></p></td>
+		<td><p style="text-align: center;"><a href="Audio_Playback.htm#Pause_Music">Pause 
+		 Music</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Audio_Playback.htm#Resume_Music">Resume 
+		 Music</a></p></td>
+		<td><p style="text-align: center;"><a href="Audio_Playback.htm#Audio_Defaults">Audio 
+		 Defaults</a></p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p style="text-align: center; font-weight: bold;"><a href="Background.htm">Background</a></p>
+<table style=" border-collapse:separate; width:100%; max-width:40.656%;" cellspacing="0" align="center" border="1">
+	<col style="width: 50.128%;" />
+	<col style="width: 49.872%;" />
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Background.htm#Change_Background">Change 
+		 Background</a></p></td>
+		<td><p style="text-align: center;"><a href="Background.htm#Scroll_Background">Scroll 
+		 Background</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Background.htm#Scroll_Background_To">Scroll 
+		 Background To</a></p></td>
+		<td><p style="text-align: center;"><a href="Background.htm#Zoom_Background">Zoom 
+		 Background</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Background.htm#Shake_Background">Shake 
+		 Background</a></p></td>
+		<td><p style="text-align: center;"><a href="Background.htm#Background_Effect">Background 
+		 Effect</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Background.htm#Mask_Background">Mask 
+		 Background</a></p></td>
+		<td><p style="text-align: center;"><a href="Background.htm#Background_Motion_Blur">Background 
+		 Motion Blur</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Background.htm#Scroll_Along_Path">Scroll 
+		 Along Path</a></p></td>
+		<td><p style="text-align: center;"><a href="Background.htm#Background_Defaults">Background 
+		 Defaults</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Background.htm#Blend_Background">Blend 
+		 Background</a></p></td>
+		<td><p style="text-align: center;"><a href="Background.htm#Rotate_Background">Rotate 
+		 Background</a></p></td>
+	</tr>
+</table>
+<p>&#160;&#160;</p>
+<p style="text-align: center; font-weight: bold;"><a href="Movie.htm">Movie</a></p>
+<table style=" border-collapse:separate; width:100%; max-width:40.656%;" cellspacing="0" align="center" border="1">
+	<col style="width: 50.128%;" />
+	<col style="width: 49.872%;" />
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Movie.htm#Play_Movie">Play 
+		 Movie</a></p></td>
+		<td><p style="text-align: center;"><a href="Movie.htm#Show_Movie">Show 
+		 Movie</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Movie.htm#Zoom_Movie">Zoom 
+		 Movie</a></p></td>
+		<td><p style="text-align: center;"><a href="Movie.htm#Move_Movie">Move 
+		 Movie</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Movie.htm#Rotate_Movie">Rotate 
+		 Movie</a></p></td>
+		<td><p style="text-align: center;"><a href="Movie.htm#Movie_Motion_Blur">Movie 
+		 Motion Blur</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Movie.htm#Move_Movie_Along_Path">Move 
+		 Movie Along Path</a></p></td>
+		<td><p style="text-align: center;"><a href="Movie.htm#Tint_Movie">Tint 
+		 Movie</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Movie.htm#Flash_Movie">Flash 
+		 Movie</a></p></td>
+		<td><p style="text-align: center;"><a href="Movie.htm#Erase_Movie">Erase 
+		 Movie</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Movie.htm#Crop_Movie">Crop 
+		 Movie</a></p></td>
+		<td><p style="text-align: center;"><a href="Movie.htm#Mask_Movie">Mask 
+		 Movie</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Movie.htm#Movie_Defaults">Movie 
+		 Defaults</a></p></td>
+		<td><p style="text-align: center;"><a href="Movie.htm#Blend_Movie">Blend 
+		 Movie</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Movie.htm#Movie_Effect">Movie 
+		 Effect</a></p></td>
+		<td><p style="text-align: center;">&#160;</p></td>
+	</tr>
+</table>
+<p>&#160;&#160;</p>
+<p style="text-align: center; font-weight: bold;"><a href="SceneCommand.htm">Scene</a></p>
+<table style=" border-collapse:separate; width:100%; max-width:40.656%;" cellspacing="0" align="center" border="1">
+	<col style="width: 50.128%;" />
+	<col style="width: 49.872%;" />
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="SceneCommand.htm#Change_Scene">Change 
+		 Scene</a></p></td>
+		<td><p style="text-align: center;"><a href="SceneCommand.htm#Change_Transition">Change 
+		 Transition</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="SceneCommand.htm#Switch_Layout">Switch 
+		 to Layout</a></p></td>
+		<td><p style="text-align: center;"><a href="SceneCommand.htm#Call_Scene">Call 
+		 Scene</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="SceneCommand.htm#Previous_Scene">Previous 
+		 Scene</a></p></td>
+		<td><p style="text-align: center;">&#160;</p></td>
+	</tr>
+</table>
+<p style="text-align: center;">&#160;</p>
+<p style="text-align: center; font-weight: bold;"><a href="Character.htm">Character</a></p>
+<table style=" border-collapse:separate; width:100%; max-width:40.656%;" cellspacing="0" align="center" border="1">
+	<col style="width: 50.128%;" />
+	<col style="width: 49.872%;" />
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Character.htm#Join_Scene">Join 
+		 Scene</a></p></td>
+		<td><p style="text-align: center;"><a href="Character.htm#Change_Expression">Change 
+		 Expression</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Character.htm#Move_Character">Move 
+		 Character</a></p></td>
+		<td><p style="text-align: center;"><a href="Character.htm#Character_Motion_Blur">Character 
+		 Motion Blur</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Character.htm#Move_Character_along_Path">Move 
+		 Character Along Path</a></p></td>
+		<td><p style="text-align: center;"><a href="Character.htm#Shake_Character">Shake 
+		 Character</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Character.htm#Zoom_Character">Zoom 
+		 Character</a></p></td>
+		<td><p style="text-align: center;"><a href="Character.htm#Mask_Character">Mask 
+		 Character</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Character.htm#Flash_Character">Flash 
+		 Character</a></p></td>
+		<td><p style="text-align: center;"><a href="Character.htm#Character_Defaults">Character 
+		 Defaults</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Character.htm#Set_Parameter">Set 
+		 Parameter</a></p></td>
+		<td><p style="text-align: center;"><a href="Character.htm#Get_Parameter">Get 
+		 Parameter</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Character.htm#Exit_Scene">Exit 
+		 Scene</a></p></td>
+		<td><p style="text-align: center;"><a href="Character.htm#Blend_Character">Blend 
+		 Character</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Character.htm#Character_Effect">Character 
+		 Effect</a></p></td>
+		<td><p style="text-align: center;">&#160;</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p style="text-align: center; font-weight: bold;"><a href="Live2D.htm">Live2D</a></p>
+<table style=" border-collapse:separate; width:100%; max-width:40.656%;" cellspacing="0" align="center" border="1">
+	<col style="width: 50.128%;" />
+	<col style="width: 49.872%;" />
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Live2D.htm#Live2D_Join_Scene">Live2D 
+		 Join Scene</a></p></td>
+		<td><p style="text-align: center;"><a href="Live2D.htm#Live2D_Exit_Scene">Live2D 
+		 Exit Scene</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Live2D.htm#Live2D_Motion">Live2D 
+		 Motion</a></p></td>
+		<td><p style="text-align: center;"><a href="Live2D.htm#Live2D_Expression">Live2D 
+		 Expression</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Live2D.htm#Live2D_Move">Live2D 
+		 Move</a></p></td>
+		<td><p style="text-align: center;"><a href="Live2D.htm#Live2D_Motion_Group">Live2D 
+		 Motion Group</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Live2D.htm#Live2D_Defaults">Live2D 
+		 Defaults</a></p></td>
+		<td><p style="text-align: center;"><a href="Live2D.htm#Live2D_Settings">Live2D 
+		 Settings</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Live2D.htm#Live2D_Parameter">Live2D 
+		 Parameter</a></p></td>
+		<td><p style="text-align: center;">&#160;</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p style="text-align: center; font-weight: bold;"><a href="Message.htm">Message</a></p>
+<table style=" border-collapse:separate; width:100%; max-width:40.656%;" cellspacing="0" align="center" border="1">
+	<col style="width: 50.128%;" />
+	<col style="width: 49.872%;" />
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Message.htm#Message_Box_Visibility">Message 
+		 Box Visibility</a></p></td>
+		<td><p style="text-align: center;"><a href="Message.htm#Message_Fading">Message 
+		 Fading</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Message.htm#Message_Settings">Message 
+		 Settings</a></p></td>
+		<td><p style="text-align: center;"><a href="Message.htm#Show_Message">Show 
+		 Message</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Message.htm#Add_Choice">Add 
+		 Choice</a></p></td>
+		<td><p style="text-align: center;"><a href="Message.htm#ShowNVLMessage">Show 
+		 NVL Message</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Message.htm#Clear_Message">Clear 
+		 Message</a></p></td>
+		<td><p style="text-align: center;"><a href="Message.htm#Close_NVL_Page">Close 
+		 NVL Page</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Message.htm#Input_Number">Input 
+		 Number</a></p></td>
+		<td><p style="text-align: center;"><a href="Message.htm#Input_Text">Input 
+		 Text</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Message.htm#Set_Message_Area">Set 
+		 Message Area</a></p></td>
+		<td><p style="text-align: center;"><a href="Message.htm#Choice_Timer">Choice 
+		 Timer</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Message.htm#Show_Choices">Show 
+		 Choices</a></p></td>
+		<td><p style="text-align: center;"><a href="Message.htm#Message_Box_Defaults">Message 
+		 Box Defaults</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Message.htm#Create_Message_Area">Create 
+		 Message Area</a></p></td>
+		<td><p style="text-align: center;"><a href="Message.htm#Set_Message_Target">Set 
+		 Message Target</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Message.htm#Backlog_Visibility">Backlog 
+		 Visibility</a></p></td>
+		<td><p style="text-align: center;"><a href="Message.htm#Erase_Message_Area">Erase 
+		 Message Area</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Message.htm#Text_Codes">Text 
+		 Codes</a></p></td>
+		<td>&#160;</td>
+	</tr>
+</table>
+<p style="text-align: center;">&#160;</p>
+<p style="text-align: center; font-weight: bold;"><a href="Picture.htm">Picture</a></p>
+<table style=" border-collapse:separate; width:100%; max-width:40.656%;" cellspacing="0" align="center" border="1">
+	<col style="width: 50.128%;" />
+	<col style="width: 49.872%;" />
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Picture.htm#Show_Picture">Show 
+		 Picture</a></p></td>
+		<td><p style="text-align: center;"><a href="Picture.htm#Move_Picture">Move 
+		 Picture</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Picture.htm#Tint_Picture">Tint 
+		 Picture</a></p></td>
+		<td><p style="text-align: center;"><a href="Picture.htm#Rotate_Picture">Rotate 
+		 Picture</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Picture.htm#Erase_Picture">Erase 
+		 Picture</a></p></td>
+		<td><p style="text-align: center;"><a href="Picture.htm#Crop_Picture">Crop 
+		 Picture</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Picture.htm#Flash_Picture">Flash 
+		 Picture</a></p></td>
+		<td><p style="text-align: center;"><a href="Picture.htm#Zoom_Picture">Zoom 
+		 Picture</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Picture.htm#Mask_Picture">Mask 
+		 Picture</a></p></td>
+		<td><p style="text-align: center;"><a href="Picture.htm#Show_Image_Map">Show 
+		 Image Map</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Picture.htm#Erase_Image_Map">Erase 
+		 Image Map</a></p></td>
+		<td><p style="text-align: center;"><a href="Picture.htm#Move_Picture_Along_Path">Move 
+		 Picture Along Path</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Picture.htm#Play_Animation">Play 
+		 Animation</a></p></td>
+		<td><p style="text-align: center;"><a href="Picture.htm#Shake_Picture">Shake 
+		 Picture</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Picture.htm#Picture_Effect">Picture 
+		 Effect</a></p></td>
+		<td><p style="text-align: center;"><a href="Picture.htm#Picture_Motion_Blur">Picture 
+		 Motion Blur</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Picture.htm#Add_Hotspot">Add 
+		 Hotspot</a></p></td>
+		<td><p style="text-align: center;"><a href="Picture.htm#Erase_Hotspot">Erase 
+		 Hotspot</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Picture.htm#Change_Hotspot_State">Change 
+		 Hotspot State</a></p></td>
+		<td><p style="text-align: center;"><a href="Picture.htm#Picture_Defaults">Picture 
+		 Defaults</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Picture.htm#Blend_Picture">Blend 
+		 Picture</a></p></td>
+		<td><p style="text-align: center;">&#160;</p></td>
+	</tr>
+</table>
+<p>&#160;&#160;</p>
+<p style="text-align: center; font-weight: bold;"><a href="Text.htm">Text</a></p>
+<table style=" border-collapse:separate; width:100%; max-width:40.656%;" cellspacing="0" align="center" border="1">
+	<col style="width: 50.128%;" />
+	<col style="width: 49.872%;" />
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Text.htm#Show_Text">Show 
+		 Text</a></p></td>
+		<td><p style="text-align: center;"><a href="Text.htm#Move_Text">Move 
+		 Text</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Text.htm#Rotate_Text">Rotate 
+		 Text</a></p></td>
+		<td><p style="text-align: center;"><a href="Text.htm#Zoom_Text">Zoom 
+		 Text</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Text.htm#Color_Text">Color 
+		 Text</a></p></td>
+		<td><p style="text-align: center;"><a href="Text.htm#Erase_Text">Erase 
+		 Text</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Text.htm#Text_Settings">Text 
+		 Setting</a></p></td>
+		<td><p style="text-align: center;"><a href="Text.htm#Move_Text_Along_Path">Move 
+		 Text Along Path</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Text.htm#Refresh_Text">Refresh 
+		 Text</a></p></td>
+		<td><p style="text-align: center;"><a href="Text.htm#Text_Defaults">Text 
+		 Defaults</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Text.htm#Blend_Text">Blend 
+		 Text</a></p></td>
+		<td><p style="text-align: center;"><a href="Text.htm#Text_Effect">Text 
+		 Effect</a></p></td>
+	</tr>
+</table>
+<p>&#160;&#160;</p>
+<p style="text-align: center; font-weight: bold;"><a href="Screen.htm">Screen</a></p>
+<table style=" border-collapse:separate; width:100%; max-width:40.656%;" cellspacing="0" align="center" border="1">
+	<col style="width: 50.128%;" />
+	<col style="width: 49.872%;" />
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Screen.htm#Tint_Screen">Tint 
+		 Screen</a></p></td>
+		<td><p style="text-align: center;"><a href="Screen.htm#Flash_Screen">Flash 
+		 Screen</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Screen.htm#Shake_Screen">Shake 
+		 Screen</a></p></td>
+		<td><p style="text-align: center;"><a href="Screen.htm#Screen_Effect">Screen 
+		 Effect</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Screen.htm#Freeze_Screen">Freeze 
+		 Screen</a></p></td>
+		<td><p style="text-align: center;"><a href="Screen.htm#Screen_Transition">Screen 
+		 Transition</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Screen.htm#Pan_Screen">Pan 
+		 Screen</a></p></td>
+		<td><p style="text-align: center;"><a href="Screen.htm#Zoom_Screen">Zoom 
+		 Screen</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="Screen.htm#Rotate_Screen">Rotate 
+		 Screen</a></p></td>
+		<td><p style="text-align: center;">&#160;</p></td>
+	</tr>
+</table>
+<p style="text-align: center; font-weight: bold;">&#160;</p>
+<p style="text-align: center; font-weight: bold;"><a href="System_Command.htm">System</a></p>
+<table style=" border-collapse:separate; width:100%; max-width:40.656%;" cellspacing="0" align="center" border="1">
+	<col style="width: 50.128%;" />
+	<col style="width: 49.872%;" />
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="System_Command.htm#Call_Common_Event">Call 
+		 Common Event</a></p></td>
+		<td><p style="text-align: center;"><a href="System_Command.htm#End_Common_Event">End 
+		 Common Event</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="System_Command.htm#Unlock_CG">Unlock 
+		 CG</a></p></td>
+		<td><p style="text-align: center;"><a href="System_Command.htm#Save_Persistent_Data">Save 
+		 Persistent Data</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="System_Command.htm#Get_Game_Data">Get 
+		 Game Data</a></p></td>
+		<td><p style="text-align: center;"><a href="System_Command.htm#Input_Data">Input 
+		 Data</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="System_Command.htm#Get_Object_Data">Get 
+		 Object Data</a></p></td>
+		<td><p style="text-align: center;"><a href="System_Command.htm#Set_Game_Data">Set 
+		 Game Data</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="System_Command.htm#Reset_Global_Data">Reset 
+		 Global Data</a></p></td>
+		<td><p style="text-align: center;"><a href="System_Command.htm#Change_Sounds">Change 
+		 Sounds</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="System_Command.htm#Change_Colors">Change 
+		 Colors</a></p></td>
+		<td><p style="text-align: center;"><a href="System_Command.htm#Change_Cursor">Change 
+		 Cursor</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="System_Command.htm#Wait_for_Input">Wait 
+		 for Input</a></p></td>
+		<td><p style="text-align: center;"><a href="System_Command.htm#UI_Access">UI 
+		 Access</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="System_Command.htm#Prepare_Save_Game">Prepare 
+		 Save Game</a></p></td>
+		<td><p style="text-align: center;"><a href="System_Command.htm#Save_Game">Save 
+		 Game</a></p></td>
+	</tr>
+	<tr style="height: 22px;">
+		<td><p style="text-align: center;"><a href="System_Command.htm#Load_Game">Load 
+		 Game</a></p></td>
+		<td><p style="text-align: center;"><a href="System_Command.htm#Reset_Variables">Reset 
+		 Variables</a></p></td>
+	</tr>
+</table>
+<p style="text-align: center; font-weight: bold;">&#160;</p>
+</body>
+</html>

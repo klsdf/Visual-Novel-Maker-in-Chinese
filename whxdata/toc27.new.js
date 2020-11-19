@@ -1,0 +1,4 @@
+(function() {
+var toc =  [{"type":"item","name":"Example: Custom Title-Screen","url":"Example__Custom_Title-Screen.htm"},{"type":"item","name":"Example: Styles","url":"Example__Styles.htm"},{"type":"item","name":"Example: Animations","url":"Example__Animations.htm"},{"type":"item","name":"Example: Templates","url":"Templates.htm"},{"type":"item","name":"Example: Actions","url":"Example__Actions.htm"},{"type":"item","name":"Example: Data Bindings","url":"Example__Data_Bindings.htm"},{"type":"item","name":"Example: Formulas","url":"Example__Formulas.htm"},{"type":"item","name":"Example: Using Components","url":"Example__Using_Components.htm"},{"type":"item","name":"Example: Custom Layout Behavior","url":"Example__Custom_Layout_Behavior.htm"}];
+window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });
+})();
